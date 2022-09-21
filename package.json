@@ -1,0 +1,46 @@
+{
+  "name": "@temple-wallet/dapp",
+  "author": {
+    "name": "Madfish Solutions",
+    "email": "info@madfish.solutions"
+  },
+  "version": "7.0.0",
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.module.js",
+  "unpkg": "dist/index.umd.js",
+  "types": "dist/index.d.ts",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madfish-solutions/templewallet-dapp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/madfish-solutions/templewallet-dapp/issues"
+  },
+  "homepage": "https://github.com/madfish-solutions/templewallet-dapp#readme",
+  "scripts": {
+    "build": "tsc --module commonjs && microbundle build",
+    "dev": "microbundle watch",
+    "prerelease": "npm run build",
+    "release": "npm publish",
+    "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.30"
+  },
+  "devDependencies": {
+    "@taquito/taquito": "^12.0.0",
+    "microbundle": "^0.14.2",
+    "typedoc": "^0.17.8",
+    "typedoc-plugin-markdown": "^2.3.1",
+    "typescript": "^4.3.4"
+  },
+  "peerDependencies": {
+    "@taquito/taquito": "^12.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

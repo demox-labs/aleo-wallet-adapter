@@ -4,7 +4,7 @@
     "name": "Demox Labs",
     "email": "evan@demoxlabs.xyz"
   },
-  "version": "7.0.0",
+  "version": "0.0.1",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
@@ -14,12 +14,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madfish-solutions/aleowallet-dapp.git"
+    "url": "git+https://github.com/demox-labs/leo-wallet-adapter.git"
   },
   "bugs": {
-    "url": "https://github.com/madfish-solutions/aleowallet-dapp/issues"
+    "url": "https://github.com/demox-labs/leo-wallet-adapter/issues"
   },
-  "homepage": "https://github.com/madfish-solutions/aleowallet-dapp#readme",
+  "homepage": "https://github.com/demox-labs/leo-wallet-adapter#readme",
   "scripts": {
     "build": "tsc --module commonjs && microbundle build",
     "dev": "microbundle watch",
@@ -31,14 +31,10 @@
     "nanoid": "^3.1.30"
   },
   "devDependencies": {
-    "@taquito/taquito": "^12.0.0",
     "microbundle": "^0.14.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
     "typescript": "^4.3.4"
-  },
-  "peerDependencies": {
-    "@taquito/taquito": "^12.0.0"
   },
   "publishConfig": {
     "access": "public"

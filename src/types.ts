@@ -55,14 +55,13 @@ export interface AleoDAppPermissionRequest extends AleoDAppMessageBase {
 
 export interface AleoDAppPermissionResponse extends AleoDAppMessageBase {
   type: AleoDAppMessageType.PermissionResponse;
-  pkh: string;
   publicKey: string;
   rpc: string;
 }
 
 export interface AleoDAppOperationRequest extends AleoDAppMessageBase {
   type: AleoDAppMessageType.OperationRequest;
-  sourcePkh: string;
+  sourcePublicKey: string;
   opParams: any[];
 }
 
@@ -73,7 +72,7 @@ export interface AleoDAppOperationResponse extends AleoDAppMessageBase {
 
 export interface AleoDAppSignRequest extends AleoDAppMessageBase {
   type: AleoDAppMessageType.SignRequest;
-  sourcePkh: string;
+  sourcePublicKey: string;
   payload: string;
 }
 
@@ -107,7 +106,6 @@ export enum AleoDAppErrorType {
 
 export type AleoDAppPermission = {
   rpc: string;
-  pkh: string;
   publicKey: string;
 } | null;
 

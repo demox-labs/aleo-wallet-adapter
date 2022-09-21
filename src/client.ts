@@ -102,25 +102,24 @@ export async function requestPermission(
   assertResponse(res.type === AleoDAppMessageType.PermissionResponse);
   return {
     rpc: res.rpc,
-    pkh: res.pkh,
     publicKey: res.publicKey,
   };
 }
 
-export async function requestOperation(sourcePkh: string, opParams: any) {
+export async function requestOperation(sourcePublicKey: string, opParams: any) {
   const res = await request({
     type: AleoDAppMessageType.OperationRequest,
-    sourcePkh,
+    sourcePublicKey,
     opParams,
   });
   assertResponse(res.type === AleoDAppMessageType.OperationResponse);
   return res.opHash;
 }
 
-export async function requestSign(sourcePkh: string, payload: string) {
+export async function requestSign(sourcePublicKey: string, payload: string) {
   const res = await request({
     type: AleoDAppMessageType.SignRequest,
-    sourcePkh,
+    sourcePublicKey,
     payload,
   });
   assertResponse(res.type === AleoDAppMessageType.SignResponse);
@@ -172,7 +171,7 @@ function permissionsAreEqual(
   bPerm: AleoDAppPermission
 ) {
   if (aPerm === null) return bPerm === null;
-  return aPerm.pkh === bPerm?.pkh && aPerm.rpc === bPerm?.rpc;
+  return aPerm.publicKey === bPerm?.publicKey && aPerm.rpc === bPerm?.rpc;
 }
 
 function createError(payload: any) {

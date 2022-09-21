@@ -46,19 +46,14 @@ export class AleoWallet {
     return this.connect(network, { forcePermission: true });
   }
 
-  async getPKH() {
-    assertConnected(this.permission);
-    return this.permission.pkh;
-  }
-
   async sendOperations(opParams: any[]) {
     assertConnected(this.permission);
-    return requestOperation(this.permission.pkh, opParams.map(formatOpParams));
+    return requestOperation(this.permission.publicKey, opParams.map(formatOpParams));
   }
 
   async sign(payload: string) {
     assertConnected(this.permission);
-    return requestSign(this.permission.pkh, payload);
+    return requestSign(this.permission.publicKey, payload);
   }
 
   async broadcast(signedOpBytes: string) {

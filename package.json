@@ -4,7 +4,7 @@
     "name": "Demox Labs",
     "email": "evan@demoxlabs.xyz"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",

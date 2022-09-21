@@ -1,47 +1,47 @@
-[@temple-wallet/dapp](README.md)
+[@aleo-wallet/dapp](README.md)
 
-# @temple-wallet/dapp
+# @aleo-wallet/dapp
 
 ## Index
 
 ### Enumerations
 
-* [TempleDAppErrorType](enums/templedapperrortype.md)
-* [TempleDAppMessageType](enums/templedappmessagetype.md)
-* [TemplePageMessageType](enums/templepagemessagetype.md)
+* [AleoDAppErrorType](enums/aleodapperrortype.md)
+* [AleoDAppMessageType](enums/aleodappmessagetype.md)
+* [AleoPageMessageType](enums/aleopagemessagetype.md)
 
 ### Classes
 
-* [InvalidParamsTempleWalletError](classes/invalidparamstemplewalleterror.md)
-* [NotConnectedTempleWalletError](classes/notconnectedtemplewalleterror.md)
-* [NotFoundTempleWalletError](classes/notfoundtemplewalleterror.md)
-* [NotGrantedTempleWalletError](classes/notgrantedtemplewalleterror.md)
-* [TempleWallet](classes/templewallet.md)
-* [TempleWalletError](classes/templewalleterror.md)
+* [InvalidParamsAleoWalletError](classes/invalidparamsaleowalleterror.md)
+* [NotConnectedAleoWalletError](classes/notconnectedaleowalleterror.md)
+* [NotFoundAleoWalletError](classes/notfoundaleowalleterror.md)
+* [NotGrantedAleoWalletError](classes/notgrantedaleowalleterror.md)
+* [AleoWallet](classes/aleowallet.md)
+* [AleoWalletError](classes/aleowalleterror.md)
 
 ### Interfaces
 
-* [TempleDAppBroadcastRequest](interfaces/templedappbroadcastrequest.md)
-* [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)
-* [TempleDAppGetCurrentPermissionRequest](interfaces/templedappgetcurrentpermissionrequest.md)
-* [TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md)
-* [TempleDAppMessageBase](interfaces/templedappmessagebase.md)
-* [TempleDAppMetadata](interfaces/templedappmetadata.md)
-* [TempleDAppOperationRequest](interfaces/templedappoperationrequest.md)
-* [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md)
-* [TempleDAppPermissionRequest](interfaces/templedapppermissionrequest.md)
-* [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md)
-* [TempleDAppSignRequest](interfaces/templedappsignrequest.md)
-* [TempleDAppSignResponse](interfaces/templedappsignresponse.md)
-* [TemplePageMessage](interfaces/templepagemessage.md)
+* [AleoDAppBroadcastRequest](interfaces/aleodappbroadcastrequest.md)
+* [AleoDAppBroadcastResponse](interfaces/aleodappbroadcastresponse.md)
+* [AleoDAppGetCurrentPermissionRequest](interfaces/aleodappgetcurrentpermissionrequest.md)
+* [AleoDAppGetCurrentPermissionResponse](interfaces/aleodappgetcurrentpermissionresponse.md)
+* [AleoDAppMessageBase](interfaces/aleodappmessagebase.md)
+* [AleoDAppMetadata](interfaces/aleodappmetadata.md)
+* [AleoDAppOperationRequest](interfaces/aleodappoperationrequest.md)
+* [AleoDAppOperationResponse](interfaces/aleodappoperationresponse.md)
+* [AleoDAppPermissionRequest](interfaces/aleodapppermissionrequest.md)
+* [AleoDAppPermissionResponse](interfaces/aleodapppermissionresponse.md)
+* [AleoDAppSignRequest](interfaces/aleodappsignrequest.md)
+* [AleoDAppSignResponse](interfaces/aleodappsignresponse.md)
+* [AleoPageMessage](interfaces/aleopagemessage.md)
 
 ### Type aliases
 
-* [TempleDAppMessage](README.md#templedappmessage)
-* [TempleDAppNetwork](README.md#templedappnetwork)
-* [TempleDAppPermission](README.md#templedapppermission)
-* [TempleDAppRequest](README.md#templedapprequest)
-* [TempleDAppResponse](README.md#templedappresponse)
+* [AleoDAppMessage](README.md#aleodappmessage)
+* [AleoDAppNetwork](README.md#aleodappnetwork)
+* [AleoDAppPermission](README.md#aleodapppermission)
+* [AleoDAppRequest](README.md#aleodapprequest)
+* [AleoDAppResponse](README.md#aleodappresponse)
 
 ### Functions
 
@@ -63,59 +63,59 @@
 
 ## Type aliases
 
-###  TempleDAppMessage
+###  AleoDAppMessage
 
-Ƭ **TempleDAppMessage**: *[TempleDAppRequest](README.md#templedapprequest) | [TempleDAppResponse](README.md#templedappresponse)*
+Ƭ **AleoDAppMessage**: *[AleoDAppRequest](README.md#aleodapprequest) | [AleoDAppResponse](README.md#aleodappresponse)*
 
-*Defined in [types.ts:1](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L1)*
-
-___
-
-###  TempleDAppNetwork
-
-Ƭ **TempleDAppNetwork**: *"mainnet" | "ithacanet" | "hangzhounet" | "idiazabalnet" | "granadanet" | "edo2net" | "florencenet" | "sandbox" | object*
-
-*Defined in [types.ts:115](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L115)*
+*Defined in [types.ts:1](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L1)*
 
 ___
 
-###  TempleDAppPermission
+###  AleoDAppNetwork
 
-Ƭ **TempleDAppPermission**: *object | null*
+Ƭ **AleoDAppNetwork**: *"mainnet" | "ithacanet" | "hangzhounet" | "idiazabalnet" | "granadanet" | "edo2net" | "florencenet" | "sandbox" | object*
 
-*Defined in [types.ts:109](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L109)*
+*Defined in [types.ts:115](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L115)*
+
+___
+
+###  AleoDAppPermission
+
+Ƭ **AleoDAppPermission**: *object | null*
+
+*Defined in [types.ts:109](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L109)*
 
 Misc
 
 ___
 
-###  TempleDAppRequest
+###  AleoDAppRequest
 
-Ƭ **TempleDAppRequest**: *[TempleDAppGetCurrentPermissionRequest](interfaces/templedappgetcurrentpermissionrequest.md) | [TempleDAppPermissionRequest](interfaces/templedapppermissionrequest.md) | [TempleDAppOperationRequest](interfaces/templedappoperationrequest.md) | [TempleDAppSignRequest](interfaces/templedappsignrequest.md) | [TempleDAppBroadcastRequest](interfaces/templedappbroadcastrequest.md)*
+Ƭ **AleoDAppRequest**: *[AleoDAppGetCurrentPermissionRequest](interfaces/aleodappgetcurrentpermissionrequest.md) | [AleoDAppPermissionRequest](interfaces/aleodapppermissionrequest.md) | [AleoDAppOperationRequest](interfaces/aleodappoperationrequest.md) | [AleoDAppSignRequest](interfaces/aleodappsignrequest.md) | [AleoDAppBroadcastRequest](interfaces/aleodappbroadcastrequest.md)*
 
-*Defined in [types.ts:3](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L3)*
+*Defined in [types.ts:3](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L3)*
 
 ___
 
-###  TempleDAppResponse
+###  AleoDAppResponse
 
-Ƭ **TempleDAppResponse**: *[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)*
+Ƭ **AleoDAppResponse**: *[AleoDAppGetCurrentPermissionResponse](interfaces/aleodappgetcurrentpermissionresponse.md) | [AleoDAppPermissionResponse](interfaces/aleodapppermissionresponse.md) | [AleoDAppOperationResponse](interfaces/aleodappoperationresponse.md) | [AleoDAppSignResponse](interfaces/aleodappsignresponse.md) | [AleoDAppBroadcastResponse](interfaces/aleodappbroadcastresponse.md)*
 
-*Defined in [types.ts:10](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/types.ts#L10)*
+*Defined in [types.ts:10](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L10)*
 
 ## Functions
 
 ###  assertConnected
 
-▸ **assertConnected**(`perm`: [TempleDAppPermission](README.md#templedapppermission)): *asserts perm*
+▸ **assertConnected**(`perm`: [AleoDAppPermission](README.md#aleodapppermission)): *asserts perm*
 
-*Defined in [taquito-wallet.ts:156](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L156)*
+*Defined in [taquito-wallet.ts:156](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L156)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`perm` | [TempleDAppPermission](README.md#templedapppermission) |
+`perm` | [AleoDAppPermission](README.md#aleodapppermission) |
 
 **Returns:** *asserts perm*
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **assertResponse**(`condition`: any): *asserts condition*
 
-*Defined in [client.ts:204](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L204)*
+*Defined in [client.ts:204](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L204)*
 
 **Parameters:**
 
@@ -139,9 +139,9 @@ ___
 
 ###  createError
 
-▸ **createError**(`payload`: any): *[TempleWalletError](classes/templewalleterror.md)‹›*
+▸ **createError**(`payload`: any): *[AleoWalletError](classes/aleowalleterror.md)‹›*
 
-*Defined in [client.ts:179](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L179)*
+*Defined in [client.ts:179](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L179)*
 
 **Parameters:**
 
@@ -149,7 +149,7 @@ Name | Type |
 ------ | ------ |
 `payload` | any |
 
-**Returns:** *[TempleWalletError](classes/templewalleterror.md)‹›*
+**Returns:** *[AleoWalletError](classes/aleowalleterror.md)‹›*
 
 ___
 
@@ -157,7 +157,7 @@ ___
 
 ▸ **formatOpParams**(`op`: any): *any*
 
-*Defined in [taquito-wallet.ts:162](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L162)*
+*Defined in [taquito-wallet.ts:162](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L162)*
 
 **Parameters:**
 
@@ -173,7 +173,7 @@ ___
 
 ▸ **getCurrentPermission**(): *Promise‹null | object›*
 
-*Defined in [client.ts:82](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L82)*
+*Defined in [client.ts:82](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L82)*
 
 **Returns:** *Promise‹null | object›*
 
@@ -183,7 +183,7 @@ ___
 
 ▸ **isAvailable**(): *Promise‹boolean›*
 
-*Defined in [client.ts:15](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L15)*
+*Defined in [client.ts:15](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L15)*
 
 **Returns:** *Promise‹boolean›*
 
@@ -193,7 +193,7 @@ ___
 
 ▸ **onAvailabilityChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:42](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L42)*
+*Defined in [client.ts:42](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L42)*
 
 **Parameters:**
 
@@ -215,19 +215,19 @@ ___
 
 ▸ **onPermissionChange**(`callback`: function): *(Anonymous function)*
 
-*Defined in [client.ts:62](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L62)*
+*Defined in [client.ts:62](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L62)*
 
 **Parameters:**
 
 ▪ **callback**: *function*
 
-▸ (`permission`: [TempleDAppPermission](README.md#templedapppermission)): *void*
+▸ (`permission`: [AleoDAppPermission](README.md#aleodapppermission)): *void*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`permission` | [TempleDAppPermission](README.md#templedapppermission) |
+`permission` | [AleoDAppPermission](README.md#aleodapppermission) |
 
 **Returns:** *(Anonymous function)*
 
@@ -235,16 +235,16 @@ ___
 
 ###  permissionsAreEqual
 
-▸ **permissionsAreEqual**(`aPerm`: [TempleDAppPermission](README.md#templedapppermission), `bPerm`: [TempleDAppPermission](README.md#templedapppermission)): *boolean*
+▸ **permissionsAreEqual**(`aPerm`: [AleoDAppPermission](README.md#aleodapppermission), `bPerm`: [AleoDAppPermission](README.md#aleodapppermission)): *boolean*
 
-*Defined in [client.ts:171](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L171)*
+*Defined in [client.ts:171](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L171)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`aPerm` | [TempleDAppPermission](README.md#templedapppermission) |
-`bPerm` | [TempleDAppPermission](README.md#templedapppermission) |
+`aPerm` | [AleoDAppPermission](README.md#aleodapppermission) |
+`bPerm` | [AleoDAppPermission](README.md#aleodapppermission) |
 
 **Returns:** *boolean*
 
@@ -252,17 +252,17 @@ ___
 
 ###  request
 
-▸ **request**(`payload`: [TempleDAppRequest](README.md#templedapprequest)): *Promise‹[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)›*
+▸ **request**(`payload`: [AleoDAppRequest](README.md#aleodapprequest)): *Promise‹[AleoDAppGetCurrentPermissionResponse](interfaces/aleodappgetcurrentpermissionresponse.md) | [AleoDAppPermissionResponse](interfaces/aleodapppermissionresponse.md) | [AleoDAppOperationResponse](interfaces/aleodappoperationresponse.md) | [AleoDAppSignResponse](interfaces/aleodappsignresponse.md) | [AleoDAppBroadcastResponse](interfaces/aleodappbroadcastresponse.md)›*
 
-*Defined in [client.ts:140](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L140)*
+*Defined in [client.ts:140](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L140)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`payload` | [TempleDAppRequest](README.md#templedapprequest) |
+`payload` | [AleoDAppRequest](README.md#aleodapprequest) |
 
-**Returns:** *Promise‹[TempleDAppGetCurrentPermissionResponse](interfaces/templedappgetcurrentpermissionresponse.md) | [TempleDAppPermissionResponse](interfaces/templedapppermissionresponse.md) | [TempleDAppOperationResponse](interfaces/templedappoperationresponse.md) | [TempleDAppSignResponse](interfaces/templedappsignresponse.md) | [TempleDAppBroadcastResponse](interfaces/templedappbroadcastresponse.md)›*
+**Returns:** *Promise‹[AleoDAppGetCurrentPermissionResponse](interfaces/aleodappgetcurrentpermissionresponse.md) | [AleoDAppPermissionResponse](interfaces/aleodapppermissionresponse.md) | [AleoDAppOperationResponse](interfaces/aleodappoperationresponse.md) | [AleoDAppSignResponse](interfaces/aleodappsignresponse.md) | [AleoDAppBroadcastResponse](interfaces/aleodappbroadcastresponse.md)›*
 
 ___
 
@@ -270,7 +270,7 @@ ___
 
 ▸ **requestBroadcast**(`signedOpBytes`: string): *Promise‹string›*
 
-*Defined in [client.ts:131](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L131)*
+*Defined in [client.ts:131](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L131)*
 
 **Parameters:**
 
@@ -286,7 +286,7 @@ ___
 
 ▸ **requestOperation**(`sourcePkh`: string, `opParams`: any): *Promise‹string›*
 
-*Defined in [client.ts:111](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L111)*
+*Defined in [client.ts:111](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L111)*
 
 **Parameters:**
 
@@ -301,16 +301,16 @@ ___
 
 ###  requestPermission
 
-▸ **requestPermission**(`network`: [TempleDAppNetwork](README.md#templedappnetwork), `appMeta`: [TempleDAppMetadata](interfaces/templedappmetadata.md), `force`: boolean): *Promise‹object›*
+▸ **requestPermission**(`network`: [AleoDAppNetwork](README.md#aleodappnetwork), `appMeta`: [AleoDAppMetadata](interfaces/aleodappmetadata.md), `force`: boolean): *Promise‹object›*
 
-*Defined in [client.ts:92](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L92)*
+*Defined in [client.ts:92](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L92)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`network` | [TempleDAppNetwork](README.md#templedappnetwork) |
-`appMeta` | [TempleDAppMetadata](interfaces/templedappmetadata.md) |
+`network` | [AleoDAppNetwork](README.md#aleodappnetwork) |
+`appMeta` | [AleoDAppMetadata](interfaces/aleodappmetadata.md) |
 `force` | boolean |
 
 **Returns:** *Promise‹object›*
@@ -321,7 +321,7 @@ ___
 
 ▸ **requestSign**(`sourcePkh`: string, `payload`: string): *Promise‹string›*
 
-*Defined in [client.ts:121](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L121)*
+*Defined in [client.ts:121](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L121)*
 
 **Parameters:**
 
@@ -336,14 +336,14 @@ ___
 
 ###  send
 
-▸ **send**(`msg`: [TemplePageMessage](interfaces/templepagemessage.md)): *void*
+▸ **send**(`msg`: [AleoPageMessage](interfaces/aleopagemessage.md)): *void*
 
-*Defined in [client.ts:210](https://github.com/madfish-solutions/templewallet-dapp/blob/0871fa5/src/client.ts#L210)*
+*Defined in [client.ts:210](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/client.ts#L210)*
 
 **Parameters:**
 
 Name | Type |
 ------ | ------ |
-`msg` | [TemplePageMessage](interfaces/templepagemessage.md) |
+`msg` | [AleoPageMessage](interfaces/aleopagemessage.md) |
 
 **Returns:** *void*

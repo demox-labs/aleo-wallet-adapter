@@ -1,24 +1,24 @@
-export type TempleDAppMessage = TempleDAppRequest | TempleDAppResponse;
+export type AleoDAppMessage = AleoDAppRequest | AleoDAppResponse;
 
-export type TempleDAppRequest =
-  | TempleDAppGetCurrentPermissionRequest
-  | TempleDAppPermissionRequest
-  | TempleDAppOperationRequest
-  | TempleDAppSignRequest
-  | TempleDAppBroadcastRequest;
+export type AleoDAppRequest =
+  | AleoDAppGetCurrentPermissionRequest
+  | AleoDAppPermissionRequest
+  | AleoDAppOperationRequest
+  | AleoDAppSignRequest
+  | AleoDAppBroadcastRequest;
 
-export type TempleDAppResponse =
-  | TempleDAppGetCurrentPermissionResponse
-  | TempleDAppPermissionResponse
-  | TempleDAppOperationResponse
-  | TempleDAppSignResponse
-  | TempleDAppBroadcastResponse;
+export type AleoDAppResponse =
+  | AleoDAppGetCurrentPermissionResponse
+  | AleoDAppPermissionResponse
+  | AleoDAppOperationResponse
+  | AleoDAppSignResponse
+  | AleoDAppBroadcastResponse;
 
-export interface TempleDAppMessageBase {
-  type: TempleDAppMessageType;
+export interface AleoDAppMessageBase {
+  type: AleoDAppMessageType;
 }
 
-export enum TempleDAppMessageType {
+export enum AleoDAppMessageType {
   GetCurrentPermissionRequest = "GET_CURRENT_PERMISSION_REQUEST",
   GetCurrentPermissionResponse = "GET_CURRENT_PERMISSION_RESPONSE",
   PermissionRequest = "PERMISSION_REQUEST",
@@ -35,67 +35,67 @@ export enum TempleDAppMessageType {
  * Messages
  */
 
-export interface TempleDAppGetCurrentPermissionRequest
-  extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.GetCurrentPermissionRequest;
+export interface AleoDAppGetCurrentPermissionRequest
+  extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.GetCurrentPermissionRequest;
 }
 
-export interface TempleDAppGetCurrentPermissionResponse
-  extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.GetCurrentPermissionResponse;
-  permission: TempleDAppPermission;
+export interface AleoDAppGetCurrentPermissionResponse
+  extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.GetCurrentPermissionResponse;
+  permission: AleoDAppPermission;
 }
 
-export interface TempleDAppPermissionRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.PermissionRequest;
-  network: TempleDAppNetwork;
-  appMeta: TempleDAppMetadata;
+export interface AleoDAppPermissionRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.PermissionRequest;
+  network: AleoDAppNetwork;
+  appMeta: AleoDAppMetadata;
   force?: boolean;
 }
 
-export interface TempleDAppPermissionResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.PermissionResponse;
+export interface AleoDAppPermissionResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.PermissionResponse;
   pkh: string;
   publicKey: string;
   rpc: string;
 }
 
-export interface TempleDAppOperationRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.OperationRequest;
+export interface AleoDAppOperationRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.OperationRequest;
   sourcePkh: string;
   opParams: any[];
 }
 
-export interface TempleDAppOperationResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.OperationResponse;
+export interface AleoDAppOperationResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.OperationResponse;
   opHash: string;
 }
 
-export interface TempleDAppSignRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.SignRequest;
+export interface AleoDAppSignRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.SignRequest;
   sourcePkh: string;
   payload: string;
 }
 
-export interface TempleDAppSignResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.SignResponse;
+export interface AleoDAppSignResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.SignResponse;
   signature: string;
 }
 
-export interface TempleDAppBroadcastRequest extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.BroadcastRequest;
+export interface AleoDAppBroadcastRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.BroadcastRequest;
   signedOpBytes: string;
 }
 
-export interface TempleDAppBroadcastResponse extends TempleDAppMessageBase {
-  type: TempleDAppMessageType.BroadcastResponse;
+export interface AleoDAppBroadcastResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.BroadcastResponse;
   opHash: string;
 }
 
 /**
  * Errors
  */
-export enum TempleDAppErrorType {
+export enum AleoDAppErrorType {
   NotGranted = "NOT_GRANTED",
   NotFound = "NOT_FOUND",
   InvalidParams = "INVALID_PARAMS",
@@ -106,13 +106,13 @@ export enum TempleDAppErrorType {
  * Misc
  */
 
-export type TempleDAppPermission = {
+export type AleoDAppPermission = {
   rpc: string;
   pkh: string;
   publicKey: string;
 } | null;
 
-export type TempleDAppNetwork =
+export type AleoDAppNetwork =
   | "mainnet"
   | "ithacanet"
   | "hangzhounet"
@@ -123,17 +123,17 @@ export type TempleDAppNetwork =
   | "sandbox"
   | { name: string; rpc: string };
 
-export interface TempleDAppMetadata {
+export interface AleoDAppMetadata {
   name: string;
 }
 
-export interface TemplePageMessage {
-  type: TemplePageMessageType;
+export interface AleoPageMessage {
+  type: AleoPageMessageType;
   payload: any;
   reqId?: string | number;
 }
 
-export enum TemplePageMessageType {
+export enum AleoPageMessageType {
   Request = "TEMPLE_PAGE_REQUEST",
   Response = "TEMPLE_PAGE_RESPONSE",
   ErrorResponse = "TEMPLE_PAGE_ERROR_RESPONSE",

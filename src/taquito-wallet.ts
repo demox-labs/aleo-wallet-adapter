@@ -18,22 +18,22 @@ import {
   requestOperation,
   requestSign,
   requestBroadcast,
-  TempleWalletError,
+  AleoWalletError,
 } from "./client";
 
-import { TempleDAppNetwork, TempleDAppPermission } from "./types";
+import { AleoDAppNetwork, AleoDAppPermission } from "./types";
 
-export class TempleWallet implements WalletProvider {
+export class AleoWallet implements WalletProvider {
   static isAvailable = isAvailable;
   static onAvailabilityChange = onAvailabilityChange;
   static getCurrentPermission = getCurrentPermission;
   static onPermissionChange = onPermissionChange;
 
-  permission: TempleDAppPermission = null;
+  permission: AleoDAppPermission = null;
 
   constructor(
     private appName: string,
-    existingPermission?: TempleDAppPermission
+    existingPermission?: AleoDAppPermission
   ) {
     if (existingPermission) {
       this.permission = existingPermission;
@@ -51,7 +51,7 @@ export class TempleWallet implements WalletProvider {
     return tezos;
   }
 
-  async connect(network: TempleDAppNetwork, opts = { forcePermission: false }) {
+  async connect(network: AleoDAppNetwork, opts = { forcePermission: false }) {
     const perm = await requestPermission(
       network,
       { name: this.appName },
@@ -60,7 +60,7 @@ export class TempleWallet implements WalletProvider {
     this.permission = perm;
   }
 
-  reconnect(network: TempleDAppNetwork) {
+  reconnect(network: AleoDAppNetwork) {
     return this.connect(network, { forcePermission: true });
   }
 
@@ -147,15 +147,15 @@ export class TempleWallet implements WalletProvider {
   }
 }
 
-export class NotConnectedTempleWalletError extends TempleWalletError {
-  name = "TempleWalletNotConnected";
+export class NotConnectedAleoWalletError extends AleoWalletError {
+  name = "AleoWalletNotConnected";
   message =
-    "You need to connect TempleWallet by calling templeWallet.connect() first";
+    "You need to connect AleoWallet by calling aleoWallet.connect() first";
 }
 
-function assertConnected(perm: TempleDAppPermission): asserts perm {
+function assertConnected(perm: AleoDAppPermission): asserts perm {
   if (!perm) {
-    throw new NotConnectedTempleWalletError();
+    throw new NotConnectedAleoWalletError();
   }
 }
 

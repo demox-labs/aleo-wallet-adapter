@@ -1,5 +1,5 @@
 {
-  "name": "@temple-wallet/dapp",
+  "name": "@aleo-wallet/dapp",
   "author": {
     "name": "Madfish Solutions",
     "email": "info@madfish.solutions"
@@ -14,12 +14,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madfish-solutions/templewallet-dapp.git"
+    "url": "git+https://github.com/madfish-solutions/aleowallet-dapp.git"
   },
   "bugs": {
-    "url": "https://github.com/madfish-solutions/templewallet-dapp/issues"
+    "url": "https://github.com/madfish-solutions/aleowallet-dapp/issues"
   },
-  "homepage": "https://github.com/madfish-solutions/templewallet-dapp#readme",
+  "homepage": "https://github.com/madfish-solutions/aleowallet-dapp#readme",
   "scripts": {
     "build": "tsc --module commonjs && microbundle build",
     "dev": "microbundle watch",

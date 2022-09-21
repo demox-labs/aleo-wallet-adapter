@@ -99,7 +99,6 @@ export enum AleoDAppErrorType {
   NotGranted = "NOT_GRANTED",
   NotFound = "NOT_FOUND",
   InvalidParams = "INVALID_PARAMS",
-  TezosOperation = "TEZOS_OPERATION",
 }
 
 /**
@@ -113,13 +112,8 @@ export type AleoDAppPermission = {
 } | null;
 
 export type AleoDAppNetwork =
+  | "testnet3"
   | "mainnet"
-  | "ithacanet"
-  | "hangzhounet"
-  | "idiazabalnet"
-  | "granadanet"
-  | "edo2net"
-  | "florencenet"
   | "sandbox"
   | { name: string; rpc: string };
 

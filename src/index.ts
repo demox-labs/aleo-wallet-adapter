@@ -1,3 +1,3 @@
 export * from "./types";
 export * from "./client";
-export * from "./taquito-wallet";
+export * from "./aleo-wallet";

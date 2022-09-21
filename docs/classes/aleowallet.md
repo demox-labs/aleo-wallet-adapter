@@ -42,7 +42,6 @@
 * [removeDefaultParams](aleowallet.md#private-removedefaultparams)
 * [sendOperations](aleowallet.md#sendoperations)
 * [sign](aleowallet.md#sign)
-* [toTezos](aleowallet.md#totezos)
 
 ## Constructors
 
@@ -293,13 +292,3 @@ Name | Type |
 `payload` | string |
 
 **Returns:** *Promise‹string›*
-
-___
-
-###  toTezos
-
-▸ **toTezos**(): *TezosToolkit‹›*
-
-*Defined in [taquito-wallet.ts:47](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/taquito-wallet.ts#L47)*
-
-**Returns:** *TezosToolkit‹›*

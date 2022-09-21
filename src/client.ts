@@ -1,5 +1,4 @@
 import { nanoid } from "nanoid";
-import { TezosOperationError } from "@taquito/taquito";
 import {
   AleoPageMessageType,
   AleoPageMessage,
@@ -186,15 +185,6 @@ function createError(payload: any) {
 
     case payload === AleoDAppErrorType.InvalidParams:
       return new InvalidParamsAleoWalletError();
-
-    case Array.isArray(payload) &&
-      payload[0] === AleoDAppErrorType.TezosOperation &&
-      Array.isArray(payload[1]) &&
-      payload[1].length > 0:
-      return new TezosOperationError(payload[1]);
-
-    case typeof payload === "string" && payload.startsWith("__tezos__"):
-      return new Error(payload.replace("__tezos__", ""));
 
     default:
       return new AleoWalletError();

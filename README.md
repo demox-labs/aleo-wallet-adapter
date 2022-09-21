@@ -31,21 +31,6 @@ import { AleoWallet } from "@aleo-wallet/dapp";
 
     const wallet = new AleoWallet("My Super DApp");
     await wallet.connect("carthagenet");
-    const tezos = wallet.toTezos();
-
-    const accountPkh = await tezos.wallet.pkh();
-    const accountBalance = await tezos.tz.getBalance(accountPkh);
-    console.info(`address: ${accountPkh}, balance: ${accountBalance}`);
-
-    const counter = await tezos.wallet.at(
-      "KT1DjYkruvfujfKw6nLYafArqKufcwHuKXvT"
-    );
-
-    const operation = await counter.methods.increment(1).send();
-    await operation.confirmation();
-
-    const counterValue = await counter.storage();
-    console.info(`count: ${counterValue}`);
   } catch (err) {
     console.error(err);
   }
@@ -79,8 +64,6 @@ import { AleoWallet } from "@aleo-wallet/dapp";
     if (!wallet.connected) {
       await wallet.connect("carthagenet");
     }
-
-    const tezos = wallet.toTezos();
 
     // ...
   } catch (err) {

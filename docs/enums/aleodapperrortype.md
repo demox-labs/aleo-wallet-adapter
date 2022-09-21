@@ -11,7 +11,6 @@ Errors
 * [InvalidParams](aleodapperrortype.md#invalidparams)
 * [NotFound](aleodapperrortype.md#notfound)
 * [NotGranted](aleodapperrortype.md#notgranted)
-* [TezosOperation](aleodapperrortype.md#tezosoperation)
 
 ## Enumeration members
 
@@ -36,11 +35,3 @@ ___
 • **NotGranted**: = "NOT_GRANTED"
 
 *Defined in [types.ts:99](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L99)*
-
-___
-
-###  TezosOperation
-
-• **TezosOperation**: = "TEZOS_OPERATION"
-
-*Defined in [types.ts:102](https://github.com/madfish-solutions/aleowallet-dapp/blob/0871fa5/src/types.ts#L102)*

@@ -1,15 +1,4 @@
 import {
-  TezosToolkit,
-  WalletProvider,
-  createOriginationOperation,
-  createSetDelegateOperation,
-  createTransferOperation,
-  WalletDelegateParams,
-  WalletTransferParams,
-  WalletOriginateParams,
-} from "@taquito/taquito";
-
-import {
   isAvailable,
   onAvailabilityChange,
   getCurrentPermission,
@@ -23,7 +12,7 @@ import {
 
 import { AleoDAppNetwork, AleoDAppPermission } from "./types";
 
-export class AleoWallet implements WalletProvider {
+export class AleoWallet {
   static isAvailable = isAvailable;
   static onAvailabilityChange = onAvailabilityChange;
   static getCurrentPermission = getCurrentPermission;
@@ -44,13 +33,6 @@ export class AleoWallet implements WalletProvider {
     return Boolean(this.permission);
   }
 
-  toTezos() {
-    assertConnected(this.permission);
-    const tezos = new TezosToolkit(this.permission.rpc);
-    tezos.setProvider({ wallet: this });
-    return tezos;
-  }
-
   async connect(network: AleoDAppNetwork, opts = { forcePermission: false }) {
     const perm = await requestPermission(
       network,
@@ -69,36 +51,6 @@ export class AleoWallet implements WalletProvider {
     return this.permission.pkh;
   }
 
-  async mapTransferParamsToWalletParams(
-    params: () => Promise<WalletTransferParams>
-  ) {
-    const walletParams = await params();
-    return this.removeDefaultParams(
-      walletParams,
-      await createTransferOperation(this.formatParameters(walletParams))
-    );
-  }
-
-  async mapOriginateParamsToWalletParams(
-    params: () => Promise<WalletOriginateParams>
-  ) {
-    const walletParams = await params();
-    return this.removeDefaultParams(
-      walletParams,
-      await createOriginationOperation(this.formatParameters(walletParams))
-    );
-  }
-
-  async mapDelegateParamsToWalletParams(
-    params: () => Promise<WalletDelegateParams>
-  ) {
-    const walletParams = await params();
-    return this.removeDefaultParams(
-      walletParams,
-      await createSetDelegateOperation(this.formatParameters(walletParams))
-    );
-  }
-
   async sendOperations(opParams: any[]) {
     assertConnected(this.permission);
     return requestOperation(this.permission.pkh, opParams.map(formatOpParams));
@@ -112,38 +64,6 @@ export class AleoWallet implements WalletProvider {
   async broadcast(signedOpBytes: string) {
     assertConnected(this.permission);
     return requestBroadcast(signedOpBytes);
-  }
-
-  private formatParameters(params: any) {
-    if (params.fee) {
-      params.fee = params.fee.toString();
-    }
-    if (params.storageLimit) {
-      params.storageLimit = params.storageLimit.toString();
-    }
-    if (params.gasLimit) {
-      params.gasLimit = params.gasLimit.toString();
-    }
-    return params;
-  }
-
-  private removeDefaultParams(
-    params: WalletTransferParams | WalletOriginateParams | WalletDelegateParams,
-    operatedParams: any
-  ) {
-    // If fee, storageLimit or gasLimit is undefined by user
-    // in case of beacon wallet, dont override it by
-    // defaults.
-    if (!params.fee) {
-      delete operatedParams.fee;
-    }
-    if (!params.storageLimit) {
-      delete operatedParams.storage_limit;
-    }
-    if (!params.gasLimit) {
-      delete operatedParams.gas_limit;
-    }
-    return operatedParams;
   }
 }
 

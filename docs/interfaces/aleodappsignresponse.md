@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoDAppSignResponse](aleodappsignresponse.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoDAppSignResponse](aleodappsignresponse.md)
 
 # Interface: AleoDAppSignResponse
 

@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoDAppGetCurrentPermissionRequest](aleodappgetcurrentpermissionrequest.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoDAppGetCurrentPermissionRequest](aleodappgetcurrentpermissionrequest.md)
 
 # Interface: AleoDAppGetCurrentPermissionRequest
 

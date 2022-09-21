@@ -7,13 +7,13 @@ This module is required to provide communication between DApps and Aleo Wallet, 
 ### Install
 
 ```bash
-yarn add @taquito/taquito @aleo-wallet/dapp
+yarn add @demox-labs/leo-wallet-adapter
 ```
 
 ### Usage
 
 ```typescript
-import { AleoWallet } from "@aleo-wallet/dapp";
+import { AleoWallet } from "@demox-labs/leo-wallet-adapter";
 
 (async () => {
   try {
@@ -40,7 +40,7 @@ import { AleoWallet } from "@aleo-wallet/dapp";
 #### Check permissions
 
 ```typescript
-import { AleoWallet } from "@aleo-wallet/dapp";
+import { AleoWallet } from "@demox-labs/leo-wallet-adapter";
 
 (async () => {
   try {
@@ -75,7 +75,7 @@ import { AleoWallet } from "@aleo-wallet/dapp";
 #### Sign
 
 ```typescript
-import { AleoWallet } from "@aleo-wallet/dapp";
+import { AleoWallet } from "@demox-labs/leo-wallet-adapter";
 
 (async () => {
   try {

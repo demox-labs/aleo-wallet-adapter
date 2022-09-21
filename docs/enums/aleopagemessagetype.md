@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoPageMessageType](aleopagemessagetype.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoPageMessageType](aleopagemessagetype.md)
 
 # Enumeration: AleoPageMessageType
 

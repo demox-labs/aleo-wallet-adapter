@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoWallet](aleowallet.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoWallet](aleowallet.md)
 
 # Class: AleoWallet
 

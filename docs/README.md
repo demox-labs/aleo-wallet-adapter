@@ -1,6 +1,6 @@
-[@aleo-wallet/dapp](README.md)
+[@demox-labs/leo-wallet-adapter](README.md)
 
-# @aleo-wallet/dapp
+# @demox-labs/leo-wallet-adapter
 
 ## Index
 

@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [NotFoundAleoWalletError](notfoundaleowalleterror.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [NotFoundAleoWalletError](notfoundaleowalleterror.md)
 
 # Class: NotFoundAleoWalletError
 

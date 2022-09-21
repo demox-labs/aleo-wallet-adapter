@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [InvalidParamsAleoWalletError](invalidparamsaleowalleterror.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [InvalidParamsAleoWalletError](invalidparamsaleowalleterror.md)
 
 # Class: InvalidParamsAleoWalletError
 

@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoDAppErrorType](aleodapperrortype.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoDAppErrorType](aleodapperrortype.md)
 
 # Enumeration: AleoDAppErrorType
 

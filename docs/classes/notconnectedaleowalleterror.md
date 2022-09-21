@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [NotConnectedAleoWalletError](notconnectedaleowalleterror.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [NotConnectedAleoWalletError](notconnectedaleowalleterror.md)
 
 # Class: NotConnectedAleoWalletError
 

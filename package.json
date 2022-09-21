@@ -1,8 +1,8 @@
 {
-  "name": "@aleo-wallet/dapp",
+  "name": "@demox-labs/leo-wallet-adapter",
   "author": {
-    "name": "Madfish Solutions",
-    "email": "info@madfish.solutions"
+    "name": "Demox Labs",
+    "email": "evan@demoxlabs.xyz"
   },
   "version": "7.0.0",
   "source": "src/index.ts",

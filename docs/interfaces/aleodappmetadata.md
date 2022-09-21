@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoDAppMetadata](aleodappmetadata.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoDAppMetadata](aleodappmetadata.md)
 
 # Interface: AleoDAppMetadata
 

@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoPageMessage](aleopagemessage.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoPageMessage](aleopagemessage.md)
 
 # Interface: AleoPageMessage
 

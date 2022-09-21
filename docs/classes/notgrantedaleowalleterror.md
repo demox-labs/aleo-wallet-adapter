@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [NotGrantedAleoWalletError](notgrantedaleowalleterror.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [NotGrantedAleoWalletError](notgrantedaleowalleterror.md)
 
 # Class: NotGrantedAleoWalletError
 

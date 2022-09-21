@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoDAppBroadcastResponse](aleodappbroadcastresponse.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoDAppBroadcastResponse](aleodappbroadcastresponse.md)
 
 # Interface: AleoDAppBroadcastResponse
 

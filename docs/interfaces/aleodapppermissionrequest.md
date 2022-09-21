@@ -1,4 +1,4 @@
-[@aleo-wallet/dapp](../README.md) › [AleoDAppPermissionRequest](aleodapppermissionrequest.md)
+[@demox-labs/leo-wallet-adapter](../README.md) › [AleoDAppPermissionRequest](aleodapppermissionrequest.md)
 
 # Interface: AleoDAppPermissionRequest
 

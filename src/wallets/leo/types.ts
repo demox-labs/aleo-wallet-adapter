@@ -126,7 +126,7 @@ export interface AleoPageMessage {
 }
 
 export enum AleoPageMessageType {
-  Request = "TEMPLE_PAGE_REQUEST",
-  Response = "TEMPLE_PAGE_RESPONSE",
-  ErrorResponse = "TEMPLE_PAGE_ERROR_RESPONSE",
+  Request = "ALEO_PAGE_REQUEST",
+  Response = "ALEO_PAGE_RESPONSE",
+  ErrorResponse = "ALEO_PAGE_ERROR_RESPONSE",
 }

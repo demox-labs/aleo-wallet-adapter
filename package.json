@@ -21,14 +21,21 @@
   },
   "homepage": "https://github.com/demox-labs/leo-wallet-adapter#readme",
   "scripts": {
-    "build": "tsc --module commonjs && microbundle build",
+    "copy-files": "copyfiles -u 1 src/**/*.css dist/",
+    "build": "tsc --module commonjs && microbundle build --jsx React.createElement && yarn copy-files",
     "dev": "microbundle watch",
     "prerelease": "npm run build",
     "release": "npm publish",
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
   "dependencies": {
-    "nanoid": "^3.1.30"
+    "@types/react": "^18.0.21",
+    "@types/react-dom": "^18.0.6",
+    "copyfiles": "^2.4.1",
+    "eventemitter3": "^4.0.7",
+    "nanoid": "^3.1.30",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "microbundle": "^0.14.2",

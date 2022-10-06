@@ -6,7 +6,7 @@ import { useWallet, Wallet } from '../useWallet.js';
 import { Collapse } from './Collapse.js';
 import { useWalletModal } from './useWalletModal.js';
 import { WalletListItem } from './WalletListItem.js';
-import { WalletSVG } from './WalletSVG.js';
+import { AleoSVG } from './AleoSVG.js';
 
 export interface WalletModalProps {
     className?: string;
@@ -199,7 +199,7 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
                                     You'll need a wallet on Aleo to continue
                                 </h1>
                                 <div className="wallet-adapter-modal-middle">
-                                    <WalletSVG />
+                                    <AleoSVG />
                                     <button
                                         type="button"
                                         className="wallet-adapter-modal-middle-button"

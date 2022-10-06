@@ -93,17 +93,12 @@ export async function requestPermission(
   appMeta: AleoDAppMetadata,
   force: boolean
 ) {
-  console.log('permission request');
-  console.log(network);
-  console.log(appMeta);
-  console.log(force);
   const res = await request({
     type: AleoDAppMessageType.PermissionRequest,
     network,
     appMeta,
     force,
   });
-  console.log(res);
   assertResponse(res.type === AleoDAppMessageType.PermissionResponse);
   return {
     rpc: res.rpc,
@@ -142,10 +137,8 @@ export async function requestBroadcast(signedOpBytes: string) {
 
 function request(payload: AleoDAppRequest) {
   return new Promise<AleoDAppResponse>((resolve, reject) => {
-    console.log(payload);
     const reqId = nanoid();
     const handleMessage = (evt: MessageEvent) => {
-      console.log(evt);
       const res = evt.data as AleoPageMessage;
       switch (true) {
         case evt.source !== window || res?.reqId !== reqId:
@@ -182,8 +175,6 @@ function permissionsAreEqual(
 }
 
 function createError(payload: any) {
-  console.log('createError');
-  console.log(payload);
   switch (true) {
     case payload === AleoDAppErrorType.NotGranted:
       return new NotGrantedAleoWalletError();
@@ -206,8 +197,6 @@ function assertResponse(condition: any): asserts condition {
 }
 
 function send(msg: AleoPageMessage) {
-  console.log('send');
-  console.log(msg);
   window.postMessage(msg, "*");
 }
 

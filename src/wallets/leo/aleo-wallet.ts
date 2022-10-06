@@ -8,6 +8,7 @@ import {
   requestSign,
   requestBroadcast,
   AleoWalletError,
+  requestDecrypt,
 } from "./client";
 
 import { AleoDAppNetwork, AleoDAppPermission } from "./types";
@@ -54,6 +55,11 @@ export class AleoWallet {
   async sign(payload: string) {
     assertConnected(this.permission);
     return requestSign(this.permission.publicKey, payload);
+  }
+
+  async decrypt(payload: string) {
+    assertConnected(this.permission);
+    return requestDecrypt(this.permission.publicKey, payload);
   }
 
   async broadcast(signedOpBytes: string) {

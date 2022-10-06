@@ -4,7 +4,7 @@
     "name": "Demox Labs",
     "email": "support@leo.app"
   },
-  "version": "0.0.5",
+  "version": "0.0.6",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
@@ -23,7 +23,7 @@
   "scripts": {
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
     "build": "tsc --module commonjs && microbundle build --jsx React.createElement && yarn copy-files",
-    "dev": "microbundle watch",
+    "dev": "microbundle watch --jsx React.createElement",
     "prerelease": "npm run build",
     "release": "npm publish",
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"

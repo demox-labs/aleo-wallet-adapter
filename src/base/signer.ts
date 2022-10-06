@@ -28,6 +28,8 @@ export abstract class BaseSignerWalletAdapter<Name extends string = string>
 
 export interface MessageSignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
     signMessage(message: Uint8Array): Promise<Uint8Array>;
+
+    decryptRecord(record: string): Promise<string>;
 }
 
 export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -38,4 +40,6 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
     implements MessageSignerWalletAdapter<Name>
 {
     abstract signMessage(message: Uint8Array): Promise<Uint8Array>;
+
+    abstract decryptRecord(record: string): Promise<string>;
 }

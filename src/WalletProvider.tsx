@@ -284,6 +284,18 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
+    // Decrypt a record if the wallet supports it
+    const decryptRecord: MessageSignerWalletAdapterProps['decryptRecord'] | undefined = useMemo(
+        () =>
+            adapter && 'decryptRecord' in adapter
+                ? async (record) => {
+                      if (!connected) throw handleError(new WalletNotConnectedError());
+                      return await adapter.decryptRecord(record);
+                  }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
     return (
         <WalletContext.Provider
             value={{
@@ -301,6 +313,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 signTransaction,
                 signAllTransactions,
                 signMessage,
+                decryptRecord
             }}
         >
             {children}

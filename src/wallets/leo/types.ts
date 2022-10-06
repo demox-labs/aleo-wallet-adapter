@@ -5,6 +5,7 @@ export type AleoDAppRequest =
   | AleoDAppPermissionRequest
   | AleoDAppOperationRequest
   | AleoDAppSignRequest
+  | AleoDAppDecryptRequest
   | AleoDAppBroadcastRequest;
 
 export type AleoDAppResponse =
@@ -12,6 +13,7 @@ export type AleoDAppResponse =
   | AleoDAppPermissionResponse
   | AleoDAppOperationResponse
   | AleoDAppSignResponse
+  | AleoDAppDecryptResponse
   | AleoDAppBroadcastResponse;
 
 export interface AleoDAppMessageBase {
@@ -27,6 +29,8 @@ export enum AleoDAppMessageType {
   OperationResponse = "OPERATION_RESPONSE",
   SignRequest = "SIGN_REQUEST",
   SignResponse = "SIGN_RESPONSE",
+  DecryptRequest = "DECRYPT_REQUEST",
+  DecryptResponse = "DECRYPT_RESPONSE",
   BroadcastRequest = "BROADCAST_REQUEST",
   BroadcastResponse = "BROADCAST_RESPONSE",
 }
@@ -79,6 +83,17 @@ export interface AleoDAppSignRequest extends AleoDAppMessageBase {
 export interface AleoDAppSignResponse extends AleoDAppMessageBase {
   type: AleoDAppMessageType.SignResponse;
   signature: string;
+}
+
+export interface AleoDAppDecryptRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.DecryptRequest;
+  sourcePublicKey: string;
+  payload: string;
+}
+
+export interface AleoDAppDecryptResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.DecryptResponse;
+  decryptedPayload: string;
 }
 
 export interface AleoDAppBroadcastRequest extends AleoDAppMessageBase {

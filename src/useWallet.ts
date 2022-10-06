@@ -23,6 +23,7 @@ export interface WalletContextState {
   signTransaction: SignerWalletAdapterProps['signTransaction'] | undefined;
   signAllTransactions: SignerWalletAdapterProps['signAllTransactions'] | undefined;
   signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined;
+  decryptRecord: MessageSignerWalletAdapterProps['decryptRecord'] | undefined;
 }
 
 const EMPTY_ARRAY: ReadonlyArray<never> = [];
@@ -33,22 +34,25 @@ const DEFAULT_CONTEXT = {
   connected: false,
   disconnecting: false,
   select(_name: WalletName) {
-      console.error(constructMissingProviderErrorMessage('get', 'select'));
+    console.error(constructMissingProviderErrorMessage('get', 'select'));
   },
   connect() {
-      return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'connect')));
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'connect')));
   },
   disconnect() {
-      return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'disconnect')));
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'disconnect')));
   },
   signTransaction(_transaction: any) {
-      return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signTransaction')));
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signTransaction')));
   },
   signAllTransactions(_transaction: any[]) {
-      return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signAllTransactions')));
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signAllTransactions')));
   },
   signMessage(_message: Uint8Array) {
-      return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
+  },
+  decryptRecord(_record: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'decryptRecord')));
   },
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {

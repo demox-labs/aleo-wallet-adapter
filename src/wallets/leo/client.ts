@@ -126,6 +126,16 @@ export async function requestSign(sourcePublicKey: string, payload: string) {
   return res.signature;
 }
 
+export async function requestDecrypt(sourcePublicKey: string, payload: string) {
+  const res = await request({
+    type: AleoDAppMessageType.DecryptRequest,
+    sourcePublicKey,
+    payload,
+  });
+  assertResponse(res.type === AleoDAppMessageType.DecryptResponse);
+  return res.decryptedPayload;
+}
+
 export async function requestBroadcast(signedOpBytes: string) {
   const res = await request({
     type: AleoDAppMessageType.BroadcastRequest,

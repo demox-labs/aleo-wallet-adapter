@@ -4,6 +4,7 @@ import {
     scopePollingDetectionStrategy,
     WalletAccountError,
     WalletConnectionError,
+    WalletDecryptRecordError,
     WalletDisconnectedError,
     WalletDisconnectionError,
     WalletError,
@@ -15,7 +16,7 @@ import {
     WalletSendTransactionError,
     WalletSignTransactionError,
 } from '../../base';
-import { requestPermission, requestSign } from './client';
+import { requestDecrypt, requestPermission, requestSign } from './client';
 import { AleoDAppNetwork, AleoDAppPermission } from './types';
 
 interface LeoWalletEvents {
@@ -32,6 +33,7 @@ interface LeoWallet extends EventEmitter<LeoWalletEvents> {
         options?: any
     ): Promise<{ signature: any }>;
     signMessage(message: Uint8Array): Promise<{ signature: Uint8Array }>;
+    decryptRecord(record: string): Promise<{ decryptedPayload: string }>;
     connect(): Promise<void>;
     disconnect(): Promise<void>;
 }
@@ -175,6 +177,23 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
                 return new TextEncoder().encode(signature);
             } catch (error: any) {
                 throw new WalletSignTransactionError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async decryptRecord(record: string): Promise<string> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this._permission?.publicKey) throw new WalletNotConnectedError();
+
+            try {
+                const decryptedPayload = await requestDecrypt(this._permission?.publicKey!, record);
+                return decryptedPayload;
+            } catch (error: any) {
+                throw new WalletDecryptRecordError(error?.message, error);
             }
         } catch (error: any) {
             this.emit('error', error);

@@ -13,8 +13,8 @@ import type { FC, ReactNode } from 'react';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { WalletNotSelectedError } from './base/errors';
 import { useLocalStorage } from './useLocalStorage';
-import type { Wallet } from './useWallet.js';
-import { WalletContext } from './useWallet.js';
+import type { Wallet } from './useWallet';
+import { WalletContext } from './useWallet';
 
 export interface WalletProviderProps {
     children: ReactNode;
@@ -284,13 +284,13 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
-    // Decrypt a record if the wallet supports it
-    const decryptRecord: MessageSignerWalletAdapterProps['decryptRecord'] | undefined = useMemo(
+    // Request the ViewKey from a wallet
+    const requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined = useMemo(
         () =>
-            adapter && 'decryptRecord' in adapter
-                ? async (record) => {
+            adapter && 'requestViewKey' in adapter
+                ? async () => {
                       if (!connected) throw handleError(new WalletNotConnectedError());
-                      return await adapter.decryptRecord(record);
+                      return await adapter.requestViewKey();
                   }
                 : undefined,
         [adapter, handleError, connected]
@@ -313,7 +313,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 signTransaction,
                 signAllTransactions,
                 signMessage,
-                decryptRecord
+                requestViewKey
             }}
         >
             {children}

@@ -4,7 +4,7 @@
     "name": "Demox Labs",
     "email": "support@leo.app"
   },
-  "version": "0.0.6",
+  "version": "0.0.7",
   "source": "src/index.ts",
   "main": "dist/index.js",
   "module": "dist/index.module.js",
@@ -22,26 +22,52 @@
   "homepage": "https://github.com/demox-labs/leo-wallet-adapter#readme",
   "scripts": {
     "copy-files": "copyfiles -u 1 src/**/*.css dist/",
-    "build": "tsc --module commonjs && microbundle build --jsx React.createElement && yarn copy-files",
-    "dev": "microbundle watch --jsx React.createElement",
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "cross-env NODE_ENV=development webpack --watch --progress",
     "prerelease": "npm run build",
     "release": "npm publish",
     "doc": "typedoc --plugin typedoc-plugin-markdown --mode file --readme none"
   },
   "dependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "@demox-labs/aleo-sdk": "^0.3.6",
     "@types/react": "^18.0.21",
     "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.39.0",
+    "@typescript-eslint/parser": "^5.39.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.2.5",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-named-asset-import": "^0.3.8",
+    "babel-preset-react-app": "^10.0.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^7.32.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-import-resolver-typescript": "^3.5.1",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.31.8",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "eventemitter3": "^4.0.7",
+    "mini-css-extract-plugin": "^2.6.1",
     "nanoid": "^3.1.30",
+    "prettier": "^2.7.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dev-utils": "^12.0.1",
+    "react-dom": "^18.2.0",
+    "ts-loader": "^9.4.1",
+    "webpackbar": "^5.0.2"
   },
   "devDependencies": {
-    "microbundle": "^0.14.2",
     "copyfiles": "^2.4.1",
+    "microbundle": "^0.14.2",
     "typedoc": "^0.17.8",
     "typedoc-plugin-markdown": "^2.3.1",
-    "typescript": "^4.3.4"
+    "typescript": "^4.3.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
   },
   "publishConfig": {
     "access": "public"

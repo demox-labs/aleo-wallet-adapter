@@ -23,7 +23,7 @@ export interface WalletContextState {
   signTransaction: SignerWalletAdapterProps['signTransaction'] | undefined;
   signAllTransactions: SignerWalletAdapterProps['signAllTransactions'] | undefined;
   signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined;
-  decryptRecord: MessageSignerWalletAdapterProps['decryptRecord'] | undefined;
+  requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
 }
 
 const EMPTY_ARRAY: ReadonlyArray<never> = [];
@@ -51,8 +51,8 @@ const DEFAULT_CONTEXT = {
   signMessage(_message: Uint8Array) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
   },
-  decryptRecord(_record: string) {
-    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'decryptRecord')));
+  requestViewKey() {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestViewKey')));
   },
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {

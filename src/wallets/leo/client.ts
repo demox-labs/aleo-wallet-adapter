@@ -1,3 +1,4 @@
+import * as Aleo from '@demox-labs/aleo-sdk';
 import { nanoid } from "nanoid";
 import {
   AleoPageMessageType,
@@ -9,6 +10,7 @@ import {
   AleoDAppNetwork,
   AleoDAppMetadata,
   AleoDAppPermission,
+  AleoDAppDecryptPermission,
 } from "./types";
 
 export function isAvailable() {
@@ -91,18 +93,22 @@ export async function getCurrentPermission() {
 export async function requestPermission(
   network: AleoDAppNetwork,
   appMeta: AleoDAppMetadata,
-  force: boolean
+  force: boolean,
+  decryptPermission: AleoDAppDecryptPermission
 ) {
   const res = await request({
     type: AleoDAppMessageType.PermissionRequest,
     network,
     appMeta,
     force,
+    decryptPermission
   });
   assertResponse(res.type === AleoDAppMessageType.PermissionResponse);
   return {
     rpc: res.rpc,
     publicKey: res.publicKey,
+    decryptPermission: res.decryptPermission,
+    viewKey: res.viewKey
   };
 }
 
@@ -126,14 +132,13 @@ export async function requestSign(sourcePublicKey: string, payload: string) {
   return res.signature;
 }
 
-export async function requestDecrypt(sourcePublicKey: string, payload: string) {
+export async function requestViewKey(sourcePublicKey: string) {
   const res = await request({
-    type: AleoDAppMessageType.DecryptRequest,
-    sourcePublicKey,
-    payload,
+    type: AleoDAppMessageType.ViewKeyRequest,
+    sourcePublicKey
   });
-  assertResponse(res.type === AleoDAppMessageType.DecryptResponse);
-  return res.decryptedPayload;
+  assertResponse(res.type === AleoDAppMessageType.ViewKeyResponse);
+  return res.viewKey;
 }
 
 export async function requestBroadcast(signedOpBytes: string) {
@@ -143,6 +148,16 @@ export async function requestBroadcast(signedOpBytes: string) {
   });
   assertResponse(res.type === AleoDAppMessageType.BroadcastResponse);
   return res.opHash;
+}
+
+export async function requestDecrypt(sourcePublicKey: string, cipherText: string) {
+  const res = await request({
+    type: AleoDAppMessageType.AutoDecryptRequest,
+    sourcePublicKey,
+    cipherText
+  });
+  assertResponse(res.type === AleoDAppMessageType.AutoDecryptResponse);
+  return res.text;
 }
 
 function request(payload: AleoDAppRequest) {

@@ -64,8 +64,8 @@ export class WalletSignTransactionError extends WalletError {
     name = 'WalletSignTransactionError';
 }
 
-export class WalletDecryptRecordError extends WalletError {
-    name = 'WalletDecryptRecordError';
+export class WalletRequestViewKeyError extends WalletError {
+    name = 'WalletRequestViewKeyError';
 }
 
 export class WalletTimeoutError extends WalletError {
@@ -78,4 +78,12 @@ export class WalletWindowBlockedError extends WalletError {
 
 export class WalletWindowClosedError extends WalletError {
     name = 'WalletWindowClosedError';
+}
+
+export class WalletDecryptionNotAllowedError extends WalletError {
+    name = 'WalletDecryptionNotAllowedError'
+}
+
+export class WalletDecryptionError extends WalletError {
+    name = 'WalletDecryptionError'
 }

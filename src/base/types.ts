@@ -1,5 +1,5 @@
-import type { WalletAdapter } from './adapter.js';
-import type { MessageSignerWalletAdapter, SignerWalletAdapter } from './signer.js';
+import type { WalletAdapter } from './adapter';
+import type { MessageSignerWalletAdapter, SignerWalletAdapter } from './signer';
 
 export type Adapter = WalletAdapter | SignerWalletAdapter | MessageSignerWalletAdapter;
 

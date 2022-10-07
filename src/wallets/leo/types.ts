@@ -5,16 +5,18 @@ export type AleoDAppRequest =
   | AleoDAppPermissionRequest
   | AleoDAppOperationRequest
   | AleoDAppSignRequest
-  | AleoDAppDecryptRequest
-  | AleoDAppBroadcastRequest;
+  | AleoDAppViewKeyRequest
+  | AleoDAppBroadcastRequest
+  | AleoDAppAutoDecryptRequest;
 
 export type AleoDAppResponse =
   | AleoDAppGetCurrentPermissionResponse
   | AleoDAppPermissionResponse
   | AleoDAppOperationResponse
   | AleoDAppSignResponse
-  | AleoDAppDecryptResponse
-  | AleoDAppBroadcastResponse;
+  | AleoDAppViewKeyResponse
+  | AleoDAppBroadcastResponse
+  | AleoDAppAutoDecryptResponse;
 
 export interface AleoDAppMessageBase {
   type: AleoDAppMessageType;
@@ -29,10 +31,12 @@ export enum AleoDAppMessageType {
   OperationResponse = "OPERATION_RESPONSE",
   SignRequest = "SIGN_REQUEST",
   SignResponse = "SIGN_RESPONSE",
-  DecryptRequest = "DECRYPT_REQUEST",
-  DecryptResponse = "DECRYPT_RESPONSE",
+  ViewKeyRequest = "VIEWKEY_REQUEST",
+  ViewKeyResponse = "VIEWKEY_RESPONSE",
   BroadcastRequest = "BROADCAST_REQUEST",
   BroadcastResponse = "BROADCAST_RESPONSE",
+  AutoDecryptRequest = "AUTO_DECRYPT_REQUEST",
+  AutoDecryptResponse = "AUTO_DECRYPT_RESPONSE"
 }
 
 /**
@@ -55,12 +59,15 @@ export interface AleoDAppPermissionRequest extends AleoDAppMessageBase {
   network: AleoDAppNetwork;
   appMeta: AleoDAppMetadata;
   force?: boolean;
+  decryptPermission?: AleoDAppDecryptPermission;
 }
 
 export interface AleoDAppPermissionResponse extends AleoDAppMessageBase {
   type: AleoDAppMessageType.PermissionResponse;
   publicKey: string;
   rpc: string;
+  decryptPermission: AleoDAppDecryptPermission;
+  viewKey?: string;
 }
 
 export interface AleoDAppOperationRequest extends AleoDAppMessageBase {
@@ -85,15 +92,14 @@ export interface AleoDAppSignResponse extends AleoDAppMessageBase {
   signature: string;
 }
 
-export interface AleoDAppDecryptRequest extends AleoDAppMessageBase {
-  type: AleoDAppMessageType.DecryptRequest;
+export interface AleoDAppViewKeyRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.ViewKeyRequest;
   sourcePublicKey: string;
-  payload: string;
 }
 
-export interface AleoDAppDecryptResponse extends AleoDAppMessageBase {
-  type: AleoDAppMessageType.DecryptResponse;
-  decryptedPayload: string;
+export interface AleoDAppViewKeyResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.ViewKeyResponse;
+  viewKey: string;
 }
 
 export interface AleoDAppBroadcastRequest extends AleoDAppMessageBase {
@@ -104,6 +110,17 @@ export interface AleoDAppBroadcastRequest extends AleoDAppMessageBase {
 export interface AleoDAppBroadcastResponse extends AleoDAppMessageBase {
   type: AleoDAppMessageType.BroadcastResponse;
   opHash: string;
+}
+
+export interface AleoDAppAutoDecryptRequest extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.AutoDecryptRequest;
+  sourcePublicKey: string;
+  cipherText: string;
+}
+
+export interface AleoDAppAutoDecryptResponse extends AleoDAppMessageBase {
+  type: AleoDAppMessageType.AutoDecryptResponse;
+  text: string;
 }
 
 /**
@@ -119,9 +136,17 @@ export enum AleoDAppErrorType {
  * Misc
  */
 
+export enum AleoDAppDecryptPermission {
+  NoDecrypt = 'NO_DECRYPT', // The App cannot decrypt any records
+  AutoDecrypt = 'AUTO_DECRYPT', // The App can decrypt any requested records
+  ViewKeyAccess = 'VIEW_KEY_ACCESS' // The App gets the View Key of the connected wallet
+}
+
 export type AleoDAppPermission = {
   rpc: string;
   publicKey: string;
+  decryptPermission: AleoDAppDecryptPermission;
+  viewKey?: string;
 } | null;
 
 export type AleoDAppNetwork =

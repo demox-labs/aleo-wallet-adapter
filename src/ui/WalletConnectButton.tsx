@@ -1,9 +1,9 @@
 import type { FC, MouseEventHandler } from 'react';
 import React, { useCallback, useMemo } from 'react';
-import { useWallet } from '../useWallet.js';
-import type { ButtonProps } from './Button.js';
-import { Button } from './Button.js';
-import { WalletIcon } from './WalletIcon.js';
+import { useWallet } from '../useWallet';
+import type { ButtonProps } from './Button';
+import { Button } from './Button';
+import { WalletIcon } from './WalletIcon';
 
 export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, ...props }) => {
     const { wallet, connect, connecting, connected } = useWallet();

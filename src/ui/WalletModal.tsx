@@ -1,12 +1,12 @@
 import type { FC, MouseEvent } from 'react';
 import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { WalletName, WalletReadyState } from '../base/adapter.js';
-import { useWallet, Wallet } from '../useWallet.js';
-import { Collapse } from './Collapse.js';
-import { useWalletModal } from './useWalletModal.js';
-import { WalletListItem } from './WalletListItem.js';
-import { AleoSVG } from './AleoSVG.js';
+import { WalletName, WalletReadyState } from '../base/adapter';
+import { useWallet, Wallet } from '../useWallet';
+import { Collapse } from './Collapse';
+import { useWalletModal } from './useWalletModal';
+import { WalletListItem } from './WalletListItem';
+import { AleoSVG } from './AleoSVG';
 
 export interface WalletModalProps {
     className?: string;

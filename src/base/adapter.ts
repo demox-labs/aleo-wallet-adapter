@@ -1,6 +1,6 @@
 import EventEmitter from 'eventemitter3';
-import type { WalletError } from './errors.js';
-import type { SupportedTransactionVersions, TransactionOrVersionedTransaction } from './types.js';
+import type { WalletError } from './errors';
+import type { SupportedTransactionVersions, TransactionOrVersionedTransaction } from './types';
 
 export { EventEmitter };
 

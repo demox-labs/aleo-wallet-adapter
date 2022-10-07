@@ -1,9 +1,9 @@
 import type { FC, MouseEventHandler } from 'react';
 import React from 'react';
-import { WalletReadyState } from '../base/adapter.js';
-import { Wallet } from '../useWallet.js';
-import { Button } from './Button.js';
-import { WalletIcon } from './WalletIcon.js';
+import { WalletReadyState } from '../base/adapter';
+import { Wallet } from '../useWallet';
+import { Button } from './Button';
+import { WalletIcon } from './WalletIcon';
 
 export interface WalletListItemProps {
     handleClick: MouseEventHandler<HTMLButtonElement>;

@@ -8,10 +8,10 @@ import {
   requestSign,
   requestBroadcast,
   AleoWalletError,
-  requestDecrypt,
+  requestViewKey,
 } from "./client";
 
-import { AleoDAppNetwork, AleoDAppPermission } from "./types";
+import { AleoDAppDecryptPermission, AleoDAppNetwork, AleoDAppPermission } from "./types";
 
 export class AleoWallet {
   static isAvailable = isAvailable;
@@ -34,17 +34,18 @@ export class AleoWallet {
     return Boolean(this.permission);
   }
 
-  async connect(network: AleoDAppNetwork, opts = { forcePermission: false }) {
+  async connect(network: AleoDAppNetwork, opts = { forcePermission: false, decryptPermission: AleoDAppDecryptPermission.NoDecrypt }) {
     const perm = await requestPermission(
       network,
       { name: this.appName },
-      opts.forcePermission
+      opts.forcePermission,
+      opts.decryptPermission,
     );
     this.permission = perm;
   }
 
-  reconnect(network: AleoDAppNetwork) {
-    return this.connect(network, { forcePermission: true });
+  reconnect(network: AleoDAppNetwork, decryptPermission = AleoDAppDecryptPermission.NoDecrypt) {
+    return this.connect(network, { forcePermission: true, decryptPermission });
   }
 
   async sendOperations(opParams: any[]) {
@@ -57,9 +58,9 @@ export class AleoWallet {
     return requestSign(this.permission.publicKey, payload);
   }
 
-  async decrypt(payload: string) {
+  async requestViewKey() {
     assertConnected(this.permission);
-    return requestDecrypt(this.permission.publicKey, payload);
+    return requestViewKey(this.permission.publicKey);
   }
 
   async broadcast(signedOpBytes: string) {

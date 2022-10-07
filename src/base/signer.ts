@@ -1,7 +1,7 @@
-import type { WalletAdapter, WalletAdapterProps } from './adapter.js';
-import { BaseWalletAdapter } from './adapter.js';
-import { WalletSendTransactionError, WalletSignTransactionError } from './errors.js';
-import type { TransactionOrVersionedTransaction } from './types.js';
+import type { WalletAdapter, WalletAdapterProps } from './adapter';
+import { BaseWalletAdapter } from './adapter';
+import { WalletSendTransactionError, WalletSignTransactionError } from './errors';
+import type { TransactionOrVersionedTransaction } from './types';
 
 export interface SignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
     signTransaction<T extends TransactionOrVersionedTransaction<this['supportedTransactionVersions']>>(
@@ -29,7 +29,7 @@ export abstract class BaseSignerWalletAdapter<Name extends string = string>
 export interface MessageSignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
     signMessage(message: Uint8Array): Promise<Uint8Array>;
 
-    decryptRecord(record: string): Promise<string>;
+    requestViewKey(): Promise<string>;
 }
 
 export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -41,5 +41,5 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
 {
     abstract signMessage(message: Uint8Array): Promise<Uint8Array>;
 
-    abstract decryptRecord(record: string): Promise<string>;
+    abstract requestViewKey(): Promise<string>;
 }

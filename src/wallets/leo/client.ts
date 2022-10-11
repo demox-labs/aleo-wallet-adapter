@@ -1,4 +1,3 @@
-import * as Aleo from '@demox-labs/aleo-sdk';
 import { nanoid } from "nanoid";
 import {
   AleoPageMessageType,

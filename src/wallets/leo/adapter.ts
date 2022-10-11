@@ -1,4 +1,3 @@
-import { ViewKey } from '@demox-labs/aleo-sdk';
 import {
     BaseMessageSignerWalletAdapter,
     EventEmitter,
@@ -133,8 +132,7 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
                         throw new WalletDecryptionError(error?.message, error);
                     }
                 case AleoDAppDecryptPermission.ViewKeyAccess:
-                    const viewKey = ViewKey.from_string(this._viewKey!);
-                    return viewKey.decrypt(cipherText);                   
+                    throw new WalletDecryptionError();               
             }
         } catch (error: any) {
             this.emit('error', error);

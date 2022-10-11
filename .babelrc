@@ -1,3 +1,7 @@
 {
-  "presets": [["react-app", { "flow": false, "typescript": true }]]
+  "plugins": [
+		[
+			"@babel/plugin-proposal-optional-chaining"
+		]
+	]
 }

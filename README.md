@@ -2,18 +2,6 @@
 
 Modular TypeScript wallet adapters and components for Aleo applications.
 
-![Wallets](wallets.png)
-
-## Quick Links
-
-- [Demo](https://leo-wallet-demo.vercel.app/)
-- [Quick Setup]
-    + [Install](#install)
-    + [Setup](#setup)
-    + [Usage](#usage)
-
-## Quick Setup
-
 ### Install
 
 Install these dependencies:

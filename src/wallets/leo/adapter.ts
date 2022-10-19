@@ -130,7 +130,9 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
                 case AleoDAppDecryptPermission.NoDecrypt:
                     throw new WalletDecryptionNotAllowedError();
 
-                case AleoDAppDecryptPermission.UponRequest || AleoDAppDecryptPermission.AutoDecrypt:
+                case AleoDAppDecryptPermission.UponRequest:
+                case AleoDAppDecryptPermission.AutoDecrypt:
+                case AleoDAppDecryptPermission.ViewKeyAccess:
                 {
                     try {
                         const text = await requestDecrypt(this._permission?.publicKey!, cipherText);
@@ -139,9 +141,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
                         throw new WalletDecryptionError(error?.message, error);
                     }
                 }
-                case AleoDAppDecryptPermission.ViewKeyAccess:
-                    throw new WalletDecryptionError();  
-                    
                 default:
                     throw new WalletDecryptionError();
             }

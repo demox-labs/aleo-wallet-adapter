@@ -1,4 +1,4 @@
-# `@demox-labs/leo-wallet-adapter`
+# `@demox-labs/aleo-wallet-adapter`
 
 Modular TypeScript wallet adapters and components for Aleo applications.
 
@@ -7,13 +7,13 @@ Modular TypeScript wallet adapters and components for Aleo applications.
 Install these dependencies:
 
 ```shell
-yarn add leo-wallet-adapter && yarn add react
+yarn add @demox-labs/aleo-wallet-adapter && yarn add react
 ```
 
 ### Usage
 
 ```tsx
-import { useWallet, WalletNotConnectedError, LeoWalletAdapter } from '@demox-labs/leo-wallet-adapter';
+import { useWallet, WalletNotConnectedError, LeoWalletAdapter } from '@demox-labs/aleo-wallet-adapter';
 import React, { FC, useCallback } from 'react';
 
 export const SignMessageForAleo: FC = () => {

@@ -1,13 +1,8 @@
-import type { WalletAdapter } from './adapter';
-import type { MessageSignerWalletAdapter, SignerWalletAdapter } from './signer';
-
-export type Adapter = WalletAdapter | SignerWalletAdapter | MessageSignerWalletAdapter;
-
-export enum WalletAdapterNetwork {
-    Mainnet = 'mainnet-beta',
-    Testnet = 'testnet3',
-    Devnet = 'devnet',
-}
+export const WalletAdapterNetwork = {
+    Mainnet: 'mainnet-beta',
+    Testnet: 'testnet3',
+    Devnet: 'devnet',
+};
 
 export type SupportedTransactionVersions = ReadonlySet<any> | null;
 

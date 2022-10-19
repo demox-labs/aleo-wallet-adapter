@@ -28,11 +28,13 @@ const initialState: {
     wallet: Wallet | null;
     adapter: Adapter | null;
     publicKey: string | null;
+    viewKey: string | null;
     connected: boolean;
 } = {
     wallet: null,
     adapter: null,
     publicKey: null,
+    viewKey: null,
     connected: false,
 };
 
@@ -44,7 +46,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     localStorageKey = 'walletName',
 }) => {
     const [name, setName] = useLocalStorage<WalletName | null>(localStorageKey, null);
-    const [{ wallet, adapter, publicKey, connected }, setState] = useState(initialState);
+    const [{ wallet, adapter, publicKey, viewKey, connected }, setState] = useState(initialState);
     const readyState = adapter?.readyState || WalletReadyState.Unsupported;
     const [connecting, setConnecting] = useState(false);
     const [disconnecting, setDisconnecting] = useState(false);
@@ -100,6 +102,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 adapter: wallet.adapter,
                 connected: wallet.adapter.connected,
                 publicKey: wallet.adapter.publicKey,
+                viewKey: wallet.adapter.viewKey
             });
         } else {
             setState(initialState);
@@ -119,7 +122,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     // Handle the adapter's connect event
     const handleConnect = useCallback(() => {
         if (!adapter) return;
-        setState((state) => ({ ...state, connected: adapter.connected, publicKey: adapter.publicKey }));
+        setState((state) => ({ ...state, connected: adapter.connected, publicKey: adapter.publicKey, viewKey: adapter.viewKey }));
     }, [adapter]);
 
     // Handle the adapter's disconnect event
@@ -296,6 +299,18 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
+    // Decrypt a ciphertext using the wallet
+    const decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined = useMemo(
+        () => 
+            adapter && 'decrypt' in adapter
+                ? async (cipherText) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.decrypt(cipherText);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    )
+
     return (
         <WalletContext.Provider
             value={{
@@ -303,6 +318,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 wallets,
                 wallet,
                 publicKey,
+                viewKey,
                 connected,
                 connecting,
                 disconnecting,
@@ -313,7 +329,8 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 signTransaction,
                 signAllTransactions,
                 signMessage,
-                requestViewKey
+                requestViewKey,
+                decrypt
             }}
         >
             {children}

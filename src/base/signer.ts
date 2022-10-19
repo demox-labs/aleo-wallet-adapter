@@ -3,6 +3,8 @@ import { BaseWalletAdapter } from './adapter';
 import { WalletSendTransactionError, WalletSignTransactionError } from './errors';
 import type { TransactionOrVersionedTransaction } from './types';
 
+export type Adapter = WalletAdapter | SignerWalletAdapter | MessageSignerWalletAdapter;
+
 export interface SignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
     signTransaction<T extends TransactionOrVersionedTransaction<this['supportedTransactionVersions']>>(
         transaction: T
@@ -30,6 +32,8 @@ export interface MessageSignerWalletAdapterProps<Name extends string = string> e
     signMessage(message: Uint8Array): Promise<Uint8Array>;
 
     requestViewKey(): Promise<string>;
+
+    decrypt(cipherText: string): Promise<string>;
 }
 
 export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -42,4 +46,6 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
     abstract signMessage(message: Uint8Array): Promise<Uint8Array>;
 
     abstract requestViewKey(): Promise<string>;
+
+    abstract decrypt(cipherText: string): Promise<string>;
 }

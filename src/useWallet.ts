@@ -11,6 +11,7 @@ export interface WalletContextState {
   wallets: Wallet[];
   wallet: Wallet | null;
   publicKey: string | null;
+  viewKey: string | null;
   connecting: boolean;
   connected: boolean;
   disconnecting: boolean;
@@ -23,6 +24,7 @@ export interface WalletContextState {
   signTransaction: SignerWalletAdapterProps['signTransaction'] | undefined;
   signAllTransactions: SignerWalletAdapterProps['signAllTransactions'] | undefined;
   signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined;
+  decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined;
   requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
 }
 
@@ -51,37 +53,46 @@ const DEFAULT_CONTEXT = {
   signMessage(_message: Uint8Array) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
   },
+  decrypt(_cipherText: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'decrypt')));
+  },
   requestViewKey() {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestViewKey')));
   },
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {
   get() {
-      console.error(constructMissingProviderErrorMessage('read', 'wallets'));
-      return EMPTY_ARRAY;
+    console.error(constructMissingProviderErrorMessage('read', 'wallets'));
+    return EMPTY_ARRAY;
   },
 });
 Object.defineProperty(DEFAULT_CONTEXT, 'wallet', {
   get() {
-      console.error(constructMissingProviderErrorMessage('read', 'wallet'));
-      return null;
+    console.error(constructMissingProviderErrorMessage('read', 'wallet'));
+    return null;
   },
 });
 Object.defineProperty(DEFAULT_CONTEXT, 'publicKey', {
   get() {
-      console.error(constructMissingProviderErrorMessage('read', 'publicKey'));
-      return null;
+    console.error(constructMissingProviderErrorMessage('read', 'publicKey'));
+    return null;
+  },
+});
+Object.defineProperty(DEFAULT_CONTEXT, 'viewKey', {
+  get() {
+    console.error(constructMissingProviderErrorMessage('read', 'viewKey'));
+    return null;
   },
 });
 
 function constructMissingProviderErrorMessage(action: string, valueName: string) {
   return (
-      'You have tried to ' +
-      ` ${action} "${valueName}"` +
-      ' on a WalletContext without providing one.' +
-      ' Make sure to render a WalletProvider' +
-      ' as an ancestor of the component that uses ' +
-      'WalletContext'
+    'You have tried to ' +
+    ` ${action} "${valueName}"` +
+    ' on a WalletContext without providing one.' +
+    ' Make sure to render a WalletProvider' +
+    ' as an ancestor of the component that uses ' +
+    'WalletContext'
   );
 }
 

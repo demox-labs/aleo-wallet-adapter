@@ -151,11 +151,11 @@ export async function requestBroadcast(signedOpBytes: string) {
 
 export async function requestDecrypt(sourcePublicKey: string, cipherText: string) {
   const res = await request({
-    type: AleoDAppMessageType.AutoDecryptRequest,
+    type: AleoDAppMessageType.DecryptRequest,
     sourcePublicKey,
     cipherText
   });
-  assertResponse(res.type === AleoDAppMessageType.AutoDecryptResponse);
+  assertResponse(res.type === AleoDAppMessageType.DecryptResponse);
   return res.text;
 }
 

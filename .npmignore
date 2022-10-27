@@ -1,3 +1,2 @@
-/docs/
-tsconfig.json
-.babelrc
+.gitignore
+node_modules

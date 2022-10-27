@@ -1,0 +1,23 @@
+{
+  "name": "@demox-labs/aleo-wallet-adapter-base",
+  "version": "0.0.7",
+  "description": "Core infrastructure for connecting aleo-compatible wallets to your dApp.",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "doc": "typedoc --tsconfig ./tsconfig.json --plugin typedoc-plugin-markdown --entryPoints index.ts"
+  },
+  "repository": "https://github.com/demox-labs/aleo-wallet-adapter",
+  "author": "Demox Labs",
+  "license": "MIT",
+  "dependencies": {
+    "eventemitter3": "^4.0.7"
+  },
+  "devDependencies": {
+    "typedoc": "^0.23.18",
+    "typedoc-plugin-markdown": "^3.13.6",
+    "typescript": "^4.8.4"
+  },
+  "private": false
+}

@@ -1,0 +1,23 @@
+{
+  "name": "@demox-labs/aleo-wallet-adapter-react",
+  "version": "0.0.5",
+  "description": "Core react infrastructure for connecting aleo-compatible wallets to your dApp.",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/demox-labs/aleo-wallet-adapter",
+  "author": "Demox Labs",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "doc": "typedoc --plugin typedoc-plugin-markdown --entryPoints index.ts"
+  },
+  "dependencies": {
+    "@demox-labs/aleo-wallet-adapter-base": "^0.0.7",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.23.18",
+    "typedoc-plugin-markdown": "^3.13.6",
+    "typescript": "^4.8.4"
+  }
+}

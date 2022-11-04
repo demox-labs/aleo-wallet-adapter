@@ -1,9 +1,12 @@
+import { DecryptPermission, WalletAdapterNetwork } from '@demox-labs/aleo-wallet-adapter-base';
 import type { CSSProperties, FC, MouseEvent, PropsWithChildren, ReactElement } from 'react';
 import React from 'react';
 
 export type ButtonProps = PropsWithChildren<{
     className?: string;
     disabled?: boolean;
+    decryptPermission?: DecryptPermission;
+    network?: WalletAdapterNetwork;
     endIcon?: ReactElement;
     onClick?: (e: MouseEvent<HTMLButtonElement>) => void;
     startIcon?: ReactElement;

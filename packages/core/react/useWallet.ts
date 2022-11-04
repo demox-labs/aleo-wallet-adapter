@@ -1,8 +1,10 @@
 import { createContext, useContext } from 'react';
 import {
   Adapter,
+  DecryptPermission,
   MessageSignerWalletAdapterProps,
   SignerWalletAdapterProps,
+  WalletAdapterNetwork,
   WalletName,
   WalletReadyState
 } from '@demox-labs/aleo-wallet-adapter-base';
@@ -23,7 +25,7 @@ export interface WalletContextState {
   disconnecting: boolean;
 
   select(walletName: WalletName): void;
-  connect(): Promise<void>;
+  connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
   disconnect(): Promise<void>;
 
   sendTransaction: undefined;
@@ -44,7 +46,7 @@ const DEFAULT_CONTEXT = {
   select(_name: WalletName) {
     console.error(constructMissingProviderErrorMessage('get', 'select'));
   },
-  connect() {
+  connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'connect')));
   },
   disconnect() {

@@ -1,6 +1,6 @@
 import EventEmitter from 'eventemitter3';
 import type { WalletError } from './errors';
-import type { SupportedTransactionVersions, TransactionOrVersionedTransaction } from './types';
+import type { SupportedTransactionVersions, DecryptPermission, WalletAdapterNetwork } from './types';
 
 export { EventEmitter };
 
@@ -26,7 +26,7 @@ export interface WalletAdapterProps<Name extends string = string> {
     connected: boolean;
     supportedTransactionVersions: SupportedTransactionVersions;
 
-    connect(): Promise<void>;
+    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
     disconnect(): Promise<void>;
 }
 
@@ -78,7 +78,7 @@ export abstract class BaseWalletAdapter<Name extends string = string>
         return !!this.publicKey;
     }
 
-    abstract connect(): Promise<void>;
+    abstract connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
     abstract disconnect(): Promise<void>;
 }
 

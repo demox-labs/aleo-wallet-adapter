@@ -4,15 +4,16 @@ import { useWallet } from '@demox-labs/aleo-wallet-adapter-react';
 import type { ButtonProps } from './Button';
 import { Button } from './Button';
 import { WalletIcon } from './WalletIcon';
+import { WalletAdapterNetwork } from '@demox-labs/aleo-wallet-adapter-base';
 
-export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, ...props }) => {
+export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, decryptPermission, network, ...props }) => {
     const { wallet, connect, connecting, connected } = useWallet();
 
     const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
         (event) => {
             if (onClick) onClick(event);
             // eslint-disable-next-line @typescript-eslint/no-empty-function
-            if (!event.defaultPrevented) connect().catch(() => {});
+            if (!event.defaultPrevented) connect(decryptPermission || "NO_DECRYPT", network || WalletAdapterNetwork.Localnet).catch(() => {});
         },
         [onClick, connect]
     );

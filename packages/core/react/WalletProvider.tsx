@@ -8,6 +8,8 @@ import {
     WalletNotConnectedError,
     WalletNotReadyError,
     WalletReadyState,
+    DecryptPermission,
+    WalletAdapterNetwork,
 } from '@demox-labs/aleo-wallet-adapter-base';
 import type { FC, ReactNode } from 'react';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -18,6 +20,8 @@ import { WalletContext } from './useWallet';
 export interface WalletProviderProps {
     children: ReactNode;
     wallets: Adapter[];
+    decryptPermission?: DecryptPermission;
+    network?: WalletAdapterNetwork;
     autoConnect?: boolean;
     onError?: (error: WalletError) => void;
     localStorageKey?: string;
@@ -41,6 +45,8 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     children,
     wallets: adapters,
     autoConnect = false,
+    decryptPermission = DecryptPermission.NoDecrypt,
+    network = WalletAdapterNetwork.Localnet,
     onError,
     localStorageKey = 'walletName',
 }) => {
@@ -176,7 +182,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
             isConnecting.current = true;
             setConnecting(true);
             try {
-                await adapter.connect();
+                await adapter.connect(decryptPermission, network);
             } catch (error: any) {
                 // Clear the selected wallet
                 setName(null);
@@ -207,7 +213,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         isConnecting.current = true;
         setConnecting(true);
         try {
-            await adapter.connect();
+            await adapter.connect(decryptPermission, network);
         } catch (error: any) {
             // Clear the selected wallet
             setName(null);
@@ -314,6 +320,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         <WalletContext.Provider
             value={{
                 autoConnect,
+                decryptPermission,
                 wallets,
                 wallet,
                 publicKey,

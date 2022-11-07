@@ -45,8 +45,7 @@ export interface LeoWindow extends Window {
 declare const window: LeoWindow;
 
 export interface LeoWalletAdapterConfig {
-    appName?: string,
-    decryptPermission?: DecryptPermission
+    appName?: string
 }
 
 export const LeoWalletName = 'Leo Wallet' as WalletName<'Leo Wallet'>;
@@ -68,12 +67,12 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
             ? WalletReadyState.Unsupported
             : WalletReadyState.NotDetected;
 
-    constructor({ appName = 'sample', decryptPermission = DecryptPermission.NoDecrypt } : LeoWalletAdapterConfig = {}) {
+    constructor({ appName = 'sample'} : LeoWalletAdapterConfig = {}) {
         super();
         this._connecting = false;
         this._wallet = null;
         this._publicKey = null;
-        this._decryptPermission = decryptPermission;
+        this._decryptPermission = DecryptPermission.NoDecrypt;
         this._viewKey = null;
 
         if (this._readyState !== WalletReadyState.Unsupported) {

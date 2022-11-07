@@ -7,7 +7,6 @@
 ### Properties
 
 - [appName](LeoWalletAdapterConfig.md#appname)
-- [decryptPermission](LeoWalletAdapterConfig.md#decryptpermission)
 
 ## Properties
 
@@ -17,14 +16,4 @@
 
 #### Defined in
 
-[adapter.ts:48](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L48)
-
-___
-
-### decryptPermission
-
-• `Optional` **decryptPermission**: `DecryptPermission`
-
-#### Defined in
-
-[adapter.ts:49](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L49)
+[adapter.ts:48](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L48)

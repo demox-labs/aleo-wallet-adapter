@@ -8,7 +8,9 @@
 
 - [autoConnect](WalletProviderProps.md#autoconnect)
 - [children](WalletProviderProps.md#children)
+- [decryptPermission](WalletProviderProps.md#decryptpermission)
 - [localStorageKey](WalletProviderProps.md#localstoragekey)
+- [network](WalletProviderProps.md#network)
 - [onError](WalletProviderProps.md#onerror)
 - [wallets](WalletProviderProps.md#wallets)
 
@@ -20,7 +22,7 @@
 
 #### Defined in
 
-[WalletProvider.tsx:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/react/WalletProvider.tsx#L21)
+[WalletProvider.tsx:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L25)
 
 ___
 
@@ -30,7 +32,17 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/react/WalletProvider.tsx#L19)
+[WalletProvider.tsx:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L21)
+
+___
+
+### decryptPermission
+
+• `Optional` **decryptPermission**: `DecryptPermission`
+
+#### Defined in
+
+[WalletProvider.tsx:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L23)
 
 ___
 
@@ -40,7 +52,17 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/react/WalletProvider.tsx#L23)
+[WalletProvider.tsx:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L27)
+
+___
+
+### network
+
+• `Optional` **network**: `WalletAdapterNetwork`
+
+#### Defined in
+
+[WalletProvider.tsx:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L24)
 
 ___
 
@@ -64,7 +86,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/react/WalletProvider.tsx#L22)
+[WalletProvider.tsx:26](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L26)
 
 ___
 
@@ -74,4 +96,4 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/react/WalletProvider.tsx#L20)
+[WalletProvider.tsx:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/react/WalletProvider.tsx#L22)

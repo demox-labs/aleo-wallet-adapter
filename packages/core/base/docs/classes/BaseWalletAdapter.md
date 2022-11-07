@@ -88,7 +88,7 @@ WalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:74](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L74)
+[adapter.ts:74](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L74)
 
 ___
 
@@ -102,7 +102,7 @@ WalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L70)
+[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L70)
 
 ___
 
@@ -116,7 +116,7 @@ WalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L68)
+[adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L68)
 
 ___
 
@@ -130,7 +130,7 @@ WalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L72)
+[adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L72)
 
 ___
 
@@ -144,7 +144,7 @@ WalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L71)
+[adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L71)
 
 ___
 
@@ -158,7 +158,7 @@ WalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L75)
+[adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L75)
 
 ___
 
@@ -172,7 +172,7 @@ WalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L69)
+[adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L69)
 
 ___
 
@@ -186,7 +186,7 @@ WalletAdapter.viewKey
 
 #### Defined in
 
-[adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L73)
+[adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L73)
 
 ___
 
@@ -218,7 +218,7 @@ WalletAdapter.connected
 
 #### Defined in
 
-[adapter.ts:77](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L77)
+[adapter.ts:77](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L77)
 
 ## Methods
 
@@ -260,7 +260,14 @@ ___
 
 ### connect
 
-▸ `Abstract` **connect**(): `Promise`<`void`\>
+▸ `Abstract` **connect**(`decryptPermission`, `network`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
+| `network` | [`WalletAdapterNetwork`](../enums/WalletAdapterNetwork.md) |
 
 #### Returns
 
@@ -272,7 +279,7 @@ WalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:81](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L81)
+[adapter.ts:81](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L81)
 
 ___
 
@@ -290,7 +297,7 @@ WalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:82](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L82)
+[adapter.ts:82](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L82)
 
 ___
 

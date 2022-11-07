@@ -8,7 +8,6 @@
 
 - [appName](LeoWalletAdapterConfig.md#appname)
 - [decryptPermission](LeoWalletAdapterConfig.md#decryptpermission)
-- [network](LeoWalletAdapterConfig.md#network)
 
 ## Properties
 
@@ -18,24 +17,14 @@
 
 #### Defined in
 
-[adapter.ts:53](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L53)
+[adapter.ts:48](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L48)
 
 ___
 
 ### decryptPermission
 
-• `Optional` **decryptPermission**: `string`
+• `Optional` **decryptPermission**: `DecryptPermission`
 
 #### Defined in
 
-[adapter.ts:54](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L54)
-
-___
-
-### network
-
-• `Optional` **network**: [`AleoDAppNetwork`](../modules.md#aleodappnetwork)
-
-#### Defined in
-
-[adapter.ts:52](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L52)
+[adapter.ts:49](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L49)

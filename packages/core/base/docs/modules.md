@@ -10,6 +10,8 @@
 
 ### Enumerations
 
+- [DecryptPermission](enums/DecryptPermission.md)
+- [WalletAdapterNetwork](enums/WalletAdapterNetwork.md)
 - [WalletReadyState](enums/WalletReadyState.md)
 
 ### Classes
@@ -57,10 +59,6 @@
 - [WalletAdapter](modules.md#walletadapter)
 - [WalletName](modules.md#walletname)
 
-### Variables
-
-- [WalletAdapterNetwork](modules.md#walletadapternetwork)
-
 ### Functions
 
 - [scopePollingDetectionStrategy](modules.md#scopepollingdetectionstrategy)
@@ -73,7 +71,7 @@
 
 #### Defined in
 
-[signer.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/signer.ts#L5)
+[signer.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L5)
 
 ___
 
@@ -89,7 +87,7 @@ ___
 
 #### Defined in
 
-[signer.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/signer.ts#L38)
+[signer.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L38)
 
 ___
 
@@ -105,7 +103,7 @@ ___
 
 #### Defined in
 
-[signer.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/signer.ts#L16)
+[signer.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L16)
 
 ___
 
@@ -115,7 +113,7 @@ ___
 
 #### Defined in
 
-[types.ts:7](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/types.ts#L7)
+[types.ts:7](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L7)
 
 ___
 
@@ -131,7 +129,7 @@ ___
 
 #### Defined in
 
-[types.ts:9](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/types.ts#L9)
+[types.ts:9](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L9)
 
 ___
 
@@ -147,7 +145,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L33)
+[adapter.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L33)
 
 ___
 
@@ -163,25 +161,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L16)
-
-## Variables
-
-### WalletAdapterNetwork
-
-• `Const` **WalletAdapterNetwork**: `Object`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `Devnet` | `string` |
-| `Mainnet` | `string` |
-| `Testnet` | `string` |
-
-#### Defined in
-
-[types.ts:1](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/types.ts#L1)
+[adapter.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L16)
 
 ## Functions
 
@@ -201,4 +181,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:85](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/core/base/adapter.ts#L85)
+[adapter.ts:85](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L85)

@@ -16,11 +16,8 @@
 
 ### Properties
 
-- [\_appName](LeoWalletAdapter.md#_appname)
 - [\_connecting](LeoWalletAdapter.md#_connecting)
 - [\_decryptPermission](LeoWalletAdapter.md#_decryptpermission)
-- [\_network](LeoWalletAdapter.md#_network)
-- [\_permission](LeoWalletAdapter.md#_permission)
 - [\_publicKey](LeoWalletAdapter.md#_publickey)
 - [\_readyState](LeoWalletAdapter.md#_readystate)
 - [\_viewKey](LeoWalletAdapter.md#_viewkey)
@@ -78,19 +75,9 @@ BaseMessageSignerWalletAdapter.constructor
 
 #### Defined in
 
-[adapter.ts:79](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L79)
+[adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L71)
 
 ## Properties
-
-### \_appName
-
-• `Private` **\_appName**: `string`
-
-#### Defined in
-
-[adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L67)
-
-___
 
 ### \_connecting
 
@@ -98,7 +85,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L69)
+[adapter.ts:61](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L61)
 
 ___
 
@@ -108,36 +95,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L72)
-
-___
-
-### \_network
-
-• `Private` **\_network**: [`AleoDAppNetwork`](../modules.md#aleodappnetwork)
-
-#### Defined in
-
-[adapter.ts:66](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L66)
-
-___
-
-### \_permission
-
-• `Private` **\_permission**: `Object` = `null`
-
-#### Type declaration
-
-| Name | Type |
-| :------ | :------ |
-| `decryptPermission` | `string` |
-| `publicKey` | `string` |
-| `rpc` | `string` |
-| `viewKey?` | `string` |
-
-#### Defined in
-
-[adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L68)
+[adapter.ts:64](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L64)
 
 ___
 
@@ -147,7 +105,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L71)
+[adapter.ts:63](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L63)
 
 ___
 
@@ -157,7 +115,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:74](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L74)
+[adapter.ts:66](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L66)
 
 ___
 
@@ -167,23 +125,23 @@ ___
 
 #### Defined in
 
-[adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L73)
+[adapter.ts:65](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L65)
 
 ___
 
 ### \_wallet
 
-• `Private` **\_wallet**: `LeoWallet`
+• `Private` **\_wallet**: [`LeoWallet`](../interfaces/LeoWallet.md)
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L70)
+[adapter.ts:62](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L62)
 
 ___
 
 ### icon
 
-• **icon**: `string` = `'data:image/png;base64,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'`
+• **icon**: `string` = `'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJERjI1N0M3NUFERjExRUQ4OTkyRDkwNjQwODFGMjUwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJERjI1N0M4NUFERjExRUQ4OTkyRDkwNjQwODFGMjUwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkRGMjU3QzU1QURGMTFFRDg5OTJEOTA2NDA4MUYyNTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MkRGMjU3QzY1QURGMTFFRDg5OTJEOTA2NDA4MUYyNTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7ZyM59AAACz0lEQVR42uzdT2vTYADH8d+Tpo3oYeph4g4iE6boZV68idKDiHj1spt7BYL4DgTfgKDgTdxZr4JXD4LCRMGLghtUGPgHpbWmaRuTsWOTOpfkyZ5+v+xWlrT5dE+ewJPFrLRjkb08DgEAABAAABAAAFD1+TmvxbFGQ5VxmdBoyMumT3Y6dujixPdlzO4BkqPvNzV/PO+X/7vuL/W6k7ec7PfovILAHYAf3zQIMw9jJsBwqGMLuvcoBSy8tYd6tqaDhya8FA20ekvLF9wBuHtb798oOLD7IShBawV5Y8VehqCcms30j8+d06y3h5PweFzKe4pjCzu1Vf6HZRbENBQAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAmgGArGWUTubX7Q01fD1/qvVXU1b0FVs00KkzungFgO11uy9faDSqdKf9ntrXAbA3BBljbdzjJMxJGAACAAACYDar4zQ0uSwq4zYx46nVAmBaw0g3VrV4uvgtb3X05MHOrB+AzJLv/tllnTtf/Ja/bO4AcA6Y0iAsZbPhH07CBAAABAAABAAABAAABAAAABAAABAAABAAABAAABAAABAAABAAAFippMdnNFt1BKjd2lBj0kWcc4cLfnqTkTobAPzb9/Tx/RJ1AZheebdoA7BfDxOzIAAIAAAIAOeyMwuKIvV/y6t2tmO8Ov4rKDsAi0u6dLXSw5FY97r68BaA7S5fS38qrrOhOzdrd50xQ+eAku5+BYBZEAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAGwrwBculuonp/Fy3/HjYZD37Xcz2I8O/BmpT35nsQ4VhDo5JI7fwRhX58/Tn5pPNbcES2cKGW/m5/ShdleBrCf4xaGevfaoSEo+zFWydH5+V1ft0rZb7OVefSVvzzd4kNerQxQgY3xllkQ01AACAAACAAAyEJ/BRgAJph5IP1XFpwAAAAASUVORK5CYII='`
 
 #### Overrides
 
@@ -191,7 +149,7 @@ BaseMessageSignerWalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:62](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L62)
+[adapter.ts:57](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L57)
 
 ___
 
@@ -205,7 +163,7 @@ BaseMessageSignerWalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:60](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L60)
+[adapter.ts:55](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L55)
 
 ___
 
@@ -219,7 +177,7 @@ BaseMessageSignerWalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:64](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L64)
+[adapter.ts:59](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L59)
 
 ___
 
@@ -233,7 +191,7 @@ BaseMessageSignerWalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:61](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L61)
+[adapter.ts:56](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L56)
 
 ___
 
@@ -283,7 +241,7 @@ BaseMessageSignerWalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:113](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L113)
+[adapter.ts:103](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L103)
 
 ___
 
@@ -297,7 +255,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:109](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L109)
+[adapter.ts:99](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L99)
 
 ___
 
@@ -315,7 +273,7 @@ BaseMessageSignerWalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:101](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L101)
+[adapter.ts:91](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L91)
 
 ___
 
@@ -333,7 +291,7 @@ BaseMessageSignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:117](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L117)
+[adapter.ts:107](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L107)
 
 • `set` **readyState**(`readyState`): `void`
 
@@ -353,7 +311,7 @@ BaseMessageSignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:121](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L121)
+[adapter.ts:111](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L111)
 
 ___
 
@@ -371,7 +329,7 @@ BaseMessageSignerWalletAdapter.viewKey
 
 #### Defined in
 
-[adapter.ts:105](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L105)
+[adapter.ts:95](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L95)
 
 ## Methods
 
@@ -409,7 +367,14 @@ ___
 
 ### connect
 
-▸ **connect**(): `Promise`<`void`\>
+▸ **connect**(`decryptPermission`, `network`): `Promise`<`void`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `decryptPermission` | `DecryptPermission` |
+| `network` | `WalletAdapterNetwork` |
 
 #### Returns
 
@@ -421,7 +386,7 @@ BaseMessageSignerWalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:153](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L153)
+[adapter.ts:143](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L143)
 
 ___
 
@@ -445,7 +410,7 @@ BaseMessageSignerWalletAdapter.decrypt
 
 #### Defined in
 
-[adapter.ts:125](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L125)
+[adapter.ts:115](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L115)
 
 ___
 
@@ -463,7 +428,7 @@ BaseMessageSignerWalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:203](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L203)
+[adapter.ts:176](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L176)
 
 ___
 
@@ -755,7 +720,7 @@ BaseMessageSignerWalletAdapter.requestViewKey
 
 #### Defined in
 
-[adapter.ts:239](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L239)
+[adapter.ts:211](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L211)
 
 ___
 
@@ -809,7 +774,7 @@ BaseMessageSignerWalletAdapter.signMessage
 
 #### Defined in
 
-[adapter.ts:221](https://github.com/demox-labs/aleo-wallet-adapter/blob/77a8a54/packages/wallets/leo/adapter.ts#L221)
+[adapter.ts:194](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/wallets/leo/adapter.ts#L194)
 
 ___
 

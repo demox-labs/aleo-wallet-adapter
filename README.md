@@ -2,7 +2,7 @@
 
 Modular TypeScript wallet adapters and components for Aleo applications.
 
-- [Demo](demo.leo.app)
+- [Demo](https://demo.leo.app)
 - [Base Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/base/docs/modules.md)
 - [React Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/react/docs/modules.md)
 - [React UI Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/ui/docs/modules.md)

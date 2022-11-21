@@ -21,7 +21,7 @@ npm install --save \
     @demox-labs/aleo-wallet-adapter-base \
     @demox-labs/aleo-wallet-adapter-react \
     @demox-labs/aleo-wallet-adapter-react-ui \
-    @solana/aleo-wallet-adapter-leo \
+    @demox-labs/aleo-wallet-adapter-leo \
     react
 ```
 

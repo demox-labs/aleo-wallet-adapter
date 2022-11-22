@@ -12,7 +12,7 @@ This is a quick setup guide with examples of how to add Wallet Adapter to a Reac
 
 ## Quick Setup (using React UI)
 
-### Install
+### 📲Install
 
 Install these dependencies:
 
@@ -25,7 +25,9 @@ npm install --save \
     react
 ```
 
-### Setup
+
+
+### 🛠️Setup
 
 ```tsx
 import React, { FC, useMemo } from 'react';
@@ -62,7 +64,9 @@ export const Wallet: FC = () => {
 };
 ```
 
-### Signing
+
+
+### ✍🏻Signing
 
 ```tsx
 import { WalletNotConnectedError } from '@demox-labs/aleo-wallet-adapter-base';
@@ -93,7 +97,10 @@ export const SignMessage: FC = () => {
 };
 ```
 
-### Decrypting
+
+
+### 🔓Decrypting
+
 ```tsx
 import { WalletNotConnectedError } from '@demox-labs/aleo-wallet-adapter-base';
 import { useWallet } from '@demox-labs/aleo-wallet-adapter-react';

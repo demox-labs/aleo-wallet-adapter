@@ -25,102 +25,101 @@ npm install --save \
     react
 ```
 
-
-
 ### 🛠️Setup
 
 ```tsx
-import React, { FC, useMemo } from 'react';
-import { WalletProvider } from '@demox-labs/aleo-wallet-adapter-react';
-import { WalletModalProvider } from '@demox-labs/aleo-wallet-adapter-reactui';
-import { LeoWalletAdapter } from '@demox-labs/aleo-wallet-adapter-leo';
-import { DecryptPermission, WalletAdapterBase } from '@demox-labs/aleo-wallet-adapter-base';
+import React, { FC, useMemo } from "react";
+import { WalletProvider } from "@demox-labs/aleo-wallet-adapter-react";
+import { WalletModalProvider } from "@demox-labs/aleo-wallet-adapter-reactui";
+import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
+import {
+  DecryptPermission,
+  WalletAdapterNetwork,
+} from "@demox-labs/aleo-wallet-adapter-base";
 
 // Default styles that can be overridden by your app
-require('@demox-labs/aleo-wallet-adapter-react-ui/styles.css');
+require("@demox-labs/aleo-wallet-adapter-reactui/styles.css");
 
 export const Wallet: FC = () => {
-    const wallets = useMemo(
+  const wallets = useMemo(
     () => [
       new LeoWalletAdapter({
-        appName: 'Leo Demo App',
+        appName: "Leo Demo App",
       }),
     ],
     []
   );
 
-    return (
-        <WalletProvider
-            wallets={wallets}
-            decryptPermission={DecryptPermission.UponRequest}
-            network={WalletAdapterNetwork.LocalNet}
-            autoConnect
-          >
-          <WalletModalProvider>
-            // Your app's components go here
-          </WalletModalProvider>
-        </WalletProvider>
-    );
+  return (
+    <WalletProvider
+      wallets={wallets}
+      decryptPermission={DecryptPermission.UponRequest}
+      network={WalletAdapterNetwork.Localnet}
+      autoConnect
+    >
+      <WalletModalProvider>
+        // Your app's components go here
+      </WalletModalProvider>
+    </WalletProvider>
+  );
 };
 ```
-
-
 
 ### ✍🏻Signing
 
 ```tsx
-import { WalletNotConnectedError } from '@demox-labs/aleo-wallet-adapter-base';
-import { useWallet } from '@demox-labs/aleo-wallet-adapter-react';
-import React, { FC, useCallback } from 'react';
+import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
+import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
+import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
+import React, { FC, useCallback } from "react";
 
 export const SignMessage: FC = () => {
-    const { wallet, publicKey } = useWallet();
+  const { wallet, publicKey } = useWallet();
 
-    const onClick = useCallback(async () => {
-        if (!publicKey) throw new WalletNotConnectedError();
-        
-        const message = "a message to sign";
-        
-        const bytes = new TextEncoder().encode(message);
-        const signatureBytes = await (
-            wallet?.adapter as LeoWalletAdapter
-        ).signMessage(bytes);
-        const signature = new TextDecoder().decode(signatureBytes);
-        alert("Signed message: " + signature);
-    }
+  const onClick = useCallback(async () => {
+    if (!publicKey) throw new WalletNotConnectedError();
 
-    return (
-        <button onClick={onClick} disabled={!publicKey}>
-            Sign message
-        </button>
-    );
+    const message = "a message to sign";
+
+    const bytes = new TextEncoder().encode(message);
+    const signatureBytes = await (
+      wallet?.adapter as LeoWalletAdapter
+    ).signMessage(bytes);
+    const signature = new TextDecoder().decode(signatureBytes);
+    alert("Signed message: " + signature);
+  }, [wallet, publicKey]);
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Sign message
+    </button>
+  );
 };
 ```
-
-
 
 ### 🔓Decrypting
 
 ```tsx
-import { WalletNotConnectedError } from '@demox-labs/aleo-wallet-adapter-base';
-import { useWallet } from '@demox-labs/aleo-wallet-adapter-react';
-import React, { FC, useCallback } from 'react';
+import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
+import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
 
 export const DecryptMessage: FC = () => {
-    const { wallet, publicKey } = useWallet();
-    
-    const onClick = async () => {
-        const cipherText = 'record....';
-        if (!publicKey) throw new WalletNotConnectedError();
-        const decryptedPayload = await wallet?.adapter).decrypt(cipherText);
-        alert("Decrypted payload: " + decryptedPayload);
-    }
-    
-    return (
-        <button onClick={onClick} disabled={!publicKey}>
-            Decrypt message
-        </button>
-    );
-}
+  const { publicKey, decrypt } = useWallet();
 
+  const onClick = async () => {
+    const cipherText = "record....";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (decrypt) {
+      const decryptedPayload = await decrypt(cipherText);
+      alert("Decrypted payload: " + decryptedPayload);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Decrypt message
+    </button>
+  );
+};
 ```

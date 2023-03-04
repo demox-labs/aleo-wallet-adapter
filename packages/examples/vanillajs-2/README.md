@@ -13,7 +13,7 @@ For example, you can connect to a DApp & request a signature (taken from `./publ
 ```bash
 document.addEventListener("DOMContentLoaded", function(event) {
   var wallet = new window.LeoWallet.LeoWalletAdapter({ appName: 'Vanilla JS Example'});
-  wallet.connect(window.AleoWalletBase.DecryptPermission.AutoDecrypt, window.AleoWalletBase.WalletAdapterNetwork.Mainnet).then(() => {
+  wallet.connect(window.AleoWalletBase.DecryptPermission.AutoDecrypt, window.AleoWalletBase.WalletAdapterNetwork.Testnet).then(() => {
     let utf8Encode = new TextEncoder();
     let bytes = utf8Encode.encode("Leo is awesome");
     wallet.signMessage(bytes);
@@ -46,7 +46,7 @@ yarn build
 
 5. Run the Dev Sever:
 ```bash
-yarn dev
+yarn start
 ```
 
 And open `localhost:9000`

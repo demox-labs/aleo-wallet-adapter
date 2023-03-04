@@ -9,7 +9,7 @@
     <script>
       document.addEventListener("DOMContentLoaded", function(event) {
         var wallet = new window.LeoWallet.LeoWalletAdapter({ appName: 'Vanilla JS Example'});
-        wallet.connect(window.AleoWalletBase.DecryptPermission.AutoDecrypt, window.AleoWalletBase.WalletAdapterNetwork.Mainnet).then(() => {
+        wallet.connect(window.AleoWalletBase.DecryptPermission.AutoDecrypt, window.AleoWalletBase.WalletAdapterNetwork.Testnet).then(() => {
           let utf8Encode = new TextEncoder();
           let bytes = utf8Encode.encode("Leo is awesome");
           wallet.signMessage(bytes);

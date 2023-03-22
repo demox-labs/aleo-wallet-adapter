@@ -20,6 +20,8 @@
 - [BaseSignerWalletAdapter](classes/BaseSignerWalletAdapter.md)
 - [BaseWalletAdapter](classes/BaseWalletAdapter.md)
 - [EventEmitter](classes/EventEmitter-1.md)
+- [Transaction](classes/Transaction.md)
+- [Transition](classes/Transition.md)
 - [WalletAccountError](classes/WalletAccountError.md)
 - [WalletConfigError](classes/WalletConfigError.md)
 - [WalletConnectionError](classes/WalletConnectionError.md)
@@ -34,16 +36,20 @@
 - [WalletNotReadyError](classes/WalletNotReadyError.md)
 - [WalletNotSelectedError](classes/WalletNotSelectedError.md)
 - [WalletPublicKeyError](classes/WalletPublicKeyError.md)
+- [WalletRecordsError](classes/WalletRecordsError.md)
 - [WalletRequestViewKeyError](classes/WalletRequestViewKeyError.md)
 - [WalletSendTransactionError](classes/WalletSendTransactionError.md)
 - [WalletSignMessageError](classes/WalletSignMessageError.md)
 - [WalletSignTransactionError](classes/WalletSignTransactionError.md)
 - [WalletTimeoutError](classes/WalletTimeoutError.md)
+- [WalletTransactionError](classes/WalletTransactionError.md)
 - [WalletWindowBlockedError](classes/WalletWindowBlockedError.md)
 - [WalletWindowClosedError](classes/WalletWindowClosedError.md)
 
 ### Interfaces
 
+- [AleoTransaction](interfaces/AleoTransaction.md)
+- [AleoTransition](interfaces/AleoTransition.md)
 - [MessageSignerWalletAdapterProps](interfaces/MessageSignerWalletAdapterProps.md)
 - [SignerWalletAdapterProps](interfaces/SignerWalletAdapterProps.md)
 - [WalletAdapterEvents](interfaces/WalletAdapterEvents.md)
@@ -71,7 +77,7 @@
 
 #### Defined in
 
-[signer.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L5)
+[signer.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/signer.ts#L5)
 
 ___
 
@@ -87,7 +93,7 @@ ___
 
 #### Defined in
 
-[signer.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L38)
+[signer.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/signer.ts#L28)
 
 ___
 
@@ -103,7 +109,7 @@ ___
 
 #### Defined in
 
-[signer.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L16)
+[signer.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/signer.ts#L9)
 
 ___
 
@@ -113,7 +119,7 @@ ___
 
 #### Defined in
 
-[types.ts:7](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L7)
+[types.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L5)
 
 ___
 
@@ -129,7 +135,7 @@ ___
 
 #### Defined in
 
-[types.ts:9](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L9)
+[types.ts:7](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L7)
 
 ___
 
@@ -145,7 +151,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L33)
+[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L33)
 
 ___
 
@@ -161,7 +167,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L16)
+[adapter.ts:16](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L16)
 
 ## Functions
 
@@ -181,4 +187,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:85](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L85)
+[adapter.ts:85](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L85)

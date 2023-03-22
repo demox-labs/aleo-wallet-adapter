@@ -1,32 +1,32 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / WalletWindowClosedError
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / WalletTransactionError
 
-# Class: WalletWindowClosedError
+# Class: WalletTransactionError
 
 ## Hierarchy
 
 - [`WalletError`](WalletError.md)
 
-  ↳ **`WalletWindowClosedError`**
+  ↳ **`WalletTransactionError`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](WalletWindowClosedError.md#constructor)
+- [constructor](WalletTransactionError.md#constructor)
 
 ### Properties
 
-- [cause](WalletWindowClosedError.md#cause)
-- [error](WalletWindowClosedError.md#error)
-- [message](WalletWindowClosedError.md#message)
-- [name](WalletWindowClosedError.md#name)
-- [stack](WalletWindowClosedError.md#stack)
+- [cause](WalletTransactionError.md#cause)
+- [error](WalletTransactionError.md#error)
+- [message](WalletTransactionError.md#message)
+- [name](WalletTransactionError.md#name)
+- [stack](WalletTransactionError.md#stack)
 
 ## Constructors
 
 ### constructor
 
-• **new WalletWindowClosedError**(`message?`, `error?`)
+• **new WalletTransactionError**(`message?`, `error?`)
 
 #### Parameters
 
@@ -89,7 +89,7 @@ ___
 
 ### name
 
-• **name**: `string` = `'WalletWindowClosedError'`
+• **name**: `string` = `'WalletTransactionError'`
 
 #### Overrides
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[errors.ts:80](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/errors.ts#L80)
+[errors.ts:96](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/errors.ts#L96)
 
 ___
 

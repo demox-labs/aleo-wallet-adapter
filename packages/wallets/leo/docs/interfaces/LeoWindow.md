@@ -43,9 +43,11 @@
 - [onanimationiteration](LeoWindow.md#onanimationiteration)
 - [onanimationstart](LeoWindow.md#onanimationstart)
 - [onauxclick](LeoWindow.md#onauxclick)
+- [onbeforeinput](LeoWindow.md#onbeforeinput)
 - [onbeforeprint](LeoWindow.md#onbeforeprint)
 - [onbeforeunload](LeoWindow.md#onbeforeunload)
 - [onblur](LeoWindow.md#onblur)
+- [oncancel](LeoWindow.md#oncancel)
 - [oncanplay](LeoWindow.md#oncanplay)
 - [oncanplaythrough](LeoWindow.md#oncanplaythrough)
 - [onchange](LeoWindow.md#onchange)
@@ -235,7 +237,7 @@ Window.caches
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16723
+node_modules/typescript/lib/lib.dom.d.ts:16958
 
 ___
 
@@ -253,7 +255,7 @@ Window.clientInformation
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16547
+node_modules/typescript/lib/lib.dom.d.ts:16782
 
 ___
 
@@ -269,7 +271,7 @@ Window.closed
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16549
+node_modules/typescript/lib/lib.dom.d.ts:16784
 
 ___
 
@@ -283,7 +285,7 @@ Window.crossOriginIsolated
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16724
+node_modules/typescript/lib/lib.dom.d.ts:16959
 
 ___
 
@@ -297,7 +299,7 @@ Window.crypto
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16725
+node_modules/typescript/lib/lib.dom.d.ts:16960
 
 ___
 
@@ -313,7 +315,7 @@ Window.customElements
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16551
+node_modules/typescript/lib/lib.dom.d.ts:16786
 
 ___
 
@@ -327,7 +329,7 @@ Window.devicePixelRatio
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16552
+node_modules/typescript/lib/lib.dom.d.ts:16787
 
 ___
 
@@ -341,7 +343,7 @@ Window.document
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16553
+node_modules/typescript/lib/lib.dom.d.ts:16788
 
 ___
 
@@ -357,7 +359,7 @@ Window.event
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16555
+node_modules/typescript/lib/lib.dom.d.ts:16790
 
 ___
 
@@ -373,7 +375,7 @@ Window.external
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16557
+node_modules/typescript/lib/lib.dom.d.ts:16792
 
 ___
 
@@ -387,7 +389,7 @@ Window.frameElement
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16558
+node_modules/typescript/lib/lib.dom.d.ts:16793
 
 ___
 
@@ -401,7 +403,7 @@ Window.frames
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16559
+node_modules/typescript/lib/lib.dom.d.ts:16794
 
 ___
 
@@ -415,7 +417,7 @@ Window.history
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16560
+node_modules/typescript/lib/lib.dom.d.ts:16795
 
 ___
 
@@ -429,7 +431,7 @@ Window.indexedDB
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16726
+node_modules/typescript/lib/lib.dom.d.ts:16961
 
 ___
 
@@ -443,7 +445,7 @@ Window.innerHeight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16561
+node_modules/typescript/lib/lib.dom.d.ts:16796
 
 ___
 
@@ -457,7 +459,7 @@ Window.innerWidth
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16562
+node_modules/typescript/lib/lib.dom.d.ts:16797
 
 ___
 
@@ -471,7 +473,7 @@ Window.isSecureContext
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16727
+node_modules/typescript/lib/lib.dom.d.ts:16962
 
 ___
 
@@ -485,7 +487,7 @@ Window.length
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16563
+node_modules/typescript/lib/lib.dom.d.ts:16798
 
 ___
 
@@ -495,7 +497,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:42](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L42)
+[adapter.ts:41](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L41)
 
 ___
 
@@ -509,7 +511,7 @@ Window.localStorage
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16718
+node_modules/typescript/lib/lib.dom.d.ts:16953
 
 ___
 
@@ -525,7 +527,7 @@ Window.locationbar
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16567
+node_modules/typescript/lib/lib.dom.d.ts:16802
 
 ___
 
@@ -541,7 +543,7 @@ Window.menubar
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16569
+node_modules/typescript/lib/lib.dom.d.ts:16804
 
 ___
 
@@ -555,7 +557,7 @@ Window.name
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16570
+node_modules/typescript/lib/lib.dom.d.ts:16805
 
 ___
 
@@ -569,7 +571,7 @@ Window.navigator
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16571
+node_modules/typescript/lib/lib.dom.d.ts:16806
 
 ___
 
@@ -600,7 +602,7 @@ Window.onabort
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5665
+node_modules/typescript/lib/lib.dom.d.ts:5819
 
 ___
 
@@ -629,7 +631,7 @@ Window.onafterprint
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16693
+node_modules/typescript/lib/lib.dom.d.ts:16928
 
 ___
 
@@ -658,7 +660,7 @@ Window.onanimationcancel
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5666
+node_modules/typescript/lib/lib.dom.d.ts:5820
 
 ___
 
@@ -687,7 +689,7 @@ Window.onanimationend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5667
+node_modules/typescript/lib/lib.dom.d.ts:5821
 
 ___
 
@@ -716,7 +718,7 @@ Window.onanimationiteration
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5668
+node_modules/typescript/lib/lib.dom.d.ts:5822
 
 ___
 
@@ -745,7 +747,7 @@ Window.onanimationstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5669
+node_modules/typescript/lib/lib.dom.d.ts:5823
 
 ___
 
@@ -774,7 +776,36 @@ Window.onauxclick
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5670
+node_modules/typescript/lib/lib.dom.d.ts:5824
+
+___
+
+### onbeforeinput
+
+• **onbeforeinput**: (`this`: `GlobalEventHandlers`, `ev`: `InputEvent`) => `any`
+
+#### Type declaration
+
+▸ (`this`, `ev`): `any`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `this` | `GlobalEventHandlers` |
+| `ev` | `InputEvent` |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+Window.onbeforeinput
+
+#### Defined in
+
+node_modules/typescript/lib/lib.dom.d.ts:5825
 
 ___
 
@@ -803,7 +834,7 @@ Window.onbeforeprint
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16694
+node_modules/typescript/lib/lib.dom.d.ts:16929
 
 ___
 
@@ -832,7 +863,7 @@ Window.onbeforeunload
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16695
+node_modules/typescript/lib/lib.dom.d.ts:16930
 
 ___
 
@@ -863,7 +894,36 @@ Window.onblur
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5675
+node_modules/typescript/lib/lib.dom.d.ts:5830
+
+___
+
+### oncancel
+
+• **oncancel**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+
+#### Type declaration
+
+▸ (`this`, `ev`): `any`
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `this` | `GlobalEventHandlers` |
+| `ev` | `Event` |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+Window.oncancel
+
+#### Defined in
+
+node_modules/typescript/lib/lib.dom.d.ts:5831
 
 ___
 
@@ -894,7 +954,7 @@ Window.oncanplay
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5680
+node_modules/typescript/lib/lib.dom.d.ts:5836
 
 ___
 
@@ -923,7 +983,7 @@ Window.oncanplaythrough
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5681
+node_modules/typescript/lib/lib.dom.d.ts:5837
 
 ___
 
@@ -954,7 +1014,7 @@ Window.onchange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5686
+node_modules/typescript/lib/lib.dom.d.ts:5842
 
 ___
 
@@ -985,7 +1045,7 @@ Window.onclick
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5691
+node_modules/typescript/lib/lib.dom.d.ts:5847
 
 ___
 
@@ -1014,7 +1074,7 @@ Window.onclose
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5692
+node_modules/typescript/lib/lib.dom.d.ts:5848
 
 ___
 
@@ -1045,7 +1105,7 @@ Window.oncontextmenu
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5697
+node_modules/typescript/lib/lib.dom.d.ts:5853
 
 ___
 
@@ -1074,7 +1134,7 @@ Window.oncuechange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5698
+node_modules/typescript/lib/lib.dom.d.ts:5854
 
 ___
 
@@ -1105,7 +1165,7 @@ Window.ondblclick
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5703
+node_modules/typescript/lib/lib.dom.d.ts:5859
 
 ___
 
@@ -1136,7 +1196,7 @@ Window.ondevicemotion
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16573
+node_modules/typescript/lib/lib.dom.d.ts:16808
 
 ___
 
@@ -1167,7 +1227,7 @@ Window.ondeviceorientation
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16575
+node_modules/typescript/lib/lib.dom.d.ts:16810
 
 ___
 
@@ -1198,7 +1258,7 @@ Window.ondrag
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5708
+node_modules/typescript/lib/lib.dom.d.ts:5864
 
 ___
 
@@ -1229,7 +1289,7 @@ Window.ondragend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5713
+node_modules/typescript/lib/lib.dom.d.ts:5869
 
 ___
 
@@ -1260,7 +1320,7 @@ Window.ondragenter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5718
+node_modules/typescript/lib/lib.dom.d.ts:5874
 
 ___
 
@@ -1291,7 +1351,7 @@ Window.ondragleave
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5723
+node_modules/typescript/lib/lib.dom.d.ts:5879
 
 ___
 
@@ -1322,7 +1382,7 @@ Window.ondragover
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5728
+node_modules/typescript/lib/lib.dom.d.ts:5884
 
 ___
 
@@ -1353,7 +1413,7 @@ Window.ondragstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5733
+node_modules/typescript/lib/lib.dom.d.ts:5889
 
 ___
 
@@ -1382,7 +1442,7 @@ Window.ondrop
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5734
+node_modules/typescript/lib/lib.dom.d.ts:5890
 
 ___
 
@@ -1413,7 +1473,7 @@ Window.ondurationchange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5739
+node_modules/typescript/lib/lib.dom.d.ts:5895
 
 ___
 
@@ -1444,7 +1504,7 @@ Window.onemptied
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5744
+node_modules/typescript/lib/lib.dom.d.ts:5900
 
 ___
 
@@ -1475,7 +1535,7 @@ Window.onended
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5749
+node_modules/typescript/lib/lib.dom.d.ts:5905
 
 ___
 
@@ -1495,7 +1555,7 @@ Window.onerror
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5754
+node_modules/typescript/lib/lib.dom.d.ts:5910
 
 ___
 
@@ -1526,7 +1586,7 @@ Window.onfocus
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5759
+node_modules/typescript/lib/lib.dom.d.ts:5915
 
 ___
 
@@ -1555,7 +1615,7 @@ Window.onformdata
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5760
+node_modules/typescript/lib/lib.dom.d.ts:5916
 
 ___
 
@@ -1584,7 +1644,7 @@ Window.ongamepadconnected
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16696
+node_modules/typescript/lib/lib.dom.d.ts:16931
 
 ___
 
@@ -1613,7 +1673,7 @@ Window.ongamepaddisconnected
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16697
+node_modules/typescript/lib/lib.dom.d.ts:16932
 
 ___
 
@@ -1642,7 +1702,7 @@ Window.ongotpointercapture
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5761
+node_modules/typescript/lib/lib.dom.d.ts:5917
 
 ___
 
@@ -1671,7 +1731,7 @@ Window.onhashchange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16698
+node_modules/typescript/lib/lib.dom.d.ts:16933
 
 ___
 
@@ -1700,7 +1760,7 @@ Window.oninput
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5762
+node_modules/typescript/lib/lib.dom.d.ts:5918
 
 ___
 
@@ -1729,7 +1789,7 @@ Window.oninvalid
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5763
+node_modules/typescript/lib/lib.dom.d.ts:5919
 
 ___
 
@@ -1760,7 +1820,7 @@ Window.onkeydown
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5768
+node_modules/typescript/lib/lib.dom.d.ts:5924
 
 ___
 
@@ -1793,7 +1853,7 @@ Window.onkeypress
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5774
+node_modules/typescript/lib/lib.dom.d.ts:5930
 
 ___
 
@@ -1824,7 +1884,7 @@ Window.onkeyup
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5779
+node_modules/typescript/lib/lib.dom.d.ts:5935
 
 ___
 
@@ -1853,7 +1913,7 @@ Window.onlanguagechange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16699
+node_modules/typescript/lib/lib.dom.d.ts:16934
 
 ___
 
@@ -1884,7 +1944,7 @@ Window.onload
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5784
+node_modules/typescript/lib/lib.dom.d.ts:5940
 
 ___
 
@@ -1915,7 +1975,7 @@ Window.onloadeddata
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5789
+node_modules/typescript/lib/lib.dom.d.ts:5945
 
 ___
 
@@ -1946,7 +2006,7 @@ Window.onloadedmetadata
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5794
+node_modules/typescript/lib/lib.dom.d.ts:5950
 
 ___
 
@@ -1977,7 +2037,7 @@ Window.onloadstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5799
+node_modules/typescript/lib/lib.dom.d.ts:5955
 
 ___
 
@@ -2006,7 +2066,7 @@ Window.onlostpointercapture
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5800
+node_modules/typescript/lib/lib.dom.d.ts:5956
 
 ___
 
@@ -2035,7 +2095,7 @@ Window.onmessage
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16700
+node_modules/typescript/lib/lib.dom.d.ts:16935
 
 ___
 
@@ -2064,7 +2124,7 @@ Window.onmessageerror
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16701
+node_modules/typescript/lib/lib.dom.d.ts:16936
 
 ___
 
@@ -2095,7 +2155,7 @@ Window.onmousedown
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5805
+node_modules/typescript/lib/lib.dom.d.ts:5961
 
 ___
 
@@ -2124,7 +2184,7 @@ Window.onmouseenter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5806
+node_modules/typescript/lib/lib.dom.d.ts:5962
 
 ___
 
@@ -2153,7 +2213,7 @@ Window.onmouseleave
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5807
+node_modules/typescript/lib/lib.dom.d.ts:5963
 
 ___
 
@@ -2184,7 +2244,7 @@ Window.onmousemove
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5812
+node_modules/typescript/lib/lib.dom.d.ts:5968
 
 ___
 
@@ -2215,7 +2275,7 @@ Window.onmouseout
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5817
+node_modules/typescript/lib/lib.dom.d.ts:5973
 
 ___
 
@@ -2246,7 +2306,7 @@ Window.onmouseover
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5822
+node_modules/typescript/lib/lib.dom.d.ts:5978
 
 ___
 
@@ -2277,7 +2337,7 @@ Window.onmouseup
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5827
+node_modules/typescript/lib/lib.dom.d.ts:5983
 
 ___
 
@@ -2306,7 +2366,7 @@ Window.onoffline
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16702
+node_modules/typescript/lib/lib.dom.d.ts:16937
 
 ___
 
@@ -2335,7 +2395,7 @@ Window.ononline
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16703
+node_modules/typescript/lib/lib.dom.d.ts:16938
 
 ___
 
@@ -2366,7 +2426,7 @@ Window.onorientationchange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16577
+node_modules/typescript/lib/lib.dom.d.ts:16812
 
 ___
 
@@ -2395,7 +2455,7 @@ Window.onpagehide
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16704
+node_modules/typescript/lib/lib.dom.d.ts:16939
 
 ___
 
@@ -2424,7 +2484,7 @@ Window.onpageshow
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16705
+node_modules/typescript/lib/lib.dom.d.ts:16940
 
 ___
 
@@ -2455,7 +2515,7 @@ Window.onpause
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5832
+node_modules/typescript/lib/lib.dom.d.ts:5988
 
 ___
 
@@ -2486,7 +2546,7 @@ Window.onplay
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5837
+node_modules/typescript/lib/lib.dom.d.ts:5993
 
 ___
 
@@ -2517,7 +2577,7 @@ Window.onplaying
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5842
+node_modules/typescript/lib/lib.dom.d.ts:5998
 
 ___
 
@@ -2546,7 +2606,7 @@ Window.onpointercancel
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5843
+node_modules/typescript/lib/lib.dom.d.ts:5999
 
 ___
 
@@ -2575,7 +2635,7 @@ Window.onpointerdown
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5844
+node_modules/typescript/lib/lib.dom.d.ts:6000
 
 ___
 
@@ -2604,7 +2664,7 @@ Window.onpointerenter
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5845
+node_modules/typescript/lib/lib.dom.d.ts:6001
 
 ___
 
@@ -2633,7 +2693,7 @@ Window.onpointerleave
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5846
+node_modules/typescript/lib/lib.dom.d.ts:6002
 
 ___
 
@@ -2662,7 +2722,7 @@ Window.onpointermove
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5847
+node_modules/typescript/lib/lib.dom.d.ts:6003
 
 ___
 
@@ -2691,7 +2751,7 @@ Window.onpointerout
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5848
+node_modules/typescript/lib/lib.dom.d.ts:6004
 
 ___
 
@@ -2720,7 +2780,7 @@ Window.onpointerover
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5849
+node_modules/typescript/lib/lib.dom.d.ts:6005
 
 ___
 
@@ -2749,7 +2809,7 @@ Window.onpointerup
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5850
+node_modules/typescript/lib/lib.dom.d.ts:6006
 
 ___
 
@@ -2778,7 +2838,7 @@ Window.onpopstate
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16706
+node_modules/typescript/lib/lib.dom.d.ts:16941
 
 ___
 
@@ -2809,7 +2869,7 @@ Window.onprogress
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5855
+node_modules/typescript/lib/lib.dom.d.ts:6011
 
 ___
 
@@ -2840,7 +2900,7 @@ Window.onratechange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5860
+node_modules/typescript/lib/lib.dom.d.ts:6016
 
 ___
 
@@ -2869,7 +2929,7 @@ Window.onrejectionhandled
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16707
+node_modules/typescript/lib/lib.dom.d.ts:16942
 
 ___
 
@@ -2900,7 +2960,7 @@ Window.onreset
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5865
+node_modules/typescript/lib/lib.dom.d.ts:6021
 
 ___
 
@@ -2929,7 +2989,7 @@ Window.onresize
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5866
+node_modules/typescript/lib/lib.dom.d.ts:6022
 
 ___
 
@@ -2960,7 +3020,7 @@ Window.onscroll
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5871
+node_modules/typescript/lib/lib.dom.d.ts:6027
 
 ___
 
@@ -2989,7 +3049,7 @@ Window.onsecuritypolicyviolation
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5872
+node_modules/typescript/lib/lib.dom.d.ts:6028
 
 ___
 
@@ -3020,7 +3080,7 @@ Window.onseeked
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5877
+node_modules/typescript/lib/lib.dom.d.ts:6033
 
 ___
 
@@ -3051,7 +3111,7 @@ Window.onseeking
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5882
+node_modules/typescript/lib/lib.dom.d.ts:6038
 
 ___
 
@@ -3082,7 +3142,7 @@ Window.onselect
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5887
+node_modules/typescript/lib/lib.dom.d.ts:6043
 
 ___
 
@@ -3111,7 +3171,7 @@ Window.onselectionchange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5888
+node_modules/typescript/lib/lib.dom.d.ts:6044
 
 ___
 
@@ -3140,7 +3200,7 @@ Window.onselectstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5889
+node_modules/typescript/lib/lib.dom.d.ts:6045
 
 ___
 
@@ -3169,7 +3229,7 @@ Window.onslotchange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5890
+node_modules/typescript/lib/lib.dom.d.ts:6046
 
 ___
 
@@ -3200,7 +3260,7 @@ Window.onstalled
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5895
+node_modules/typescript/lib/lib.dom.d.ts:6051
 
 ___
 
@@ -3229,7 +3289,7 @@ Window.onstorage
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16708
+node_modules/typescript/lib/lib.dom.d.ts:16943
 
 ___
 
@@ -3258,7 +3318,7 @@ Window.onsubmit
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5896
+node_modules/typescript/lib/lib.dom.d.ts:6052
 
 ___
 
@@ -3289,7 +3349,7 @@ Window.onsuspend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5901
+node_modules/typescript/lib/lib.dom.d.ts:6057
 
 ___
 
@@ -3320,7 +3380,7 @@ Window.ontimeupdate
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5906
+node_modules/typescript/lib/lib.dom.d.ts:6062
 
 ___
 
@@ -3349,7 +3409,7 @@ Window.ontoggle
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5907
+node_modules/typescript/lib/lib.dom.d.ts:6063
 
 ___
 
@@ -3378,7 +3438,7 @@ Window.ontouchcancel
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5908
+node_modules/typescript/lib/lib.dom.d.ts:6064
 
 ___
 
@@ -3407,7 +3467,7 @@ Window.ontouchend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5909
+node_modules/typescript/lib/lib.dom.d.ts:6065
 
 ___
 
@@ -3436,7 +3496,7 @@ Window.ontouchmove
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5910
+node_modules/typescript/lib/lib.dom.d.ts:6066
 
 ___
 
@@ -3465,7 +3525,7 @@ Window.ontouchstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5911
+node_modules/typescript/lib/lib.dom.d.ts:6067
 
 ___
 
@@ -3494,7 +3554,7 @@ Window.ontransitioncancel
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5912
+node_modules/typescript/lib/lib.dom.d.ts:6068
 
 ___
 
@@ -3523,7 +3583,7 @@ Window.ontransitionend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5913
+node_modules/typescript/lib/lib.dom.d.ts:6069
 
 ___
 
@@ -3552,7 +3612,7 @@ Window.ontransitionrun
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5914
+node_modules/typescript/lib/lib.dom.d.ts:6070
 
 ___
 
@@ -3581,7 +3641,7 @@ Window.ontransitionstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5915
+node_modules/typescript/lib/lib.dom.d.ts:6071
 
 ___
 
@@ -3610,7 +3670,7 @@ Window.onunhandledrejection
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16709
+node_modules/typescript/lib/lib.dom.d.ts:16944
 
 ___
 
@@ -3639,7 +3699,7 @@ Window.onunload
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16710
+node_modules/typescript/lib/lib.dom.d.ts:16945
 
 ___
 
@@ -3670,7 +3730,7 @@ Window.onvolumechange
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5920
+node_modules/typescript/lib/lib.dom.d.ts:6076
 
 ___
 
@@ -3701,7 +3761,7 @@ Window.onwaiting
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5925
+node_modules/typescript/lib/lib.dom.d.ts:6081
 
 ___
 
@@ -3734,7 +3794,7 @@ Window.onwebkitanimationend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5927
+node_modules/typescript/lib/lib.dom.d.ts:6083
 
 ___
 
@@ -3767,7 +3827,7 @@ Window.onwebkitanimationiteration
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5929
+node_modules/typescript/lib/lib.dom.d.ts:6085
 
 ___
 
@@ -3800,7 +3860,7 @@ Window.onwebkitanimationstart
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5931
+node_modules/typescript/lib/lib.dom.d.ts:6087
 
 ___
 
@@ -3833,7 +3893,7 @@ Window.onwebkittransitionend
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5933
+node_modules/typescript/lib/lib.dom.d.ts:6089
 
 ___
 
@@ -3862,7 +3922,7 @@ Window.onwheel
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5934
+node_modules/typescript/lib/lib.dom.d.ts:6090
 
 ___
 
@@ -3876,7 +3936,7 @@ Window.opener
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16578
+node_modules/typescript/lib/lib.dom.d.ts:16813
 
 ___
 
@@ -3892,7 +3952,7 @@ Window.orientation
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16580
+node_modules/typescript/lib/lib.dom.d.ts:16815
 
 ___
 
@@ -3906,7 +3966,7 @@ Window.origin
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16728
+node_modules/typescript/lib/lib.dom.d.ts:16963
 
 ___
 
@@ -3920,7 +3980,7 @@ Window.outerHeight
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16581
+node_modules/typescript/lib/lib.dom.d.ts:16816
 
 ___
 
@@ -3934,7 +3994,7 @@ Window.outerWidth
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16582
+node_modules/typescript/lib/lib.dom.d.ts:16817
 
 ___
 
@@ -3952,7 +4012,7 @@ Window.pageXOffset
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16584
+node_modules/typescript/lib/lib.dom.d.ts:16819
 
 ___
 
@@ -3970,7 +4030,7 @@ Window.pageYOffset
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16586
+node_modules/typescript/lib/lib.dom.d.ts:16821
 
 ___
 
@@ -3988,7 +4048,7 @@ Window.parent
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16592
+node_modules/typescript/lib/lib.dom.d.ts:16827
 
 ___
 
@@ -4002,7 +4062,7 @@ Window.performance
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16729
+node_modules/typescript/lib/lib.dom.d.ts:16964
 
 ___
 
@@ -4018,7 +4078,7 @@ Window.personalbar
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16594
+node_modules/typescript/lib/lib.dom.d.ts:16829
 
 ___
 
@@ -4032,7 +4092,7 @@ Window.screen
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16595
+node_modules/typescript/lib/lib.dom.d.ts:16830
 
 ___
 
@@ -4046,7 +4106,7 @@ Window.screenLeft
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16596
+node_modules/typescript/lib/lib.dom.d.ts:16831
 
 ___
 
@@ -4060,7 +4120,7 @@ Window.screenTop
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16597
+node_modules/typescript/lib/lib.dom.d.ts:16832
 
 ___
 
@@ -4074,7 +4134,7 @@ Window.screenX
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16598
+node_modules/typescript/lib/lib.dom.d.ts:16833
 
 ___
 
@@ -4088,7 +4148,7 @@ Window.screenY
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16599
+node_modules/typescript/lib/lib.dom.d.ts:16834
 
 ___
 
@@ -4102,7 +4162,7 @@ Window.scrollX
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16600
+node_modules/typescript/lib/lib.dom.d.ts:16835
 
 ___
 
@@ -4116,7 +4176,7 @@ Window.scrollY
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16601
+node_modules/typescript/lib/lib.dom.d.ts:16836
 
 ___
 
@@ -4132,7 +4192,7 @@ Window.scrollbars
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16603
+node_modules/typescript/lib/lib.dom.d.ts:16838
 
 ___
 
@@ -4146,7 +4206,7 @@ Window.self
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16604
+node_modules/typescript/lib/lib.dom.d.ts:16839
 
 ___
 
@@ -4160,7 +4220,7 @@ Window.sessionStorage
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16745
+node_modules/typescript/lib/lib.dom.d.ts:16980
 
 ___
 
@@ -4174,7 +4234,7 @@ Window.speechSynthesis
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16605
+node_modules/typescript/lib/lib.dom.d.ts:16840
 
 ___
 
@@ -4190,7 +4250,7 @@ Window.status
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16607
+node_modules/typescript/lib/lib.dom.d.ts:16842
 
 ___
 
@@ -4206,7 +4266,7 @@ Window.statusbar
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16609
+node_modules/typescript/lib/lib.dom.d.ts:16844
 
 ___
 
@@ -4222,7 +4282,7 @@ Window.toolbar
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16611
+node_modules/typescript/lib/lib.dom.d.ts:16846
 
 ___
 
@@ -4236,7 +4296,7 @@ Window.top
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16612
+node_modules/typescript/lib/lib.dom.d.ts:16847
 
 ___
 
@@ -4250,7 +4310,7 @@ Window.visualViewport
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16613
+node_modules/typescript/lib/lib.dom.d.ts:16848
 
 ___
 
@@ -4264,7 +4324,7 @@ Window.window
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16614
+node_modules/typescript/lib/lib.dom.d.ts:16849
 
 ## Accessors
 
@@ -4282,7 +4342,7 @@ Window.location
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16564
+node_modules/typescript/lib/lib.dom.d.ts:16799
 
 • `set` **location**(`href`): `void`
 
@@ -4302,7 +4362,7 @@ Window.location
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16565
+node_modules/typescript/lib/lib.dom.d.ts:16800
 
 ## Methods
 
@@ -4334,7 +4394,7 @@ Window.addEventListener
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16659
+node_modules/typescript/lib/lib.dom.d.ts:16894
 
 ▸ **addEventListener**(`type`, `listener`, `options?`): `void`
 
@@ -4356,7 +4416,7 @@ Window.addEventListener
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16660
+node_modules/typescript/lib/lib.dom.d.ts:16895
 
 ___
 
@@ -4380,7 +4440,7 @@ Window.alert
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16615
+node_modules/typescript/lib/lib.dom.d.ts:16850
 
 ___
 
@@ -4404,7 +4464,7 @@ Window.atob
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16730
+node_modules/typescript/lib/lib.dom.d.ts:16965
 
 ___
 
@@ -4422,7 +4482,7 @@ Window.blur
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16616
+node_modules/typescript/lib/lib.dom.d.ts:16851
 
 ___
 
@@ -4446,7 +4506,7 @@ Window.btoa
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16731
+node_modules/typescript/lib/lib.dom.d.ts:16966
 
 ___
 
@@ -4470,7 +4530,7 @@ Window.cancelAnimationFrame
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:2119
+node_modules/typescript/lib/lib.dom.d.ts:2195
 
 ___
 
@@ -4494,7 +4554,7 @@ Window.cancelIdleCallback
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16617
+node_modules/typescript/lib/lib.dom.d.ts:16852
 
 ___
 
@@ -4514,7 +4574,7 @@ Window.captureEvents
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16619
+node_modules/typescript/lib/lib.dom.d.ts:16854
 
 ___
 
@@ -4538,7 +4598,7 @@ Window.clearInterval
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16732
+node_modules/typescript/lib/lib.dom.d.ts:16967
 
 ___
 
@@ -4562,7 +4622,7 @@ Window.clearTimeout
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16733
+node_modules/typescript/lib/lib.dom.d.ts:16968
 
 ___
 
@@ -4582,7 +4642,7 @@ Window.close
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16621
+node_modules/typescript/lib/lib.dom.d.ts:16856
 
 ___
 
@@ -4606,7 +4666,7 @@ Window.confirm
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16622
+node_modules/typescript/lib/lib.dom.d.ts:16857
 
 ___
 
@@ -4631,7 +4691,7 @@ Window.createImageBitmap
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16734
+node_modules/typescript/lib/lib.dom.d.ts:16969
 
 ▸ **createImageBitmap**(`image`, `sx`, `sy`, `sw`, `sh`, `options?`): `Promise`<`ImageBitmap`\>
 
@@ -4656,7 +4716,7 @@ Window.createImageBitmap
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16735
+node_modules/typescript/lib/lib.dom.d.ts:16970
 
 ___
 
@@ -4682,7 +4742,7 @@ Window.dispatchEvent
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:5156
+node_modules/typescript/lib/lib.dom.d.ts:5309
 
 ___
 
@@ -4707,7 +4767,7 @@ Window.fetch
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16736
+node_modules/typescript/lib/lib.dom.d.ts:16971
 
 ___
 
@@ -4727,7 +4787,7 @@ Window.focus
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16624
+node_modules/typescript/lib/lib.dom.d.ts:16859
 
 ___
 
@@ -4752,7 +4812,7 @@ Window.getComputedStyle
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16625
+node_modules/typescript/lib/lib.dom.d.ts:16860
 
 ___
 
@@ -4770,7 +4830,7 @@ Window.getSelection
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16626
+node_modules/typescript/lib/lib.dom.d.ts:16861
 
 ___
 
@@ -4794,7 +4854,7 @@ Window.matchMedia
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16627
+node_modules/typescript/lib/lib.dom.d.ts:16862
 
 ___
 
@@ -4819,7 +4879,7 @@ Window.moveBy
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16628
+node_modules/typescript/lib/lib.dom.d.ts:16863
 
 ___
 
@@ -4844,7 +4904,7 @@ Window.moveTo
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16629
+node_modules/typescript/lib/lib.dom.d.ts:16864
 
 ___
 
@@ -4870,7 +4930,7 @@ Window.open
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16630
+node_modules/typescript/lib/lib.dom.d.ts:16865
 
 ___
 
@@ -4906,7 +4966,7 @@ Window.postMessage
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16642
+node_modules/typescript/lib/lib.dom.d.ts:16877
 
 ▸ **postMessage**(`message`, `options?`): `void`
 
@@ -4927,7 +4987,7 @@ Window.postMessage
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16643
+node_modules/typescript/lib/lib.dom.d.ts:16878
 
 ___
 
@@ -4945,7 +5005,7 @@ Window.print
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16644
+node_modules/typescript/lib/lib.dom.d.ts:16879
 
 ___
 
@@ -4970,7 +5030,7 @@ Window.prompt
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16645
+node_modules/typescript/lib/lib.dom.d.ts:16880
 
 ___
 
@@ -4994,7 +5054,7 @@ Window.queueMicrotask
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16737
+node_modules/typescript/lib/lib.dom.d.ts:16972
 
 ___
 
@@ -5014,7 +5074,7 @@ Window.releaseEvents
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16647
+node_modules/typescript/lib/lib.dom.d.ts:16882
 
 ___
 
@@ -5046,7 +5106,7 @@ Window.removeEventListener
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16661
+node_modules/typescript/lib/lib.dom.d.ts:16896
 
 ▸ **removeEventListener**(`type`, `listener`, `options?`): `void`
 
@@ -5068,7 +5128,7 @@ Window.removeEventListener
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16662
+node_modules/typescript/lib/lib.dom.d.ts:16897
 
 ___
 
@@ -5092,7 +5152,7 @@ Window.reportError
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16738
+node_modules/typescript/lib/lib.dom.d.ts:16973
 
 ___
 
@@ -5116,7 +5176,7 @@ Window.requestAnimationFrame
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:2120
+node_modules/typescript/lib/lib.dom.d.ts:2196
 
 ___
 
@@ -5141,7 +5201,7 @@ Window.requestIdleCallback
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16648
+node_modules/typescript/lib/lib.dom.d.ts:16883
 
 ___
 
@@ -5166,7 +5226,7 @@ Window.resizeBy
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16649
+node_modules/typescript/lib/lib.dom.d.ts:16884
 
 ___
 
@@ -5191,7 +5251,7 @@ Window.resizeTo
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16650
+node_modules/typescript/lib/lib.dom.d.ts:16885
 
 ___
 
@@ -5215,7 +5275,7 @@ Window.scroll
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16651
+node_modules/typescript/lib/lib.dom.d.ts:16886
 
 ▸ **scroll**(`x`, `y`): `void`
 
@@ -5236,7 +5296,7 @@ Window.scroll
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16652
+node_modules/typescript/lib/lib.dom.d.ts:16887
 
 ___
 
@@ -5260,7 +5320,7 @@ Window.scrollBy
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16653
+node_modules/typescript/lib/lib.dom.d.ts:16888
 
 ▸ **scrollBy**(`x`, `y`): `void`
 
@@ -5281,7 +5341,7 @@ Window.scrollBy
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16654
+node_modules/typescript/lib/lib.dom.d.ts:16889
 
 ___
 
@@ -5305,7 +5365,7 @@ Window.scrollTo
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16655
+node_modules/typescript/lib/lib.dom.d.ts:16890
 
 ▸ **scrollTo**(`x`, `y`): `void`
 
@@ -5326,7 +5386,7 @@ Window.scrollTo
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16656
+node_modules/typescript/lib/lib.dom.d.ts:16891
 
 ___
 
@@ -5352,7 +5412,7 @@ Window.setInterval
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16739
+node_modules/typescript/lib/lib.dom.d.ts:16974
 
 ___
 
@@ -5378,7 +5438,7 @@ Window.setTimeout
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16740
+node_modules/typescript/lib/lib.dom.d.ts:16975
 
 ___
 
@@ -5398,7 +5458,7 @@ Window.stop
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16658
+node_modules/typescript/lib/lib.dom.d.ts:16893
 
 ___
 
@@ -5423,4 +5483,4 @@ Window.structuredClone
 
 #### Defined in
 
-node_modules/typescript/lib/lib.dom.d.ts:16741
+node_modules/typescript/lib/lib.dom.d.ts:16976

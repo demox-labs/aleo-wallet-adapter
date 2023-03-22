@@ -52,10 +52,10 @@
 - [once](LeoWalletAdapter.md#once)
 - [removeAllListeners](LeoWalletAdapter.md#removealllisteners)
 - [removeListener](LeoWalletAdapter.md#removelistener)
+- [requestRecords](LeoWalletAdapter.md#requestrecords)
+- [requestTransaction](LeoWalletAdapter.md#requesttransaction)
 - [requestViewKey](LeoWalletAdapter.md#requestviewkey)
-- [signAllTransactions](LeoWalletAdapter.md#signalltransactions)
 - [signMessage](LeoWalletAdapter.md#signmessage)
-- [signTransaction](LeoWalletAdapter.md#signtransaction)
 
 ## Constructors
 
@@ -75,7 +75,7 @@ BaseMessageSignerWalletAdapter.constructor
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L70)
+[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L69)
 
 ## Properties
 
@@ -85,7 +85,7 @@ BaseMessageSignerWalletAdapter.constructor
 
 #### Defined in
 
-[adapter.ts:60](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L60)
+[adapter.ts:59](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L59)
 
 ___
 
@@ -95,7 +95,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:63](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L63)
+[adapter.ts:62](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L62)
 
 ___
 
@@ -105,7 +105,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:62](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L62)
+[adapter.ts:61](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L61)
 
 ___
 
@@ -115,7 +115,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:65](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L65)
+[adapter.ts:64](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L64)
 
 ___
 
@@ -125,7 +125,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:64](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L64)
+[adapter.ts:63](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L63)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:61](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L61)
+[adapter.ts:60](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L60)
 
 ___
 
@@ -149,7 +149,7 @@ BaseMessageSignerWalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:56](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L56)
+[adapter.ts:55](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L55)
 
 ___
 
@@ -163,7 +163,7 @@ BaseMessageSignerWalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:54](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L54)
+[adapter.ts:53](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L53)
 
 ___
 
@@ -177,7 +177,7 @@ BaseMessageSignerWalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:58](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L58)
+[adapter.ts:57](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L57)
 
 ___
 
@@ -191,7 +191,7 @@ BaseMessageSignerWalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:55](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L55)
+[adapter.ts:54](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L54)
 
 ___
 
@@ -241,7 +241,7 @@ BaseMessageSignerWalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:102](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L102)
+[adapter.ts:101](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L101)
 
 ___
 
@@ -255,7 +255,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:98](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L98)
+[adapter.ts:97](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L97)
 
 ___
 
@@ -273,7 +273,7 @@ BaseMessageSignerWalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:90](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L90)
+[adapter.ts:89](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L89)
 
 ___
 
@@ -291,7 +291,7 @@ BaseMessageSignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:106](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L106)
+[adapter.ts:105](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L105)
 
 • `set` **readyState**(`readyState`): `void`
 
@@ -311,7 +311,7 @@ BaseMessageSignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:110](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L110)
+[adapter.ts:109](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L109)
 
 ___
 
@@ -329,7 +329,7 @@ BaseMessageSignerWalletAdapter.viewKey
 
 #### Defined in
 
-[adapter.ts:94](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L94)
+[adapter.ts:93](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L93)
 
 ## Methods
 
@@ -374,7 +374,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `decryptPermission` | `DecryptPermission` |
-| `network` | `WalletAdapterNetwork` |
+| `network` | `Testnet` |
 
 #### Returns
 
@@ -386,7 +386,7 @@ BaseMessageSignerWalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:142](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L142)
+[adapter.ts:174](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L174)
 
 ___
 
@@ -410,7 +410,7 @@ BaseMessageSignerWalletAdapter.decrypt
 
 #### Defined in
 
-[adapter.ts:114](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L114)
+[adapter.ts:113](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L113)
 
 ___
 
@@ -428,7 +428,7 @@ BaseMessageSignerWalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:175](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L175)
+[adapter.ts:207](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L207)
 
 ___
 
@@ -706,6 +706,54 @@ node_modules/eventemitter3/index.d.ts:63
 
 ___
 
+### requestRecords
+
+▸ **requestRecords**(`program`): `Promise`<`any`[]\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `program` | `string` |
+
+#### Returns
+
+`Promise`<`any`[]\>
+
+#### Overrides
+
+BaseMessageSignerWalletAdapter.requestRecords
+
+#### Defined in
+
+[adapter.ts:141](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L141)
+
+___
+
+### requestTransaction
+
+▸ **requestTransaction**(`transaction`): `Promise`<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transaction` | `AleoTransaction` |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Overrides
+
+BaseMessageSignerWalletAdapter.requestTransaction
+
+#### Defined in
+
+[adapter.ts:158](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L158)
+
+___
+
 ### requestViewKey
 
 ▸ **requestViewKey**(): `Promise`<`string`\>
@@ -720,37 +768,7 @@ BaseMessageSignerWalletAdapter.requestViewKey
 
 #### Defined in
 
-[adapter.ts:210](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L210)
-
-___
-
-### signAllTransactions
-
-▸ **signAllTransactions**<`T`\>(`transactions`): `Promise`<`T`[]\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `any` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transactions` | `T`[] |
-
-#### Returns
-
-`Promise`<`T`[]\>
-
-#### Inherited from
-
-BaseMessageSignerWalletAdapter.signAllTransactions
-
-#### Defined in
-
-node_modules/@demox-labs/aleo-wallet-adapter-base/dist/signer.d.ts:12
+[adapter.ts:242](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L242)
 
 ___
 
@@ -774,34 +792,4 @@ BaseMessageSignerWalletAdapter.signMessage
 
 #### Defined in
 
-[adapter.ts:193](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L193)
-
-___
-
-### signTransaction
-
-▸ **signTransaction**<`T`\>(`transaction`): `Promise`<`T`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `any` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `T` |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Inherited from
-
-BaseMessageSignerWalletAdapter.signTransaction
-
-#### Defined in
-
-node_modules/@demox-labs/aleo-wallet-adapter-base/dist/signer.d.ts:11
+[adapter.ts:225](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L225)

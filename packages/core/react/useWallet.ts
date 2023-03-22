@@ -1,9 +1,9 @@
 import { createContext, useContext } from 'react';
 import {
   Adapter,
+  AleoTransaction,
   DecryptPermission,
   MessageSignerWalletAdapterProps,
-  SignerWalletAdapterProps,
   WalletAdapterNetwork,
   WalletName,
   WalletReadyState
@@ -28,12 +28,11 @@ export interface WalletContextState {
   connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
   disconnect(): Promise<void>;
 
-  sendTransaction: undefined;
-  signTransaction: SignerWalletAdapterProps['signTransaction'] | undefined;
-  signAllTransactions: SignerWalletAdapterProps['signAllTransactions'] | undefined;
   signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined;
   decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined;
   requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
+  requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined;
+  requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined;
 }
 
 const EMPTY_ARRAY: never[] = [];
@@ -52,12 +51,6 @@ const DEFAULT_CONTEXT = {
   disconnect() {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'disconnect')));
   },
-  signTransaction(_transaction: any) {
-    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signTransaction')));
-  },
-  signAllTransactions(_transaction: any[]) {
-    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signAllTransactions')));
-  },
   signMessage(_message: Uint8Array) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
   },
@@ -67,6 +60,12 @@ const DEFAULT_CONTEXT = {
   requestViewKey() {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestViewKey')));
   },
+  requestRecords(_program: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestRecords')));
+  },
+  requestTransaction(_transaction: AleoTransaction) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransaction')));
+  }
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {
   get() {

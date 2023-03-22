@@ -13,7 +13,7 @@ export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onCli
         (event) => {
             if (onClick) onClick(event);
             // eslint-disable-next-line @typescript-eslint/no-empty-function
-            if (!event.defaultPrevented) connect(decryptPermission || "NO_DECRYPT", network || WalletAdapterNetwork.Localnet).catch(() => {});
+            if (!event.defaultPrevented) connect(decryptPermission || "NO_DECRYPT", network || WalletAdapterNetwork.Testnet).catch(() => {});
         },
         [onClick, connect]
     );

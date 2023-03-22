@@ -21,7 +21,7 @@ Object.defineProperty(DEFAULT_CONTEXT, 'visible', {
 function constructMissingProviderErrorMessage(action: string, valueName: string) {
     return (
         'You have tried to ' +
-        ` ${action} "${valueName}"` +
+        `${action} "${valueName}"` +
         ' on a WalletModalContext without providing one.' +
         ' Make sure to render a WalletModalProvider' +
         ' as an ancestor of the component that uses ' +

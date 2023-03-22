@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[types.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L16)
+[types.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L14)
 
 ___
 
@@ -29,7 +29,7 @@ ___
 
 #### Defined in
 
-[types.ts:14](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L14)
+[types.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L12)
 
 ___
 
@@ -39,7 +39,7 @@ ___
 
 #### Defined in
 
-[types.ts:15](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L15)
+[types.ts:13](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L13)
 
 ___
 
@@ -49,4 +49,4 @@ ___
 
 #### Defined in
 
-[types.ts:17](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L17)
+[types.ts:15](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L15)

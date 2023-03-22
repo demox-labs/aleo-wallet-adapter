@@ -59,8 +59,6 @@ Minimal `EventEmitter` interface that is molded against the Node.js
 - [once](BaseSignerWalletAdapter.md#once)
 - [removeAllListeners](BaseSignerWalletAdapter.md#removealllisteners)
 - [removeListener](BaseSignerWalletAdapter.md#removelistener)
-- [signAllTransactions](BaseSignerWalletAdapter.md#signalltransactions)
-- [signTransaction](BaseSignerWalletAdapter.md#signtransaction)
 
 ## Constructors
 
@@ -94,7 +92,7 @@ SignerWalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:74](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L74)
+[adapter.ts:74](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L74)
 
 ___
 
@@ -112,7 +110,7 @@ SignerWalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L70)
+[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L70)
 
 ___
 
@@ -130,7 +128,7 @@ SignerWalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L68)
+[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L68)
 
 ___
 
@@ -148,7 +146,7 @@ SignerWalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L72)
+[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L72)
 
 ___
 
@@ -166,7 +164,7 @@ SignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L71)
+[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L71)
 
 ___
 
@@ -184,7 +182,7 @@ SignerWalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L75)
+[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L75)
 
 ___
 
@@ -202,7 +200,7 @@ SignerWalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L69)
+[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L69)
 
 ___
 
@@ -220,7 +218,7 @@ SignerWalletAdapter.viewKey
 
 #### Defined in
 
-[adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L73)
+[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L73)
 
 ___
 
@@ -256,7 +254,7 @@ BaseWalletAdapter.connected
 
 #### Defined in
 
-[adapter.ts:77](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L77)
+[adapter.ts:77](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L77)
 
 ## Methods
 
@@ -305,7 +303,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
-| `network` | [`WalletAdapterNetwork`](../enums/WalletAdapterNetwork.md) |
+| `network` | [`Testnet`](../enums/WalletAdapterNetwork.md#testnet) |
 
 #### Returns
 
@@ -321,7 +319,7 @@ SignerWalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:81](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L81)
+[adapter.ts:81](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L81)
 
 ___
 
@@ -343,7 +341,7 @@ SignerWalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:82](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/adapter.ts#L82)
+[adapter.ts:82](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L82)
 
 ___
 
@@ -654,63 +652,3 @@ SignerWalletAdapter.removeListener
 #### Defined in
 
 node_modules/eventemitter3/index.d.ts:63
-
-___
-
-### signAllTransactions
-
-▸ **signAllTransactions**<`T`\>(`transactions`): `Promise`<`T`[]\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `any` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transactions` | `T`[] |
-
-#### Returns
-
-`Promise`<`T`[]\>
-
-#### Implementation of
-
-SignerWalletAdapter.signAllTransactions
-
-#### Defined in
-
-[signer.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L25)
-
-___
-
-### signTransaction
-
-▸ **signTransaction**<`T`\>(`transaction`): `Promise`<`T`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends `any` |
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `T` |
-
-#### Returns
-
-`Promise`<`T`\>
-
-#### Implementation of
-
-SignerWalletAdapter.signTransaction
-
-#### Defined in
-
-[signer.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/signer.ts#L22)

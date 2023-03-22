@@ -1,7 +1,6 @@
 import {
     Adapter,
     MessageSignerWalletAdapterProps,
-    SignerWalletAdapterProps,
     WalletNotSelectedError,
     WalletError,
     WalletName,
@@ -46,7 +45,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     wallets: adapters,
     autoConnect = false,
     decryptPermission = DecryptPermission.NoDecrypt,
-    network = WalletAdapterNetwork.Localnet,
+    network = WalletAdapterNetwork.Testnet,
     onError,
     localStorageKey = 'walletName',
 }) => {
@@ -245,41 +244,6 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         }
     }, [isDisconnecting, adapter, setName]);
 
-    // Send a transaction using the provided connection
-    const sendTransaction = undefined;
-    //  WalletAdapterProps['sendTransaction'] = useCallback(
-    //     async (transaction, connection, options) => {
-    //         if (!adapter) throw handleError(new WalletNotSelectedError());
-    //         if (!connected) throw handleError(new WalletNotConnectedError());
-    //         return await adapter.sendTransaction(transaction, connection, options);
-    //     },
-    //     [adapter, handleError, connected]
-    // );
-
-    // Sign a transaction if the wallet supports it
-    const signTransaction: SignerWalletAdapterProps['signTransaction'] | undefined = useMemo(
-        () =>
-            adapter && 'signTransaction' in adapter
-                ? async (transaction) => {
-                      if (!connected) throw handleError(new WalletNotConnectedError());
-                      return await adapter.signTransaction(transaction);
-                  }
-                : undefined,
-        [adapter, handleError, connected]
-    );
-
-    // Sign multiple transactions if the wallet supports it
-    const signAllTransactions: SignerWalletAdapterProps['signAllTransactions'] | undefined = useMemo(
-        () =>
-            adapter && 'signAllTransactions' in adapter
-                ? async (transactions) => {
-                      if (!connected) throw handleError(new WalletNotConnectedError());
-                      return await adapter.signAllTransactions(transactions);
-                  }
-                : undefined,
-        [adapter, handleError, connected]
-    );
-
     // Sign an arbitrary message if the wallet supports it
     const signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined = useMemo(
         () =>
@@ -314,7 +278,31 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                     }
                 : undefined,
         [adapter, handleError, connected]
-    )
+    );
+
+    // Request records for a specific program
+    const requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined = useMemo(
+        () => 
+            adapter && 'requestRecords' in adapter
+                ? async (program) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.requestRecords(program);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request records for a specific program
+    const requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined = useMemo(
+        () => 
+            adapter && 'requestTransaction' in adapter
+                ? async (transaction) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.requestTransaction(transaction);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    );
 
     return (
         <WalletContext.Provider
@@ -331,12 +319,11 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 select: setName,
                 connect,
                 disconnect,
-                sendTransaction,
-                signTransaction,
-                signAllTransactions,
                 signMessage,
                 requestViewKey,
-                decrypt
+                decrypt,
+                requestRecords,
+                requestTransaction
             }}
         >
             {children}

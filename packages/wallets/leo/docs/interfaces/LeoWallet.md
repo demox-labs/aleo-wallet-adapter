@@ -30,11 +30,10 @@
 - [once](LeoWallet.md#once)
 - [removeAllListeners](LeoWallet.md#removealllisteners)
 - [removeListener](LeoWallet.md#removelistener)
+- [requestRecords](LeoWallet.md#requestrecords)
+- [requestTransaction](LeoWallet.md#requesttransaction)
 - [requestViewKey](LeoWallet.md#requestviewkey)
-- [signAllTransactions](LeoWallet.md#signalltransactions)
-- [signAndSendTransaction](LeoWallet.md#signandsendtransaction)
 - [signMessage](LeoWallet.md#signmessage)
-- [signTransaction](LeoWallet.md#signtransaction)
 
 ## Properties
 
@@ -44,7 +43,7 @@
 
 #### Defined in
 
-[adapter.ts:26](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L26)
+[adapter.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L29)
 
 ___
 
@@ -54,7 +53,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L27)
+[adapter.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L30)
 
 ## Methods
 
@@ -99,7 +98,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `decryptPermission` | `DecryptPermission` |
-| `network` | `WalletAdapterNetwork` |
+| `network` | `Testnet` |
 
 #### Returns
 
@@ -107,7 +106,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:37](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L37)
+[adapter.ts:36](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L36)
 
 ___
 
@@ -127,7 +126,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:36](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L36)
+[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L33)
 
 ___
 
@@ -141,7 +140,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L38)
+[adapter.ts:37](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L37)
 
 ___
 
@@ -419,6 +418,46 @@ node_modules/eventemitter3/index.d.ts:63
 
 ___
 
+### requestRecords
+
+▸ **requestRecords**(`program`): `Promise`<{ `records`: `any`[]  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `program` | `string` |
+
+#### Returns
+
+`Promise`<{ `records`: `any`[]  }\>
+
+#### Defined in
+
+[adapter.ts:34](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L34)
+
+___
+
+### requestTransaction
+
+▸ **requestTransaction**(`transaction`): `Promise`<{ `transactionId?`: `string`  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transaction` | `AleoTransaction` |
+
+#### Returns
+
+`Promise`<{ `transactionId?`: `string`  }\>
+
+#### Defined in
+
+[adapter.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L35)
+
+___
+
 ### requestViewKey
 
 ▸ **requestViewKey**(): `Promise`<{ `viewKey`: `string`  }\>
@@ -429,48 +468,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L35)
-
-___
-
-### signAllTransactions
-
-▸ **signAllTransactions**(`transactions`): `Promise`<`any`[]\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transactions` | `any`[] |
-
-#### Returns
-
-`Promise`<`any`[]\>
-
-#### Defined in
-
-[adapter.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L29)
-
-___
-
-### signAndSendTransaction
-
-▸ **signAndSendTransaction**(`transaction`, `options?`): `Promise`<{ `signature`: `any`  }\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `any` |
-| `options?` | `any` |
-
-#### Returns
-
-`Promise`<{ `signature`: `any`  }\>
-
-#### Defined in
-
-[adapter.ts:30](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L30)
+[adapter.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L32)
 
 ___
 
@@ -490,24 +488,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:34](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L34)
-
-___
-
-### signTransaction
-
-▸ **signTransaction**(`transaction`): `Promise`<`any`\>
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `any` |
-
-#### Returns
-
-`Promise`<`any`\>
-
-#### Defined in
-
-[adapter.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/eb32ab9/packages/wallets/leo/adapter.ts#L28)
+[adapter.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/wallets/leo/adapter.ts#L31)

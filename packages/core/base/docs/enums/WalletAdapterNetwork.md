@@ -6,31 +6,9 @@
 
 ### Enumeration Members
 
-- [Localnet](WalletAdapterNetwork.md#localnet)
-- [Mainnet](WalletAdapterNetwork.md#mainnet)
 - [Testnet](WalletAdapterNetwork.md#testnet)
 
 ## Enumeration Members
-
-### Localnet
-
-• **Localnet** = ``"localnet"``
-
-#### Defined in
-
-[types.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L4)
-
-___
-
-### Mainnet
-
-• **Mainnet** = ``"mainnet"``
-
-#### Defined in
-
-[types.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L2)
-
-___
 
 ### Testnet
 
@@ -38,4 +16,4 @@ ___
 
 #### Defined in
 
-[types.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/f19bfe5/packages/core/base/types.ts#L3)
+[types.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L2)

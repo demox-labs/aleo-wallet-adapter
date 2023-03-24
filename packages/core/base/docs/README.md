@@ -172,7 +172,7 @@ export const RequestRecords: FC = () => {
 
     // The credits.aleo transfer proving key can be found here: https://aleo-public.s3.us-west-2.amazonaws.com/testnet3/transfer.prover.837ad21
     // For other programs, you will need to host your proving key file
-    const provingKey: Uint8Array = [...];
+    const provingKeyUrl = 'https://aleo-public.s3.us-west-2.amazonaws.com/testnet3/transfer.prover.837ad21';
     // The record here is an output from the Requesting Records above
     const record = `'{"id":"0f27d86a-1026-4980-9816-bcdce7569aa4","program_id":"credits.aleo","gates":"200000","spent":false,"data":{}}'`
     // Note that the inputs must be formatted in the same order as the Aleo program function expects, otherwise it will fail
@@ -184,7 +184,7 @@ export const RequestRecords: FC = () => {
       'credits.aleo',
       'transfer',
       inputs,
-      provingKey.buffer
+      provingKeyUrl
     );
 
     if (requestTransaction) {

@@ -3,20 +3,20 @@ export interface AleoTransition {
   program: string;
   functionName: string;
   inputs: any[];
-  provingKey?: Array<any>;
+  provingKeyUrl?: string;
 }
 
 export class Transition implements AleoTransition {
   program: string;
   functionName: string;
   inputs: any[];
-  provingKey?: Array<any>;
+  provingKeyUrl?: string;
 
-  constructor(program: string, functionName: string, inputs: any[], provingKey?: Array<any>) {
+  constructor(program: string, functionName: string, inputs: any[], provingKeyUrl?: string) {
     this.program = program;
     this.functionName = functionName;
     this.inputs = inputs;
-    this.provingKey = provingKey;
+    this.provingKeyUrl = provingKeyUrl;
   }
 }
 
@@ -37,8 +37,8 @@ export class Transaction implements AleoTransaction {
     this.transitions = transitions;
   }
 
-  static createTransaction(address: string, chainId: string, program: string, functionName: string, inputs: any[], provingKey?: Array<any>) {
-    const transition = new Transition(program, functionName, inputs, provingKey);
+  static createTransaction(address: string, chainId: string, program: string, functionName: string, inputs: any[], provingKeyUrl?: string) {
+    const transition = new Transition(program, functionName, inputs, provingKeyUrl);
     return new Transaction(address, chainId, [transition]);
   }
 }

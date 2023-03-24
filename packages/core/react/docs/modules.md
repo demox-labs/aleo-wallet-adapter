@@ -28,7 +28,7 @@
 
 #### Defined in
 
-[useWallet.ts:106](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/react/useWallet.ts#L106)
+[useWallet.ts:106](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L106)
 
 ___
 
@@ -38,7 +38,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:43](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/react/WalletProvider.tsx#L43)
+[WalletProvider.tsx:43](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L43)
 
 ## Functions
 
@@ -65,7 +65,7 @@ ___
 
 #### Defined in
 
-[useLocalStorage.ts:4](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/react/useLocalStorage.ts#L4)
+[useLocalStorage.ts:4](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useLocalStorage.ts#L4)
 
 ___
 
@@ -79,4 +79,4 @@ ___
 
 #### Defined in
 
-[useWallet.ts:108](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/react/useWallet.ts#L108)
+[useWallet.ts:108](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L108)

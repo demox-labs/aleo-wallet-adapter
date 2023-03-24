@@ -13,7 +13,7 @@
 - [functionName](AleoTransition.md#functionname)
 - [inputs](AleoTransition.md#inputs)
 - [program](AleoTransition.md#program)
-- [provingKey](AleoTransition.md#provingkey)
+- [provingKeyUrl](AleoTransition.md#provingkeyurl)
 
 ## Properties
 
@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[transaction.ts:4](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/transaction.ts#L4)
+[transaction.ts:4](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L4)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/transaction.ts#L5)
+[transaction.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L5)
 
 ___
 
@@ -43,14 +43,14 @@ ___
 
 #### Defined in
 
-[transaction.ts:3](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/transaction.ts#L3)
+[transaction.ts:3](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L3)
 
 ___
 
-### provingKey
+### provingKeyUrl
 
-• `Optional` **provingKey**: `any`[]
+• `Optional` **provingKeyUrl**: `string`
 
 #### Defined in
 
-[transaction.ts:6](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/transaction.ts#L6)
+[transaction.ts:6](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L6)

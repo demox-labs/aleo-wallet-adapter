@@ -77,7 +77,7 @@
 
 #### Defined in
 
-[signer.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/signer.ts#L5)
+[signer.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L5)
 
 ___
 
@@ -93,7 +93,7 @@ ___
 
 #### Defined in
 
-[signer.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/signer.ts#L28)
+[signer.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L28)
 
 ___
 
@@ -109,7 +109,7 @@ ___
 
 #### Defined in
 
-[signer.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/signer.ts#L9)
+[signer.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L9)
 
 ___
 
@@ -119,7 +119,7 @@ ___
 
 #### Defined in
 
-[types.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L5)
+[types.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/types.ts#L5)
 
 ___
 
@@ -135,7 +135,7 @@ ___
 
 #### Defined in
 
-[types.ts:7](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/types.ts#L7)
+[types.ts:7](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/types.ts#L7)
 
 ___
 
@@ -151,7 +151,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L33)
+[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L33)
 
 ___
 
@@ -167,7 +167,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:16](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L16)
+[adapter.ts:16](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L16)
 
 ## Functions
 
@@ -187,4 +187,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:85](https://github.com/demox-labs/leo-wallet-adapter/blob/a4e012e/packages/core/base/adapter.ts#L85)
+[adapter.ts:85](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L85)

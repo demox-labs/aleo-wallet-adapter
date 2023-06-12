@@ -22,7 +22,7 @@
 
 #### Defined in
 
-[WalletProvider.tsx:24](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L24)
+[WalletProvider.tsx:24](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L24)
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:20](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L20)
+[WalletProvider.tsx:20](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L20)
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:22](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L22)
+[WalletProvider.tsx:22](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L22)
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:26](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L26)
+[WalletProvider.tsx:26](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L26)
 
 ___
 
@@ -62,7 +62,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:23](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L23)
+[WalletProvider.tsx:23](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L23)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:25](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L25)
+[WalletProvider.tsx:25](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L25)
 
 ___
 
@@ -96,4 +96,4 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:21](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/WalletProvider.tsx#L21)
+[WalletProvider.tsx:21](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/WalletProvider.tsx#L21)

@@ -12,6 +12,7 @@
 
 - [address](AleoTransaction.md#address)
 - [chainId](AleoTransaction.md#chainid)
+- [fee](AleoTransaction.md#fee)
 - [transitions](AleoTransaction.md#transitions)
 
 ## Properties
@@ -22,7 +23,7 @@
 
 #### Defined in
 
-[transaction.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L24)
+[transaction.ts:21](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L21)
 
 ___
 
@@ -32,7 +33,17 @@ ___
 
 #### Defined in
 
-[transaction.ts:25](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L25)
+[transaction.ts:22](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L22)
+
+___
+
+### fee
+
+• **fee**: `number`
+
+#### Defined in
+
+[transaction.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L24)
 
 ___
 
@@ -42,4 +53,4 @@ ___
 
 #### Defined in
 
-[transaction.ts:26](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L26)
+[transaction.ts:23](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L23)

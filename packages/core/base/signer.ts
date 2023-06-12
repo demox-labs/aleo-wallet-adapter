@@ -1,5 +1,6 @@
 import type { WalletAdapter, WalletAdapterProps } from './adapter';
 import { BaseWalletAdapter } from './adapter';
+import { AleoDeployment } from './deployment';
 import { AleoTransaction } from './transaction';
 
 export type Adapter = WalletAdapter | SignerWalletAdapter | MessageSignerWalletAdapter;
@@ -23,6 +24,10 @@ export interface MessageSignerWalletAdapterProps<Name extends string = string> e
     requestRecords(program: string): Promise<any[]>;
 
     requestTransaction(transaction: AleoTransaction): Promise<string>;
+
+    requestDeploy(deployment: AleoDeployment): Promise<string>;
+
+    transactionStatus(transactionId: string): Promise<string>;
 }
 
 export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -41,4 +46,8 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
     abstract requestRecords(program: string): Promise<any[]>;
 
     abstract requestTransaction(transaction: AleoTransaction): Promise<string>;
+
+    abstract requestDeploy(deployment: AleoDeployment): Promise<string>;
+
+    abstract transactionStatus(transactionId: string): Promise<string>;
 }

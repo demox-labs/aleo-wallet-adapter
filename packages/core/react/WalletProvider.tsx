@@ -292,14 +292,38 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
-    // Request records for a specific program
+    // Request transaction
     const requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined = useMemo(
         () => 
             adapter && 'requestTransaction' in adapter
                 ? async (transaction) => {
                     if (!connected) throw handleError(new WalletNotConnectedError());
-                        return await adapter.requestTransaction(transaction);
-                    }
+                    return await adapter.requestTransaction(transaction);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request deploy
+    const requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined = useMemo(
+        () =>
+            adapter && 'requestDeploy' in adapter
+                ? async (deployment) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestDeploy(deployment);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request transaction status
+    const transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined = useMemo(
+        () =>
+            adapter && 'transactionStatus' in adapter
+                ? async (transactionId) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.transactionStatus(transactionId);
+                }
                 : undefined,
         [adapter, handleError, connected]
     );
@@ -323,7 +347,9 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 requestViewKey,
                 decrypt,
                 requestRecords,
-                requestTransaction
+                requestTransaction,
+                requestDeploy,
+                transactionStatus,
             }}
         >
             {children}

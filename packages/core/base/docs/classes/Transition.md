@@ -17,13 +17,12 @@
 - [functionName](Transition.md#functionname)
 - [inputs](Transition.md#inputs)
 - [program](Transition.md#program)
-- [provingKeyUrl](Transition.md#provingkeyurl)
 
 ## Constructors
 
 ### constructor
 
-• **new Transition**(`program`, `functionName`, `inputs`, `provingKeyUrl?`)
+• **new Transition**(`program`, `functionName`, `inputs`)
 
 #### Parameters
 
@@ -32,11 +31,10 @@
 | `program` | `string` |
 | `functionName` | `string` |
 | `inputs` | `any`[] |
-| `provingKeyUrl?` | `string` |
 
 #### Defined in
 
-[transaction.ts:15](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L15)
+[transaction.ts:13](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L13)
 
 ## Properties
 
@@ -50,7 +48,7 @@
 
 #### Defined in
 
-[transaction.ts:11](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L11)
+[transaction.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L10)
 
 ___
 
@@ -64,7 +62,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L12)
+[transaction.ts:11](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L11)
 
 ___
 
@@ -78,18 +76,4 @@ ___
 
 #### Defined in
 
-[transaction.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L10)
-
-___
-
-### provingKeyUrl
-
-• `Optional` **provingKeyUrl**: `string`
-
-#### Implementation of
-
-[AleoTransition](../interfaces/AleoTransition.md).[provingKeyUrl](../interfaces/AleoTransition.md#provingkeyurl)
-
-#### Defined in
-
-[transaction.ts:13](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L13)
+[transaction.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L9)

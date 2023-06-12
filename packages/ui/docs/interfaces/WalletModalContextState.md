@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[useWalletModal.tsx:5](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/ui/src/useWalletModal.tsx#L5)
+[useWalletModal.tsx:5](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/ui/src/useWalletModal.tsx#L5)
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 #### Defined in
 
-[useWalletModal.tsx:4](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/ui/src/useWalletModal.tsx#L4)
+[useWalletModal.tsx:4](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/ui/src/useWalletModal.tsx#L4)

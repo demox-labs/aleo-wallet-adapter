@@ -16,6 +16,7 @@
 
 - [address](Transaction.md#address)
 - [chainId](Transaction.md#chainid)
+- [fee](Transaction.md#fee)
 - [transitions](Transaction.md#transitions)
 
 ### Methods
@@ -26,7 +27,7 @@
 
 ### constructor
 
-• **new Transaction**(`address`, `chainId`, `transitions`)
+• **new Transaction**(`address`, `chainId`, `transitions`, `fee`)
 
 #### Parameters
 
@@ -35,10 +36,11 @@
 | `address` | `string` |
 | `chainId` | `string` |
 | `transitions` | [`AleoTransition`](../interfaces/AleoTransition.md)[] |
+| `fee` | `number` |
 
 #### Defined in
 
-[transaction.ts:34](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L34)
+[transaction.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L33)
 
 ## Properties
 
@@ -52,7 +54,7 @@
 
 #### Defined in
 
-[transaction.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L30)
+[transaction.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L28)
 
 ___
 
@@ -66,7 +68,21 @@ ___
 
 #### Defined in
 
-[transaction.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L31)
+[transaction.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L29)
+
+___
+
+### fee
+
+• **fee**: `number`
+
+#### Implementation of
+
+[AleoTransaction](../interfaces/AleoTransaction.md).[fee](../interfaces/AleoTransaction.md#fee)
+
+#### Defined in
+
+[transaction.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L31)
 
 ___
 
@@ -80,13 +96,13 @@ ___
 
 #### Defined in
 
-[transaction.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L32)
+[transaction.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L30)
 
 ## Methods
 
 ### createTransaction
 
-▸ `Static` **createTransaction**(`address`, `chainId`, `program`, `functionName`, `inputs`, `provingKeyUrl?`): [`Transaction`](Transaction.md)
+▸ `Static` **createTransaction**(`address`, `chainId`, `program`, `functionName`, `inputs`, `fee`): [`Transaction`](Transaction.md)
 
 #### Parameters
 
@@ -97,7 +113,7 @@ ___
 | `program` | `string` |
 | `functionName` | `string` |
 | `inputs` | `any`[] |
-| `provingKeyUrl?` | `string` |
+| `fee` | `number` |
 
 #### Returns
 
@@ -105,4 +121,4 @@ ___
 
 #### Defined in
 
-[transaction.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/transaction.ts#L40)
+[transaction.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/transaction.ts#L40)

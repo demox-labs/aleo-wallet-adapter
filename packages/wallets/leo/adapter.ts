@@ -17,6 +17,7 @@ import {
     DecryptPermission,
     WalletAdapterNetwork,
     AleoTransaction,
+    AleoDeployment,
     WalletTransactionError,
 } from '@demox-labs/aleo-wallet-adapter-base';
 
@@ -33,6 +34,8 @@ export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
     decrypt(cipherText: string): Promise<{ text: string }>,
     requestRecords(program: string): Promise<{ records: any[] }>,
     requestTransaction(transaction: AleoTransaction): Promise<{ transactionId?: string}>,
+    requestDeploy(deployment: AleoDeployment): Promise<{ transactionId?: string}>,
+    transactionStatus(transactionId: string): Promise<{ status: string }>,
     connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
     disconnect(): Promise<void>;
 }
@@ -162,6 +165,38 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
             try {
                 const result = await wallet.requestTransaction(transaction);
                 return result.transactionId;
+            } catch (error: any) {
+                throw new WalletTransactionError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async requestDeploy(deployment: AleoDeployment): Promise<string> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+            try {
+                const result = await wallet.requestDeploy(deployment);
+                return result.transactionId;
+            } catch (error: any) {
+                throw new WalletTransactionError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async transactionStatus(transactionId: string): Promise<string> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+            try {
+                const result = await wallet.transactionStatus(transactionId);
+                return result.status;
             } catch (error: any) {
                 throw new WalletTransactionError(error?.message, error);
             }

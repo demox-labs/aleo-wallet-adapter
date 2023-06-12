@@ -12,10 +12,12 @@
 - [decrypt](WalletContextState.md#decrypt)
 - [disconnecting](WalletContextState.md#disconnecting)
 - [publicKey](WalletContextState.md#publickey)
+- [requestDeploy](WalletContextState.md#requestdeploy)
 - [requestRecords](WalletContextState.md#requestrecords)
 - [requestTransaction](WalletContextState.md#requesttransaction)
 - [requestViewKey](WalletContextState.md#requestviewkey)
 - [signMessage](WalletContextState.md#signmessage)
+- [transactionStatus](WalletContextState.md#transactionstatus)
 - [viewKey](WalletContextState.md#viewkey)
 - [wallet](WalletContextState.md#wallet)
 - [wallets](WalletContextState.md#wallets)
@@ -34,7 +36,7 @@
 
 #### Defined in
 
-[useWallet.ts:18](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L18)
+[useWallet.ts:19](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L19)
 
 ___
 
@@ -44,7 +46,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L24)
+[useWallet.ts:25](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L25)
 
 ___
 
@@ -54,7 +56,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:23](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L23)
+[useWallet.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L24)
 
 ___
 
@@ -78,7 +80,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L32)
+[useWallet.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L33)
 
 ___
 
@@ -88,7 +90,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:25](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L25)
+[useWallet.ts:26](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L26)
 
 ___
 
@@ -98,7 +100,31 @@ ___
 
 #### Defined in
 
-[useWallet.ts:21](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L21)
+[useWallet.ts:22](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L22)
+
+___
+
+### requestDeploy
+
+• **requestDeploy**: (`deployment`: `AleoDeployment`) => `Promise`<`string`\>
+
+#### Type declaration
+
+▸ (`deployment`): `Promise`<`string`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `deployment` | `AleoDeployment` |
+
+##### Returns
+
+`Promise`<`string`\>
+
+#### Defined in
+
+[useWallet.ts:37](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L37)
 
 ___
 
@@ -122,7 +148,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:34](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L34)
+[useWallet.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L35)
 
 ___
 
@@ -146,7 +172,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L35)
+[useWallet.ts:36](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L36)
 
 ___
 
@@ -164,7 +190,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L33)
+[useWallet.ts:34](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L34)
 
 ___
 
@@ -188,7 +214,31 @@ ___
 
 #### Defined in
 
-[useWallet.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L31)
+[useWallet.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L32)
+
+___
+
+### transactionStatus
+
+• **transactionStatus**: (`transactionId`: `string`) => `Promise`<`string`\>
+
+#### Type declaration
+
+▸ (`transactionId`): `Promise`<`string`\>
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactionId` | `string` |
+
+##### Returns
+
+`Promise`<`string`\>
+
+#### Defined in
+
+[useWallet.ts:38](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L38)
 
 ___
 
@@ -198,7 +248,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:22](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L22)
+[useWallet.ts:23](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L23)
 
 ___
 
@@ -208,7 +258,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:20](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L20)
+[useWallet.ts:21](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L21)
 
 ___
 
@@ -218,7 +268,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:19](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L19)
+[useWallet.ts:20](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L20)
 
 ## Methods
 
@@ -239,7 +289,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L28)
+[useWallet.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L29)
 
 ___
 
@@ -253,7 +303,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L29)
+[useWallet.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L30)
 
 ___
 
@@ -273,4 +323,4 @@ ___
 
 #### Defined in
 
-[useWallet.ts:27](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/react/useWallet.ts#L27)
+[useWallet.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/70f25dd/packages/core/react/useWallet.ts#L28)

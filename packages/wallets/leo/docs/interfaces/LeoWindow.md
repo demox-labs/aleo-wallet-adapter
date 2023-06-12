@@ -497,7 +497,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:41](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/wallets/leo/adapter.ts#L41)
+[adapter.ts:44](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L44)
 
 ___
 

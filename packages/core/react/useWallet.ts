@@ -2,6 +2,7 @@ import { createContext, useContext } from 'react';
 import {
   Adapter,
   AleoTransaction,
+  AleoDeployment,
   DecryptPermission,
   MessageSignerWalletAdapterProps,
   WalletAdapterNetwork,
@@ -33,6 +34,8 @@ export interface WalletContextState {
   requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
   requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined;
   requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined;
+  requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined;
+  transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined;
 }
 
 const EMPTY_ARRAY: never[] = [];
@@ -65,7 +68,13 @@ const DEFAULT_CONTEXT = {
   },
   requestTransaction(_transaction: AleoTransaction) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransaction')));
-  }
+  },
+  requestDeploy(_deployment: AleoDeployment) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestDeploy')));
+  },
+  transactionStatus(_transactionId: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'transactionStatus')));
+  },
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {
   get() {

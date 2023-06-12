@@ -58,10 +58,12 @@ Minimal `EventEmitter` interface that is molded against the Node.js
 - [once](BaseMessageSignerWalletAdapter.md#once)
 - [removeAllListeners](BaseMessageSignerWalletAdapter.md#removealllisteners)
 - [removeListener](BaseMessageSignerWalletAdapter.md#removelistener)
+- [requestDeploy](BaseMessageSignerWalletAdapter.md#requestdeploy)
 - [requestRecords](BaseMessageSignerWalletAdapter.md#requestrecords)
 - [requestTransaction](BaseMessageSignerWalletAdapter.md#requesttransaction)
 - [requestViewKey](BaseMessageSignerWalletAdapter.md#requestviewkey)
 - [signMessage](BaseMessageSignerWalletAdapter.md#signmessage)
+- [transactionStatus](BaseMessageSignerWalletAdapter.md#transactionstatus)
 
 ## Constructors
 
@@ -95,7 +97,7 @@ MessageSignerWalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:74](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L74)
+[adapter.ts:74](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L74)
 
 ___
 
@@ -113,7 +115,7 @@ MessageSignerWalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L70)
+[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L70)
 
 ___
 
@@ -131,7 +133,7 @@ MessageSignerWalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L68)
+[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L68)
 
 ___
 
@@ -149,7 +151,7 @@ MessageSignerWalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L72)
+[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L72)
 
 ___
 
@@ -167,7 +169,7 @@ MessageSignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L71)
+[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L71)
 
 ___
 
@@ -185,7 +187,7 @@ MessageSignerWalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L75)
+[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L75)
 
 ___
 
@@ -203,7 +205,7 @@ MessageSignerWalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L69)
+[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L69)
 
 ___
 
@@ -221,7 +223,7 @@ MessageSignerWalletAdapter.viewKey
 
 #### Defined in
 
-[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L73)
+[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L73)
 
 ___
 
@@ -257,7 +259,7 @@ BaseSignerWalletAdapter.connected
 
 #### Defined in
 
-[adapter.ts:77](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L77)
+[adapter.ts:77](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L77)
 
 ## Methods
 
@@ -322,7 +324,7 @@ MessageSignerWalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:81](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L81)
+[adapter.ts:81](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L81)
 
 ___
 
@@ -346,7 +348,7 @@ MessageSignerWalletAdapter.decrypt
 
 #### Defined in
 
-[signer.ts:39](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L39)
+[signer.ts:44](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L44)
 
 ___
 
@@ -368,7 +370,7 @@ MessageSignerWalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:82](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L82)
+[adapter.ts:82](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L82)
 
 ___
 
@@ -682,6 +684,30 @@ node_modules/eventemitter3/index.d.ts:63
 
 ___
 
+### requestDeploy
+
+▸ `Abstract` **requestDeploy**(`deployment`): `Promise`<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `deployment` | [`AleoDeployment`](../interfaces/AleoDeployment.md) |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Implementation of
+
+MessageSignerWalletAdapter.requestDeploy
+
+#### Defined in
+
+[signer.ts:50](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L50)
+
+___
+
 ### requestRecords
 
 ▸ `Abstract` **requestRecords**(`program`): `Promise`<`any`[]\>
@@ -702,7 +728,7 @@ MessageSignerWalletAdapter.requestRecords
 
 #### Defined in
 
-[signer.ts:41](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L41)
+[signer.ts:46](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L46)
 
 ___
 
@@ -726,7 +752,7 @@ MessageSignerWalletAdapter.requestTransaction
 
 #### Defined in
 
-[signer.ts:43](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L43)
+[signer.ts:48](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L48)
 
 ___
 
@@ -744,7 +770,7 @@ MessageSignerWalletAdapter.requestViewKey
 
 #### Defined in
 
-[signer.ts:37](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L37)
+[signer.ts:42](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L42)
 
 ___
 
@@ -768,4 +794,28 @@ MessageSignerWalletAdapter.signMessage
 
 #### Defined in
 
-[signer.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L35)
+[signer.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L40)
+
+___
+
+### transactionStatus
+
+▸ `Abstract` **transactionStatus**(`transactionId`): `Promise`<`string`\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactionId` | `string` |
+
+#### Returns
+
+`Promise`<`string`\>
+
+#### Implementation of
+
+MessageSignerWalletAdapter.transactionStatus
+
+#### Defined in
+
+[signer.ts:52](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L52)

@@ -19,6 +19,7 @@
 - [BaseMessageSignerWalletAdapter](classes/BaseMessageSignerWalletAdapter.md)
 - [BaseSignerWalletAdapter](classes/BaseSignerWalletAdapter.md)
 - [BaseWalletAdapter](classes/BaseWalletAdapter.md)
+- [Deployment](classes/Deployment.md)
 - [EventEmitter](classes/EventEmitter-1.md)
 - [Transaction](classes/Transaction.md)
 - [Transition](classes/Transition.md)
@@ -48,6 +49,7 @@
 
 ### Interfaces
 
+- [AleoDeployment](interfaces/AleoDeployment.md)
 - [AleoTransaction](interfaces/AleoTransaction.md)
 - [AleoTransition](interfaces/AleoTransition.md)
 - [MessageSignerWalletAdapterProps](interfaces/MessageSignerWalletAdapterProps.md)
@@ -77,7 +79,7 @@
 
 #### Defined in
 
-[signer.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L5)
+[signer.ts:6](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L6)
 
 ___
 
@@ -93,7 +95,7 @@ ___
 
 #### Defined in
 
-[signer.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L28)
+[signer.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L33)
 
 ___
 
@@ -109,7 +111,7 @@ ___
 
 #### Defined in
 
-[signer.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/signer.ts#L9)
+[signer.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/signer.ts#L10)
 
 ___
 
@@ -119,7 +121,7 @@ ___
 
 #### Defined in
 
-[types.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/types.ts#L5)
+[types.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/types.ts#L5)
 
 ___
 
@@ -135,7 +137,7 @@ ___
 
 #### Defined in
 
-[types.ts:7](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/types.ts#L7)
+[types.ts:7](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/types.ts#L7)
 
 ___
 
@@ -151,7 +153,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L33)
+[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L33)
 
 ___
 
@@ -167,7 +169,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:16](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L16)
+[adapter.ts:16](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L16)
 
 ## Functions
 
@@ -187,4 +189,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:85](https://github.com/demox-labs/leo-wallet-adapter/blob/d6f035f/packages/core/base/adapter.ts#L85)
+[adapter.ts:85](https://github.com/demox-labs/leo-wallet-adapter/blob/e633661/packages/core/base/adapter.ts#L85)

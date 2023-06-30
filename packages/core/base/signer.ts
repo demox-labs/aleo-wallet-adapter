@@ -19,11 +19,13 @@ export interface MessageSignerWalletAdapterProps<Name extends string = string> e
 
     requestViewKey(): Promise<string>;
 
-    decrypt(cipherText: string): Promise<string>;
+    decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
 
     requestRecords(program: string): Promise<any[]>;
 
     requestTransaction(transaction: AleoTransaction): Promise<string>;
+
+    requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
 
     requestDeploy(deployment: AleoDeployment): Promise<string>;
 
@@ -41,11 +43,13 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
 
     abstract requestViewKey(): Promise<string>;
 
-    abstract decrypt(cipherText: string): Promise<string>;
+    abstract decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
 
     abstract requestRecords(program: string): Promise<any[]>;
 
     abstract requestTransaction(transaction: AleoTransaction): Promise<string>;
+
+    abstract requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
 
     abstract requestDeploy(deployment: AleoDeployment): Promise<string>;
 

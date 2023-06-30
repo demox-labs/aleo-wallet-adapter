@@ -30,6 +30,7 @@
 - [once](LeoWallet.md#once)
 - [removeAllListeners](LeoWallet.md#removealllisteners)
 - [removeListener](LeoWallet.md#removelistener)
+- [requestBulkTransactions](LeoWallet.md#requestbulktransactions)
 - [requestDeploy](LeoWallet.md#requestdeploy)
 - [requestRecords](LeoWallet.md#requestrecords)
 - [requestTransaction](LeoWallet.md#requesttransaction)
@@ -45,7 +46,7 @@
 
 #### Defined in
 
-[adapter.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L30)
+[adapter.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L30)
 
 ___
 
@@ -55,7 +56,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L31)
+[adapter.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L31)
 
 ## Methods
 
@@ -108,19 +109,23 @@ ___
 
 #### Defined in
 
-[adapter.ts:39](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L39)
+[adapter.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L40)
 
 ___
 
 ### decrypt
 
-▸ **decrypt**(`cipherText`): `Promise`<{ `text`: `string`  }\>
+▸ **decrypt**(`cipherText`, `tpk?`, `programId?`, `functionName?`, `index?`): `Promise`<{ `text`: `string`  }\>
 
 #### Parameters
 
 | Name | Type |
 | :------ | :------ |
 | `cipherText` | `string` |
+| `tpk?` | `string` |
+| `programId?` | `string` |
+| `functionName?` | `string` |
+| `index?` | `number` |
 
 #### Returns
 
@@ -128,7 +133,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:34](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L34)
+[adapter.ts:34](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L34)
 
 ___
 
@@ -142,7 +147,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L40)
+[adapter.ts:41](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L41)
 
 ___
 
@@ -420,6 +425,26 @@ node_modules/eventemitter3/index.d.ts:63
 
 ___
 
+### requestBulkTransactions
+
+▸ **requestBulkTransactions**(`transactions`): `Promise`<{ `transactionIds?`: `string`[]  }\>
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `transactions` | `AleoTransaction`[] |
+
+#### Returns
+
+`Promise`<{ `transactionIds?`: `string`[]  }\>
+
+#### Defined in
+
+[adapter.ts:37](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L37)
+
+___
+
 ### requestDeploy
 
 ▸ **requestDeploy**(`deployment`): `Promise`<{ `transactionId?`: `string`  }\>
@@ -436,7 +461,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:37](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L37)
+[adapter.ts:38](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L38)
 
 ___
 
@@ -456,7 +481,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L35)
+[adapter.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L35)
 
 ___
 
@@ -476,7 +501,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:36](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L36)
+[adapter.ts:36](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L36)
 
 ___
 
@@ -490,7 +515,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L33)
+[adapter.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L33)
 
 ___
 
@@ -510,7 +535,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L32)
+[adapter.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L32)
 
 ___
 
@@ -530,4 +555,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:38](https://github.com/demox-labs/leo-wallet-adapter/blob/fa4da03/packages/wallets/leo/adapter.ts#L38)
+[adapter.ts:39](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L39)

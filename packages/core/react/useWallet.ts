@@ -34,6 +34,7 @@ export interface WalletContextState {
   requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
   requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined;
   requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined;
+  requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined;
   requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined;
   transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined;
 }
@@ -57,7 +58,7 @@ const DEFAULT_CONTEXT = {
   signMessage(_message: Uint8Array) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
   },
-  decrypt(_cipherText: string) {
+  decrypt(_cipherText: string, _tpk?: string, _programId?: string, _functionName?: string, _index?: number) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'decrypt')));
   },
   requestViewKey() {
@@ -68,6 +69,9 @@ const DEFAULT_CONTEXT = {
   },
   requestTransaction(_transaction: AleoTransaction) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransaction')));
+  },
+  requestBulkTransactions(_transactions: AleoTransaction[]) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestBulkTransactions')));
   },
   requestDeploy(_deployment: AleoDeployment) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestDeploy')));

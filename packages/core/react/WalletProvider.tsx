@@ -9,6 +9,8 @@ import {
     WalletReadyState,
     DecryptPermission,
     WalletAdapterNetwork,
+    AleoTransaction,
+    AleoDeployment,
 } from '@demox-labs/aleo-wallet-adapter-base';
 import type { FC, ReactNode } from 'react';
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
@@ -272,9 +274,9 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     const decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined = useMemo(
         () => 
             adapter && 'decrypt' in adapter
-                ? async (cipherText) => {
+                ? async (cipherText, tpk?: string, programId?: string, functionName?: string, index?: number) => {
                     if (!connected) throw handleError(new WalletNotConnectedError());
-                        return await adapter.decrypt(cipherText);
+                        return await adapter.decrypt(cipherText, tpk, programId, functionName, index);
                     }
                 : undefined,
         [adapter, handleError, connected]
@@ -296,9 +298,21 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     const requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined = useMemo(
         () => 
             adapter && 'requestTransaction' in adapter
-                ? async (transaction) => {
+                ? async (transaction: AleoTransaction) => {
                     if (!connected) throw handleError(new WalletNotConnectedError());
                     return await adapter.requestTransaction(transaction);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request bulk transactions
+    const requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined = useMemo(
+        () =>
+            adapter && 'requestBulkTransactions' in adapter
+                ? async (transactions: AleoTransaction[]) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestBulkTransactions(transactions);
                 }
                 : undefined,
         [adapter, handleError, connected]
@@ -308,7 +322,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     const requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined = useMemo(
         () =>
             adapter && 'requestDeploy' in adapter
-                ? async (deployment) => {
+                ? async (deployment: AleoDeployment) => {
                     if (!connected) throw handleError(new WalletNotConnectedError());
                     return await adapter.requestDeploy(deployment);
                 }
@@ -348,6 +362,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 decrypt,
                 requestRecords,
                 requestTransaction,
+                requestBulkTransactions,
                 requestDeploy,
                 transactionStatus,
             }}

@@ -42,6 +42,7 @@ export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
 }
 
 export interface LeoWindow extends Window {
+    leoWallet?: LeoWallet;
     leo?: LeoWallet;
 }
 
@@ -80,7 +81,7 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
-                if (window?.leo) {
+                if (window?.leoWallet || window?.leo) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
                     return true;
@@ -231,7 +232,7 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
             this._connecting = true;
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-            const wallet = window.leo!;
+            const wallet = window.leoWallet! || window.leo!;
 
             try {
                 await wallet.connect(decryptPermission, network);

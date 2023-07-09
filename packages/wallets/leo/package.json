@@ -1,6 +1,6 @@
 {
   "name": "@demox-labs/aleo-wallet-adapter-leo",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "description": "Aleo wallet adapter for the Leo Wallet.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

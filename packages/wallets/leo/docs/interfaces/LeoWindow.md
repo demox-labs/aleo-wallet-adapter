@@ -31,6 +31,7 @@
 - [isSecureContext](LeoWindow.md#issecurecontext)
 - [length](LeoWindow.md#length)
 - [leo](LeoWindow.md#leo)
+- [leoWallet](LeoWindow.md#leowallet)
 - [localStorage](LeoWindow.md#localstorage)
 - [locationbar](LeoWindow.md#locationbar)
 - [menubar](LeoWindow.md#menubar)
@@ -497,7 +498,17 @@ ___
 
 #### Defined in
 
-[adapter.ts:45](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/wallets/leo/adapter.ts#L45)
+[adapter.ts:46](https://github.com/demox-labs/leo-wallet-adapter/blob/f430a0b/packages/wallets/leo/adapter.ts#L46)
+
+___
+
+### leoWallet
+
+• `Optional` **leoWallet**: [`LeoWallet`](LeoWallet.md)
+
+#### Defined in
+
+[adapter.ts:45](https://github.com/demox-labs/leo-wallet-adapter/blob/f430a0b/packages/wallets/leo/adapter.ts#L45)
 
 ___
 

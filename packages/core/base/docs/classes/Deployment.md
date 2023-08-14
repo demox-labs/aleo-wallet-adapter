@@ -36,7 +36,7 @@
 
 #### Defined in
 
-[deployment.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/deployment.ts#L14)
+[deployment.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/deployment.ts#L14)
 
 ## Properties
 
@@ -50,7 +50,7 @@
 
 #### Defined in
 
-[deployment.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/deployment.ts#L9)
+[deployment.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/deployment.ts#L9)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/deployment.ts#L10)
+[deployment.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/deployment.ts#L10)
 
 ___
 
@@ -78,7 +78,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/deployment.ts#L12)
+[deployment.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/deployment.ts#L12)
 
 ___
 
@@ -92,4 +92,4 @@ ___
 
 #### Defined in
 
-[deployment.ts:11](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/deployment.ts#L11)
+[deployment.ts:11](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/deployment.ts#L11)

@@ -25,11 +25,15 @@ export interface MessageSignerWalletAdapterProps<Name extends string = string> e
 
     requestTransaction(transaction: AleoTransaction): Promise<string>;
 
+    requestExecution(transaction: AleoTransaction): Promise<string>;
+
     requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
 
     requestDeploy(deployment: AleoDeployment): Promise<string>;
 
     transactionStatus(transactionId: string): Promise<string>;
+
+    getExecution(transactionId: string): Promise<string>;
 }
 
 export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -49,9 +53,13 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
 
     abstract requestTransaction(transaction: AleoTransaction): Promise<string>;
 
+    abstract requestExecution(transaction: AleoTransaction): Promise<string>;
+
     abstract requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
 
     abstract requestDeploy(deployment: AleoDeployment): Promise<string>;
 
     abstract transactionStatus(transactionId: string): Promise<string>;
+
+    abstract getExecution(transactionId: string): Promise<string>;
 }

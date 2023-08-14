@@ -16,4 +16,4 @@
 
 #### Defined in
 
-[types.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/types.ts#L2)
+[types.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/types.ts#L2)

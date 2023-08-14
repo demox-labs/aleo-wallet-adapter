@@ -34,9 +34,11 @@ export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
     decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<{ text: string }>,
     requestRecords(program: string): Promise<{ records: any[] }>,
     requestTransaction(transaction: AleoTransaction): Promise<{ transactionId?: string}>,
+    requestExecution(transaction: AleoTransaction): Promise<{ transactionId?: string}>,
     requestBulkTransactions(transactions: AleoTransaction[]): Promise<{ transactionIds?: string[] }>,
     requestDeploy(deployment: AleoDeployment): Promise<{ transactionId?: string}>,
     transactionStatus(transactionId: string): Promise<{ status: string }>,
+    getExecution(transactionId: string): Promise<{ execution: string }>,
     connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
     disconnect(): Promise<void>;
 }
@@ -176,6 +178,22 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
         }
     }
 
+    async requestExecution(transaction: AleoTransaction): Promise<string> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+            try {
+                const result = await wallet.requestExecution(transaction);
+                return result.transactionId;
+            } catch (error: any) {
+                throw new WalletTransactionError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
     async requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]> {
         try {
             const wallet = this._wallet;
@@ -215,6 +233,22 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
             try {
                 const result = await wallet.transactionStatus(transactionId);
                 return result.status;
+            } catch (error: any) {
+                throw new WalletTransactionError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async getExecution(transactionId: string): Promise<string> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+            try {
+                const result = await wallet.getExecution(transactionId);
+                return result.execution;
             } catch (error: any) {
                 throw new WalletTransactionError(error?.message, error);
             }

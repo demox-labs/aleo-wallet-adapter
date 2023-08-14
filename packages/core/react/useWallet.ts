@@ -34,9 +34,11 @@ export interface WalletContextState {
   requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
   requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined;
   requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined;
+  requestExecution: MessageSignerWalletAdapterProps['requestExecution'] | undefined;
   requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined;
   requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined;
   transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined;
+  getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined;
 }
 
 const EMPTY_ARRAY: never[] = [];
@@ -70,6 +72,9 @@ const DEFAULT_CONTEXT = {
   requestTransaction(_transaction: AleoTransaction) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransaction')));
   },
+  requestExecution(_execution: AleoTransaction) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestExecution')));
+  },
   requestBulkTransactions(_transactions: AleoTransaction[]) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestBulkTransactions')));
   },
@@ -79,6 +84,9 @@ const DEFAULT_CONTEXT = {
   transactionStatus(_transactionId: string) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'transactionStatus')));
   },
+  getExecution(_transactionId: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'getExecution')));
+  }
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {
   get() {

@@ -40,7 +40,7 @@
 
 #### Defined in
 
-[transaction.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/transaction.ts#L33)
+[transaction.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/transaction.ts#L33)
 
 ## Properties
 
@@ -54,7 +54,7 @@
 
 #### Defined in
 
-[transaction.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/transaction.ts#L28)
+[transaction.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/transaction.ts#L28)
 
 ___
 
@@ -68,7 +68,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/transaction.ts#L29)
+[transaction.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/transaction.ts#L29)
 
 ___
 
@@ -82,7 +82,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/transaction.ts#L31)
+[transaction.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/transaction.ts#L31)
 
 ___
 
@@ -96,7 +96,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/transaction.ts#L30)
+[transaction.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/transaction.ts#L30)
 
 ## Methods
 
@@ -121,4 +121,4 @@ ___
 
 #### Defined in
 
-[transaction.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/8b34447/packages/core/base/transaction.ts#L40)
+[transaction.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/transaction.ts#L40)

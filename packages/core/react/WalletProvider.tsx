@@ -306,6 +306,18 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
+    // Request execution
+    const requestExecution: MessageSignerWalletAdapterProps['requestExecution'] | undefined = useMemo(
+        () => 
+            adapter && 'requestExecution' in adapter
+                ? async (transaction: AleoTransaction) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestExecution(transaction);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
     // Request bulk transactions
     const requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined = useMemo(
         () =>
@@ -342,6 +354,18 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
+    // Request Execution
+    const getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined = useMemo(
+        () =>
+            adapter && 'getExecution' in adapter
+                ? async (transactionId) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.getExecution(transactionId);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
     return (
         <WalletContext.Provider
             value={{
@@ -362,9 +386,11 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 decrypt,
                 requestRecords,
                 requestTransaction,
+                requestExecution,
                 requestBulkTransactions,
                 requestDeploy,
                 transactionStatus,
+                getExecution,
             }}
         >
             {children}

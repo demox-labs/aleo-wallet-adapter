@@ -8,8 +8,8 @@
 
 - [AutoDecrypt](DecryptPermission.md#autodecrypt)
 - [NoDecrypt](DecryptPermission.md#nodecrypt)
+- [OnChainHistory](DecryptPermission.md#onchainhistory)
 - [UponRequest](DecryptPermission.md#uponrequest)
-- [ViewKeyAccess](DecryptPermission.md#viewkeyaccess)
 
 ## Enumeration Members
 
@@ -19,7 +19,7 @@
 
 #### Defined in
 
-[types.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/types.ts#L14)
+[types.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/types.ts#L14)
 
 ___
 
@@ -29,7 +29,17 @@ ___
 
 #### Defined in
 
-[types.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/types.ts#L12)
+[types.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/types.ts#L12)
+
+___
+
+### OnChainHistory
+
+• **OnChainHistory** = ``"ON_CHAIN_HISTORY"``
+
+#### Defined in
+
+[types.ts:15](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/types.ts#L15)
 
 ___
 
@@ -39,14 +49,4 @@ ___
 
 #### Defined in
 
-[types.ts:13](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/types.ts#L13)
-
-___
-
-### ViewKeyAccess
-
-• **ViewKeyAccess** = ``"VIEW_KEY_ACCESS"``
-
-#### Defined in
-
-[types.ts:15](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/types.ts#L15)
+[types.ts:13](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/types.ts#L13)

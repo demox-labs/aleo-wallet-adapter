@@ -38,7 +38,6 @@ Minimal `EventEmitter` interface that is molded against the Node.js
 - [readyState](BaseWalletAdapter.md#readystate)
 - [supportedTransactionVersions](BaseWalletAdapter.md#supportedtransactionversions)
 - [url](BaseWalletAdapter.md#url)
-- [viewKey](BaseWalletAdapter.md#viewkey)
 - [prefixed](BaseWalletAdapter.md#prefixed)
 
 ### Accessors
@@ -88,7 +87,7 @@ WalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:74](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L74)
+[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L72)
 
 ___
 
@@ -102,7 +101,7 @@ WalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L70)
+[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L69)
 
 ___
 
@@ -116,7 +115,7 @@ WalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L68)
+[adapter.ts:67](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L67)
 
 ___
 
@@ -130,7 +129,7 @@ WalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L72)
+[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L71)
 
 ___
 
@@ -144,7 +143,7 @@ WalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L71)
+[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L70)
 
 ___
 
@@ -158,7 +157,7 @@ WalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L75)
+[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L73)
 
 ___
 
@@ -172,21 +171,7 @@ WalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L69)
-
-___
-
-### viewKey
-
-• `Abstract` **viewKey**: `string`
-
-#### Implementation of
-
-WalletAdapter.viewKey
-
-#### Defined in
-
-[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L73)
+[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L68)
 
 ___
 
@@ -218,7 +203,7 @@ WalletAdapter.connected
 
 #### Defined in
 
-[adapter.ts:77](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L77)
+[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L75)
 
 ## Methods
 
@@ -260,7 +245,7 @@ ___
 
 ### connect
 
-▸ `Abstract` **connect**(`decryptPermission`, `network`): `Promise`<`void`\>
+▸ `Abstract` **connect**(`decryptPermission`, `network`, `programs?`): `Promise`<`void`\>
 
 #### Parameters
 
@@ -268,6 +253,7 @@ ___
 | :------ | :------ |
 | `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
 | `network` | [`Testnet`](../enums/WalletAdapterNetwork.md#testnet) |
+| `programs?` | `string`[] |
 
 #### Returns
 
@@ -279,7 +265,7 @@ WalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:81](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L81)
+[adapter.ts:79](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L79)
 
 ___
 
@@ -297,7 +283,7 @@ WalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:82](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L82)
+[adapter.ts:80](https://github.com/demox-labs/leo-wallet-adapter/blob/4e84099/packages/core/base/adapter.ts#L80)
 
 ___
 

@@ -20,18 +20,16 @@ export interface WalletContextState {
   wallets: Wallet[];
   wallet: Wallet | null;
   publicKey: string | null;
-  viewKey: string | null;
   connecting: boolean;
   connected: boolean;
   disconnecting: boolean;
 
   select(walletName: WalletName): void;
-  connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
+  connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
   disconnect(): Promise<void>;
 
   signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined;
   decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined;
-  requestViewKey: MessageSignerWalletAdapterProps['requestViewKey'] | undefined;
   requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined;
   requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined;
   requestExecution: MessageSignerWalletAdapterProps['requestExecution'] | undefined;
@@ -39,6 +37,8 @@ export interface WalletContextState {
   requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined;
   transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined;
   getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined;
+  requestRecordPlaintexts: MessageSignerWalletAdapterProps['requestRecordPlaintexts'] | undefined;
+  requestTransactionHistory: MessageSignerWalletAdapterProps['requestTransactionHistory'] | undefined;
 }
 
 const EMPTY_ARRAY: never[] = [];
@@ -51,7 +51,7 @@ const DEFAULT_CONTEXT = {
   select(_name: WalletName) {
     console.error(constructMissingProviderErrorMessage('get', 'select'));
   },
-  connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork) {
+  connect(_decryptPermission: DecryptPermission, _network: WalletAdapterNetwork, _programs?: string[]) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'connect')));
   },
   disconnect() {
@@ -62,9 +62,6 @@ const DEFAULT_CONTEXT = {
   },
   decrypt(_cipherText: string, _tpk?: string, _programId?: string, _functionName?: string, _index?: number) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'decrypt')));
-  },
-  requestViewKey() {
-    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestViewKey')));
   },
   requestRecords(_program: string) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestRecords')));
@@ -86,6 +83,12 @@ const DEFAULT_CONTEXT = {
   },
   getExecution(_transactionId: string) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'getExecution')));
+  },
+  requestRecordPlaintexts(_program: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestRecordPlaintexts')));
+  },
+  requestTransactionHistory(_program: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransactionHistory')));
   }
 } as WalletContextState;
 Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {
@@ -103,12 +106,6 @@ Object.defineProperty(DEFAULT_CONTEXT, 'wallet', {
 Object.defineProperty(DEFAULT_CONTEXT, 'publicKey', {
   get() {
     console.error(constructMissingProviderErrorMessage('read', 'publicKey'));
-    return null;
-  },
-});
-Object.defineProperty(DEFAULT_CONTEXT, 'viewKey', {
-  get() {
-    console.error(constructMissingProviderErrorMessage('read', 'viewKey'));
     return null;
   },
 });

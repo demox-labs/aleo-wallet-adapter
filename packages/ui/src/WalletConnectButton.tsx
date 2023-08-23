@@ -6,14 +6,14 @@ import { Button } from './Button';
 import { WalletIcon } from './WalletIcon';
 import { WalletAdapterNetwork } from '@demox-labs/aleo-wallet-adapter-base';
 
-export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, decryptPermission, network, ...props }) => {
+export const WalletConnectButton: FC<ButtonProps> = ({ children, disabled, onClick, decryptPermission, network, programs, ...props }) => {
     const { wallet, connect, connecting, connected } = useWallet();
 
     const handleClick: MouseEventHandler<HTMLButtonElement> = useCallback(
         (event) => {
             if (onClick) onClick(event);
             // eslint-disable-next-line @typescript-eslint/no-empty-function
-            if (!event.defaultPrevented) connect(decryptPermission || "NO_DECRYPT", network || WalletAdapterNetwork.Testnet).catch(() => {});
+            if (!event.defaultPrevented) connect(decryptPermission || "NO_DECRYPT", network || WalletAdapterNetwork.Testnet, programs ?? []).catch(() => {});
         },
         [onClick, connect]
     );

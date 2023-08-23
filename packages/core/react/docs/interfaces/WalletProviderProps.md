@@ -12,6 +12,7 @@
 - [localStorageKey](WalletProviderProps.md#localstoragekey)
 - [network](WalletProviderProps.md#network)
 - [onError](WalletProviderProps.md#onerror)
+- [programs](WalletProviderProps.md#programs)
 - [wallets](WalletProviderProps.md#wallets)
 
 ## Properties
@@ -22,7 +23,7 @@
 
 #### Defined in
 
-[WalletProvider.tsx:26](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L26)
+[WalletProvider.tsx:27](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L27)
 
 ___
 
@@ -32,7 +33,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:22](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L22)
+[WalletProvider.tsx:22](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L22)
 
 ___
 
@@ -42,7 +43,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:24](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L24)
+[WalletProvider.tsx:24](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L24)
 
 ___
 
@@ -52,7 +53,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:28](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L28)
+[WalletProvider.tsx:29](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L29)
 
 ___
 
@@ -62,7 +63,7 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:25](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L25)
+[WalletProvider.tsx:26](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L26)
 
 ___
 
@@ -86,7 +87,17 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:27](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L27)
+[WalletProvider.tsx:28](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L28)
+
+___
+
+### programs
+
+• `Optional` **programs**: `string`[]
+
+#### Defined in
+
+[WalletProvider.tsx:25](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L25)
 
 ___
 
@@ -96,4 +107,4 @@ ___
 
 #### Defined in
 
-[WalletProvider.tsx:23](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/react/WalletProvider.tsx#L23)
+[WalletProvider.tsx:23](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/react/WalletProvider.tsx#L23)

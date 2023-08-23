@@ -34,7 +34,7 @@
 
 #### Defined in
 
-[WalletConnectButton.tsx:9](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletConnectButton.tsx#L9)
+[WalletConnectButton.tsx:9](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletConnectButton.tsx#L9)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[WalletDisconnectButton.tsx:8](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletDisconnectButton.tsx#L8)
+[WalletDisconnectButton.tsx:8](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletDisconnectButton.tsx#L8)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[WalletIcon.tsx:9](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletIcon.tsx#L9)
+[WalletIcon.tsx:9](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletIcon.tsx#L9)
 
 ___
 
@@ -64,7 +64,7 @@ ___
 
 #### Defined in
 
-[WalletModal.tsx:16](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletModal.tsx#L16)
+[WalletModal.tsx:16](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletModal.tsx#L16)
 
 ___
 
@@ -74,7 +74,7 @@ ___
 
 #### Defined in
 
-[WalletModalButton.tsx:7](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletModalButton.tsx#L7)
+[WalletModalButton.tsx:7](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletModalButton.tsx#L7)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[useWalletModal.tsx:32](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/useWalletModal.tsx#L32)
+[useWalletModal.tsx:32](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/useWalletModal.tsx#L32)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[WalletModalProvider.tsx:11](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletModalProvider.tsx#L11)
+[WalletModalProvider.tsx:11](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletModalProvider.tsx#L11)
 
 ___
 
@@ -104,7 +104,7 @@ ___
 
 #### Defined in
 
-[WalletMultiButton.tsx:11](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/WalletMultiButton.tsx#L11)
+[WalletMultiButton.tsx:11](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/WalletMultiButton.tsx#L11)
 
 ## Functions
 
@@ -118,4 +118,4 @@ ___
 
 #### Defined in
 
-[useWalletModal.tsx:34](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/ui/src/useWalletModal.tsx#L34)
+[useWalletModal.tsx:34](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/ui/src/useWalletModal.tsx#L34)

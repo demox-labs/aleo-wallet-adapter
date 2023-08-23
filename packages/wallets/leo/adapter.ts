@@ -2,9 +2,7 @@ import {
     BaseMessageSignerWalletAdapter,
     EventEmitter,
     scopePollingDetectionStrategy,
-    WalletAccountError,
     WalletConnectionError,
-    WalletRequestViewKeyError,
     WalletDisconnectionError,
     WalletName,
     WalletNotConnectedError,
@@ -28,9 +26,7 @@ export interface LeoWalletEvents {
 
 export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
     publicKey?: string;
-    viewKey?: string;
     signMessage(message: Uint8Array): Promise<{ signature: Uint8Array }>;
-    requestViewKey(): Promise<{ viewKey: string }>;
     decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<{ text: string }>,
     requestRecords(program: string): Promise<{ records: any[] }>,
     requestTransaction(transaction: AleoTransaction): Promise<{ transactionId?: string}>,
@@ -39,7 +35,9 @@ export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
     requestDeploy(deployment: AleoDeployment): Promise<{ transactionId?: string}>,
     transactionStatus(transactionId: string): Promise<{ status: string }>,
     getExecution(transactionId: string): Promise<{ execution: string }>,
-    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
+    requestRecordPlaintexts(program: string): Promise<{ records: any[] }>,
+    requestTransactionHistory(program: string): Promise<{ transactions: any[] }>,
+    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
     disconnect(): Promise<void>;
 }
 
@@ -67,7 +65,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
     private _wallet: LeoWallet | null;
     private _publicKey: string | null;
     private _decryptPermission: string;
-    private _viewKey: string | null;
     private _readyState: WalletReadyState =
         typeof window === 'undefined' || typeof document === 'undefined'
             ? WalletReadyState.Unsupported
@@ -79,7 +76,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
         this._wallet = null;
         this._publicKey = null;
         this._decryptPermission = DecryptPermission.NoDecrypt;
-        this._viewKey = null;
 
         if (this._readyState !== WalletReadyState.Unsupported) {
             scopePollingDetectionStrategy(() => {
@@ -95,10 +91,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
 
     get publicKey() {
         return this._publicKey;
-    }
-
-    get viewKey() {
-        return this._viewKey;
     }
 
     get decryptPermission() {
@@ -127,7 +119,7 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
 
                 case DecryptPermission.UponRequest:
                 case DecryptPermission.AutoDecrypt:
-                case DecryptPermission.ViewKeyAccess:
+                case DecryptPermission.OnChainHistory:
                 {
                     try {
                         const text = await wallet.decrypt(cipherText, tpk, programId, functionName, index);
@@ -258,7 +250,41 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
         }
     }
 
-    async connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void> {
+    async requestRecordPlaintexts(program: string): Promise<any[]> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+
+            try {
+                const result = await wallet.requestRecordPlaintexts(program);
+                return result.records;
+            } catch (error: any) {
+                throw new WalletRecordsError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async requestTransactionHistory(program: string): Promise<any[]> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+
+            try {
+                const result = await wallet.requestTransactionHistory(program);
+                return result.transactions;
+            } catch (error: any) {
+                throw new WalletRecordsError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void> {
         try {
             if (this.connected || this.connecting) return;
             if (this._readyState !== WalletReadyState.Installed) throw new WalletNotReadyError();
@@ -269,7 +295,7 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
             const wallet = window.leoWallet! || window.leo!;
 
             try {
-                await wallet.connect(decryptPermission, network);
+                await wallet.connect(decryptPermission, network, programs);
                 if (!wallet?.publicKey) {
                     throw new WalletConnectionError();
                 }
@@ -280,7 +306,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
 
             this._wallet = wallet;
             this._decryptPermission = decryptPermission;
-            this._viewKey = this._viewKey;
 
             this.emit('connect', this._publicKey);
         } catch (error: any) {
@@ -319,23 +344,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
                 return signature.signature;
             } catch (error: any) {
                 throw new WalletSignTransactionError(error?.message, error);
-            }
-        } catch (error: any) {
-            this.emit('error', error);
-            throw error;
-        }
-    }
-
-    async requestViewKey(): Promise<string> {
-        try {
-            const wallet = this._wallet;
-            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
-
-            try {
-                const viewKey = await wallet.requestViewKey();
-                return viewKey.viewKey;
-            } catch (error: any) {
-                throw new WalletRequestViewKeyError(error?.message, error);
             }
         } catch (error: any) {
             this.emit('error', error);

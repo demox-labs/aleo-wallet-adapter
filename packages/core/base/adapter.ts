@@ -5,7 +5,7 @@ import type { SupportedTransactionVersions, DecryptPermission, WalletAdapterNetw
 export { EventEmitter };
 
 export interface WalletAdapterEvents {
-    connect(publicKey: string): void;
+    connect(publicKey: string, programs?: string[]): void;
     disconnect(): void;
     error(error: WalletError): void;
     readyStateChange(readyState: WalletReadyState): void;
@@ -21,12 +21,11 @@ export interface WalletAdapterProps<Name extends string = string> {
     icon: string;
     readyState: WalletReadyState;
     publicKey: string | null;
-    viewKey: string | null;
     connecting: boolean;
     connected: boolean;
     supportedTransactionVersions: SupportedTransactionVersions;
 
-    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
+    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
     disconnect(): Promise<void>;
 }
 
@@ -70,7 +69,6 @@ export abstract class BaseWalletAdapter<Name extends string = string>
     abstract icon: string;
     abstract readyState: WalletReadyState;
     abstract publicKey: string | null;
-    abstract viewKey: string | null;
     abstract connecting: boolean;
     abstract supportedTransactionVersions: SupportedTransactionVersions;
 
@@ -78,7 +76,7 @@ export abstract class BaseWalletAdapter<Name extends string = string>
         return !!this.publicKey;
     }
 
-    abstract connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork): Promise<void>;
+    abstract connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
     abstract disconnect(): Promise<void>;
 }
 

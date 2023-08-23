@@ -246,3 +246,61 @@ export const DeployProgram: FC = () => {
   );
 };
 ```
+
+### 🗂️Requesting Record Plaintexts
+
+This requires the `OnChainHistory` permission
+
+```tsx
+import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
+import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const RequestRecordPlaintexts: FC = () => {
+  const { publicKey, requestRecordPlaintexts } = useWallet();
+
+  const onClick = async () => {
+    const program = "credits.aleo";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (requestRecordPlaintexts) {
+      const records = await requestRecordPlaintexts(program);
+      console.log("Records: " + records);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Request Records Plaintexts
+    </button>
+  );
+};
+```
+
+### 🗂️Requesting Transaction History
+
+This requires the `OnChainHistory` permission
+
+```tsx
+import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
+import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const RequestRecords: FC = () => {
+  const { publicKey, requestTransactionHistory } = useWallet();
+
+  const onClick = async () => {
+    const program = "credits.aleo";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (requestTransactionHistory) {
+      const transactions = await requestTransactionHistory(program);
+      console.log("Transactions: " + transactions);
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Request Records Transaction History
+    </button>
+  );
+};
+```

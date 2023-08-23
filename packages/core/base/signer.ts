@@ -17,8 +17,6 @@ export abstract class BaseSignerWalletAdapter<Name extends string = string>
 export interface MessageSignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
     signMessage(message: Uint8Array): Promise<Uint8Array>;
 
-    requestViewKey(): Promise<string>;
-
     decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
 
     requestRecords(program: string): Promise<any[]>;
@@ -34,6 +32,10 @@ export interface MessageSignerWalletAdapterProps<Name extends string = string> e
     transactionStatus(transactionId: string): Promise<string>;
 
     getExecution(transactionId: string): Promise<string>;
+
+    requestRecordPlaintexts(program: string): Promise<any[]>;
+
+    requestTransactionHistory(program: string): Promise<any[]>;
 }
 
 export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
@@ -44,8 +46,6 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
     implements MessageSignerWalletAdapter<Name>
 {
     abstract signMessage(message: Uint8Array): Promise<Uint8Array>;
-
-    abstract requestViewKey(): Promise<string>;
 
     abstract decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
 
@@ -62,4 +62,8 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
     abstract transactionStatus(transactionId: string): Promise<string>;
 
     abstract getExecution(transactionId: string): Promise<string>;
+
+    abstract requestRecordPlaintexts(program: string): Promise<any[]>;
+
+    abstract requestTransactionHistory(program: string): Promise<any[]>;
 }

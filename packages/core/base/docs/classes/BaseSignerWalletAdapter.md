@@ -38,7 +38,6 @@ Minimal `EventEmitter` interface that is molded against the Node.js
 - [readyState](BaseSignerWalletAdapter.md#readystate)
 - [supportedTransactionVersions](BaseSignerWalletAdapter.md#supportedtransactionversions)
 - [url](BaseSignerWalletAdapter.md#url)
-- [viewKey](BaseSignerWalletAdapter.md#viewkey)
 - [prefixed](BaseSignerWalletAdapter.md#prefixed)
 
 ### Accessors
@@ -92,7 +91,7 @@ SignerWalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:74](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L74)
+[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L72)
 
 ___
 
@@ -110,7 +109,7 @@ SignerWalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L70)
+[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L69)
 
 ___
 
@@ -128,7 +127,7 @@ SignerWalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L68)
+[adapter.ts:67](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L67)
 
 ___
 
@@ -146,7 +145,7 @@ SignerWalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L72)
+[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L71)
 
 ___
 
@@ -164,7 +163,7 @@ SignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L71)
+[adapter.ts:70](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L70)
 
 ___
 
@@ -182,7 +181,7 @@ SignerWalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L75)
+[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L73)
 
 ___
 
@@ -200,25 +199,7 @@ SignerWalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L69)
-
-___
-
-### viewKey
-
-• `Abstract` **viewKey**: `string`
-
-#### Implementation of
-
-SignerWalletAdapter.viewKey
-
-#### Inherited from
-
-[BaseWalletAdapter](BaseWalletAdapter.md).[viewKey](BaseWalletAdapter.md#viewkey)
-
-#### Defined in
-
-[adapter.ts:73](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L73)
+[adapter.ts:68](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L68)
 
 ___
 
@@ -254,7 +235,7 @@ BaseWalletAdapter.connected
 
 #### Defined in
 
-[adapter.ts:77](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L77)
+[adapter.ts:75](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L75)
 
 ## Methods
 
@@ -296,7 +277,7 @@ ___
 
 ### connect
 
-▸ `Abstract` **connect**(`decryptPermission`, `network`): `Promise`<`void`\>
+▸ `Abstract` **connect**(`decryptPermission`, `network`, `programs?`): `Promise`<`void`\>
 
 #### Parameters
 
@@ -304,6 +285,7 @@ ___
 | :------ | :------ |
 | `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
 | `network` | [`Testnet`](../enums/WalletAdapterNetwork.md#testnet) |
+| `programs?` | `string`[] |
 
 #### Returns
 
@@ -319,7 +301,7 @@ SignerWalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:81](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L81)
+[adapter.ts:79](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L79)
 
 ___
 
@@ -341,7 +323,7 @@ SignerWalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:82](https://github.com/demox-labs/leo-wallet-adapter/blob/21dd6ca/packages/core/base/adapter.ts#L82)
+[adapter.ts:80](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/adapter.ts#L80)
 
 ___
 

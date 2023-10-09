@@ -23,7 +23,7 @@
 
 #### Defined in
 
-[deployment.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/deployment.ts#L2)
+[deployment.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L2)
 
 ___
 
@@ -33,7 +33,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:3](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/deployment.ts#L3)
+[deployment.ts:3](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L3)
 
 ___
 
@@ -43,7 +43,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/deployment.ts#L5)
+[deployment.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L5)
 
 ___
 
@@ -53,4 +53,4 @@ ___
 
 #### Defined in
 
-[deployment.ts:4](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/deployment.ts#L4)
+[deployment.ts:4](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L4)

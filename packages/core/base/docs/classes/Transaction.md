@@ -17,6 +17,7 @@
 - [address](Transaction.md#address)
 - [chainId](Transaction.md#chainid)
 - [fee](Transaction.md#fee)
+- [feePrivate](Transaction.md#feeprivate)
 - [transitions](Transaction.md#transitions)
 
 ### Methods
@@ -27,20 +28,21 @@
 
 ### constructor
 
-• **new Transaction**(`address`, `chainId`, `transitions`, `fee`)
+• **new Transaction**(`address`, `chainId`, `transitions`, `fee`, `feePrivate?`)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `chainId` | `string` |
-| `transitions` | [`AleoTransition`](../interfaces/AleoTransition.md)[] |
-| `fee` | `number` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `chainId` | `string` | `undefined` |
+| `transitions` | [`AleoTransition`](../interfaces/AleoTransition.md)[] | `undefined` |
+| `fee` | `number` | `undefined` |
+| `feePrivate` | `boolean` | `true` |
 
 #### Defined in
 
-[transaction.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/transaction.ts#L33)
+[transaction.ts:35](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L35)
 
 ## Properties
 
@@ -54,7 +56,7 @@
 
 #### Defined in
 
-[transaction.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/transaction.ts#L28)
+[transaction.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L29)
 
 ___
 
@@ -68,7 +70,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/transaction.ts#L29)
+[transaction.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L30)
 
 ___
 
@@ -82,7 +84,21 @@ ___
 
 #### Defined in
 
-[transaction.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/transaction.ts#L31)
+[transaction.ts:32](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L32)
+
+___
+
+### feePrivate
+
+• **feePrivate**: `boolean`
+
+#### Implementation of
+
+[AleoTransaction](../interfaces/AleoTransaction.md).[feePrivate](../interfaces/AleoTransaction.md#feeprivate)
+
+#### Defined in
+
+[transaction.ts:33](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L33)
 
 ___
 
@@ -96,24 +112,25 @@ ___
 
 #### Defined in
 
-[transaction.ts:30](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/transaction.ts#L30)
+[transaction.ts:31](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L31)
 
 ## Methods
 
 ### createTransaction
 
-▸ `Static` **createTransaction**(`address`, `chainId`, `program`, `functionName`, `inputs`, `fee`): [`Transaction`](Transaction.md)
+▸ `Static` **createTransaction**(`address`, `chainId`, `program`, `functionName`, `inputs`, `fee`, `feePrivate?`): [`Transaction`](Transaction.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `chainId` | `string` |
-| `program` | `string` |
-| `functionName` | `string` |
-| `inputs` | `any`[] |
-| `fee` | `number` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `chainId` | `string` | `undefined` |
+| `program` | `string` | `undefined` |
+| `functionName` | `string` | `undefined` |
+| `inputs` | `any`[] | `undefined` |
+| `fee` | `number` | `undefined` |
+| `feePrivate` | `boolean` | `true` |
 
 #### Returns
 
@@ -121,4 +138,4 @@ ___
 
 #### Defined in
 
-[transaction.ts:40](https://github.com/demox-labs/leo-wallet-adapter/blob/dbce117/packages/core/base/transaction.ts#L40)
+[transaction.ts:43](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/transaction.ts#L43)

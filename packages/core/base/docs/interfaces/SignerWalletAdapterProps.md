@@ -44,7 +44,7 @@
 
 #### Defined in
 
-[adapter.ts:25](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L25)
+[adapter.ts:25](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L25)
 
 ___
 
@@ -58,7 +58,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L24)
+[adapter.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L24)
 
 ___
 
@@ -72,7 +72,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:21](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L21)
+[adapter.ts:21](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L21)
 
 ___
 
@@ -86,7 +86,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:19](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L19)
+[adapter.ts:19](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L19)
 
 ___
 
@@ -100,7 +100,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:23](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L23)
+[adapter.ts:23](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L23)
 
 ___
 
@@ -114,7 +114,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:22](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L22)
+[adapter.ts:22](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L22)
 
 ___
 
@@ -128,7 +128,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:26](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L26)
+[adapter.ts:26](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L26)
 
 ___
 
@@ -142,7 +142,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:20](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L20)
+[adapter.ts:20](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L20)
 
 ## Methods
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L28)
+[adapter.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L28)
 
 ___
 
@@ -186,4 +186,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L29)
+[adapter.ts:29](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L29)

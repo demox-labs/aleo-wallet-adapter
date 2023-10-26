@@ -31,7 +31,7 @@ we consider the wallet to have been installed.
 
 #### Defined in
 
-[adapter.ts:49](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L49)
+[adapter.ts:49](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L49)
 
 ___
 
@@ -44,7 +44,7 @@ any time, it's meaningless to say that they have been detected.
 
 #### Defined in
 
-[adapter.ts:55](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L55)
+[adapter.ts:55](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L55)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:50](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L50)
+[adapter.ts:50](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L50)
 
 ___
 
@@ -67,4 +67,4 @@ mobile) then it will stay in the `Unsupported` state.
 
 #### Defined in
 
-[adapter.ts:60](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/adapter.ts#L60)
+[adapter.ts:60](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/adapter.ts#L60)

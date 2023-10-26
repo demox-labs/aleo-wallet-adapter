@@ -41,7 +41,7 @@
 
 #### Defined in
 
-[errors.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/errors.ts#L5)
+[errors.ts:5](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/errors.ts#L5)
 
 ## Properties
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-[errors.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/errors.ts#L2)
+[errors.ts:2](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/errors.ts#L2)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[errors.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/errors.ts#L28)
+[errors.ts:28](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/errors.ts#L28)
 
 ___
 

@@ -17,26 +17,28 @@
 - [address](Deployment.md#address)
 - [chainId](Deployment.md#chainid)
 - [fee](Deployment.md#fee)
+- [feePrivate](Deployment.md#feeprivate)
 - [program](Deployment.md#program)
 
 ## Constructors
 
 ### constructor
 
-• **new Deployment**(`address`, `chainId`, `program`, `fee`)
+• **new Deployment**(`address`, `chainId`, `program`, `fee`, `feePrivate?`)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `address` | `string` |
-| `chainId` | `string` |
-| `program` | `string` |
-| `fee` | `number` |
+| Name | Type | Default value |
+| :------ | :------ | :------ |
+| `address` | `string` | `undefined` |
+| `chainId` | `string` | `undefined` |
+| `program` | `string` | `undefined` |
+| `fee` | `number` | `undefined` |
+| `feePrivate` | `boolean` | `true` |
 
 #### Defined in
 
-[deployment.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L14)
+[deployment.ts:16](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/deployment.ts#L16)
 
 ## Properties
 
@@ -50,7 +52,7 @@
 
 #### Defined in
 
-[deployment.ts:9](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L9)
+[deployment.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/deployment.ts#L10)
 
 ___
 
@@ -64,7 +66,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:10](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L10)
+[deployment.ts:11](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/deployment.ts#L11)
 
 ___
 
@@ -78,7 +80,21 @@ ___
 
 #### Defined in
 
-[deployment.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L12)
+[deployment.ts:13](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/deployment.ts#L13)
+
+___
+
+### feePrivate
+
+• **feePrivate**: `boolean`
+
+#### Implementation of
+
+[AleoDeployment](../interfaces/AleoDeployment.md).[feePrivate](../interfaces/AleoDeployment.md#feeprivate)
+
+#### Defined in
+
+[deployment.ts:14](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/deployment.ts#L14)
 
 ___
 
@@ -92,4 +108,4 @@ ___
 
 #### Defined in
 
-[deployment.ts:11](https://github.com/demox-labs/leo-wallet-adapter/blob/0449b28/packages/core/base/deployment.ts#L11)
+[deployment.ts:12](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/core/base/deployment.ts#L12)

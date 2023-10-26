@@ -1,6 +1,6 @@
 {
   "name": "@demox-labs/aleo-wallet-adapter-reactui",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "React UI Components for connecting Aleo-compatible wallets to your dApp.",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,8 +14,8 @@
     "doc": "typedoc --plugin typedoc-plugin-markdown"
   },
   "dependencies": {
-    "@demox-labs/aleo-wallet-adapter-base": "^0.0.19",
-    "@demox-labs/aleo-wallet-adapter-react": "^0.0.18"
+    "@demox-labs/aleo-wallet-adapter-base": "^0.0.20",
+    "@demox-labs/aleo-wallet-adapter-react": "^0.0.19"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",

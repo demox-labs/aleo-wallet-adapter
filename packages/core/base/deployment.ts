@@ -3,6 +3,7 @@ export interface AleoDeployment {
   chainId: string;
   program: string;
   fee: number;
+  feePrivate: boolean;
 }
 
 export class Deployment implements AleoDeployment {
@@ -10,12 +11,14 @@ export class Deployment implements AleoDeployment {
   chainId: string;
   program: string;
   fee: number;
+  feePrivate: boolean;
 
-  constructor(address: string, chainId: string, program: string, fee: number) {
+  constructor(address: string, chainId: string, program: string, fee: number, feePrivate: boolean = true) {
     this.address = address;
     this.chainId = chainId;
     this.program = program;
     this.fee = fee;
+    this.feePrivate = feePrivate;
   }
 }
 

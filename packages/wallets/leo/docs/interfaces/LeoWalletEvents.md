@@ -6,10 +6,31 @@
 
 ### Methods
 
+- [accountChange](LeoWalletEvents.md#accountchange)
 - [connect](LeoWalletEvents.md#connect)
 - [disconnect](LeoWalletEvents.md#disconnect)
 
 ## Methods
+
+### accountChange
+
+▸ **accountChange**(...`args`): `unknown`
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `...args` | `unknown`[] |
+
+#### Returns
+
+`unknown`
+
+#### Defined in
+
+[adapter.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/wallets/leo/adapter.ts#L25)
+
+___
 
 ### connect
 
@@ -27,7 +48,7 @@
 
 #### Defined in
 
-[adapter.ts:23](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/wallets/leo/adapter.ts#L23)
+[adapter.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/wallets/leo/adapter.ts#L23)
 
 ___
 
@@ -47,4 +68,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:24](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/wallets/leo/adapter.ts#L24)
+[adapter.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/wallets/leo/adapter.ts#L24)

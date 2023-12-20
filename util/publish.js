@@ -10,6 +10,7 @@ const directories = [
 ];
 
 const commands = [
+    'yarn',
     'yarn build',
     'yarn doc'
     // 'npm publish' will be handled separately to include OTP

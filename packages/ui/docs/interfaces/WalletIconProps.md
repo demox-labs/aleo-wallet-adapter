@@ -22,4 +22,4 @@
 
 #### Defined in
 
-[WalletIcon.tsx:6](https://github.com/demox-labs/leo-wallet-adapter/blob/10fbe90/packages/ui/src/WalletIcon.tsx#L6)
+[WalletIcon.tsx:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/ui/src/WalletIcon.tsx#L6)

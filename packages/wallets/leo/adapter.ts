@@ -22,6 +22,7 @@ import {
 export interface LeoWalletEvents {
     connect(...args: unknown[]): unknown;
     disconnect(...args: unknown[]): unknown;
+    accountChange(...args: unknown[]): unknown;
 }
 
 export interface LeoWallet extends EventEmitter<LeoWalletEvents> {

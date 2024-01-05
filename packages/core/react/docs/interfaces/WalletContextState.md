@@ -39,7 +39,7 @@
 
 #### Defined in
 
-[useWallet.ts:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L19)
+[useWallet.ts:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L19)
 
 ___
 
@@ -49,7 +49,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L24)
+[useWallet.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L24)
 
 ___
 
@@ -59,7 +59,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L23)
+[useWallet.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L23)
 
 ___
 
@@ -87,7 +87,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L32)
+[useWallet.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L32)
 
 ___
 
@@ -97,7 +97,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L25)
+[useWallet.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L25)
 
 ___
 
@@ -121,7 +121,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:39](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L39)
+[useWallet.ts:39](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L39)
 
 ___
 
@@ -131,7 +131,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L22)
+[useWallet.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L22)
 
 ___
 
@@ -155,7 +155,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:36](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L36)
+[useWallet.ts:36](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L36)
 
 ___
 
@@ -179,7 +179,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:37](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L37)
+[useWallet.ts:37](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L37)
 
 ___
 
@@ -203,7 +203,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L35)
+[useWallet.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L35)
 
 ___
 
@@ -227,7 +227,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:40](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L40)
+[useWallet.ts:40](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L40)
 
 ___
 
@@ -251,7 +251,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L33)
+[useWallet.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L33)
 
 ___
 
@@ -275,7 +275,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:34](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L34)
+[useWallet.ts:34](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L34)
 
 ___
 
@@ -299,7 +299,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:41](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L41)
+[useWallet.ts:41](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L41)
 
 ___
 
@@ -323,7 +323,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L31)
+[useWallet.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L31)
 
 ___
 
@@ -347,7 +347,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L38)
+[useWallet.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L38)
 
 ___
 
@@ -357,7 +357,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L21)
+[useWallet.ts:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L21)
 
 ___
 
@@ -367,7 +367,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L20)
+[useWallet.ts:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L20)
 
 ## Methods
 
@@ -389,7 +389,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L28)
+[useWallet.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L28)
 
 ___
 
@@ -403,7 +403,7 @@ ___
 
 #### Defined in
 
-[useWallet.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L29)
+[useWallet.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L29)
 
 ___
 
@@ -423,4 +423,4 @@ ___
 
 #### Defined in
 
-[useWallet.ts:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/react/useWallet.ts#L27)
+[useWallet.ts:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L27)

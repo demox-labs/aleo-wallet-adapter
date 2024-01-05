@@ -83,7 +83,7 @@ Error.constructor
 
 #### Defined in
 
-[errors.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/errors.ts#L5)
+[errors.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/errors.ts#L5)
 
 ## Properties
 
@@ -107,7 +107,7 @@ ___
 
 #### Defined in
 
-[errors.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/errors.ts#L2)
+[errors.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/errors.ts#L2)
 
 ___
 

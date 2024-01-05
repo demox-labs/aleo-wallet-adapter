@@ -27,4 +27,4 @@
 
 #### Defined in
 
-[adapter.ts:56](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/wallets/leo/adapter.ts#L56)
+[adapter.ts:57](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/wallets/leo/adapter.ts#L57)

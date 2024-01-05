@@ -27,6 +27,7 @@ export interface LeoWalletEvents {
 
 export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
     publicKey?: string;
+    isAvailable(): Promise<boolean>;
     signMessage(message: Uint8Array): Promise<{ signature: Uint8Array }>;
     decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<{ text: string }>,
     requestRecords(program: string): Promise<{ records: any[] }>,
@@ -83,6 +84,11 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
                 if (window?.leoWallet || window?.leo) {
                     this._readyState = WalletReadyState.Installed;
                     this.emit('readyStateChange', this._readyState);
+
+                    // Wakeup service worker
+                    if (window?.leoWallet && window?.leoWallet.isAvailable) {
+                        window?.leoWallet.isAvailable();
+                    }
                     return true;
                 }
                 return false;
@@ -294,6 +300,8 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
 
             // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
             const wallet = window.leoWallet! || window.leo!;
+            const isAvailable = wallet.isAvailable ? await wallet.isAvailable() : true;
+            if (!isAvailable) throw new WalletConnectionError('The wallet is not available');
 
             try {
                 await wallet.connect(decryptPermission, network, programs);
@@ -307,7 +315,6 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
 
             this._wallet = wallet;
             this._decryptPermission = decryptPermission;
-
             this.emit('connect', this._publicKey);
         } catch (error: any) {
             this.emit('error', error);

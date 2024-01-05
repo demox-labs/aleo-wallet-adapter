@@ -78,7 +78,7 @@
 
 #### Defined in
 
-[signer.ts:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/signer.ts#L6)
+[signer.ts:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/signer.ts#L6)
 
 ___
 
@@ -94,7 +94,7 @@ ___
 
 #### Defined in
 
-[signer.ts:41](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/signer.ts#L41)
+[signer.ts:41](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/signer.ts#L41)
 
 ___
 
@@ -110,7 +110,7 @@ ___
 
 #### Defined in
 
-[signer.ts:10](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/signer.ts#L10)
+[signer.ts:10](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/signer.ts#L10)
 
 ___
 
@@ -120,7 +120,7 @@ ___
 
 #### Defined in
 
-[types.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/types.ts#L5)
+[types.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/types.ts#L5)
 
 ___
 
@@ -136,7 +136,7 @@ ___
 
 #### Defined in
 
-[types.ts:7](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/types.ts#L7)
+[types.ts:7](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/types.ts#L7)
 
 ___
 
@@ -152,7 +152,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/adapter.ts#L32)
+[adapter.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/adapter.ts#L32)
 
 ___
 
@@ -168,7 +168,7 @@ ___
 
 #### Defined in
 
-[adapter.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/adapter.ts#L16)
+[adapter.ts:16](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/adapter.ts#L16)
 
 ## Functions
 
@@ -188,4 +188,4 @@ ___
 
 #### Defined in
 
-[adapter.ts:83](https://github.com/demox-labs/aleo-wallet-adapter/blob/aa97381/packages/core/base/adapter.ts#L83)
+[adapter.ts:83](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/base/adapter.ts#L83)

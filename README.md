@@ -6,19 +6,19 @@ It is composed of 4 sub-packages:
 - `aleo-wallet-adapter-base`: Generic features such as Aleo related Classes, Errors, Permissions...  [See Base Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/base/docs/modules.md)
 - `aleo-wallet-adapter-react`: React Context Povider and Hooks. [See React Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/react/docs/modules.md)
 - `aleo-wallet-adapter-reactui`: React components ready to be used in a DApp. [See React UI Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/ui/docs/modules.md)
-- `aleo-wallet-adapter-leo`: Leo Wallet implementation of the adapter. [See Leo Adapter Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/wallets/leo/docs/modules.md)
+- `aleo-wallet-adapter-leo`: Leo Wallet specific implementation of the adapter. [See Leo Adapter Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/wallets/leo/docs/modules.md)
 
 Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 
 [A live demo can be found here.](https://demo.leo.app)
 
-This is a quick setup guide with examples of how to add Wallet Adapter to a React-based Aleo app.
+## Quick Setup for a React App
 
-## Quick Setup (using React UI)
+This is a quick setup guide of how to add Wallet Adapter to a React-based Aleo app with a few usefull examples.
 
-### 📲Install
+### 📲 Install
 
-Install these dependencies:
+First, install these dependencies, using npm:
 
 ```shell
 npm install --save \
@@ -29,7 +29,19 @@ npm install --save \
     react
 ```
 
-### 🛠️Setup
+Or using yarn:
+```shell
+yarn add \
+    @demox-labs/aleo-wallet-adapter-base \
+    @demox-labs/aleo-wallet-adapter-react \
+    @demox-labs/aleo-wallet-adapter-reactui \
+    @demox-labs/aleo-wallet-adapter-leo \
+    react
+```
+
+### 🛠️ Setup
+
+Set up Aleo Wallet Adapter in your React application by creating a wallet context with a provider, modal provider, and specifying the wallets (e.g., LeoWalletAdapter) you want to use.
 
 ```tsx
 import React, { FC, useMemo } from "react";
@@ -69,7 +81,9 @@ export const Wallet: FC = () => {
 };
 ```
 
-### ✍🏻Signing
+### ✍🏻 Signing
+
+You can use Aleo Wallet Adapter to sign messages with the user's wallet. This snippet demonstrates how to create a button that, upon clicking, signs a predefined message.
 
 ```tsx
 import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
@@ -101,7 +115,9 @@ export const SignMessage: FC = () => {
 };
 ```
 
-### 🔓Decrypting
+### 🔓 Decrypting
+
+The following example shows how you can use the package to decrypt any encrypted record ciphertext:
 
 ```tsx
 import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
@@ -128,7 +144,9 @@ export const DecryptMessage: FC = () => {
 };
 ```
 
-### 🗂️Requesting Records
+### 🗂️ Requesting Records
+
+You can request all records of a program the wallet has saved locally by syncing with the chain. Just use the `requestRecords` function returned by `useWallet` hook. The program id must be provdied as an argument.
 
 ```tsx
 import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
@@ -155,7 +173,11 @@ export const RequestRecords: FC = () => {
 };
 ```
 
-### 📡Requesting Transactions
+See more in dedicated documentation.
+
+### 📡 Broadcasting Transactions
+
+To initiate a transaction and broadcast it to the network, you can use the `requestTransaction` function returned by `useWallet` hook.
 
 ```tsx
 import {
@@ -201,7 +223,11 @@ export const RequestTransaction: FC = () => {
 };
 ```
 
-### 💻Deploying Programs
+See more in dedicated documentation.
+
+### 💻 Deploying Programs
+
+A program deployement transaction can be initated as well, with just the program source code, using `requestDeploy` returned by `useWallet` hook.
 
 ```tsx
 import {
@@ -249,9 +275,9 @@ export const DeployProgram: FC = () => {
 };
 ```
 
-### 🗂️Requesting Record Plaintexts
+### 🗂️ Requesting Record Plaintexts
 
-This requires the `OnChainHistory` permission
+You can requests as well all records associated with a specific program, as decrypted plaintext. This requires the `OnChainHistory` permission.
 
 ```tsx
 import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
@@ -278,9 +304,9 @@ export const RequestRecordPlaintexts: FC = () => {
 };
 ```
 
-### 🗂️Requesting Transaction History
+### 🗂️ Requesting Transaction History
 
-This requires the `OnChainHistory` permission
+All trasnction history associated with a program can be recovered as well. This requires the `OnChainHistory` permission.
 
 ```tsx
 import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
@@ -308,6 +334,8 @@ export const RequestRecords: FC = () => {
 ```
 
 ### Subscribing to Events
+
+Events, like change of the active account can trigger dedicated callback options as the following:
 
 ```tsx
 import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";

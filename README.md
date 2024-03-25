@@ -2,6 +2,8 @@
 
 A node package for integrating wallet features into your Aleo decentralised applications (DApp). It includes adapters and components tailored for use with the Aleo blockchain, supporting React-based applications.
 
+[A live demo can be found here.](https://demo.leo.app)
+
 It is includes 4 sub-packages:
 - `aleo-wallet-adapter-base`: Generic features such as Aleo related Classes, Errors, Permissions...  [See Base Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/base/docs/modules.md)
 - `aleo-wallet-adapter-react`: React Context Povider and Hooks. [See React Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/react/docs/modules.md)
@@ -9,8 +11,6 @@ It is includes 4 sub-packages:
 - `aleo-wallet-adapter-leo`: Leo Wallet specific implementation of the adapter. [See Leo Adapter Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/wallets/leo/docs/modules.md)
 
 Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
-
-[A live demo can be found here.](https://demo.leo.app)
 
 ## Quick Setup for a React App
 

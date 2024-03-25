@@ -14,7 +14,7 @@ Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 
 ## Quick Setup for a React App
 
-This is a quick setup guide of how to add Wallet Adapter to a React-based Aleo app with *useful examples*.
+This is a quick setup guide of how to add Wallet Adapter to a React-based Aleo app with **useful examples**.
 
 ### 📲 Install
 

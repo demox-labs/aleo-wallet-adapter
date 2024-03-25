@@ -19,7 +19,7 @@ To get further details about any specific feature, checkout corresponding sub-pa
 
 ### 📲 Install
 
-TO get started, simply install the following dependencies, using npm:
+To get started, simply install the following dependencies, using npm:
 
 ```shell
 npm install --save \

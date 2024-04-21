@@ -44,42 +44,22 @@ It includes 4 sub-packages:
 - `aleo-wallet-adapter-base`
 Generic features such as Aleo related Classes, Errors, Permissions...
 
-    <a href="./packages/core/base/docs/modules.md">
-        <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>&nbsp;
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base">
-        <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/>
-    </a>
+    <a href="./packages/core/base/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
 
 - `aleo-wallet-adapter-react`
 React Context Povider and Hooks.
 
-    <a href="./packages/core/react/docs/modules.md">
-        <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>&nbsp;
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react">
-        <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/>
-    </a>
+    <a href="./packages/core/react/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/></a>
 
 - `aleo-wallet-adapter-reactui`
 React components ready to be used in a DApp.
 
-    <a href="./packages/ui/docs/modules.md">
-        <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>&nbsp;
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui">
-        <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/>
-    </a>
+    <a href="./packages/ui/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"/></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/></a>
 
 - `aleo-wallet-adapter-leo`
 Leo Wallet specific implementation of the adapter.
 
-    <a href="./packages/wallets/leo/docs/modules.md">
-        <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>&nbsp;
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo">
-        <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/>
-    </a>
+    <a href="./packages/wallets/leo/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/></a>
 
 Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 

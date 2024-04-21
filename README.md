@@ -5,16 +5,17 @@ A node package for integrating wallet features into your Aleo decentralised appl
 [A live demo can be found here.](https://demo.leo.app)
 
 It is includes 4 sub-packages:
-- `aleo-wallet-adapter-base`: Generic features such as Aleo related Classes, Errors, Permissions...  [See Base Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/base/docs/modules.md)
-- `aleo-wallet-adapter-react`: React Context Povider and Hooks. [See React Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/react/docs/modules.md)
-- `aleo-wallet-adapter-reactui`: React components ready to be used in a DApp. [See React UI Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/ui/docs/modules.md)
-- `aleo-wallet-adapter-leo`: Leo Wallet specific implementation of the adapter. [See Leo Adapter Docs.](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/wallets/leo/docs/modules.md)
+
+- `aleo-wallet-adapter-base`: Generic features such as Aleo related Classes, Errors, Permissions...  [See Base Docs.](./packages/core/base/docs/modules.md)
+- `aleo-wallet-adapter-react`: React Context Povider and Hooks. [See React Docs.](./packages/core/react/docs/modules.md)
+- `aleo-wallet-adapter-reactui`: React components ready to be used in a DApp. [See React UI Docs.](./packages/ui/docs/modules.md)
+- `aleo-wallet-adapter-leo`: Leo Wallet specific implementation of the adapter. [See Leo Adapter Docs.](./packages/wallets/leo/docs/modules.md)
 
 Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 
-## Quick Setup for a React App
+## Quick Setup
 
-Here is a quick setup guide on how to add Wallet Adapter to a React-based Aleo app along with **useful examples**. 
+Here is a quick setup guide on how to add Wallet Adapter to a React-based Aleo app along with **useful examples**.
 To get further details about any specific feature, checkout corresponding sub-package documentation.
 
 ### 📲 Install
@@ -31,6 +32,7 @@ npm install --save \
 ```
 
 Or using yarn:
+
 ```shell
 yarn add \
     @demox-labs/aleo-wallet-adapter-base \
@@ -81,6 +83,8 @@ export const Wallet: FC = () => {
   );
 };
 ```
+
+## Usage examples
 
 ### ✍🏻 Signing
 

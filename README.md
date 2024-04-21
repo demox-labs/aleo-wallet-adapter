@@ -18,16 +18,16 @@
 
 ## Table of Content
 
-- [Getting Started](#getting-started)
+- [🚀 Getting Started](#-getting-started)
   - [📲 Install](#-install)
   - [🛠️ Setup](#-setup)
-- [Usage examples](#usage-examples)
+- [🧪 Usage examples](#-usage-examples)
   - [✍🏻 Signing](#-signing)
   - [🔓 Decrypting](#-decrypting)
-  - [🗂️ Requesting Records](#-%EF%B8%8F-requesting-records)
+  - [🗂️ Requesting Records](#%EF%B8%8F-requesting-records)
   - [📡 Broadcasting Transactions](#-broadcasting-transactions)
   - [💻 Deploying Programs](#-deploying-programs)
-  - [🗂️ Requesting Record Plaintexts](#-requesting-record-plaintexts)
+  - [🗂️ Requesting Record Plaintexts](#%EF%B8%8F-requesting-record-plaintexts)
   - [📜 Requesting Transaction History](#-requesting-transaction-history)
   - [🔔 Subscribing to Events](#-subscribing-to-events)
 
@@ -56,8 +56,7 @@ React Context Povider and Hooks.
 
     <a href="./packages/core/react/docs/modules.md">
         <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react">
+    </a><a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react">
         <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/>
     </a>
 
@@ -66,8 +65,7 @@ React components ready to be used in a DApp.
 
     <a href="./packages/core/ui/docs/modules.md">
         <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui">
+    </a><a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui">
         <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/>
     </a>
 
@@ -76,14 +74,13 @@ Leo Wallet specific implementation of the adapter. [See Leo  Adapter Docs.](./pa
 
     <a href="./packages/core/wallets/docs/leo/modules.md">
         <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a>
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo">
+    </a><a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo">
         <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/>
     </a>
 
 Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 
-## Getting Started
+## 🚀 Getting Started
 
 Here is a quick setup guide on how to add Wallet Adapter to a React-based Aleo app along with **useful examples**.
 To get further details about any specific feature, checkout corresponding sub-package documentation.
@@ -154,7 +151,7 @@ export const Wallet: FC = () => {
 };
 ```
 
-## Usage examples
+## 🧪 Usage examples
 
 ### ✍🏻 Signing
 

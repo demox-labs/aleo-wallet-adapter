@@ -1,10 +1,44 @@
-# Wallet Adapter for Aleo Apps
+<h1 align="center">
+    <picture>
+        <img alt="Aleo Wallet Adapter" src="https://assets-global.website-files.com/6559a97a91ac8fe073763dc8/656f59844279a74a7ac47d6b_logo-symbol.svg" style="filter: invert(75%) sepia(90%) saturate(2945%) hue-rotate(240deg) brightness(100%) contrast(94%);" width="26"/>
+    </picture>
+    Aleo Wallet Adapter
+</h1>
+
+<p align="center">
+    <a href="https://docs.leo.app/aleo-wallet-adapter"> <img alt="Website" src="https://img.shields.io/badge/Docs-online-blue"></a>
+        <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
+    <a href="https://discord.com/invite/aleo"><img src="https://img.shields.io/discord/913160862670397510?logo=discord"/></a>
+</p>
+
+<p align="center">
+    A package for integrating wallet features into your React Aleo decentralised applications.
+</p>
+
+# Overview
+
+## Table of Content
+
+- [Getting Started](#getting-started)
+  - [📲 Install](#-install)
+  - [🛠️ Setup](#-setup)
+- [Usage examples](#usage-examples)
+  - [✍🏻 Signing](#-signing)
+  - [🔓 Decrypting](#-decrypting)
+  - [🗂️ Requesting Records](#-requesting-records)
+  - [📡 Broadcasting Transactions](#-broadcasting-transactions)
+  - [💻 Deploying Programs](#-deploying-programs)
+  - [🗂️ Requesting Record Plaintexts](#-requesting-record-plaintexts)
+  - [📜 Requesting Transaction History](#-requesting-transaction-history)
+  - [🔔 Subscribing to Events](#-subscribing-to-events)
+
+## Introduction
 
 A node package for integrating wallet features into your Aleo decentralised applications (DApp). It includes adapters and components tailored for use with the Aleo blockchain, supporting React-based applications.
 
 [A live demo can be found here.](https://demo.leo.app)
 
-It is includes 4 sub-packages:
+It includes 4 sub-packages:
 
 - `aleo-wallet-adapter-base`: Generic features such as Aleo related Classes, Errors, Permissions...  [See Base Docs.](./packages/core/base/docs/modules.md)
 - `aleo-wallet-adapter-react`: React Context Povider and Hooks. [See React Docs.](./packages/core/react/docs/modules.md)
@@ -13,7 +47,7 @@ It is includes 4 sub-packages:
 
 Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 
-## Quick Setup
+## Getting Started
 
 Here is a quick setup guide on how to add Wallet Adapter to a React-based Aleo app along with **useful examples**.
 To get further details about any specific feature, checkout corresponding sub-package documentation.
@@ -309,7 +343,7 @@ export const RequestRecordPlaintexts: FC = () => {
 };
 ```
 
-### 🗂️ Requesting Transaction History
+### 📜 Requesting Transaction History
 
 All trasnction history associated with a program can be recovered as well. This requires the `OnChainHistory` permission.
 
@@ -338,7 +372,7 @@ export const RequestRecords: FC = () => {
 };
 ```
 
-### Subscribing to Events
+### 🔔 Subscribing to Events
 
 Events, like change of the active account can trigger dedicated callback options as the following:
 

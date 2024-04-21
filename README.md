@@ -16,8 +16,6 @@
     A package for integrating wallet features into your React Aleo decentralised applications.
 </p>
 
-# Overview
-
 ## Table of Content
 
 - [Getting Started](#getting-started)
@@ -26,7 +24,7 @@
 - [Usage examples](#usage-examples)
   - [✍🏻 Signing](#-signing)
   - [🔓 Decrypting](#-decrypting)
-  - [🗂️ Requesting Records](#-requesting-records)
+  - [🗂️ Requesting Records](#-%EF%B8%8F-requesting-records)
   - [📡 Broadcasting Transactions](#-broadcasting-transactions)
   - [💻 Deploying Programs](#-deploying-programs)
   - [🗂️ Requesting Record Plaintexts](#-requesting-record-plaintexts)

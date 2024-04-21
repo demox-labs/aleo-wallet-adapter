@@ -1,6 +1,6 @@
 <h1 align="center">
     <picture>
-        <img alt="Aleo Wallet Adapter" src="https://assets-global.website-files.com/6559a97a91ac8fe073763dc8/656f59844279a74a7ac47d6b_logo-symbol.svg" style="filter: invert(75%) sepia(90%) saturate(2945%) hue-rotate(240deg) brightness(100%) contrast(94%);" width="26"/>
+        <img alt="Aleo Wallet Adapter" src="https://assets-global.website-files.com/6559a97a91ac8fe073763dc8/656f59844279a74a7ac47d6b_logo-symbol.svg" style="filter: invert(75%) sepia(90%) saturate(2945%) hue-rotate(240deg) brightness(100%) contrast(94%);" width="22"/>
     </picture>
     Aleo Wallet Adapter
 </h1>

@@ -56,25 +56,28 @@ React Context Povider and Hooks.
 
     <a href="./packages/core/react/docs/modules.md">
         <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a><a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react">
+    </a>
+    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react">
         <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/>
     </a>
 
 - `aleo-wallet-adapter-reactui`
 React components ready to be used in a DApp.
 
-    <a href="./packages/core/ui/docs/modules.md">
+    <a href="./packages/ui/docs/modules.md">
         <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a><a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui">
+    </a>
+    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui">
         <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/>
     </a>
 
 - `aleo-wallet-adapter-leo`
-Leo Wallet specific implementation of the adapter. [See Leo  Adapter Docs.](./packages/wallets/leo/docs/modules.md)
+Leo Wallet specific implementation of the adapter.
 
-    <a href="./packages/core/wallets/docs/leo/modules.md">
+    <a href="./packages/wallets/leo/docs/modules.md">
         <img alt="Website" src="https://img.shields.io/badge/docs-online-blue">
-    </a><a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo">
+    </a>
+    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo">
         <img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/>
     </a>
 

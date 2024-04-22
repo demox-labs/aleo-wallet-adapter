@@ -8,7 +8,7 @@
 <p align="center">
     <a href="https://docs.leo.app/aleo-wallet-adapter"> <img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>
     <a href="https://demo.leo.app"><img src="https://img.shields.io/badge/live_demo-▶️-green"/></a>
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
+    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter"/></a>
     <a href="https://discord.com/invite/aleo"><img src="https://img.shields.io/discord/913160862670397510?logo=discord"/></a>
 </p>
 
@@ -18,6 +18,7 @@
 
 ## Table of Content
 
+- [👋 Introduction](#-introduction)
 - [🚀 Getting Started](#-getting-started)
   - [📲 Install](#-install)
   - [🛠️ Setup](#%EF%B8%8F-setup)
@@ -31,9 +32,11 @@
   - [📜 Requesting Transaction History](#-requesting-transaction-history)
   - [🔔 Subscribing to Events](#-subscribing-to-events)
 
-## Introduction
+## 👋 Introduction
 
-A node package for integrating wallet features into your React Aleo decentralised applications (DApp). It includes adapters and components tailored for use with the Aleo blockchain, supporting React-based applications.
+A wallet adapter is a bridge between an wallet browser extension and decentralised applications.
+
+**Aleo Wallet Adapter** node package is built to make integration seamless for both wallet and dApp developers on Aleo. It includes adapters and components tailored for use with the Aleo blockchain, supporting React-based applications.
 
 <p align="center">
     <a href="https://demo.leo.app"><img src="https://img.shields.io/badge/live_demo-▶️-green"/></a>
@@ -61,7 +64,7 @@ Leo Wallet specific implementation of the adapter.
 
     <a href="./packages/wallets/leo/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/></a>
 
-Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
+Top package `aleo-wallet-adapter` exposes all of these sub-packages exports.
 
 ## 🚀 Getting Started
 

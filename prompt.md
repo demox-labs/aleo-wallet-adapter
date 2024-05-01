@@ -1,3 +1,5 @@
+ChatGPT, here is a Readme for a npm package codebase.
+
 <h1 align="center">
     <picture>
         <img alt="Aleo Wallet Adapter" src="https://assets-global.website-files.com/6559a97a91ac8fe073763dc8/656f59844279a74a7ac47d6b_logo-symbol.svg" style="filter: invert(75%) sepia(90%) saturate(2945%) hue-rotate(240deg) brightness(100%) contrast(94%);" width="22"/>
@@ -8,7 +10,7 @@
 <p align="center">
     <a href="https://docs.leo.app/aleo-wallet-adapter"> <img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>
     <a href="https://demo.leo.app"><img src="https://img.shields.io/badge/live_demo-▶️-green"/></a>
-    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter"/></a>
+    <a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
     <a href="https://discord.com/invite/aleo"><img src="https://img.shields.io/discord/913160862670397510?logo=discord"/></a>
 </p>
 
@@ -31,15 +33,10 @@
   - [🗂️ Requesting Record Plaintexts](#%EF%B8%8F-requesting-record-plaintexts)
   - [📜 Requesting Transaction History](#-requesting-transaction-history)
   - [🔔 Subscribing to Events](#-subscribing-to-events)
-- [Wallet Developers](#-usage-examples)
-  - How to integrate
-  - Merge Request
 
 ## 👋 Introduction
 
-A wallet adapter is a bridge between an wallet browser extension and decentralised applications.
-
-**Aleo Wallet Adapter** node package is built to make integration seamless for both wallet and dApp developers on Aleo. It includes adapters and components tailored for use with the Aleo blockchain, supporting React-based applications.
+A node package for integrating wallet features into your React Aleo decentralised applications (DApp). It includes adapters and components tailored for use with the Aleo blockchain, supporting React-based applications.
 
 <p align="center">
     <a href="https://demo.leo.app"><img src="https://img.shields.io/badge/live_demo-▶️-green"/></a>
@@ -50,7 +47,7 @@ It includes 4 sub-packages:
 - `aleo-wallet-adapter-base`
 Generic features such as Aleo related Classes, Errors, Permissions...
 
-    <a href="./packages/core/base/docs/README.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
+    <a href="./packages/core/base/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
 
 - `aleo-wallet-adapter-react`
 React Context Povider and Hooks.
@@ -67,7 +64,7 @@ Leo Wallet specific implementation of the adapter.
 
     <a href="./packages/wallets/leo/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/></a>
 
-Top package `aleo-wallet-adapter` exposes all of these sub-packages exports.
+Top package `aleo-wallet-adapter` exports all of these sub-packages exports.
 
 ## 🚀 Getting Started
 
@@ -423,3 +420,388 @@ export const SubscribeToEvent: FC = () => {
   );
 };
 ```
+
+ChatGPT, aleo-wallet-adapter-base subpackage is constituted of the following files :
+
+- adapter.ts
+- errors.ts
+- index.ts
+- package.json
+- signer.ts
+- transaction.ts
+- tsconfig.json
+- types.ts
+- yarn.lock
+
+ChatGPT, here is the code for adapter.ts file:
+
+import EventEmitter from 'eventemitter3';
+import type { WalletError } from './errors';
+import type { SupportedTransactionVersions, DecryptPermission, WalletAdapterNetwork } from './types';
+
+export { EventEmitter };
+
+export interface WalletAdapterEvents {
+    connect(publicKey: string, programs?: string[]): void;
+    disconnect(): void;
+    error(error: WalletError): void;
+    readyStateChange(readyState: WalletReadyState): void;
+}
+
+// WalletName is a nominal type that wallet adapters should use, e.g. `'MyCryptoWallet' as WalletName<'MyCryptoWallet'>`
+// <https://medium.com/@KevinBGreene/surviving-the-typescript-ecosystem-branding-and-type-tagging-6cf6e516523d>
+export type WalletName<T extends string = string> = T & { **brand**: 'WalletName' };
+
+export interface WalletAdapterProps<Name extends string = string> {
+    name: WalletName<Name>;
+    url: string;
+    icon: string;
+    readyState: WalletReadyState;
+    publicKey: string | null;
+    connecting: boolean;
+    connected: boolean;
+    supportedTransactionVersions: SupportedTransactionVersions;
+
+    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
+    disconnect(): Promise<void>;
+}
+
+export type WalletAdapter<Name extends string = string> = WalletAdapterProps<Name> & EventEmitter<WalletAdapterEvents>;
+
+/**
+
+- A wallet's readiness describes a series of states that the wallet can be in,
+- depending on what kind of wallet it is. An installable wallet (eg. a browser
+- extension like Phantom) might be `Installed` if we've found the Phantom API
+- in the global scope, or `NotDetected` otherwise. A loadable, zero-install
+- runtime (eg. Torus Wallet) might simply signal that it's `Loadable`. Use this
+- metadata to personalize the wallet list for each user (eg. to show their
+- installed wallets first).
+ */
+export enum WalletReadyState {
+    /**
+  - User-installable wallets can typically be detected by scanning for an API
+  - that they've injected into the global context. If such an API is present,
+  - we consider the wallet to have been installed.
+     */
+    Installed = 'Installed',
+    NotDetected = 'NotDetected',
+    /**
+  - Loadable wallets are always available to you. Since you can load them at
+  - any time, it's meaningless to say that they have been detected.
+     */
+    Loadable = 'Loadable',
+    /**
+  - If a wallet is not supported on a given platform (eg. server-rendering, or
+  - mobile) then it will stay in the `Unsupported` state.
+     */
+    Unsupported = 'Unsupported',
+}
+
+export abstract class BaseWalletAdapter<Name extends string = string>
+    extends EventEmitter<WalletAdapterEvents>
+    implements WalletAdapter<Name>
+{
+    abstract name: WalletName<Name>;
+    abstract url: string;
+    abstract icon: string;
+    abstract readyState: WalletReadyState;
+    abstract publicKey: string | null;
+    abstract connecting: boolean;
+    abstract supportedTransactionVersions: SupportedTransactionVersions;
+
+    get connected() {
+        return !!this.publicKey;
+    }
+
+    abstract connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
+    abstract disconnect(): Promise<void>;
+}
+
+export function scopePollingDetectionStrategy(detect: () => boolean): void {
+    // Early return when server-side rendering
+    if (typeof window === 'undefined' || typeof document === 'undefined') return;
+
+    const disposers: (() => void)[] = [];
+
+    function detectAndDispose() {
+        const detected = detect();
+        if (detected) {
+            for (const dispose of disposers) {
+                dispose();
+            }
+        }
+    }
+
+    // Strategy #1: Try detecting every second.
+    const interval =
+        // TODO: #334 Replace with idle callback strategy.
+        setInterval(detectAndDispose, 1000);
+    disposers.push(() => clearInterval(interval));
+
+    // Strategy #2: Detect as soon as the DOM becomes 'ready'/'interactive'.
+    if (
+        // Implies that `DOMContentLoaded` has not yet fired.
+        document.readyState === 'loading'
+    ) {
+        document.addEventListener('DOMContentLoaded', detectAndDispose, { once: true });
+        disposers.push(() => document.removeEventListener('DOMContentLoaded', detectAndDispose));
+    }
+
+    // Strategy #3: Detect after the `window` has fully loaded.
+    if (
+        // If the `complete` state has been reached, we're too late.
+        document.readyState !== 'complete'
+    ) {
+        window.addEventListener('load', detectAndDispose, { once: true });
+        disposers.push(() => window.removeEventListener('load', detectAndDispose));
+    }
+
+    // Strategy #4: Detect synchronously, now.
+    detectAndDispose();
+}
+
+ChatGPT, here is the code for deployment.ts file:
+
+export interface AleoDeployment {
+  address: string;
+  chainId: string;
+  program: string;
+  fee: number;
+  feePrivate: boolean;
+}
+
+export class Deployment implements AleoDeployment {
+  address: string;
+  chainId: string;
+  program: string;
+  fee: number;
+  feePrivate: boolean;
+
+  constructor(address: string, chainId: string, program: string, fee: number, feePrivate: boolean = true) {
+    this.address = address;
+    this.chainId = chainId;
+    this.program = program;
+    this.fee = fee;
+    this.feePrivate = feePrivate;
+  }
+}
+
+ChatGPT, here is the code for deployment.ts file:
+
+export class WalletError extends Error {
+    error: any;
+
+    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
+    constructor(message?: string, error?: any) {
+        super(message);
+        this.error = error;
+    }
+}
+
+export class WalletNotReadyError extends WalletError {
+    name = 'WalletNotReadyError';
+}
+
+export class WalletLoadError extends WalletError {
+    name = 'WalletLoadError';
+}
+
+export class WalletConfigError extends WalletError {
+    name = 'WalletConfigError';
+}
+
+export class WalletConnectionError extends WalletError {
+    name = 'WalletConnectionError';
+}
+
+export class WalletNotSelectedError extends WalletError {
+    name = 'WalletNotSelectedError';
+}
+
+export class WalletDisconnectedError extends WalletError {
+    name = 'WalletDisconnectedError';
+}
+
+export class WalletDisconnectionError extends WalletError {
+    name = 'WalletDisconnectionError';
+}
+
+export class WalletAccountError extends WalletError {
+    name = 'WalletAccountError';
+}
+
+export class WalletPublicKeyError extends WalletError {
+    name = 'WalletPublicKeyError';
+}
+
+export class WalletKeypairError extends WalletError {
+    name = 'WalletKeypairError';
+}
+
+export class WalletNotConnectedError extends WalletError {
+    name = 'WalletNotConnectedError';
+}
+
+export class WalletSendTransactionError extends WalletError {
+    name = 'WalletSendTransactionError';
+}
+
+export class WalletSignMessageError extends WalletError {
+    name = 'WalletSignMessageError';
+}
+
+export class WalletSignTransactionError extends WalletError {
+    name = 'WalletSignTransactionError';
+}
+
+export class WalletTimeoutError extends WalletError {
+    name = 'WalletTimeoutError';
+}
+
+export class WalletWindowBlockedError extends WalletError {
+    name = 'WalletWindowBlockedError';
+}
+
+export class WalletWindowClosedError extends WalletError {
+    name = 'WalletWindowClosedError';
+}
+
+export class WalletDecryptionNotAllowedError extends WalletError {
+    name = 'WalletDecryptionNotAllowedError';
+}
+
+export class WalletDecryptionError extends WalletError {
+    name = 'WalletDecryptionError';
+}
+
+export class WalletRecordsError extends WalletError {
+    name = 'WalletRecordsError';
+}
+
+export class WalletTransactionError extends WalletError {
+    name = 'WalletTransactionError';
+}
+
+ChatGPT, here is the code for signer.ts file:
+
+import type { WalletAdapter, WalletAdapterProps } from './adapter';
+import { BaseWalletAdapter } from './adapter';
+import { AleoDeployment } from './deployment';
+import { AleoTransaction } from './transaction';
+
+export type Adapter = WalletAdapter | SignerWalletAdapter | MessageSignerWalletAdapter;
+
+export interface SignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> { }
+
+export type SignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> & SignerWalletAdapterProps<Name>;
+
+export abstract class BaseSignerWalletAdapter<Name extends string = string>
+    extends BaseWalletAdapter<Name>
+    implements SignerWalletAdapter<Name>
+{ }
+
+export interface MessageSignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
+    signMessage(message: Uint8Array): Promise<Uint8Array>;
+
+    decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
+
+    requestRecords(program: string): Promise<any[]>;
+
+    requestTransaction(transaction: AleoTransaction): Promise<string>;
+
+    requestExecution(transaction: AleoTransaction): Promise<string>;
+
+    requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
+
+    requestDeploy(deployment: AleoDeployment): Promise<string>;
+
+    transactionStatus(transactionId: string): Promise<string>;
+
+    getExecution(transactionId: string): Promise<string>;
+
+    requestRecordPlaintexts(program: string): Promise<any[]>;
+
+    requestTransactionHistory(program: string): Promise<any[]>;
+}
+
+export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
+    MessageSignerWalletAdapterProps<Name>;
+
+export abstract class BaseMessageSignerWalletAdapter<Name extends string = string>
+    extends BaseSignerWalletAdapter<Name>
+    implements MessageSignerWalletAdapter<Name>
+{
+    abstract signMessage(message: Uint8Array): Promise<Uint8Array>;
+
+    abstract decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
+
+    abstract requestRecords(program: string): Promise<any[]>;
+
+    abstract requestTransaction(transaction: AleoTransaction): Promise<string>;
+
+    abstract requestExecution(transaction: AleoTransaction): Promise<string>;
+
+    abstract requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
+
+    abstract requestDeploy(deployment: AleoDeployment): Promise<string>;
+
+    abstract transactionStatus(transactionId: string): Promise<string>;
+
+    abstract getExecution(transactionId: string): Promise<string>;
+
+    abstract requestRecordPlaintexts(program: string): Promise<any[]>;
+
+    abstract requestTransactionHistory(program: string): Promise<any[]>;
+}
+
+ChatGPT, here is the code for transaction.ts file:
+
+export interface AleoTransition {
+  program: string;
+  functionName: string;
+  inputs: any[];
+}
+
+export class Transition implements AleoTransition {
+  program: string;
+  functionName: string;
+  inputs: any[];
+
+  constructor(program: string, functionName: string, inputs: any[]) {
+    this.program = program;
+    this.functionName = functionName;
+    this.inputs = inputs;
+  }
+}
+
+export interface AleoTransaction {
+  address: string;
+  chainId: string;
+  transitions: AleoTransition[];
+  fee: number;
+  feePrivate: boolean;
+}
+
+export class Transaction implements AleoTransaction {
+  address: string;
+  chainId: string;
+  transitions: AleoTransition[];
+  fee: number;
+  feePrivate: boolean;
+
+  constructor(address: string, chainId: string, transitions: AleoTransition[], fee: number, feePrivate = true) {
+    this.address = address;
+    this.chainId = chainId;
+    this.transitions = transitions;
+    this.fee = fee;
+    this.feePrivate = feePrivate;
+  }
+
+  static createTransaction(address: string, chainId: string, program: string, functionName: string, inputs: any[], fee: number, feePrivate = true) {
+    const transition = new Transition(program, functionName, inputs);
+    return new Transaction(address, chainId, [transition], fee, feePrivate);
+  }
+}
+
+ChatGPT, now write the exaustive user documentation for subpackage `aleo-wallet-adapter-base subpackage`, it must be written in multiple markdown files. Include a file tree and the whole content for each file, feel free to chose the most relevant file tree for best comprehension for users. It should include descriptions of each function that are built to be used by end user and parameters must be detailed. Usage examples are very important.

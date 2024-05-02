@@ -31,9 +31,9 @@
   - [🗂️ Requesting Record Plaintexts](#%EF%B8%8F-requesting-record-plaintexts)
   - [📜 Requesting Transaction History](#-requesting-transaction-history)
   - [🔔 Subscribing to Events](#-subscribing-to-events)
-- [Wallet Developers](#-usage-examples)
-  - How to integrate
-  - Merge Request
+- [👨‍💻 Aleo Wallets](#-aleo-wallet)
+  - [☑️ Provide Mutliple Options](#-☑️-provide-multiple-options)
+  - [</> Integrate your Wallet](#-integrate-your-wallet)
 
 ## 👋 Introduction
 
@@ -423,3 +423,83 @@ export const SubscribeToEvent: FC = () => {
   );
 };
 ```
+
+## 👨‍💻 Aleo Wallets
+
+### ☑️ Provide Multiple Options
+
+To provide multiple wallet alternatives, simply add to setup's `useMemo` first argument function's output the desired adapter:
+
+```tsx
+import React, { FC, useMemo } from "react";
+import { WalletProvider } from "@demox-labs/aleo-wallet-adapter-react";
+import { WalletModalProvider } from "@demox-labs/aleo-wallet-adapter-reactui";
+import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
+
+import {
+  AvailWalletAdapter,
+  SoterWalletAdapter,
+  FoxWalletAdapter,
+  PuzzleWalletAdapter
+} from 'aleo-wallet-adapters';
+
+import {
+  DecryptPermission,
+  WalletAdapterNetwork,
+} from "@demox-labs/aleo-wallet-adapter-base";
+
+// Default styles that can be overridden by your app
+require("@demox-labs/aleo-wallet-adapter-reactui/styles.css");
+
+export const Wallet: FC = () => {
+  const wallets = useMemo(
+    () => [
+      new LeoWalletAdapter({
+        appName: "Aleo Demo App",
+      }),
+      new AvailWalletAdapter({
+        appName: "Aleo Demo App",
+      }),
+      new SoterWalletAdapter({
+        appName: "Aleo Demo App",
+      }),
+      new FoxWalletAdapter({
+        appName: "Aleo Demo App",
+      }),
+      new PuzzleWalletAdapter({
+        appName: "Aleo Demo App",
+      }),
+    ],
+    []
+  );
+
+  return (
+    <WalletProvider
+      wallets={wallets}
+      decryptPermission={DecryptPermission.UponRequest}
+      network={WalletAdapterNetwork.Localnet}
+      autoConnect
+    >
+      <WalletModalProvider>
+        // Your app's components go here
+      </WalletModalProvider>
+    </WalletProvider>
+  );
+};
+```
+
+Here is a list of known adapters:
+
+- [Leo wallet:](https://leo.app/) `LeoWalletAdapter` from package `@demox-labs/aleo-wallet-adapter-leo`.
+- [Avail wallet:](https://avail.global/) `AvailWalletAdapter` from package `@avail-wallet/aleo-wallet-adapter-avail`.
+- [Soter wallet:](https://sotertech.io/) `SoterWalletAdapter` from package `@soterhq/aleo-wallet-adapter-soter`.
+
+*To obtain the node package exporting the adapter of a specific wallet, you can also contact its development teams directly.*
+
+To add your wallet adapter to the list above, fork this repository, edit this `README.md` file and [propose a Pull Request.](https://github.com/demox-labs/aleo-wallet-adapter/compare)
+
+### </> Integrate your Wallet
+
+Part of the purpose of this repository is to provide a toolbox for Aleo wallet developers. To make your own wallet available to dApps, you can build your own adapter, which should implement `WalletAdapter` exported from [./packages/core/base/adapter.js.](./packages/core/base/adapter.js)
+
+An example of such an implementation can be found at  [./packages/wallets/leo/adapter.js.](./packages/wallets/leo/adapter.js)

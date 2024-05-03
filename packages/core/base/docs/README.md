@@ -1,11 +1,10 @@
 # Aleo Wallet Adapter Base
 
-This package provides the foundational components for interacting with Aleo wallets within decentralized applications (DApps). It includes wallet adapters, error handling, transaction signing, and types for building decentralized applications on the Aleo blockchain.
+This package provides the abstract interfaces to implement for connecting a wallet to Aleo wallets within decentralized applications (DApps). It includes wallet adapters, error handling, transaction and deployments useful types.
 
 ## Contents
 
-- [Adapter](adapter.md) - Implementation and usage of the wallet adapter.
-- [Errors](errors.md) - Definitions and explanations of the various wallet errors.
-- [Signer](signer.md) - Details on the signer adapters and message signing.
-- [Transaction](transaction.md) - Transaction structure and related functionalities.
-- [Types](types.md) - Various types used throughout the package.
+- [Adapter abstractions](adapters.md) - Details on the different types of adapters, which abstract wallet features to interact with DApps.
+- [Errors](errors.md) - List of the various possible wallet errors.
+- [Permissions](permissions.md) - List of the existing permissions.
+- [Aleo types](aleo_types.md) - Aleo specific useful types: transactions, transitions, program deployments.

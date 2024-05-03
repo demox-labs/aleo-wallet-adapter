@@ -804,4 +804,4 @@ export class Transaction implements AleoTransaction {
   }
 }
 
-ChatGPT, now write the exaustive user documentation for subpackage `aleo-wallet-adapter-base subpackage`, it must be written in multiple markdown files. Include a file tree and the whole content for each file, feel free to chose the most relevant file tree for best comprehension for users. It should include descriptions of each function that are built to be used by end user and parameters must be detailed. Usage examples are very important.
+ChatGPT, explain the difference between MessageSignerWalletAdapter, SignerWalletAdapter, BaseMessageSignerWalletAdapter,BaseSignerWalletAdapter, BaseWalletAdapter and WalletAdapter and the reason why each exists.

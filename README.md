@@ -140,6 +140,8 @@ export const Wallet: FC = () => {
 };
 ```
 
+Learn more here about available [decrypt permissions](./packages/core/base/docs/permissions.md), and [network options](./packages/core/base/docs/networks.md).
+
 ## 🧪 Usage examples
 
 ### ✍🏻 Signing

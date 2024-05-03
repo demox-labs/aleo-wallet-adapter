@@ -48,12 +48,12 @@ A wallet adapter is a bridge between an wallet browser extension and decentralis
 It includes 4 sub-packages:
 
 - `aleo-wallet-adapter-base`
-Generic features such as Aleo related Classes, Errors, Permissions...
+Abstracts Aleo Wallet Adapter and provides generic features such as Errors, Decrypt Permissions, and other useful Aleo related types.
 
     <a href="./packages/core/base/docs/README.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
 
 - `aleo-wallet-adapter-react`
-React Context Povider and Hooks.
+React Context Provider and Hooks.
 
     <a href="./packages/core/react/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/></a>
 
@@ -63,7 +63,7 @@ React components ready to be used in a DApp.
     <a href="./packages/ui/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"/></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/></a>
 
 - `aleo-wallet-adapter-leo`
-Leo Wallet specific implementation of the adapter.
+Leo Wallet specific implementation of wallet adapter.
 
     <a href="./packages/wallets/leo/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-leo"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-leo"/></a>
 
@@ -430,7 +430,7 @@ export const SubscribeToEvent: FC = () => {
 
 ### ☑️ Provide Multiple Options
 
-To provide multiple wallet alternatives, simply add to setup's `useMemo` first argument function's output the desired adapter:
+To provide multiple wallet alternatives, simply add the desired adapters to **`wallets`** prop of **`WalletProvider`**. Here is an example, using `useMemo` for caching adapter instanciation:
 
 ```tsx
 import React, { FC, useMemo } from "react";

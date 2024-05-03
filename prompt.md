@@ -421,387 +421,561 @@ export const SubscribeToEvent: FC = () => {
 };
 ```
 
-ChatGPT, aleo-wallet-adapter-base subpackage is constituted of the following files :
+ChatGPT, aleo-wallet-adapter-react subpackage is constituted of the following files :
 
-- adapter.ts
-- errors.ts
-- index.ts
-- package.json
-- signer.ts
-- transaction.ts
-- tsconfig.json
-- types.ts
-- yarn.lock
+- useWallet.ts
+- WalletProvider.ts
+- useLocalStorage.ts
 
-ChatGPT, here is the code for adapter.ts file:
+ChatGPT, here is the code for useWallet.ts file:
 
-import EventEmitter from 'eventemitter3';
-import type { WalletError } from './errors';
-import type { SupportedTransactionVersions, DecryptPermission, WalletAdapterNetwork } from './types';
+"""
 
-export { EventEmitter };
+import { createContext, useContext } from 'react';
+import {
+  Adapter,
+  AleoTransaction,
+  AleoDeployment,
+  DecryptPermission,
+  MessageSignerWalletAdapterProps,
+  WalletAdapterNetwork,
+  WalletName,
+  WalletReadyState
+} from '@demox-labs/aleo-wallet-adapter-base';
 
-export interface WalletAdapterEvents {
-    connect(publicKey: string, programs?: string[]): void;
-    disconnect(): void;
-    error(error: WalletError): void;
-    readyStateChange(readyState: WalletReadyState): void;
+export interface Wallet {
+  adapter: Adapter;
+  readyState: WalletReadyState;
 }
 
-// WalletName is a nominal type that wallet adapters should use, e.g. `'MyCryptoWallet' as WalletName<'MyCryptoWallet'>`
-// <https://medium.com/@KevinBGreene/surviving-the-typescript-ecosystem-branding-and-type-tagging-6cf6e516523d>
-export type WalletName<T extends string = string> = T & { **brand**: 'WalletName' };
+export interface WalletContextState {
+  autoConnect: boolean;
+  wallets: Wallet[];
+  wallet: Wallet | null;
+  publicKey: string | null;
+  connecting: boolean;
+  connected: boolean;
+  disconnecting: boolean;
 
-export interface WalletAdapterProps<Name extends string = string> {
-    name: WalletName<Name>;
-    url: string;
-    icon: string;
-    readyState: WalletReadyState;
+  select(walletName: WalletName): void;
+  connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
+  disconnect(): Promise<void>;
+
+  signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined;
+  decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined;
+  requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined;
+  requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined;
+  requestExecution: MessageSignerWalletAdapterProps['requestExecution'] | undefined;
+  requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined;
+  requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined;
+  transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined;
+  getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined;
+  requestRecordPlaintexts: MessageSignerWalletAdapterProps['requestRecordPlaintexts'] | undefined;
+  requestTransactionHistory: MessageSignerWalletAdapterProps['requestTransactionHistory'] | undefined;
+}
+
+const EMPTY_ARRAY: never[] = [];
+
+const DEFAULT_CONTEXT = {
+  autoConnect: false,
+  connecting: false,
+  connected: false,
+  disconnecting: false,
+  select(_name: WalletName) {
+    console.error(constructMissingProviderErrorMessage('get', 'select'));
+  },
+  connect(_decryptPermission: DecryptPermission,_network: WalletAdapterNetwork, _programs?: string[]) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'connect')));
+  },
+  disconnect() {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'disconnect')));
+  },
+  signMessage(_message: Uint8Array) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'signMessage')));
+  },
+  decrypt(_cipherText: string,_tpk?: string, _programId?: string,_functionName?: string, _index?: number) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'decrypt')));
+  },
+  requestRecords(_program: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestRecords')));
+  },
+  requestTransaction(_transaction: AleoTransaction) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransaction')));
+  },
+  requestExecution(_execution: AleoTransaction) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestExecution')));
+  },
+  requestBulkTransactions(_transactions: AleoTransaction[]) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestBulkTransactions')));
+  },
+  requestDeploy(_deployment: AleoDeployment) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestDeploy')));
+  },
+  transactionStatus(_transactionId: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'transactionStatus')));
+  },
+  getExecution(_transactionId: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'getExecution')));
+  },
+  requestRecordPlaintexts(_program: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestRecordPlaintexts')));
+  },
+  requestTransactionHistory(_program: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'requestTransactionHistory')));
+  }
+} as WalletContextState;
+Object.defineProperty(DEFAULT_CONTEXT, 'wallets', {
+  get() {
+    console.error(constructMissingProviderErrorMessage('read', 'wallets'));
+    return EMPTY_ARRAY;
+  },
+});
+Object.defineProperty(DEFAULT_CONTEXT, 'wallet', {
+  get() {
+    console.error(constructMissingProviderErrorMessage('read', 'wallet'));
+    return null;
+  },
+});
+Object.defineProperty(DEFAULT_CONTEXT, 'publicKey', {
+  get() {
+    console.error(constructMissingProviderErrorMessage('read', 'publicKey'));
+    return null;
+  },
+});
+
+function constructMissingProviderErrorMessage(action: string, valueName: string) {
+  return (
+    'You have tried to ' +
+    `${action} "${valueName}"` +
+    ' on a WalletContext without providing one.' +
+    ' Make sure to render a WalletProvider' +
+    ' as an ancestor of the component that uses ' +
+    'WalletContext'
+  );
+}
+
+export const WalletContext = createContext<WalletContextState>(DEFAULT_CONTEXT as WalletContextState);
+
+export function useWallet(): WalletContextState {
+  return useContext(WalletContext);
+}
+"""
+
+ChatGPT here is the WalletProvider.ts file:
+
+"""
+
+import {
+    Adapter,
+    MessageSignerWalletAdapterProps,
+    WalletNotSelectedError,
+    WalletError,
+    WalletName,
+    WalletNotConnectedError,
+    WalletNotReadyError,
+    WalletReadyState,
+    DecryptPermission,
+    WalletAdapterNetwork,
+    AleoTransaction,
+    AleoDeployment,
+} from '@demox-labs/aleo-wallet-adapter-base';
+import type { FC, ReactNode } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
+import { useLocalStorage } from './useLocalStorage';
+import type { Wallet } from './useWallet';
+import { WalletContext } from './useWallet';
+
+export interface WalletProviderProps {
+    children: ReactNode;
+    wallets: Adapter[];
+    decryptPermission?: DecryptPermission;
+    programs?: string[];
+    network?: WalletAdapterNetwork;
+    autoConnect?: boolean;
+    onError?: (error: WalletError) => void;
+    localStorageKey?: string;
+}
+
+const initialState: {
+    wallet: Wallet | null;
+    adapter: Adapter | null;
     publicKey: string | null;
-    connecting: boolean;
     connected: boolean;
-    supportedTransactionVersions: SupportedTransactionVersions;
+} = {
+    wallet: null,
+    adapter: null,
+    publicKey: null,
+    connected: false,
+};
 
-    connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
-    disconnect(): Promise<void>;
-}
+export const WalletProvider: FC<WalletProviderProps> = ({
+    children,
+    wallets: adapters,
+    autoConnect = false,
+    decryptPermission = DecryptPermission.NoDecrypt,
+    network = WalletAdapterNetwork.Testnet,
+    onError,
+    localStorageKey = 'walletName',
+    programs = []
+}) => {
+    const [name, setName] = useLocalStorage<WalletName | null>(localStorageKey, null);
+    const [{ wallet, adapter, publicKey, connected }, setState] = useState(initialState);
+    const readyState = adapter?.readyState || WalletReadyState.Unsupported;
+    const [connecting, setConnecting] = useState(false);
+    const [disconnecting, setDisconnecting] = useState(false);
+    const isConnecting = useRef(false);
+    const isDisconnecting = useRef(false);
+    const isUnloading = useRef(false);
 
-export type WalletAdapter<Name extends string = string> = WalletAdapterProps<Name> & EventEmitter<WalletAdapterEvents>;
+    // Wrap adapters to conform to the `Wallet` interface
+    const [wallets, setWallets] = useState(() =>
+        adapters.map((adapter) => ({
+            adapter,
+            readyState: adapter.readyState,
+        }))
+    );
 
-/**
+    // When the adapters change, start to listen for changes to their `readyState`
+    useEffect(() => {
+        // When the adapters change, wrap them to conform to the `Wallet` interface
+        setWallets((wallets) =>
+            adapters.map((adapter, index) => {
+                const wallet = wallets[index];
+                // If the wallet hasn't changed, return the same instance
+                return wallet && wallet.adapter === adapter && wallet.readyState === adapter.readyState
+                    ? wallet
+                    : {
+                          adapter: adapter,
+                          readyState: adapter.readyState,
+                      };
+            })
+        );
 
-- A wallet's readiness describes a series of states that the wallet can be in,
-- depending on what kind of wallet it is. An installable wallet (eg. a browser
-- extension like Phantom) might be `Installed` if we've found the Phantom API
-- in the global scope, or `NotDetected` otherwise. A loadable, zero-install
-- runtime (eg. Torus Wallet) might simply signal that it's `Loadable`. Use this
-- metadata to personalize the wallet list for each user (eg. to show their
-- installed wallets first).
- */
-export enum WalletReadyState {
-    /**
-  - User-installable wallets can typically be detected by scanning for an API
-  - that they've injected into the global context. If such an API is present,
-  - we consider the wallet to have been installed.
-     */
-    Installed = 'Installed',
-    NotDetected = 'NotDetected',
-    /**
-  - Loadable wallets are always available to you. Since you can load them at
-  - any time, it's meaningless to say that they have been detected.
-     */
-    Loadable = 'Loadable',
-    /**
-  - If a wallet is not supported on a given platform (eg. server-rendering, or
-  - mobile) then it will stay in the `Unsupported` state.
-     */
-    Unsupported = 'Unsupported',
-}
+        function handleReadyStateChange(this: Adapter, readyState: WalletReadyState) {
+            setWallets((prevWallets) => {
+                const index = prevWallets.findIndex(({ adapter }) => adapter === this);
+                if (index === -1) return prevWallets;
 
-export abstract class BaseWalletAdapter<Name extends string = string>
-    extends EventEmitter<WalletAdapterEvents>
-    implements WalletAdapter<Name>
-{
-    abstract name: WalletName<Name>;
-    abstract url: string;
-    abstract icon: string;
-    abstract readyState: WalletReadyState;
-    abstract publicKey: string | null;
-    abstract connecting: boolean;
-    abstract supportedTransactionVersions: SupportedTransactionVersions;
-
-    get connected() {
-        return !!this.publicKey;
-    }
-
-    abstract connect(decryptPermission: DecryptPermission, network: WalletAdapterNetwork, programs?: string[]): Promise<void>;
-    abstract disconnect(): Promise<void>;
-}
-
-export function scopePollingDetectionStrategy(detect: () => boolean): void {
-    // Early return when server-side rendering
-    if (typeof window === 'undefined' || typeof document === 'undefined') return;
-
-    const disposers: (() => void)[] = [];
-
-    function detectAndDispose() {
-        const detected = detect();
-        if (detected) {
-            for (const dispose of disposers) {
-                dispose();
-            }
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                const { adapter } = prevWallets[index]!;
+                return [...prevWallets.slice(0, index), { adapter, readyState }, ...prevWallets.slice(index + 1)];
+            });
         }
-    }
-
-    // Strategy #1: Try detecting every second.
-    const interval =
-        // TODO: #334 Replace with idle callback strategy.
-        setInterval(detectAndDispose, 1000);
-    disposers.push(() => clearInterval(interval));
-
-    // Strategy #2: Detect as soon as the DOM becomes 'ready'/'interactive'.
-    if (
-        // Implies that `DOMContentLoaded` has not yet fired.
-        document.readyState === 'loading'
-    ) {
-        document.addEventListener('DOMContentLoaded', detectAndDispose, { once: true });
-        disposers.push(() => document.removeEventListener('DOMContentLoaded', detectAndDispose));
-    }
-
-    // Strategy #3: Detect after the `window` has fully loaded.
-    if (
-        // If the `complete` state has been reached, we're too late.
-        document.readyState !== 'complete'
-    ) {
-        window.addEventListener('load', detectAndDispose, { once: true });
-        disposers.push(() => window.removeEventListener('load', detectAndDispose));
-    }
-
-    // Strategy #4: Detect synchronously, now.
-    detectAndDispose();
-}
-
-ChatGPT, here is the code for deployment.ts file:
-
-export interface AleoDeployment {
-  address: string;
-  chainId: string;
-  program: string;
-  fee: number;
-  feePrivate: boolean;
-}
-
-export class Deployment implements AleoDeployment {
-  address: string;
-  chainId: string;
-  program: string;
-  fee: number;
-  feePrivate: boolean;
-
-  constructor(address: string, chainId: string, program: string, fee: number, feePrivate: boolean = true) {
-    this.address = address;
-    this.chainId = chainId;
-    this.program = program;
-    this.fee = fee;
-    this.feePrivate = feePrivate;
-  }
-}
-
-ChatGPT, here is the code for deployment.ts file:
-
-export class WalletError extends Error {
-    error: any;
-
-    // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
-    constructor(message?: string, error?: any) {
-        super(message);
-        this.error = error;
-    }
-}
-
-export class WalletNotReadyError extends WalletError {
-    name = 'WalletNotReadyError';
-}
-
-export class WalletLoadError extends WalletError {
-    name = 'WalletLoadError';
-}
-
-export class WalletConfigError extends WalletError {
-    name = 'WalletConfigError';
-}
-
-export class WalletConnectionError extends WalletError {
-    name = 'WalletConnectionError';
-}
-
-export class WalletNotSelectedError extends WalletError {
-    name = 'WalletNotSelectedError';
-}
 
-export class WalletDisconnectedError extends WalletError {
-    name = 'WalletDisconnectedError';
-}
-
-export class WalletDisconnectionError extends WalletError {
-    name = 'WalletDisconnectionError';
-}
-
-export class WalletAccountError extends WalletError {
-    name = 'WalletAccountError';
-}
-
-export class WalletPublicKeyError extends WalletError {
-    name = 'WalletPublicKeyError';
-}
-
-export class WalletKeypairError extends WalletError {
-    name = 'WalletKeypairError';
-}
-
-export class WalletNotConnectedError extends WalletError {
-    name = 'WalletNotConnectedError';
-}
-
-export class WalletSendTransactionError extends WalletError {
-    name = 'WalletSendTransactionError';
-}
-
-export class WalletSignMessageError extends WalletError {
-    name = 'WalletSignMessageError';
-}
-
-export class WalletSignTransactionError extends WalletError {
-    name = 'WalletSignTransactionError';
-}
-
-export class WalletTimeoutError extends WalletError {
-    name = 'WalletTimeoutError';
-}
-
-export class WalletWindowBlockedError extends WalletError {
-    name = 'WalletWindowBlockedError';
-}
-
-export class WalletWindowClosedError extends WalletError {
-    name = 'WalletWindowClosedError';
-}
-
-export class WalletDecryptionNotAllowedError extends WalletError {
-    name = 'WalletDecryptionNotAllowedError';
-}
-
-export class WalletDecryptionError extends WalletError {
-    name = 'WalletDecryptionError';
-}
-
-export class WalletRecordsError extends WalletError {
-    name = 'WalletRecordsError';
-}
-
-export class WalletTransactionError extends WalletError {
-    name = 'WalletTransactionError';
-}
-
-ChatGPT, here is the code for signer.ts file:
-
-import type { WalletAdapter, WalletAdapterProps } from './adapter';
-import { BaseWalletAdapter } from './adapter';
-import { AleoDeployment } from './deployment';
-import { AleoTransaction } from './transaction';
-
-export type Adapter = WalletAdapter | SignerWalletAdapter | MessageSignerWalletAdapter;
-
-export interface SignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> { }
-
-export type SignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> & SignerWalletAdapterProps<Name>;
-
-export abstract class BaseSignerWalletAdapter<Name extends string = string>
-    extends BaseWalletAdapter<Name>
-    implements SignerWalletAdapter<Name>
-{ }
-
-export interface MessageSignerWalletAdapterProps<Name extends string = string> extends WalletAdapterProps<Name> {
-    signMessage(message: Uint8Array): Promise<Uint8Array>;
-
-    decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
-
-    requestRecords(program: string): Promise<any[]>;
-
-    requestTransaction(transaction: AleoTransaction): Promise<string>;
-
-    requestExecution(transaction: AleoTransaction): Promise<string>;
-
-    requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
-
-    requestDeploy(deployment: AleoDeployment): Promise<string>;
-
-    transactionStatus(transactionId: string): Promise<string>;
-
-    getExecution(transactionId: string): Promise<string>;
-
-    requestRecordPlaintexts(program: string): Promise<any[]>;
-
-    requestTransactionHistory(program: string): Promise<any[]>;
-}
-
-export type MessageSignerWalletAdapter<Name extends string = string> = WalletAdapter<Name> &
-    MessageSignerWalletAdapterProps<Name>;
-
-export abstract class BaseMessageSignerWalletAdapter<Name extends string = string>
-    extends BaseSignerWalletAdapter<Name>
-    implements MessageSignerWalletAdapter<Name>
-{
-    abstract signMessage(message: Uint8Array): Promise<Uint8Array>;
-
-    abstract decrypt(cipherText: string, tpk?: string, programId?: string, functionName?: string, index?: number): Promise<string>;
-
-    abstract requestRecords(program: string): Promise<any[]>;
-
-    abstract requestTransaction(transaction: AleoTransaction): Promise<string>;
-
-    abstract requestExecution(transaction: AleoTransaction): Promise<string>;
-
-    abstract requestBulkTransactions(transactions: AleoTransaction[]): Promise<string[]>;
-
-    abstract requestDeploy(deployment: AleoDeployment): Promise<string>;
-
-    abstract transactionStatus(transactionId: string): Promise<string>;
-
-    abstract getExecution(transactionId: string): Promise<string>;
-
-    abstract requestRecordPlaintexts(program: string): Promise<any[]>;
-
-    abstract requestTransactionHistory(program: string): Promise<any[]>;
-}
-
-ChatGPT, here is the code for transaction.ts file:
-
-export interface AleoTransition {
-  program: string;
-  functionName: string;
-  inputs: any[];
-}
-
-export class Transition implements AleoTransition {
-  program: string;
-  functionName: string;
-  inputs: any[];
-
-  constructor(program: string, functionName: string, inputs: any[]) {
-    this.program = program;
-    this.functionName = functionName;
-    this.inputs = inputs;
-  }
-}
-
-export interface AleoTransaction {
-  address: string;
-  chainId: string;
-  transitions: AleoTransition[];
-  fee: number;
-  feePrivate: boolean;
-}
-
-export class Transaction implements AleoTransaction {
-  address: string;
-  chainId: string;
-  transitions: AleoTransition[];
-  fee: number;
-  feePrivate: boolean;
-
-  constructor(address: string, chainId: string, transitions: AleoTransition[], fee: number, feePrivate = true) {
-    this.address = address;
-    this.chainId = chainId;
-    this.transitions = transitions;
-    this.fee = fee;
-    this.feePrivate = feePrivate;
-  }
-
-  static createTransaction(address: string, chainId: string, program: string, functionName: string, inputs: any[], fee: number, feePrivate = true) {
-    const transition = new Transition(program, functionName, inputs);
-    return new Transaction(address, chainId, [transition], fee, feePrivate);
-  }
-}
-
-ChatGPT, explain the difference between MessageSignerWalletAdapter, SignerWalletAdapter, BaseMessageSignerWalletAdapter,BaseSignerWalletAdapter, BaseWalletAdapter and WalletAdapter and the reason why each exists.
+        adapters.forEach((adapter) => adapter.on('readyStateChange', handleReadyStateChange, adapter));
+        return () => adapters.forEach((adapter) => adapter.off('readyStateChange', handleReadyStateChange, adapter));
+    }, [adapters]);
+
+    // When the selected wallet changes, initialize the state
+    useEffect(() => {
+        const wallet = name && wallets.find(({ adapter }) => adapter.name === name);
+        if (wallet) {
+            setState({
+                wallet,
+                adapter: wallet.adapter,
+                connected: wallet.adapter.connected,
+                publicKey: wallet.adapter.publicKey
+            });
+        } else {
+            setState(initialState);
+        }
+    }, [name, wallets]);
+
+    // If the window is closing or reloading, ignore disconnect and error events from the adapter
+    useEffect(() => {
+        function listener() {
+            isUnloading.current = true;
+        }
+
+        window.addEventListener('beforeunload', listener);
+        return () => window.removeEventListener('beforeunload', listener);
+    }, [isUnloading]);
+
+    // Handle the adapter's connect event
+    const handleConnect = useCallback(() => {
+        if (!adapter) return;
+        setState((state) => ({ ...state, connected: adapter.connected, publicKey: adapter.publicKey }));
+    }, [adapter]);
+
+    // Handle the adapter's disconnect event
+    const handleDisconnect = useCallback(() => {
+        // Clear the selected wallet unless the window is unloading
+        if (!isUnloading.current) setName(null);
+    }, [isUnloading, setName]);
+
+    // Handle the adapter's error event, and local errors
+    const handleError = useCallback(
+        (error: WalletError) => {
+            // Call onError unless the window is unloading
+            if (!isUnloading.current) (onError || console.error)(error);
+            return error;
+        },
+        [isUnloading, onError]
+    );
+
+    // Setup and teardown event listeners when the adapter changes
+    useEffect(() => {
+        if (adapter) {
+            adapter.on('connect', handleConnect);
+            adapter.on('disconnect', handleDisconnect);
+            adapter.on('error', handleError);
+            return () => {
+                adapter.off('connect', handleConnect);
+                adapter.off('disconnect', handleDisconnect);
+                adapter.off('error', handleError);
+            };
+        }
+    }, [adapter, handleConnect, handleDisconnect, handleError]);
+
+    // When the adapter changes, disconnect the old one
+    useEffect(() => {
+        return () => {
+            adapter?.disconnect();
+        };
+    }, [adapter]);
+
+    // If autoConnect is enabled, try to connect when the adapter changes and is ready
+    useEffect(() => {
+        if (
+            isConnecting.current ||
+            connected ||
+            !autoConnect ||
+            !adapter ||
+            !(readyState === WalletReadyState.Installed || readyState === WalletReadyState.Loadable)
+        )
+            return;
+
+        (async function () {
+            isConnecting.current = true;
+            setConnecting(true);
+            try {
+                await adapter.connect(decryptPermission, network, programs);
+            } catch (error: any) {
+                // Clear the selected wallet
+                setName(null);
+                // Don't throw error, but handleError will still be called
+            } finally {
+                setConnecting(false);
+                isConnecting.current = false;
+            }
+        })();
+    }, [isConnecting, connected, autoConnect, adapter, readyState, setName]);
+
+    // Connect the adapter to the wallet
+    const connect = useCallback(async () => {
+        if (isConnecting.current || isDisconnecting.current || connected) return;
+        if (!adapter) throw handleError(new WalletNotSelectedError());
+
+        if (!(readyState === WalletReadyState.Installed || readyState === WalletReadyState.Loadable)) {
+            // Clear the selected wallet
+            setName(null);
+
+            if (typeof window !== 'undefined') {
+                window.open(adapter.url, '_blank');
+            }
+
+            throw handleError(new WalletNotReadyError());
+        }
+
+        isConnecting.current = true;
+        setConnecting(true);
+        try {
+            await adapter.connect(decryptPermission, network, programs);
+        } catch (error: any) {
+            // Clear the selected wallet
+            setName(null);
+            // Rethrow the error, and handleError will also be called
+            throw error;
+        } finally {
+            setConnecting(false);
+            isConnecting.current = false;
+        }
+    }, [isConnecting, isDisconnecting, connected, adapter, readyState, handleError, setName]);
+
+    // Disconnect the adapter from the wallet
+    const disconnect = useCallback(async () => {
+        if (isDisconnecting.current) return;
+        if (!adapter) return setName(null);
+
+        isDisconnecting.current = true;
+        setDisconnecting(true);
+        try {
+            await adapter.disconnect();
+        } catch (error: any) {
+            // Clear the selected wallet
+            setName(null);
+            // Rethrow the error, and handleError will also be called
+            throw error;
+        } finally {
+            setDisconnecting(false);
+            isDisconnecting.current = false;
+        }
+    }, [isDisconnecting, adapter, setName]);
+
+    // Sign an arbitrary message if the wallet supports it
+    const signMessage: MessageSignerWalletAdapterProps['signMessage'] | undefined = useMemo(
+        () =>
+            adapter && 'signMessage' in adapter
+                ? async (message) => {
+                      if (!connected) throw handleError(new WalletNotConnectedError());
+                      return await adapter.signMessage(message);
+                  }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Decrypt a ciphertext using the wallet
+    const decrypt: MessageSignerWalletAdapterProps['decrypt'] | undefined = useMemo(
+        () => 
+            adapter && 'decrypt' in adapter
+                ? async (cipherText, tpk?: string, programId?: string, functionName?: string, index?: number) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.decrypt(cipherText, tpk, programId, functionName, index);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request records for a specific program
+    const requestRecords: MessageSignerWalletAdapterProps['requestRecords'] | undefined = useMemo(
+        () => 
+            adapter && 'requestRecords' in adapter
+                ? async (program) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.requestRecords(program);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request transaction
+    const requestTransaction: MessageSignerWalletAdapterProps['requestTransaction'] | undefined = useMemo(
+        () => 
+            adapter && 'requestTransaction' in adapter
+                ? async (transaction: AleoTransaction) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestTransaction(transaction);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request execution
+    const requestExecution: MessageSignerWalletAdapterProps['requestExecution'] | undefined = useMemo(
+        () => 
+            adapter && 'requestExecution' in adapter
+                ? async (transaction: AleoTransaction) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestExecution(transaction);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request bulk transactions
+    const requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined = useMemo(
+        () =>
+            adapter && 'requestBulkTransactions' in adapter
+                ? async (transactions: AleoTransaction[]) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestBulkTransactions(transactions);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request deploy
+    const requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined = useMemo(
+        () =>
+            adapter && 'requestDeploy' in adapter
+                ? async (deployment: AleoDeployment) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.requestDeploy(deployment);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request transaction status
+    const transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined = useMemo(
+        () =>
+            adapter && 'transactionStatus' in adapter
+                ? async (transactionId) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.transactionStatus(transactionId);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request Execution
+    const getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined = useMemo(
+        () =>
+            adapter && 'getExecution' in adapter
+                ? async (transactionId) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.getExecution(transactionId);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request the on-chain records plaintexts for a specific program
+    const requestRecordPlaintexts: MessageSignerWalletAdapterProps['requestRecordPlaintexts'] | undefined = useMemo(
+        () => 
+            adapter && 'requestRecordPlaintexts' in adapter
+                ? async (program) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.requestRecordPlaintexts(program);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    // Request on-chain transaction history for a specific program
+    const requestTransactionHistory: MessageSignerWalletAdapterProps['requestTransactionHistory'] | undefined = useMemo(
+        () => 
+            adapter && 'requestTransactionHistory' in adapter
+                ? async (program) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                        return await adapter.requestTransactionHistory(program);
+                    }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
+    return (
+        <WalletContext.Provider
+            value={{
+                autoConnect,
+                decryptPermission,
+                wallets,
+                wallet,
+                publicKey,
+                connected,
+                connecting,
+                disconnecting,
+                select: setName,
+                connect,
+                disconnect,
+                signMessage,
+                decrypt,
+                requestRecords,
+                requestTransaction,
+                requestExecution,
+                requestBulkTransactions,
+                requestDeploy,
+                transactionStatus,
+                getExecution,
+                requestRecordPlaintexts,
+                requestTransactionHistory
+            }}
+        >
+            {children}
+        </WalletContext.Provider>
+    );
+};
+
+"""
+
+ChatGPT, write the README.md file in markdown for aleo-wallet-adapter-react subpackage. It should have a "context" section focused on WalletProvider docs and a "hook" section focused on useWallet. It should include usage examples for each sections and be user friendly.

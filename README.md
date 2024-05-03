@@ -31,8 +31,8 @@
   - [🗂️ Requesting Record Plaintexts](#%EF%B8%8F-requesting-record-plaintexts)
   - [📜 Requesting Transaction History](#-requesting-transaction-history)
   - [🔔 Subscribing to Events](#-subscribing-to-events)
-- [👨‍💻 Aleo Wallets](#-aleo-wallet)
-  - [☑️ Provide Mutliple Options](#-☑️-provide-multiple-options)
+- [👨‍💻 Aleo Wallets](#-aleo-wallets)
+  - [☑️ Provide Mutliple Options](#%EF%B8%8F-provide-multiple-options)
   - [</> Integrate your Wallet](#-integrate-your-wallet)
 
 ## 👋 Introduction
@@ -48,7 +48,7 @@ A wallet adapter is a bridge between an wallet browser extension and decentralis
 It includes 4 sub-packages:
 
 - `aleo-wallet-adapter-base`
-Abstracts Aleo Wallet Adapter and provides generic features such as Errors, Decrypt Permissions, and other useful Aleo related types.
+Abstracts wallet adapters and provides generic features such as Errors, Decrypt Permissions, and other useful Aleo related types.
 
     <a href="./packages/core/base/docs/README.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-base"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-base"/></a>
 

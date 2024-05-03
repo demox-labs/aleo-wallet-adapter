@@ -429,8 +429,6 @@ ChatGPT, aleo-wallet-adapter-react subpackage is constituted of the following fi
 
 ChatGPT, here is the code for useWallet.ts file:
 
-"""
-
 import { createContext, useContext } from 'react';
 import {
   Adapter,
@@ -559,11 +557,8 @@ export const WalletContext = createContext<WalletContextState>(DEFAULT_CONTEXT a
 export function useWallet(): WalletContextState {
   return useContext(WalletContext);
 }
-"""
 
 ChatGPT here is the WalletProvider.ts file:
-
-"""
 
 import {
     Adapter,
@@ -976,6 +971,14 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     );
 };
 
-"""
+ChatGPT, correct and complete the following README.md file in markdown for aleo-wallet-adapter-react subpackage. Write also ./context.md and ./hook.md files content.
+It should include usage examples for each sections and be user friendly.
 
-ChatGPT, write the README.md file in markdown for aleo-wallet-adapter-react subpackage. It should have a "context" section focused on WalletProvider docs and a "hook" section focused on useWallet. It should include usage examples for each sections and be user friendly.
+# Aleo Wallet Adapter React
+
+The aleo-wallet-adapter-react subpackage provides React context and hook that enable integration of Aleo wallet features into your React applications.
+
+## Contents
+
+- [Context](./context.md) - Defines `WalletProvider` that wraps a DApp to provide wallet-related functionality across the entire application through the `WalletContext`.
+- [Hook](./hook.md) - ...

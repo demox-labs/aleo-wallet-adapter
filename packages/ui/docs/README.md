@@ -1,334 +1,160 @@
-@demox-labs/aleo-wallet-adapter-reactui / [Exports](modules.md)
+# **Aleo Wallet Adapter UI**
 
-# Wallet Adapter for Aleo Apps
+The **`aleo-wallet-adapter-reactui`** sub-package provides a collection of React components and hooks to integrate wallet functionality into your React Aleo DApps. This package simplifies the process of creating wallet modals, connection buttons, and other user interface elements.
 
-Modular TypeScript wallet adapters and components for Aleo applications.
+## **Features**
 
-- [Demo](https://demo.leo.app)
-- [Base Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/base/docs/modules.md)
-- [React Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/core/react/docs/modules.md)
-- [React UI Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/ui/docs/modules.md)
-- [Leo Adapter Docs](https://github.com/demox-labs/aleo-wallet-adapter/blob/main/packages/wallets/leo/docs/modules.md)
+- Wallet modal management.
+- Pre-built buttons for wallet connection and disconnection.
+- Hooks for wallet modal state management.
+- Icon display for connected wallets.
 
-This is a quick setup guide with examples of how to add Wallet Adapter to a React-based Aleo app.
+## **Installation**
 
-## Quick Setup (using React UI)
-
-### 📲Install
-
-Install these dependencies:
+To get started, simply install the following dependency, using npm:
 
 ```shell
-npm install --save \
-    @demox-labs/aleo-wallet-adapter-base \
-    @demox-labs/aleo-wallet-adapter-react \
-    @demox-labs/aleo-wallet-adapter-reactui \
-    @demox-labs/aleo-wallet-adapter-leo \
-    react
+npm install --save @demox-labs/aleo-wallet-adapter-reactui
 ```
 
-### 🛠️Setup
+Or using yarn:
+
+```shell
+yarn add @demox-labs/aleo-wallet-adapter-reactui
+```
+
+## **Components**
+
+### **`WalletModalProvider`**
+
+The **`WalletModalProvider`** component wraps the entire application to provide wallet modal functionality.
+
+#### **Usage**
+
+Wrap your app with **`WalletModalProvider`**:
 
 ```tsx
-import React, { FC, useMemo } from "react";
-import { WalletProvider } from "@demox-labs/aleo-wallet-adapter-react";
-import { WalletModalProvider } from "@demox-labs/aleo-wallet-adapter-reactui";
-import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
-import {
-  DecryptPermission,
-  WalletAdapterNetwork,
-} from "@demox-labs/aleo-wallet-adapter-base";
+import React from 'react';
+import { WalletModalProvider } from '@demox-labs/aleo-wallet-adapter-reactui';
 
-// Default styles that can be overridden by your app
-require("@demox-labs/aleo-wallet-adapter-reactui/styles.css");
+const App = () => (
+  <WalletModalProvider>
+    {/* Other components */}
+  </WalletModalProvider>
+);
 
-export const Wallet: FC = () => {
-  const wallets = useMemo(
-    () => [
-      new LeoWalletAdapter({
-        appName: "Leo Demo App",
-      }),
-    ],
-    []
-  );
+export default App;
 
-  return (
-    <WalletProvider
-      wallets={wallets}
+```
+
+### **`WalletModalButton`**
+
+A button that opens the wallet selection modal.
+
+#### **Usage**
+
+```tsx
+import React from 'react';
+import { WalletModalButton } from '@demox-labs/aleo-wallet-adapter-reactui';
+
+const MyComponent = () => (
+  <div>
+    <WalletModalButton>Select Wallet</WalletModalButton>
+  </div>
+);
+
+export default MyComponent;
+
+```
+
+### **`WalletDisconnectButton`**
+
+A button that disconnects the currently connected wallet.
+
+#### **Usage**
+
+```tsx
+import React from 'react';
+import { WalletDisconnectButton } from '@demox-labs/aleo-wallet-adapter-reactui';
+
+const MyComponent = () => (
+  <div>
+    <WalletDisconnectButton>Disconnect Wallet</WalletDisconnectButton>
+  </div>
+);
+
+export default MyComponent;
+
+```
+
+### **`WalletMultiButton`**
+
+A button that shows wallet connection status and opens a wallet modal if clicked.
+
+#### **Usage**
+
+```tsx
+import React from 'react';
+import { WalletMultiButton } from '@demox-labs/aleo-wallet-adapter-reactui';
+
+const MyComponent = () => (
+  <div>
+    <WalletMultiButton>Connect Wallet</WalletMultiButton>
+  </div>
+);
+
+export default MyComponent;
+
+```
+
+### **`WalletConnectButton`**
+
+A button to connect to a wallet directly, and includes decrypt permissions and network options.
+
+#### **Usage**
+
+```tsx
+import React from 'react';
+import { WalletConnectButton } from '@demox-labs/aleo-wallet-adapter-reactui';
+import { WalletAdapterNetwork, DecryptPermission } from '@demox-labs/aleo-wallet-adapter-base';
+
+const MyComponent = () => (
+  <div>
+    <WalletConnectButton
+      network={WalletAdapterNetwork.Testnet}
       decryptPermission={DecryptPermission.UponRequest}
-      network={WalletAdapterNetwork.Localnet}
-      autoConnect
+      programs={['myProgram.aleo']}
     >
-      <WalletModalProvider>
-        // Your app's components go here
-      </WalletModalProvider>
-    </WalletProvider>
-  );
-};
+      Connect Wallet
+    </WalletConnectButton>
+  </div>
+);
+
+export default MyComponent;
+
 ```
 
-### ✍🏻Signing
+## Hooks
+
+### **`useWalletModal`**
+
+A hook for accessing wallet modal state.
+
+#### **Usage**
 
 ```tsx
-import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
-import React, { FC, useCallback } from "react";
+import React from 'react';
+import { useWalletModal } from '@demox-labs/aleo-wallet-adapter-reactui';
 
-export const SignMessage: FC = () => {
-  const { wallet, publicKey } = useWallet();
-
-  const onClick = useCallback(async () => {
-    if (!publicKey) throw new WalletNotConnectedError();
-
-    const message = "a message to sign";
-
-    const bytes = new TextEncoder().encode(message);
-    const signatureBytes = await (
-      wallet?.adapter as LeoWalletAdapter
-    ).signMessage(bytes);
-    const signature = new TextDecoder().decode(signatureBytes);
-    alert("Signed message: " + signature);
-  }, [wallet, publicKey]);
+const MyComponent = () => {
+  const { visible, setVisible } = useWalletModal();
 
   return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Sign message
+    <button onClick={() => setVisible(!visible)}>
+      Toggle Wallet Modal
     </button>
   );
 };
-```
 
-### 🔓Decrypting
-
-```tsx
-import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import React, { FC, useCallback } from "react";
-
-export const DecryptMessage: FC = () => {
-  const { publicKey, decrypt } = useWallet();
-
-  const onClick = async () => {
-    const cipherText = "record....";
-    if (!publicKey) throw new WalletNotConnectedError();
-    if (decrypt) {
-      const decryptedPayload = await decrypt(cipherText);
-      alert("Decrypted payload: " + decryptedPayload);
-    }
-  };
-
-  return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Decrypt message
-    </button>
-  );
-};
-```
-
-### 🗂️Requesting Records
-
-```tsx
-import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import React, { FC, useCallback } from "react";
-
-export const RequestRecords: FC = () => {
-  const { publicKey, requestRecords } = useWallet();
-
-  const onClick = async () => {
-    const program = "credits.aleo";
-    if (!publicKey) throw new WalletNotConnectedError();
-    if (requestRecords) {
-      const records = await requestRecords(program);
-      console.log("Records: " + records);
-    }
-  };
-
-  return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Request Records
-    </button>
-  );
-};
-```
-
-### 📡Requesting Transactions
-
-```tsx
-import {
-  Transaction,
-  WalletAdapterNetwork,
-  WalletNotConnectedError
-} from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import React, { FC, useCallback } from "react";
-
-export const RequestTransaction: FC = () => {
-  const { publicKey, requestTransaction } = useWallet();
-
-  const onClick = async () => {
-    if (!publicKey) throw new WalletNotConnectedError();
-
-    // The record here is an output from the Requesting Records above
-    const record = `'{"id":"0f27d86a-1026-4980-9816-bcdce7569aa4","program_id":"credits.aleo","microcredits":"200000","spent":false,"data":{}}'`
-    // Note that the inputs must be formatted in the same order as the Aleo program function expects, otherwise it will fail
-    const inputs = [JSON.parse(record), "aleo1kf3dgrz9...", `${amount}u64`];
-    const fee = 35_000; // This will fail if fee is not set high enough
-
-    const aleoTransaction = Transaction.createTransaction(
-      publicKey,
-      WalletAdapterNetwork.Testnet,
-      'credits.aleo',
-      'transfer',
-      inputs,
-      fee
-    );
-
-    if (requestTransaction) {
-      // Returns a transaction Id, that can be used to check the status. Note this is not the on-chain transaction id
-      await requestTransaction(aleoTransaction);
-    }
-  };
-
-  return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Request Transaction
-    </button>
-  );
-};
-```
-
-### 💻Deploying Programs
-
-```tsx
-import {
-  Deployment,
-  WalletAdapterNetwork,
-  WalletNotConnectedError
-} from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import React, { FC, useCallback } from "react";
-
-export const DeployProgram: FC = () => {
-  const { publicKey, requestDeploy } = useWallet();
-
-  const onClick = async () => {
-    if (!publicKey) throw new WalletNotConnectedError();
-
-    const program = `
-      program hello.aleo;
-      function main:
-        input r0 as u32.public;
-        input r1 as u32.private;
-        add r0 r1 into r2;
-        output r2 as u32.private;
-    `;
-    const fee = 4_835_000; // This will fail if fee is not set high enough
-
-    const aleoDeployment = new Deployment(
-      publicKey,
-      WalletAdapterNetwork.Testnet,
-      program,
-      fee
-    );
-
-    if (requestTransaction) {
-      // Returns a transaction Id, that can be used to check the status. Note this is not the on-chain transaction id
-      await requestDeploy(aleoDeployment);
-    }
-  };
-
-  return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Deploy Program
-    </button>
-  );
-};
-```
-
-### 🗂️Requesting Record Plaintexts
-
-This requires the `OnChainHistory` permission
-
-```tsx
-import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import React, { FC, useCallback } from "react";
-
-export const RequestRecordPlaintexts: FC = () => {
-  const { publicKey, requestRecordPlaintexts } = useWallet();
-
-  const onClick = async () => {
-    const program = "credits.aleo";
-    if (!publicKey) throw new WalletNotConnectedError();
-    if (requestRecordPlaintexts) {
-      const records = await requestRecordPlaintexts(program);
-      console.log("Records: " + records);
-    }
-  };
-
-  return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Request Records Plaintexts
-    </button>
-  );
-};
-```
-
-### 🗂️Requesting Transaction History
-
-This requires the `OnChainHistory` permission
-
-```tsx
-import { WalletNotConnectedError } from "@demox-labs/aleo-wallet-adapter-base";
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import React, { FC, useCallback } from "react";
-
-export const RequestRecords: FC = () => {
-  const { publicKey, requestTransactionHistory } = useWallet();
-
-  const onClick = async () => {
-    const program = "credits.aleo";
-    if (!publicKey) throw new WalletNotConnectedError();
-    if (requestTransactionHistory) {
-      const transactions = await requestTransactionHistory(program);
-      console.log("Transactions: " + transactions);
-    }
-  };
-
-  return (
-    <button onClick={onClick} disabled={!publicKey}>
-      Request Records Transaction History
-    </button>
-  );
-};
-```
-
-### Subscribing to Events
-
-```tsx
-import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
-import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
-import React, { FC, useEffect } from "react";
-
-export const SubscribeToEvent: FC = () => {
-  const { wallet } = useWallet();
-
-  const handleAccountChange = useCallback(() => {
-    // Handle account change, reconnect
-  }, [wallet]);
-
-  useEffect(() => {
-    (wallet?.adapter as LeoWalletAdapter).on('accountChange', handleAccountChange);
-    // Removes event listener during component teardown
-    return () => {
-      (wallet?.adapter as LeoWalletAdapter).off('accountChange', handleAccountChange);
-    }
-  }, [wallet, publicKey]);
-
-  return (
-    // Component
-  );
-};
+export default MyComponent;
 ```

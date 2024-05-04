@@ -18,10 +18,10 @@ The **`useWallet`** hook allows you to interact with the wallet functionality ex
 - **`disconnect`**: Function to disconnect the wallet.
 - **`signMessage`**: Function to sign a message.
 - **`decrypt`**: Function to decrypt ciphertext.
-- **`requestRecords`**: Function to request records.
-- **`requestTransaction`**: Function to request a transaction.
-- **`requestExecution`**: Function to request an execution.
-- **`requestBulkTransactions`**: Function to request multiple transactions.
+- **`requestRecords`**: Function to request users records.
+- **`requestTransaction`**: Function to prove a transaction execution and broadcast it.
+- **`requestExecution`**: Function to prove an transaction execution.
+- **`requestBulkTransactions`**: Function to prove and broadcast multiple transactions.
 - **`requestDeploy`**: Function to request a program deployment.
 - **`transactionStatus`**: Function to check a transaction's status.
 - **`getExecution`**: Function to get an execution.

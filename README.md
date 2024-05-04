@@ -32,7 +32,8 @@
   - [📜 Requesting Transaction History](#-requesting-transaction-history)
   - [🔔 Subscribing to Events](#-subscribing-to-events)
 - [👨‍💻 Aleo Wallets](#-aleo-wallets)
-  - [☑️ Provide Mutliple Options](#%EF%B8%8F-provide-multiple-options)
+  - [📱 Mobile Support](#-mobile-support)
+  - [☑️ Provide Multiple Options](#%EF%B8%8F-provide-multiple-options)
   - [</> Integrate your Wallet](#-integrate-your-wallet)
 
 ## 👋 Introduction
@@ -55,12 +56,12 @@ Abstracts wallet adapters and provides generic features such as Errors, Decrypt 
 - `aleo-wallet-adapter-react`
 React Context Provider and Hooks.
 
-    <a href="./packages/core/react/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/></a>
+    <a href="./packages/core/react/docs/README.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-react"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-react"/></a>
 
 - `aleo-wallet-adapter-reactui`
 React components ready to be used in a DApp.
 
-    <a href="./packages/ui/docs/modules.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"/></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/></a>
+    <a href="./packages/ui/docs/README.md"><img alt="Website" src="https://img.shields.io/badge/docs-online-blue"/></a>&nbsp;<a href="https://www.npmjs.com/package/@demox-labs/aleo-wallet-adapter-reactui"><img src="https://img.shields.io/npm/v/@demox-labs/aleo-wallet-adapter-reactui"/></a>
 
 - `aleo-wallet-adapter-leo`
 Leo Wallet specific implementation of wallet adapter.
@@ -428,9 +429,13 @@ export const SubscribeToEvent: FC = () => {
 
 ## 👨‍💻 Aleo Wallets
 
+### 📱 Mobile Support
+
+Compatible Mobile Wallets are supported automatically when integrating with `aleo-wallet-adapter`. There is no extra effort to do in order to make a DApp accessible to those devices.
+
 ### ☑️ Provide Multiple Options
 
-To provide multiple wallet alternatives, simply add the desired adapters to **`wallets`** prop of **`WalletProvider`**. Here is an example, using `useMemo` for caching adapter instanciation:
+To provide multiple wallet alternatives, simply add the desired adapters to **`wallets`** prop of **`WalletProvider`**. Here is an example, using `useMemo` for caching adapters instanciation:
 
 ```tsx
 import React, { FC, useMemo } from "react";
@@ -498,10 +503,16 @@ Here is a list of known adapters:
 
 *To obtain the node package exporting the adapter of a specific wallet, you can also contact its development teams directly.*
 
-To add your wallet adapter to the list above, fork this repository, edit this `README.md` file and [propose a Pull Request.](https://github.com/demox-labs/aleo-wallet-adapter/compare)
+To add your wallet adapter to the list above:
+
+- Fork this repository
+- Edit this `README.md` file.
+- [Propose a Pull Request.](https://github.com/demox-labs/aleo-wallet-adapter/compare)
 
 ### </> Integrate your Wallet
 
-Part of the purpose of this repository is to provide a toolbox for Aleo wallet developers. To make your own wallet available to dApps, you can build your own adapter, which should implement `WalletAdapter` exported from [./packages/core/base/adapter.js.](./packages/core/base/adapter.js)
+Part of the purpose of this repository is to provide a toolbox for Aleo wallet developers. To make your own wallet available to dApps, you can build an adapter, which should implement `WalletAdapter` exported from [./packages/core/base/adapter.ts.](./packages/core/base/adapter.ts)
 
-An example of such an implementation can be found at  [./packages/wallets/leo/adapter.js.](./packages/wallets/leo/adapter.js)
+An example of such an implementation can be found at  [./packages/wallets/leo/adapter.ts.](./packages/wallets/leo/adapter.ts)
+
+Once your adapter is ready, push the package to [npmjs.com](https://npmjs.com/) and follow the instructions at the end of [☑️ Provide Multiple Options](#%EF%B8%8F-provide-multiple-options) section above.

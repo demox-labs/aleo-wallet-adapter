@@ -1,46 +1,86 @@
-### Wallet Errors
+# Wallet Errors
 
-Here's the list of errors a wallet can encounter.
+## Exhaustive List
 
-- `WalletNotReadyError`
+Here's the list of errors wallet operations can throw:
+
+- **`WalletNotReadyError`**
 Wallet is not ready yet.
-- `WalletLoadError`
+- **`WalletLoadError`**
 Error loading wallet.
-- `WalletConfigError`
+- **`WalletConfigError`**
 Configuration error in wallet.
-- `WalletConnectionError`
+- **`WalletConnectionError`**
 Unable to connect to wallet.
-- `WalletNotSelectedError`
+- **`WalletNotSelectedError`**
 No wallet selected.
-- `WalletDisconnectedError`
+- **`WalletDisconnectedError`**
 Wallet disconnected unexpectedly.
-- `WalletDisconnectionError`
+- **`WalletDisconnectionError`**
 Error during disconnection from wallet.
-- `WalletAccountError`
+- **`WalletAccountError`**
 Account-related error in wallet.
-- `WalletPublicKeyError`
+- **`WalletPublicKeyError`**
 Public key error in wallet.
-- `WalletKeypairError`
+- **`WalletKeypairError`**
 Keypair error in wallet.
-- `WalletNotConnectedError`
+- **`WalletNotConnectedError`**
 Wallet is not connected.
-- `WalletSendTransactionError`
+- **`WalletSendTransactionError`**
 Error sending transaction from wallet.
-- `WalletSignMessageError`
+- **`WalletSignMessageError`**
 Error signing message with wallet.
-- `WalletSignTransactionError`
+- **`WalletSignTransactionError`**
 Error signing transaction with wallet.
-- `WalletTimeoutError`
+- **`WalletTimeoutError`**
 Operation timed out in wallet.
-- `WalletWindowBlockedError`
+- **`WalletWindowBlockedError`**
 Wallet window blocked or inaccessible.
-- `WalletWindowClosedError`
+- **`WalletWindowClosedError`**
 Wallet window closed unexpectedly.
-- `WalletDecryptionNotAllowedError`
+- **`WalletDecryptionNotAllowedError`**
 Decryption not allowed in wallet.
-- `WalletDecryptionError`
+- **`WalletDecryptionError`**
 Error decrypting data in wallet.
-- `WalletRecordsError`
+- **`WalletRecordsError`**
 Error accessing or managing records in wallet.
-- `WalletTransactionError`
+- **`WalletTransactionError`**
 General transaction error in wallet.
+
+## Error Handling
+
+The following example shows how you can catch a specific error using the different types defined above:
+
+```tsx
+import { 
+    WalletNotConnectedError,
+    WalletDecryptionNotAllowedError,
+} from "@demox-labs/aleo-wallet-adapter-base";
+import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
+import React, { FC, useCallback } from "react";
+
+export const DecryptMessage: FC = () => {
+  const { publicKey, decrypt } = useWallet();
+
+  const onClick = async () => {
+    const cipherText = "record....";
+    if (!publicKey) throw new WalletNotConnectedError();
+    if (decrypt) {
+      try {
+          const decryptedPayload = await decrypt(cipherText);
+          alert("Decrypted payload: " + decryptedPayload);
+      } catch(error: any){
+        if(error instanceof WalletDecryptionNotAllowedError){
+            console.log("Cannot decrypt record ciphertext when 'NoDecrypt' permission is set.")
+        }
+      }
+    }
+  };
+
+  return (
+    <button onClick={onClick} disabled={!publicKey}>
+      Decrypt message
+    </button>
+  );
+};
+```

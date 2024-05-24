@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@demox-labs/aleo-wallet-adapter-base@^0.0.20":
-  version "0.0.20"
-  resolved "https://registry.yarnpkg.com/@demox-labs/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-0.0.20.tgz#b239f062ebbc5c22e8df028ea145ef838f8f8875"
-  integrity sha512-H7FNLew8dFbD3GxT/hUijHy7iEIf7YYR4cQQCz57rV7aEs3Zq0mc/N+Ku/PQcbPEQj6vUoFBtyhqNTXOw36kYw==
+"@demox-labs/aleo-wallet-adapter-base@^0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@demox-labs/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-0.0.21.tgz#9bc2de37c024dec76eb8ca0fb9c55d18c93c76d8"
+  integrity sha512-tF+tX2HoHJGNEuKoWrx8L4pJhtgEpJo9hLXJSxU+Y+ItIyLNJvggq3duJunONyprLaN83E3jZGQL5PbMd6iUOQ==
   dependencies:
     eventemitter3 "^4.0.7"
 

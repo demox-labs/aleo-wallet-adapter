@@ -31,7 +31,7 @@
 
 #### Defined in
 
-[useWalletModal.tsx:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/ui/src/useWalletModal.tsx#L5)
+[useWalletModal.tsx:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/ui/src/useWalletModal.tsx#L5)
 
 ___
 
@@ -41,4 +41,4 @@ ___
 
 #### Defined in
 
-[useWalletModal.tsx:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/ui/src/useWalletModal.tsx#L4)
+[useWalletModal.tsx:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/ui/src/useWalletModal.tsx#L4)

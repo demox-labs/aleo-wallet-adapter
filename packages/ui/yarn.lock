@@ -9,6 +9,13 @@
   dependencies:
     eventemitter3 "^4.0.7"
 
+"@demox-labs/aleo-wallet-adapter-base@^0.0.21":
+  version "0.0.21"
+  resolved "https://registry.yarnpkg.com/@demox-labs/aleo-wallet-adapter-base/-/aleo-wallet-adapter-base-0.0.21.tgz#9bc2de37c024dec76eb8ca0fb9c55d18c93c76d8"
+  integrity sha512-tF+tX2HoHJGNEuKoWrx8L4pJhtgEpJo9hLXJSxU+Y+ItIyLNJvggq3duJunONyprLaN83E3jZGQL5PbMd6iUOQ==
+  dependencies:
+    eventemitter3 "^4.0.7"
+
 "@demox-labs/aleo-wallet-adapter-react@^0.0.19":
   version "0.0.19"
   resolved "https://registry.yarnpkg.com/@demox-labs/aleo-wallet-adapter-react/-/aleo-wallet-adapter-react-0.0.19.tgz#e2e783b25a96d366828d3b9859be9650c2788106"

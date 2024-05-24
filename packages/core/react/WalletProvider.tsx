@@ -46,7 +46,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
     wallets: adapters,
     autoConnect = false,
     decryptPermission = DecryptPermission.NoDecrypt,
-    network = WalletAdapterNetwork.Testnet,
+    network = WalletAdapterNetwork.TestnetBeta,
     onError,
     localStorageKey = 'walletName',
     programs = []

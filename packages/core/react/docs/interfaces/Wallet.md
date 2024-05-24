@@ -17,7 +17,7 @@
 
 #### Defined in
 
-[useWallet.ts:14](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L14)
+[useWallet.ts:14](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L14)
 
 ___
 
@@ -27,4 +27,4 @@ ___
 
 #### Defined in
 
-[useWallet.ts:15](https://github.com/demox-labs/aleo-wallet-adapter/blob/9ebe345/packages/core/react/useWallet.ts#L15)
+[useWallet.ts:15](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L15)

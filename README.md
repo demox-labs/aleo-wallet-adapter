@@ -38,8 +38,8 @@
 
 ### Sub-package documentations
 
-- [`aleo-wallet-adapter-base`](./packages/core/base/docs/README.md)
-- [`aleo-wallet-adapter-react`](#-integrate-your-wallet)
+- [**`aleo-wallet-adapter-base`**](./packages/core/base/docs/README.md)
+- [**`aleo-wallet-adapter-react`**](#-integrate-your-wallet)
 - [**`aleo-wallet-adapter-reactui`**](./packages/core/react/docs/README.md)
 - [**`aleo-wallet-adapter-leo`**](./packages/wallets/leo/docs/modules.md)
 

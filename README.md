@@ -466,22 +466,23 @@ import {
 require("@demox-labs/aleo-wallet-adapter-reactui/styles.css");
 
 export const Wallet: FC = () => {
+  const appName = "Aleo Demo App";
   const wallets = useMemo(
     () => [
       new LeoWalletAdapter({
-        appName: "Aleo Demo App",
+        appName
       }),
       new AvailWalletAdapter({
-        appName: "Aleo Demo App",
+        appName,
       }),
       new SoterWalletAdapter({
-        appName: "Aleo Demo App",
+        appName,
       }),
       new FoxWalletAdapter({
-        appName: "Aleo Demo App",
+        appName,
       }),
       new PuzzleWalletAdapter({
-        appName: "Aleo Demo App",
+        appName,
       }),
     ],
     []

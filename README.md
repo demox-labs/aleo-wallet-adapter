@@ -36,6 +36,13 @@
   - [☑️ Provide Multiple Options](#%EF%B8%8F-provide-multiple-options)
   - [</> Integrate your Wallet](#-integrate-your-wallet)
 
+### Sub-package documentations
+
+- [`aleo-wallet-adapter-base`](./packages/core/base/docs/README.md)
+- [`aleo-wallet-adapter-react`](#-integrate-your-wallet)
+- [**`aleo-wallet-adapter-reactui`**](./packages/core/react/docs/README.md)
+- [**`aleo-wallet-adapter-leo`**](./packages/wallets/leo/docs/modules.md)
+
 ## 👋 Introduction
 
 A wallet adapter is a bridge between an wallet browser extension and decentralised applications.

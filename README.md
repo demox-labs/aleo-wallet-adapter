@@ -36,7 +36,7 @@
   - [☑️ Provide Multiple Options](#%EF%B8%8F-provide-multiple-options)
   - [</> Integrate your Wallet](#-integrate-your-wallet)
 
-### Sub-package documentations
+### Sub-packages documentations
 
 - [**`aleo-wallet-adapter-base`**](./packages/core/base/docs/README.md)
 - [**`aleo-wallet-adapter-react`**](#-integrate-your-wallet)

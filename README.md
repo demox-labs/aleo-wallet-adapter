@@ -469,21 +469,11 @@ export const Wallet: FC = () => {
   const appName = "Aleo Demo App";
   const wallets = useMemo(
     () => [
-      new LeoWalletAdapter({
-        appName
-      }),
-      new AvailWalletAdapter({
-        appName,
-      }),
-      new SoterWalletAdapter({
-        appName,
-      }),
-      new FoxWalletAdapter({
-        appName,
-      }),
-      new PuzzleWalletAdapter({
-        appName,
-      }),
+      new LeoWalletAdapter({ appName }),
+      new AvailWalletAdapter({ appName }),
+      new SoterWalletAdapter({ appName }),
+      new FoxWalletAdapter({ appName }),
+      new PuzzleWalletAdapter({ appName }),
     ],
     []
   );

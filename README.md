@@ -499,7 +499,7 @@ Here is a list of known adapters:
 - [Avail wallet:](https://avail.global/) `AvailWalletAdapter` from package `@avail-wallet/aleo-wallet-adapter-avail`.
 - [Soter wallet:](https://sotertech.io/) `SoterWalletAdapter` from package `@soterhq/aleo-wallet-adapter-soter`.
 
-*To obtain the node package exporting the adapter of a specific wallet, you can also contact its development teams directly.*
+*To obtain the node package exporting the adapter of a specific wallet, you can also contact its development team directly.*
 
 To add your wallet adapter to the list above:
 

@@ -6,7 +6,8 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "doc": "typedoc --tsconfig ./tsconfig.json --plugin typedoc-plugin-markdown --entryPoints index.ts"
+    "doc": "typedoc --tsconfig ./tsconfig.json --plugin typedoc-plugin-markdown --entryPoints index.ts",
+    "reinstall-all": "rm -rf node_modules yarn.lock && yarn && yarn build && cd ../react && rm -rf node_modules yarn.lock && yarn && yarn build && cd ../../ui && rm -rf node_modules yarn.lock && yarn && yarn build && cd ../wallets/leo && rm -rf node_modules yarn.lock && yarn && yarn build"
   },
   "repository": "https://github.com/demox-labs/aleo-wallet-adapter",
   "author": "Demox Labs",

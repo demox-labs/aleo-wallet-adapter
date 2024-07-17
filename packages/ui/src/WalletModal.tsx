@@ -1,7 +1,7 @@
 import type { FC, MouseEvent } from 'react';
 import React, { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
-import { WalletName, WalletReadyState } from '@demox-labs/aleo-wallet-adapter-base';
+import { WalletAdapterNetwork, WalletName, WalletReadyState } from '@demox-labs/aleo-wallet-adapter-base';
 import { useWallet, Wallet } from '@demox-labs/aleo-wallet-adapter-react';
 import { Collapse } from './Collapse';
 import { useWalletModal } from './useWalletModal';
@@ -13,9 +13,9 @@ export interface WalletModalProps {
     container?: string;
 }
 
-export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 'body' }) => {
+export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 'body', decryptPermission, network, programs }) => {
     const ref = useRef<HTMLDivElement>(null);
-    const { wallets, select } = useWallet();
+    const { wallets, select, connect, wallet } = useWallet();
     const { setVisible } = useWalletModal();
     const [expanded, setExpanded] = useState(false);
     const [fadeIn, setFadeIn] = useState(false);
@@ -128,6 +128,12 @@ export const WalletModal: FC<WalletModalProps> = ({ className = '', container = 
     }, [hideModal, handleTabKey]);
 
     useLayoutEffect(() => setPortal(document.querySelector(container)), [container]);
+
+    useLayoutEffect(() => {
+        if (wallet) {
+            connect(decryptPermission || "NO_DECRYPT", network || WalletAdapterNetwork.TestnetBeta, programs ?? []).catch((e) => {console.log({e})});
+        }
+    }, [wallet])
 
     return (
         portal &&

@@ -1,3 +1,7 @@
+**@foxwallet/aleo-wallet-adapter-fox** • [**Docs**](globals.md)
+
+***
+
 # Wallet Adapter for Aleo Apps
 
 Modular TypeScript wallet adapters and components for Aleo applications.

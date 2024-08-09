@@ -1,0 +1,28 @@
+{
+  "name": "@foxwallet/aleo-wallet-adapter-fox",
+  "version": "0.0.24",
+  "description": "Aleo wallet adapter for the FoxWallet.",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "repository": "https://github.com/foxwallet/aleo-wallet-adapter",
+  "author": "FoxWallet",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@demox-labs/aleo-wallet-adapter-base": "^0.0.22",
+    "nanoid": "^4.0.0"
+  },
+  "scripts": {
+    "build": "tsc",
+    "doc": "typedoc --plugin typedoc-plugin-markdown index.ts",
+    "bundle": "webpack"
+  },
+  "devDependencies": {
+    "ts-loader": "^9.4.1",
+    "typedoc": "^0.26.5",
+    "typedoc-plugin-markdown": "^4.2.3",
+    "typescript": "^4.9.3",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.0"
+  }
+}

@@ -24,6 +24,7 @@ npm install --save \
     @demox-labs/aleo-wallet-adapter-react \
     @demox-labs/aleo-wallet-adapter-reactui \
     @demox-labs/aleo-wallet-adapter-leo \
+    @demox-labs/aleo-wallet-adapter-fox
     react
 ```
 
@@ -34,6 +35,7 @@ import React, { FC, useMemo } from "react";
 import { WalletProvider } from "@demox-labs/aleo-wallet-adapter-react";
 import { WalletModalProvider } from "@demox-labs/aleo-wallet-adapter-reactui";
 import { LeoWalletAdapter } from "@demox-labs/aleo-wallet-adapter-leo";
+import { FoxWalletAdapter } from "@demox-labs/aleo-wallet-adapter-fox";
 import {
   DecryptPermission,
   WalletAdapterNetwork,
@@ -48,6 +50,7 @@ export const Wallet: FC = () => {
       new LeoWalletAdapter({
         appName: "Leo Demo App",
       }),
+      new FoxWalletAdapter({}),
     ],
     []
   );

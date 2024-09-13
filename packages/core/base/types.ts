@@ -2,6 +2,7 @@ export enum WalletAdapterNetwork {
     Testnet = 'testnet3',
     TestnetBeta = 'testnetbeta',
     MainnetBeta = 'mainnetbeta',
+    Mainnet= 'mainnet'
 };
 
 export type SupportedTransactionVersions = ReadonlySet<any> | null;

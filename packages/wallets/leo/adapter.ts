@@ -36,6 +36,7 @@ export interface LeoWallet extends EventEmitter<LeoWalletEvents> {
     requestBulkTransactions(transactions: AleoTransaction[]): Promise<{ transactionIds?: string[] }>,
     requestDeploy(deployment: AleoDeployment): Promise<{ transactionId?: string}>,
     transactionStatus(transactionId: string): Promise<{ status: string }>,
+    transitionViewKeys(transactionId: string): Promise<{ viewKeys?: string[] }>,
     getExecution(transactionId: string): Promise<{ execution: string }>,
     requestRecordPlaintexts(program: string): Promise<{ records: any[] }>,
     requestTransactionHistory(program: string): Promise<{ transactions: any[] }>,
@@ -235,6 +236,22 @@ export class LeoWalletAdapter extends BaseMessageSignerWalletAdapter {
             try {
                 const result = await wallet.transactionStatus(transactionId);
                 return result.status;
+            } catch (error: any) {
+                throw new WalletTransactionError(error?.message, error);
+            }
+        } catch (error: any) {
+            this.emit('error', error);
+            throw error;
+        }
+    }
+
+    async transitionViewKeys(transactionId: string): Promise<string[]> {
+        try {
+            const wallet = this._wallet;
+            if (!wallet || !this.publicKey) throw new WalletNotConnectedError();
+            try {
+                const result = await wallet.transitionViewKeys(transactionId);
+                return result.viewKeys;
             } catch (error: any) {
                 throw new WalletTransactionError(error?.message, error);
             }

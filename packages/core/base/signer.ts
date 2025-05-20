@@ -31,6 +31,8 @@ export interface MessageSignerWalletAdapterProps<Name extends string = string> e
 
     transactionStatus(transactionId: string): Promise<string>;
 
+    transitionViewKeys(transactionId: string): Promise<string[]>;
+
     getExecution(transactionId: string): Promise<string>;
 
     requestRecordPlaintexts(program: string): Promise<any[]>;
@@ -60,6 +62,8 @@ export abstract class BaseMessageSignerWalletAdapter<Name extends string = strin
     abstract requestDeploy(deployment: AleoDeployment): Promise<string>;
 
     abstract transactionStatus(transactionId: string): Promise<string>;
+
+    abstract transitionViewKeys(transactionId: string): Promise<string[]>;
 
     abstract getExecution(transactionId: string): Promise<string>;
 

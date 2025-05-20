@@ -36,6 +36,7 @@ export interface WalletContextState {
   requestBulkTransactions: MessageSignerWalletAdapterProps['requestBulkTransactions'] | undefined;
   requestDeploy: MessageSignerWalletAdapterProps['requestDeploy'] | undefined;
   transactionStatus: MessageSignerWalletAdapterProps['transactionStatus'] | undefined;
+  transitionViewKeys: MessageSignerWalletAdapterProps['transitionViewKeys'] | undefined;
   getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined;
   requestRecordPlaintexts: MessageSignerWalletAdapterProps['requestRecordPlaintexts'] | undefined;
   requestTransactionHistory: MessageSignerWalletAdapterProps['requestTransactionHistory'] | undefined;
@@ -80,6 +81,9 @@ const DEFAULT_CONTEXT = {
   },
   transactionStatus(_transactionId: string) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'transactionStatus')));
+  },
+  transitionViewKeys(_transactionId: string) {
+    return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'transitionViewKeys')));
   },
   getExecution(_transactionId: string) {
     return Promise.reject(console.error(constructMissingProviderErrorMessage('get', 'getExecution')));

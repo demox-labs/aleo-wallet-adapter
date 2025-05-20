@@ -341,6 +341,18 @@ export const WalletProvider: FC<WalletProviderProps> = ({
         [adapter, handleError, connected]
     );
 
+    // Request transition view keys
+    const transitionViewKeys: MessageSignerWalletAdapterProps['transitionViewKeys'] | undefined = useMemo(
+        () =>
+            adapter && 'transitionViewKeys' in adapter
+                ? async (transactionId) => {
+                    if (!connected) throw handleError(new WalletNotConnectedError());
+                    return await adapter.transitionViewKeys(transactionId);
+                }
+                : undefined,
+        [adapter, handleError, connected]
+    );
+
     // Request Execution
     const getExecution: MessageSignerWalletAdapterProps['getExecution'] | undefined = useMemo(
         () =>
@@ -399,6 +411,7 @@ export const WalletProvider: FC<WalletProviderProps> = ({
                 requestBulkTransactions,
                 requestDeploy,
                 transactionStatus,
+                transitionViewKeys,
                 getExecution,
                 requestRecordPlaintexts,
                 requestTransactionHistory

@@ -1,4053 +1,3536 @@
-[@demox-labs/aleo-wallet-adapter-leo](../README.md) / [Exports](../modules.md) / LeoWindow
+[**@demox-labs/aleo-wallet-adapter-leo**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-leo](../README.md) / LeoWindow
 
 # Interface: LeoWindow
 
-## Hierarchy
+Defined in: [adapter.ts:47](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L47)
+
+## Extends
 
 - `Window`
 
-  ↳ **`LeoWindow`**
+## Indexable
 
-## Table of contents
-
-### Properties
-
-- [caches](LeoWindow.md#caches)
-- [clientInformation](LeoWindow.md#clientinformation)
-- [closed](LeoWindow.md#closed)
-- [crossOriginIsolated](LeoWindow.md#crossoriginisolated)
-- [crypto](LeoWindow.md#crypto)
-- [customElements](LeoWindow.md#customelements)
-- [devicePixelRatio](LeoWindow.md#devicepixelratio)
-- [document](LeoWindow.md#document)
-- [event](LeoWindow.md#event)
-- [external](LeoWindow.md#external)
-- [frameElement](LeoWindow.md#frameelement)
-- [frames](LeoWindow.md#frames)
-- [history](LeoWindow.md#history)
-- [indexedDB](LeoWindow.md#indexeddb)
-- [innerHeight](LeoWindow.md#innerheight)
-- [innerWidth](LeoWindow.md#innerwidth)
-- [isSecureContext](LeoWindow.md#issecurecontext)
-- [length](LeoWindow.md#length)
-- [leo](LeoWindow.md#leo)
-- [leoWallet](LeoWindow.md#leowallet)
-- [localStorage](LeoWindow.md#localstorage)
-- [locationbar](LeoWindow.md#locationbar)
-- [menubar](LeoWindow.md#menubar)
-- [name](LeoWindow.md#name)
-- [navigator](LeoWindow.md#navigator)
-- [onabort](LeoWindow.md#onabort)
-- [onafterprint](LeoWindow.md#onafterprint)
-- [onanimationcancel](LeoWindow.md#onanimationcancel)
-- [onanimationend](LeoWindow.md#onanimationend)
-- [onanimationiteration](LeoWindow.md#onanimationiteration)
-- [onanimationstart](LeoWindow.md#onanimationstart)
-- [onauxclick](LeoWindow.md#onauxclick)
-- [onbeforeinput](LeoWindow.md#onbeforeinput)
-- [onbeforeprint](LeoWindow.md#onbeforeprint)
-- [onbeforeunload](LeoWindow.md#onbeforeunload)
-- [onblur](LeoWindow.md#onblur)
-- [oncancel](LeoWindow.md#oncancel)
-- [oncanplay](LeoWindow.md#oncanplay)
-- [oncanplaythrough](LeoWindow.md#oncanplaythrough)
-- [onchange](LeoWindow.md#onchange)
-- [onclick](LeoWindow.md#onclick)
-- [onclose](LeoWindow.md#onclose)
-- [oncontextmenu](LeoWindow.md#oncontextmenu)
-- [oncuechange](LeoWindow.md#oncuechange)
-- [ondblclick](LeoWindow.md#ondblclick)
-- [ondevicemotion](LeoWindow.md#ondevicemotion)
-- [ondeviceorientation](LeoWindow.md#ondeviceorientation)
-- [ondrag](LeoWindow.md#ondrag)
-- [ondragend](LeoWindow.md#ondragend)
-- [ondragenter](LeoWindow.md#ondragenter)
-- [ondragleave](LeoWindow.md#ondragleave)
-- [ondragover](LeoWindow.md#ondragover)
-- [ondragstart](LeoWindow.md#ondragstart)
-- [ondrop](LeoWindow.md#ondrop)
-- [ondurationchange](LeoWindow.md#ondurationchange)
-- [onemptied](LeoWindow.md#onemptied)
-- [onended](LeoWindow.md#onended)
-- [onerror](LeoWindow.md#onerror)
-- [onfocus](LeoWindow.md#onfocus)
-- [onformdata](LeoWindow.md#onformdata)
-- [ongamepadconnected](LeoWindow.md#ongamepadconnected)
-- [ongamepaddisconnected](LeoWindow.md#ongamepaddisconnected)
-- [ongotpointercapture](LeoWindow.md#ongotpointercapture)
-- [onhashchange](LeoWindow.md#onhashchange)
-- [oninput](LeoWindow.md#oninput)
-- [oninvalid](LeoWindow.md#oninvalid)
-- [onkeydown](LeoWindow.md#onkeydown)
-- [onkeypress](LeoWindow.md#onkeypress)
-- [onkeyup](LeoWindow.md#onkeyup)
-- [onlanguagechange](LeoWindow.md#onlanguagechange)
-- [onload](LeoWindow.md#onload)
-- [onloadeddata](LeoWindow.md#onloadeddata)
-- [onloadedmetadata](LeoWindow.md#onloadedmetadata)
-- [onloadstart](LeoWindow.md#onloadstart)
-- [onlostpointercapture](LeoWindow.md#onlostpointercapture)
-- [onmessage](LeoWindow.md#onmessage)
-- [onmessageerror](LeoWindow.md#onmessageerror)
-- [onmousedown](LeoWindow.md#onmousedown)
-- [onmouseenter](LeoWindow.md#onmouseenter)
-- [onmouseleave](LeoWindow.md#onmouseleave)
-- [onmousemove](LeoWindow.md#onmousemove)
-- [onmouseout](LeoWindow.md#onmouseout)
-- [onmouseover](LeoWindow.md#onmouseover)
-- [onmouseup](LeoWindow.md#onmouseup)
-- [onoffline](LeoWindow.md#onoffline)
-- [ononline](LeoWindow.md#ononline)
-- [onorientationchange](LeoWindow.md#onorientationchange)
-- [onpagehide](LeoWindow.md#onpagehide)
-- [onpageshow](LeoWindow.md#onpageshow)
-- [onpause](LeoWindow.md#onpause)
-- [onplay](LeoWindow.md#onplay)
-- [onplaying](LeoWindow.md#onplaying)
-- [onpointercancel](LeoWindow.md#onpointercancel)
-- [onpointerdown](LeoWindow.md#onpointerdown)
-- [onpointerenter](LeoWindow.md#onpointerenter)
-- [onpointerleave](LeoWindow.md#onpointerleave)
-- [onpointermove](LeoWindow.md#onpointermove)
-- [onpointerout](LeoWindow.md#onpointerout)
-- [onpointerover](LeoWindow.md#onpointerover)
-- [onpointerup](LeoWindow.md#onpointerup)
-- [onpopstate](LeoWindow.md#onpopstate)
-- [onprogress](LeoWindow.md#onprogress)
-- [onratechange](LeoWindow.md#onratechange)
-- [onrejectionhandled](LeoWindow.md#onrejectionhandled)
-- [onreset](LeoWindow.md#onreset)
-- [onresize](LeoWindow.md#onresize)
-- [onscroll](LeoWindow.md#onscroll)
-- [onsecuritypolicyviolation](LeoWindow.md#onsecuritypolicyviolation)
-- [onseeked](LeoWindow.md#onseeked)
-- [onseeking](LeoWindow.md#onseeking)
-- [onselect](LeoWindow.md#onselect)
-- [onselectionchange](LeoWindow.md#onselectionchange)
-- [onselectstart](LeoWindow.md#onselectstart)
-- [onslotchange](LeoWindow.md#onslotchange)
-- [onstalled](LeoWindow.md#onstalled)
-- [onstorage](LeoWindow.md#onstorage)
-- [onsubmit](LeoWindow.md#onsubmit)
-- [onsuspend](LeoWindow.md#onsuspend)
-- [ontimeupdate](LeoWindow.md#ontimeupdate)
-- [ontoggle](LeoWindow.md#ontoggle)
-- [ontouchcancel](LeoWindow.md#ontouchcancel)
-- [ontouchend](LeoWindow.md#ontouchend)
-- [ontouchmove](LeoWindow.md#ontouchmove)
-- [ontouchstart](LeoWindow.md#ontouchstart)
-- [ontransitioncancel](LeoWindow.md#ontransitioncancel)
-- [ontransitionend](LeoWindow.md#ontransitionend)
-- [ontransitionrun](LeoWindow.md#ontransitionrun)
-- [ontransitionstart](LeoWindow.md#ontransitionstart)
-- [onunhandledrejection](LeoWindow.md#onunhandledrejection)
-- [onunload](LeoWindow.md#onunload)
-- [onvolumechange](LeoWindow.md#onvolumechange)
-- [onwaiting](LeoWindow.md#onwaiting)
-- [onwebkitanimationend](LeoWindow.md#onwebkitanimationend)
-- [onwebkitanimationiteration](LeoWindow.md#onwebkitanimationiteration)
-- [onwebkitanimationstart](LeoWindow.md#onwebkitanimationstart)
-- [onwebkittransitionend](LeoWindow.md#onwebkittransitionend)
-- [onwheel](LeoWindow.md#onwheel)
-- [opener](LeoWindow.md#opener)
-- [orientation](LeoWindow.md#orientation)
-- [origin](LeoWindow.md#origin)
-- [outerHeight](LeoWindow.md#outerheight)
-- [outerWidth](LeoWindow.md#outerwidth)
-- [pageXOffset](LeoWindow.md#pagexoffset)
-- [pageYOffset](LeoWindow.md#pageyoffset)
-- [parent](LeoWindow.md#parent)
-- [performance](LeoWindow.md#performance)
-- [personalbar](LeoWindow.md#personalbar)
-- [screen](LeoWindow.md#screen)
-- [screenLeft](LeoWindow.md#screenleft)
-- [screenTop](LeoWindow.md#screentop)
-- [screenX](LeoWindow.md#screenx)
-- [screenY](LeoWindow.md#screeny)
-- [scrollX](LeoWindow.md#scrollx)
-- [scrollY](LeoWindow.md#scrolly)
-- [scrollbars](LeoWindow.md#scrollbars)
-- [self](LeoWindow.md#self)
-- [sessionStorage](LeoWindow.md#sessionstorage)
-- [speechSynthesis](LeoWindow.md#speechsynthesis)
-- [status](LeoWindow.md#status)
-- [statusbar](LeoWindow.md#statusbar)
-- [toolbar](LeoWindow.md#toolbar)
-- [top](LeoWindow.md#top)
-- [visualViewport](LeoWindow.md#visualviewport)
-- [window](LeoWindow.md#window)
-
-### Accessors
-
-- [location](LeoWindow.md#location)
-
-### Methods
-
-- [addEventListener](LeoWindow.md#addeventlistener)
-- [alert](LeoWindow.md#alert)
-- [atob](LeoWindow.md#atob)
-- [blur](LeoWindow.md#blur)
-- [btoa](LeoWindow.md#btoa)
-- [cancelAnimationFrame](LeoWindow.md#cancelanimationframe)
-- [cancelIdleCallback](LeoWindow.md#cancelidlecallback)
-- [captureEvents](LeoWindow.md#captureevents)
-- [clearInterval](LeoWindow.md#clearinterval)
-- [clearTimeout](LeoWindow.md#cleartimeout)
-- [close](LeoWindow.md#close)
-- [confirm](LeoWindow.md#confirm)
-- [createImageBitmap](LeoWindow.md#createimagebitmap)
-- [dispatchEvent](LeoWindow.md#dispatchevent)
-- [fetch](LeoWindow.md#fetch)
-- [focus](LeoWindow.md#focus)
-- [getComputedStyle](LeoWindow.md#getcomputedstyle)
-- [getSelection](LeoWindow.md#getselection)
-- [matchMedia](LeoWindow.md#matchmedia)
-- [moveBy](LeoWindow.md#moveby)
-- [moveTo](LeoWindow.md#moveto)
-- [open](LeoWindow.md#open)
-- [postMessage](LeoWindow.md#postmessage)
-- [print](LeoWindow.md#print)
-- [prompt](LeoWindow.md#prompt)
-- [queueMicrotask](LeoWindow.md#queuemicrotask)
-- [releaseEvents](LeoWindow.md#releaseevents)
-- [removeEventListener](LeoWindow.md#removeeventlistener)
-- [reportError](LeoWindow.md#reporterror)
-- [requestAnimationFrame](LeoWindow.md#requestanimationframe)
-- [requestIdleCallback](LeoWindow.md#requestidlecallback)
-- [resizeBy](LeoWindow.md#resizeby)
-- [resizeTo](LeoWindow.md#resizeto)
-- [scroll](LeoWindow.md#scroll)
-- [scrollBy](LeoWindow.md#scrollby)
-- [scrollTo](LeoWindow.md#scrollto)
-- [setInterval](LeoWindow.md#setinterval)
-- [setTimeout](LeoWindow.md#settimeout)
-- [stop](LeoWindow.md#stop)
-- [structuredClone](LeoWindow.md#structuredclone)
+\[`index`: `number`\]: `Window`
 
 ## Properties
 
 ### caches
 
-• `Readonly` **caches**: `CacheStorage`
+> `readonly` **caches**: `CacheStorage`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16958
 
 Available only in secure contexts.
 
 #### Inherited from
 
-Window.caches
+`Window.caches`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16958
+### ~~clientInformation~~
 
-___
+> `readonly` **clientInformation**: `Navigator`
 
-### clientInformation
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16782
 
-• `Readonly` **clientInformation**: `Navigator`
-
-**`Deprecated`**
+#### Deprecated
 
 This is a legacy alias of `navigator`.
 
 #### Inherited from
 
-Window.clientInformation
+`Window.clientInformation`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16782
-
-___
+***
 
 ### closed
 
-• `Readonly` **closed**: `boolean`
+> `readonly` **closed**: `boolean`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16784
 
 Returns true if the window has been closed, false otherwise.
 
 #### Inherited from
 
-Window.closed
+`Window.closed`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16784
-
-___
+***
 
 ### crossOriginIsolated
 
-• `Readonly` **crossOriginIsolated**: `boolean`
+> `readonly` **crossOriginIsolated**: `boolean`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16959
 
 #### Inherited from
 
-Window.crossOriginIsolated
+`Window.crossOriginIsolated`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16959
-
-___
+***
 
 ### crypto
 
-• `Readonly` **crypto**: `Crypto`
+> `readonly` **crypto**: `Crypto`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16960
 
 #### Inherited from
 
-Window.crypto
+`Window.crypto`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16960
-
-___
+***
 
 ### customElements
 
-• `Readonly` **customElements**: `CustomElementRegistry`
+> `readonly` **customElements**: `CustomElementRegistry`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16786
 
 Defines a new custom element, mapping the given name to the given constructor as an autonomous custom element.
 
 #### Inherited from
 
-Window.customElements
+`Window.customElements`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16786
-
-___
+***
 
 ### devicePixelRatio
 
-• `Readonly` **devicePixelRatio**: `number`
+> `readonly` **devicePixelRatio**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16787
 
 #### Inherited from
 
-Window.devicePixelRatio
+`Window.devicePixelRatio`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16787
-
-___
+***
 
 ### document
 
-• `Readonly` **document**: `Document`
+> `readonly` **document**: `Document`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16788
 
 #### Inherited from
 
-Window.document
+`Window.document`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16788
+### ~~event~~
 
-___
+> `readonly` **event**: `Event`
 
-### event
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16790
 
-• `Readonly` **event**: `Event`
-
-**`Deprecated`**
+#### Deprecated
 
 #### Inherited from
 
-Window.event
+`Window.event`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16790
+### ~~external~~
 
-___
+> `readonly` **external**: `External`
 
-### external
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16792
 
-• `Readonly` **external**: `External`
-
-**`Deprecated`**
+#### Deprecated
 
 #### Inherited from
 
-Window.external
+`Window.external`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16792
-
-___
+***
 
 ### frameElement
 
-• `Readonly` **frameElement**: `Element`
+> `readonly` **frameElement**: `Element`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16793
 
 #### Inherited from
 
-Window.frameElement
+`Window.frameElement`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16793
-
-___
+***
 
 ### frames
 
-• `Readonly` **frames**: `Window`
+> `readonly` **frames**: `Window`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16794
 
 #### Inherited from
 
-Window.frames
+`Window.frames`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16794
-
-___
+***
 
 ### history
 
-• `Readonly` **history**: `History`
+> `readonly` **history**: `History`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16795
 
 #### Inherited from
 
-Window.history
+`Window.history`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16795
-
-___
+***
 
 ### indexedDB
 
-• `Readonly` **indexedDB**: `IDBFactory`
+> `readonly` **indexedDB**: `IDBFactory`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16961
 
 #### Inherited from
 
-Window.indexedDB
+`Window.indexedDB`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16961
-
-___
+***
 
 ### innerHeight
 
-• `Readonly` **innerHeight**: `number`
+> `readonly` **innerHeight**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16796
 
 #### Inherited from
 
-Window.innerHeight
+`Window.innerHeight`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16796
-
-___
+***
 
 ### innerWidth
 
-• `Readonly` **innerWidth**: `number`
+> `readonly` **innerWidth**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16797
 
 #### Inherited from
 
-Window.innerWidth
+`Window.innerWidth`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16797
-
-___
+***
 
 ### isSecureContext
 
-• `Readonly` **isSecureContext**: `boolean`
+> `readonly` **isSecureContext**: `boolean`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16962
 
 #### Inherited from
 
-Window.isSecureContext
+`Window.isSecureContext`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16962
-
-___
+***
 
 ### length
 
-• `Readonly` **length**: `number`
+> `readonly` **length**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16798
 
 #### Inherited from
 
-Window.length
+`Window.length`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16798
+### leo?
 
-___
+> `optional` **leo**: [`LeoWallet`](LeoWallet.md)
 
-### leo
+Defined in: [adapter.ts:49](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L49)
 
-• `Optional` **leo**: [`LeoWallet`](LeoWallet.md)
+***
 
-#### Defined in
+### leoWallet?
 
-[adapter.ts:48](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L48)
+> `optional` **leoWallet**: [`LeoWallet`](LeoWallet.md)
 
-___
+Defined in: [adapter.ts:48](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L48)
 
-### leoWallet
-
-• `Optional` **leoWallet**: [`LeoWallet`](LeoWallet.md)
-
-#### Defined in
-
-[adapter.ts:47](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L47)
-
-___
+***
 
 ### localStorage
 
-• `Readonly` **localStorage**: `Storage`
+> `readonly` **localStorage**: `Storage`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16953
 
 #### Inherited from
 
-Window.localStorage
+`Window.localStorage`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16953
-
-___
+***
 
 ### locationbar
 
-• `Readonly` **locationbar**: `BarProp`
+> `readonly` **locationbar**: `BarProp`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16802
 
 Returns true if the location bar is visible; otherwise, returns false.
 
 #### Inherited from
 
-Window.locationbar
+`Window.locationbar`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16802
-
-___
+***
 
 ### menubar
 
-• `Readonly` **menubar**: `BarProp`
+> `readonly` **menubar**: `BarProp`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16804
 
 Returns true if the menu bar is visible; otherwise, returns false.
 
 #### Inherited from
 
-Window.menubar
+`Window.menubar`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16804
-
-___
+***
 
 ### name
 
-• **name**: `string`
+> **name**: `string`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16805
 
 #### Inherited from
 
-Window.name
+`Window.name`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16805
-
-___
+***
 
 ### navigator
 
-• `Readonly` **navigator**: `Navigator`
+> `readonly` **navigator**: `Navigator`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16806
 
 #### Inherited from
 
-Window.navigator
+`Window.navigator`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16806
+### onabort()
 
-___
+> **onabort**: (`this`, `ev`) => `any`
 
-### onabort
-
-• **onabort**: (`this`: `GlobalEventHandlers`, `ev`: `UIEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5819
 
 Fires when the user aborts the download.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `UIEvent` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`UIEvent`
 
-Window.onabort
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5819
-
-___
-
-### onafterprint
-
-• **onafterprint**: (`this`: `WindowEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onafterprint
+`Window.onabort`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16928
+### onafterprint()
 
-___
+> **onafterprint**: (`this`, `ev`) => `any`
 
-### onanimationcancel
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16928
 
-• **onanimationcancel**: (`this`: `GlobalEventHandlers`, `ev`: `AnimationEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `AnimationEvent` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onanimationcancel
+`Window.onafterprint`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5820
+### onanimationcancel()
 
-___
+> **onanimationcancel**: (`this`, `ev`) => `any`
 
-### onanimationend
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5820
 
-• **onanimationend**: (`this`: `GlobalEventHandlers`, `ev`: `AnimationEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `AnimationEvent` |
+`AnimationEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onanimationend
+`Window.onanimationcancel`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5821
+### onanimationend()
 
-___
+> **onanimationend**: (`this`, `ev`) => `any`
 
-### onanimationiteration
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5821
 
-• **onanimationiteration**: (`this`: `GlobalEventHandlers`, `ev`: `AnimationEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `AnimationEvent` |
+`AnimationEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onanimationiteration
+`Window.onanimationend`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5822
+### onanimationiteration()
 
-___
+> **onanimationiteration**: (`this`, `ev`) => `any`
 
-### onanimationstart
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5822
 
-• **onanimationstart**: (`this`: `GlobalEventHandlers`, `ev`: `AnimationEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `AnimationEvent` |
+`AnimationEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onanimationstart
+`Window.onanimationiteration`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5823
+### onanimationstart()
 
-___
+> **onanimationstart**: (`this`, `ev`) => `any`
 
-### onauxclick
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5823
 
-• **onauxclick**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `MouseEvent` |
+`AnimationEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onauxclick
+`Window.onanimationstart`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5824
+### onauxclick()
 
-___
+> **onauxclick**: (`this`, `ev`) => `any`
 
-### onbeforeinput
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5824
 
-• **onbeforeinput**: (`this`: `GlobalEventHandlers`, `ev`: `InputEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `InputEvent` |
+`MouseEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onbeforeinput
+`Window.onauxclick`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5825
+### onbeforeinput()
 
-___
+> **onbeforeinput**: (`this`, `ev`) => `any`
 
-### onbeforeprint
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5825
 
-• **onbeforeprint**: (`this`: `WindowEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `Event` |
+`InputEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onbeforeprint
+`Window.onbeforeinput`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16929
+### onbeforeprint()
 
-___
+> **onbeforeprint**: (`this`, `ev`) => `any`
 
-### onbeforeunload
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16929
 
-• **onbeforeunload**: (`this`: `WindowEventHandlers`, `ev`: `BeforeUnloadEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `BeforeUnloadEvent` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onbeforeunload
+`Window.onbeforeprint`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16930
+### onbeforeunload()
 
-___
+> **onbeforeunload**: (`this`, `ev`) => `any`
 
-### onblur
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16930
 
-• **onblur**: (`this`: `GlobalEventHandlers`, `ev`: `FocusEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
+
+##### ev
+
+`BeforeUnloadEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onbeforeunload`
+
+***
+
+### onblur()
+
+> **onblur**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5830
 
 Fires when the object loses the input focus.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `FocusEvent` | The focus event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`FocusEvent`
 
-Window.onblur
+The focus event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5830
-
-___
-
-### oncancel
-
-• **oncancel**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.oncancel
+`Window.onblur`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5831
+### oncancel()
 
-___
+> **oncancel**: (`this`, `ev`) => `any`
 
-### oncanplay
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5831
 
-• **oncanplay**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.oncancel`
+
+***
+
+### oncanplay()
+
+> **oncanplay**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5836
 
 Occurs when playback is possible, but would require further buffering.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.oncanplay
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5836
-
-___
-
-### oncanplaythrough
-
-• **oncanplaythrough**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.oncanplaythrough
+`Window.oncanplay`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5837
+### oncanplaythrough()
 
-___
+> **oncanplaythrough**: (`this`, `ev`) => `any`
 
-### onchange
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5837
 
-• **onchange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.oncanplaythrough`
+
+***
+
+### onchange()
+
+> **onchange**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5842
 
 Fires when the contents of the object or selection have changed.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onchange
+`Window.onchange`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5842
+### onclick()
 
-___
+> **onclick**: (`this`, `ev`) => `any`
 
-### onclick
-
-• **onclick**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5847
 
 Fires when the user clicks the left mouse button on the object
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`MouseEvent`
 
-Window.onclick
+The mouse event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5847
-
-___
-
-### onclose
-
-• **onclose**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onclose
+`Window.onclick`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5848
+### onclose()
 
-___
+> **onclose**: (`this`, `ev`) => `any`
 
-### oncontextmenu
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5848
 
-• **oncontextmenu**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onclose`
+
+***
+
+### oncontextmenu()
+
+> **oncontextmenu**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5853
 
 Fires when the user clicks the right mouse button in the client area, opening the context menu.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`MouseEvent`
 
-Window.oncontextmenu
+The mouse event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5853
-
-___
-
-### oncuechange
-
-• **oncuechange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.oncuechange
+`Window.oncontextmenu`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5854
+### oncuechange()
 
-___
+> **oncuechange**: (`this`, `ev`) => `any`
 
-### ondblclick
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5854
 
-• **ondblclick**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.oncuechange`
+
+***
+
+### ondblclick()
+
+> **ondblclick**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5859
 
 Fires when the user double-clicks the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`MouseEvent`
+
+The mouse event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondblclick
+`Window.ondblclick`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5859
+### ondevicemotion()
 
-___
+> **ondevicemotion**: (`this`, `ev`) => `any`
 
-### ondevicemotion
-
-• **ondevicemotion**: (`this`: `Window`, `ev`: `DeviceMotionEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16808
 
 Available only in secure contexts.
 
-##### Parameters
+#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `Window` |
-| `ev` | `DeviceMotionEvent` |
+##### this
 
-##### Returns
+`Window`
+
+##### ev
+
+`DeviceMotionEvent`
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondevicemotion
+`Window.ondevicemotion`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16808
+### ondeviceorientation()
 
-___
+> **ondeviceorientation**: (`this`, `ev`) => `any`
 
-### ondeviceorientation
-
-• **ondeviceorientation**: (`this`: `Window`, `ev`: `DeviceOrientationEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16810
 
 Available only in secure contexts.
 
-##### Parameters
+#### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `Window` |
-| `ev` | `DeviceOrientationEvent` |
+##### this
 
-##### Returns
+`Window`
+
+##### ev
+
+`DeviceOrientationEvent`
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondeviceorientation
+`Window.ondeviceorientation`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16810
+### ondrag()
 
-___
+> **ondrag**: (`this`, `ev`) => `any`
 
-### ondrag
-
-• **ondrag**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5864
 
 Fires on the source object continuously during a drag operation.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `DragEvent` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`DragEvent`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondrag
+`Window.ondrag`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5864
+### ondragend()
 
-___
+> **ondragend**: (`this`, `ev`) => `any`
 
-### ondragend
-
-• **ondragend**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5869
 
 Fires on the source object when the user releases the mouse at the close of a drag operation.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `DragEvent` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`DragEvent`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondragend
+`Window.ondragend`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5869
+### ondragenter()
 
-___
+> **ondragenter**: (`this`, `ev`) => `any`
 
-### ondragenter
-
-• **ondragenter**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5874
 
 Fires on the target element when the user drags the object to a valid drop target.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `DragEvent` | The drag event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`DragEvent`
+
+The drag event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondragenter
+`Window.ondragenter`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5874
+### ondragleave()
 
-___
+> **ondragleave**: (`this`, `ev`) => `any`
 
-### ondragleave
-
-• **ondragleave**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5879
 
 Fires on the target object when the user moves the mouse out of a valid drop target during a drag operation.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `DragEvent` | The drag event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`DragEvent`
+
+The drag event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondragleave
+`Window.ondragleave`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5879
+### ondragover()
 
-___
+> **ondragover**: (`this`, `ev`) => `any`
 
-### ondragover
-
-• **ondragover**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5884
 
 Fires on the target element continuously while the user drags the object over a valid drop target.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `DragEvent` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`DragEvent`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondragover
+`Window.ondragover`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5884
+### ondragstart()
 
-___
+> **ondragstart**: (`this`, `ev`) => `any`
 
-### ondragstart
-
-• **ondragstart**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5889
 
 Fires on the source object when the user starts to drag a text selection or selected object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `DragEvent` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`DragEvent`
 
-Window.ondragstart
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5889
-
-___
-
-### ondrop
-
-• **ondrop**: (`this`: `GlobalEventHandlers`, `ev`: `DragEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `DragEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondrop
+`Window.ondragstart`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5890
+### ondrop()
 
-___
+> **ondrop**: (`this`, `ev`) => `any`
 
-### ondurationchange
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5890
 
-• **ondurationchange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`DragEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.ondrop`
+
+***
+
+### ondurationchange()
+
+> **ondurationchange**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5895
 
 Occurs when the duration attribute is updated.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ondurationchange
+`Window.ondurationchange`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5895
+### onemptied()
 
-___
+> **onemptied**: (`this`, `ev`) => `any`
 
-### onemptied
-
-• **onemptied**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5900
 
 Occurs when the media element is reset to its initial state.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onemptied
+`Window.onemptied`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5900
+### onended()
 
-___
+> **onended**: (`this`, `ev`) => `any`
 
-### onended
-
-• **onended**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5905
 
 Occurs when the end of playback is reached.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onended
+`Window.onended`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5905
-
-___
+***
 
 ### onerror
 
-• **onerror**: `OnErrorEventHandlerNonNull`
+> **onerror**: `OnErrorEventHandlerNonNull`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5910
 
 Fires when an error occurs during object loading.
 
-**`Param`**
+#### Param
 
 The event.
 
 #### Inherited from
 
-Window.onerror
+`Window.onerror`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5910
+### onfocus()
 
-___
+> **onfocus**: (`this`, `ev`) => `any`
 
-### onfocus
-
-• **onfocus**: (`this`: `GlobalEventHandlers`, `ev`: `FocusEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5915
 
 Fires when the object receives focus.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `FocusEvent` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`FocusEvent`
 
-Window.onfocus
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5915
-
-___
-
-### onformdata
-
-• **onformdata**: (`this`: `GlobalEventHandlers`, `ev`: `FormDataEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `FormDataEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onformdata
+`Window.onfocus`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5916
+### onformdata()
 
-___
+> **onformdata**: (`this`, `ev`) => `any`
 
-### ongamepadconnected
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5916
 
-• **ongamepadconnected**: (`this`: `WindowEventHandlers`, `ev`: `GamepadEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `GamepadEvent` |
+`FormDataEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ongamepadconnected
+`Window.onformdata`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16931
+### ongamepadconnected()
 
-___
+> **ongamepadconnected**: (`this`, `ev`) => `any`
 
-### ongamepaddisconnected
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16931
 
-• **ongamepaddisconnected**: (`this`: `WindowEventHandlers`, `ev`: `GamepadEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `GamepadEvent` |
+`GamepadEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ongamepaddisconnected
+`Window.ongamepadconnected`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16932
+### ongamepaddisconnected()
 
-___
+> **ongamepaddisconnected**: (`this`, `ev`) => `any`
 
-### ongotpointercapture
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16932
 
-• **ongotpointercapture**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`GamepadEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ongotpointercapture
+`Window.ongamepaddisconnected`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5917
+### ongotpointercapture()
 
-___
+> **ongotpointercapture**: (`this`, `ev`) => `any`
 
-### onhashchange
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5917
 
-• **onhashchange**: (`this`: `WindowEventHandlers`, `ev`: `HashChangeEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `HashChangeEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onhashchange
+`Window.ongotpointercapture`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16933
+### onhashchange()
 
-___
+> **onhashchange**: (`this`, `ev`) => `any`
 
-### oninput
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16933
 
-• **oninput**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`HashChangeEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.oninput
+`Window.onhashchange`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5918
+### oninput()
 
-___
+> **oninput**: (`this`, `ev`) => `any`
 
-### oninvalid
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5918
 
-• **oninvalid**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.oninvalid
+`Window.oninput`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5919
+### oninvalid()
 
-___
+> **oninvalid**: (`this`, `ev`) => `any`
 
-### onkeydown
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5919
 
-• **onkeydown**: (`this`: `GlobalEventHandlers`, `ev`: `KeyboardEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.oninvalid`
+
+***
+
+### onkeydown()
+
+> **onkeydown**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5924
 
 Fires when the user presses a key.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `KeyboardEvent` | The keyboard event |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`KeyboardEvent`
+
+The keyboard event
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onkeydown
+`Window.onkeydown`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5924
+### ~~onkeypress()~~
 
-___
+> **onkeypress**: (`this`, `ev`) => `any`
 
-### onkeypress
-
-• **onkeypress**: (`this`: `GlobalEventHandlers`, `ev`: `KeyboardEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5930
 
 Fires when the user presses an alphanumeric key.
 
-**`Deprecated`**
+#### Parameters
 
-##### Parameters
+##### this
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `KeyboardEvent` | The event. |
+`GlobalEventHandlers`
 
-##### Returns
+##### ev
+
+`KeyboardEvent`
+
+The event.
+
+#### Returns
 
 `any`
 
+#### Deprecated
+
 #### Inherited from
 
-Window.onkeypress
+`Window.onkeypress`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5930
+### onkeyup()
 
-___
+> **onkeyup**: (`this`, `ev`) => `any`
 
-### onkeyup
-
-• **onkeyup**: (`this`: `GlobalEventHandlers`, `ev`: `KeyboardEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5935
 
 Fires when the user releases a key.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `KeyboardEvent` | The keyboard event |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`KeyboardEvent`
 
-Window.onkeyup
+The keyboard event
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5935
-
-___
-
-### onlanguagechange
-
-• **onlanguagechange**: (`this`: `WindowEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onlanguagechange
+`Window.onkeyup`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16934
+### onlanguagechange()
 
-___
+> **onlanguagechange**: (`this`, `ev`) => `any`
 
-### onload
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16934
 
-• **onload**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onlanguagechange`
+
+***
+
+### onload()
+
+> **onload**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5940
 
 Fires immediately after the browser loads the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onload
+`Window.onload`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5940
+### onloadeddata()
 
-___
+> **onloadeddata**: (`this`, `ev`) => `any`
 
-### onloadeddata
-
-• **onloadeddata**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5945
 
 Occurs when media data is loaded at the current playback position.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onloadeddata
+`Window.onloadeddata`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5945
+### onloadedmetadata()
 
-___
+> **onloadedmetadata**: (`this`, `ev`) => `any`
 
-### onloadedmetadata
-
-• **onloadedmetadata**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5950
 
 Occurs when the duration and dimensions of the media have been determined.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onloadedmetadata
+`Window.onloadedmetadata`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5950
+### onloadstart()
 
-___
+> **onloadstart**: (`this`, `ev`) => `any`
 
-### onloadstart
-
-• **onloadstart**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5955
 
 Occurs when Internet Explorer begins looking for media data.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onloadstart
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5955
-
-___
-
-### onlostpointercapture
-
-• **onlostpointercapture**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onlostpointercapture
+`Window.onloadstart`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5956
+### onlostpointercapture()
 
-___
+> **onlostpointercapture**: (`this`, `ev`) => `any`
 
-### onmessage
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5956
 
-• **onmessage**: (`this`: `WindowEventHandlers`, `ev`: `MessageEvent`<`any`\>) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `MessageEvent`<`any`\> |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmessage
+`Window.onlostpointercapture`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16935
+### onmessage()
 
-___
+> **onmessage**: (`this`, `ev`) => `any`
 
-### onmessageerror
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16935
 
-• **onmessageerror**: (`this`: `WindowEventHandlers`, `ev`: `MessageEvent`<`any`\>) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `MessageEvent`<`any`\> |
+`MessageEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmessageerror
+`Window.onmessage`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16936
+### onmessageerror()
 
-___
+> **onmessageerror**: (`this`, `ev`) => `any`
 
-### onmousedown
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16936
 
-• **onmousedown**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
+
+##### ev
+
+`MessageEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onmessageerror`
+
+***
+
+### onmousedown()
+
+> **onmousedown**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5961
 
 Fires when the user clicks the object with either mouse button.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`MouseEvent`
 
-Window.onmousedown
+The mouse event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5961
-
-___
-
-### onmouseenter
-
-• **onmouseenter**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `MouseEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmouseenter
+`Window.onmousedown`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5962
+### onmouseenter()
 
-___
+> **onmouseenter**: (`this`, `ev`) => `any`
 
-### onmouseleave
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5962
 
-• **onmouseleave**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `MouseEvent` |
+`MouseEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmouseleave
+`Window.onmouseenter`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5963
+### onmouseleave()
 
-___
+> **onmouseleave**: (`this`, `ev`) => `any`
 
-### onmousemove
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5963
 
-• **onmousemove**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`MouseEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onmouseleave`
+
+***
+
+### onmousemove()
+
+> **onmousemove**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5968
 
 Fires when the user moves the mouse over the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`MouseEvent`
+
+The mouse event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmousemove
+`Window.onmousemove`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5968
+### onmouseout()
 
-___
+> **onmouseout**: (`this`, `ev`) => `any`
 
-### onmouseout
-
-• **onmouseout**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5973
 
 Fires when the user moves the mouse pointer outside the boundaries of the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`MouseEvent`
+
+The mouse event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmouseout
+`Window.onmouseout`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5973
+### onmouseover()
 
-___
+> **onmouseover**: (`this`, `ev`) => `any`
 
-### onmouseover
-
-• **onmouseover**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5978
 
 Fires when the user moves the mouse pointer into the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`MouseEvent`
+
+The mouse event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onmouseover
+`Window.onmouseover`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5978
+### onmouseup()
 
-___
+> **onmouseup**: (`this`, `ev`) => `any`
 
-### onmouseup
-
-• **onmouseup**: (`this`: `GlobalEventHandlers`, `ev`: `MouseEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5983
 
 Fires when the user releases a mouse button while the mouse is over the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `MouseEvent` | The mouse event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`MouseEvent`
 
-Window.onmouseup
+The mouse event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5983
-
-___
-
-### onoffline
-
-• **onoffline**: (`this`: `WindowEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onoffline
+`Window.onmouseup`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16937
+### onoffline()
 
-___
+> **onoffline**: (`this`, `ev`) => `any`
 
-### ononline
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16937
 
-• **ononline**: (`this`: `WindowEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `Event` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ononline
+`Window.onoffline`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16938
+### ononline()
 
-___
+> **ononline**: (`this`, `ev`) => `any`
 
-### onorientationchange
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16938
 
-• **onorientationchange**: (`this`: `Window`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-**`Deprecated`**
+##### ev
 
-##### Parameters
+`Event`
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `Window` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onorientationchange
+`Window.ononline`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16812
+### ~~onorientationchange()~~
 
-___
+> **onorientationchange**: (`this`, `ev`) => `any`
 
-### onpagehide
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16812
 
-• **onpagehide**: (`this`: `WindowEventHandlers`, `ev`: `PageTransitionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`Window`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `PageTransitionEvent` |
+`Event`
 
-##### Returns
+#### Returns
+
+`any`
+
+#### Deprecated
+
+#### Inherited from
+
+`Window.onorientationchange`
+
+***
+
+### onpagehide()
+
+> **onpagehide**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16939
+
+#### Parameters
+
+##### this
+
+`WindowEventHandlers`
+
+##### ev
+
+`PageTransitionEvent`
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpagehide
+`Window.onpagehide`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16939
+### onpageshow()
 
-___
+> **onpageshow**: (`this`, `ev`) => `any`
 
-### onpageshow
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16940
 
-• **onpageshow**: (`this`: `WindowEventHandlers`, `ev`: `PageTransitionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `PageTransitionEvent` |
+`PageTransitionEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpageshow
+`Window.onpageshow`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16940
+### onpause()
 
-___
+> **onpause**: (`this`, `ev`) => `any`
 
-### onpause
-
-• **onpause**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5988
 
 Occurs when playback is paused.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpause
+`Window.onpause`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5988
+### onplay()
 
-___
+> **onplay**: (`this`, `ev`) => `any`
 
-### onplay
-
-• **onplay**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5993
 
 Occurs when the play method is requested.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onplay
+`Window.onplay`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5993
+### onplaying()
 
-___
+> **onplaying**: (`this`, `ev`) => `any`
 
-### onplaying
-
-• **onplaying**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5998
 
 Occurs when the audio or video has started playing.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onplaying
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:5998
-
-___
-
-### onpointercancel
-
-• **onpointercancel**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointercancel
+`Window.onplaying`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5999
+### onpointercancel()
 
-___
+> **onpointercancel**: (`this`, `ev`) => `any`
 
-### onpointerdown
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5999
 
-• **onpointerdown**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointerdown
+`Window.onpointercancel`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6000
+### onpointerdown()
 
-___
+> **onpointerdown**: (`this`, `ev`) => `any`
 
-### onpointerenter
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6000
 
-• **onpointerenter**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointerenter
+`Window.onpointerdown`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6001
+### onpointerenter()
 
-___
+> **onpointerenter**: (`this`, `ev`) => `any`
 
-### onpointerleave
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6001
 
-• **onpointerleave**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointerleave
+`Window.onpointerenter`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6002
+### onpointerleave()
 
-___
+> **onpointerleave**: (`this`, `ev`) => `any`
 
-### onpointermove
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6002
 
-• **onpointermove**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointermove
+`Window.onpointerleave`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6003
+### onpointermove()
 
-___
+> **onpointermove**: (`this`, `ev`) => `any`
 
-### onpointerout
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6003
 
-• **onpointerout**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointerout
+`Window.onpointermove`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6004
+### onpointerout()
 
-___
+> **onpointerout**: (`this`, `ev`) => `any`
 
-### onpointerover
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6004
 
-• **onpointerover**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointerover
+`Window.onpointerout`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6005
+### onpointerover()
 
-___
+> **onpointerover**: (`this`, `ev`) => `any`
 
-### onpointerup
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6005
 
-• **onpointerup**: (`this`: `GlobalEventHandlers`, `ev`: `PointerEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `PointerEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpointerup
+`Window.onpointerover`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6006
+### onpointerup()
 
-___
+> **onpointerup**: (`this`, `ev`) => `any`
 
-### onpopstate
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6006
 
-• **onpopstate**: (`this`: `WindowEventHandlers`, `ev`: `PopStateEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `PopStateEvent` |
+`PointerEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onpopstate
+`Window.onpointerup`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16941
+### onpopstate()
 
-___
+> **onpopstate**: (`this`, `ev`) => `any`
 
-### onprogress
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16941
 
-• **onprogress**: (`this`: `GlobalEventHandlers`, `ev`: `ProgressEvent`<`EventTarget`\>) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
+
+##### ev
+
+`PopStateEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onpopstate`
+
+***
+
+### onprogress()
+
+> **onprogress**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6011
 
 Occurs to indicate progress while downloading media data.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `ProgressEvent`<`EventTarget`\> | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`ProgressEvent`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onprogress
+`Window.onprogress`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6011
+### onratechange()
 
-___
+> **onratechange**: (`this`, `ev`) => `any`
 
-### onratechange
-
-• **onratechange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6016
 
 Occurs when the playback rate is increased or decreased.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onratechange
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6016
-
-___
-
-### onrejectionhandled
-
-• **onrejectionhandled**: (`this`: `WindowEventHandlers`, `ev`: `PromiseRejectionEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `PromiseRejectionEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onrejectionhandled
+`Window.onratechange`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16942
+### onrejectionhandled()
 
-___
+> **onrejectionhandled**: (`this`, `ev`) => `any`
 
-### onreset
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16942
 
-• **onreset**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
+
+##### ev
+
+`PromiseRejectionEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onrejectionhandled`
+
+***
+
+### onreset()
+
+> **onreset**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6021
 
 Fires when the user resets a form.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onreset
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6021
-
-___
-
-### onresize
-
-• **onresize**: (`this`: `GlobalEventHandlers`, `ev`: `UIEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `UIEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onresize
+`Window.onreset`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6022
+### onresize()
 
-___
+> **onresize**: (`this`, `ev`) => `any`
 
-### onscroll
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6022
 
-• **onscroll**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`UIEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onresize`
+
+***
+
+### onscroll()
+
+> **onscroll**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6027
 
 Fires when the user repositions the scroll box in the scroll bar on the object.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onscroll
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6027
-
-___
-
-### onsecuritypolicyviolation
-
-• **onsecuritypolicyviolation**: (`this`: `GlobalEventHandlers`, `ev`: `SecurityPolicyViolationEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `SecurityPolicyViolationEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onsecuritypolicyviolation
+`Window.onscroll`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6028
+### onsecuritypolicyviolation()
 
-___
+> **onsecuritypolicyviolation**: (`this`, `ev`) => `any`
 
-### onseeked
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6028
 
-• **onseeked**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`SecurityPolicyViolationEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onsecuritypolicyviolation`
+
+***
+
+### onseeked()
+
+> **onseeked**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6033
 
 Occurs when the seek operation ends.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onseeked
+`Window.onseeked`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6033
+### onseeking()
 
-___
+> **onseeking**: (`this`, `ev`) => `any`
 
-### onseeking
-
-• **onseeking**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6038
 
 Occurs when the current playback position is moved.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onseeking
+`Window.onseeking`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6038
+### onselect()
 
-___
+> **onselect**: (`this`, `ev`) => `any`
 
-### onselect
-
-• **onselect**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6043
 
 Fires when the current selection changes.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onselect
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6043
-
-___
-
-### onselectionchange
-
-• **onselectionchange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onselectionchange
+`Window.onselect`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6044
+### onselectionchange()
 
-___
+> **onselectionchange**: (`this`, `ev`) => `any`
 
-### onselectstart
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6044
 
-• **onselectstart**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onselectstart
+`Window.onselectionchange`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6045
+### onselectstart()
 
-___
+> **onselectstart**: (`this`, `ev`) => `any`
 
-### onslotchange
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6045
 
-• **onslotchange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onslotchange
+`Window.onselectstart`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6046
+### onslotchange()
 
-___
+> **onslotchange**: (`this`, `ev`) => `any`
 
-### onstalled
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6046
 
-• **onstalled**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onslotchange`
+
+***
+
+### onstalled()
+
+> **onstalled**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6051
 
 Occurs when the download has stopped.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.onstalled
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6051
-
-___
-
-### onstorage
-
-• **onstorage**: (`this`: `WindowEventHandlers`, `ev`: `StorageEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `StorageEvent` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onstorage
+`Window.onstalled`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16943
+### onstorage()
 
-___
+> **onstorage**: (`this`, `ev`) => `any`
 
-### onsubmit
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16943
 
-• **onsubmit**: (`this`: `GlobalEventHandlers`, `ev`: `SubmitEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `SubmitEvent` |
+`StorageEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onsubmit
+`Window.onstorage`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6052
+### onsubmit()
 
-___
+> **onsubmit**: (`this`, `ev`) => `any`
 
-### onsuspend
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6052
 
-• **onsuspend**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
+
+##### ev
+
+`SubmitEvent`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onsubmit`
+
+***
+
+### onsuspend()
+
+> **onsuspend**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6057
 
 Occurs if the load operation has been intentionally halted.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onsuspend
+`Window.onsuspend`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6057
+### ontimeupdate()
 
-___
+> **ontimeupdate**: (`this`, `ev`) => `any`
 
-### ontimeupdate
-
-• **ontimeupdate**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6062
 
 Occurs to indicate the current playback position.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
 
-`any`
+##### ev
 
-#### Inherited from
+`Event`
 
-Window.ontimeupdate
+The event.
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6062
-
-___
-
-### ontoggle
-
-• **ontoggle**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
-
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontoggle
+`Window.ontimeupdate`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6063
+### ontoggle()
 
-___
+> **ontoggle**: (`this`, `ev`) => `any`
 
-### ontouchcancel
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6063
 
-• `Optional` **ontouchcancel**: (`this`: `GlobalEventHandlers`, `ev`: `TouchEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TouchEvent` |
+`Event`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontouchcancel
+`Window.ontoggle`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6064
+### ontouchcancel()?
 
-___
+> `optional` **ontouchcancel**: (`this`, `ev`) => `any`
 
-### ontouchend
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6064
 
-• `Optional` **ontouchend**: (`this`: `GlobalEventHandlers`, `ev`: `TouchEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TouchEvent` |
+`TouchEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontouchend
+`Window.ontouchcancel`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6065
+### ontouchend()?
 
-___
+> `optional` **ontouchend**: (`this`, `ev`) => `any`
 
-### ontouchmove
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6065
 
-• `Optional` **ontouchmove**: (`this`: `GlobalEventHandlers`, `ev`: `TouchEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TouchEvent` |
+`TouchEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontouchmove
+`Window.ontouchend`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6066
+### ontouchmove()?
 
-___
+> `optional` **ontouchmove**: (`this`, `ev`) => `any`
 
-### ontouchstart
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6066
 
-• `Optional` **ontouchstart**: (`this`: `GlobalEventHandlers`, `ev`: `TouchEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TouchEvent` |
+`TouchEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontouchstart
+`Window.ontouchmove`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6067
+### ontouchstart()?
 
-___
+> `optional` **ontouchstart**: (`this`, `ev`) => `any`
 
-### ontransitioncancel
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6067
 
-• **ontransitioncancel**: (`this`: `GlobalEventHandlers`, `ev`: `TransitionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TransitionEvent` |
+`TouchEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontransitioncancel
+`Window.ontouchstart`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6068
+### ontransitioncancel()
 
-___
+> **ontransitioncancel**: (`this`, `ev`) => `any`
 
-### ontransitionend
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6068
 
-• **ontransitionend**: (`this`: `GlobalEventHandlers`, `ev`: `TransitionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TransitionEvent` |
+`TransitionEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontransitionend
+`Window.ontransitioncancel`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6069
+### ontransitionend()
 
-___
+> **ontransitionend**: (`this`, `ev`) => `any`
 
-### ontransitionrun
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6069
 
-• **ontransitionrun**: (`this`: `GlobalEventHandlers`, `ev`: `TransitionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TransitionEvent` |
+`TransitionEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontransitionrun
+`Window.ontransitionend`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6070
+### ontransitionrun()
 
-___
+> **ontransitionrun**: (`this`, `ev`) => `any`
 
-### ontransitionstart
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6070
 
-• **ontransitionstart**: (`this`: `GlobalEventHandlers`, `ev`: `TransitionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `TransitionEvent` |
+`TransitionEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.ontransitionstart
+`Window.ontransitionrun`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6071
+### ontransitionstart()
 
-___
+> **ontransitionstart**: (`this`, `ev`) => `any`
 
-### onunhandledrejection
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6071
 
-• **onunhandledrejection**: (`this`: `WindowEventHandlers`, `ev`: `PromiseRejectionEvent`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `PromiseRejectionEvent` |
+`TransitionEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onunhandledrejection
+`Window.ontransitionstart`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16944
+### onunhandledrejection()
 
-___
+> **onunhandledrejection**: (`this`, `ev`) => `any`
 
-### onunload
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16944
 
-• **onunload**: (`this`: `WindowEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
 
-##### Parameters
+##### ev
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `WindowEventHandlers` |
-| `ev` | `Event` |
+`PromiseRejectionEvent`
 
-##### Returns
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onunload
+`Window.onunhandledrejection`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16945
+### onunload()
 
-___
+> **onunload**: (`this`, `ev`) => `any`
 
-### onvolumechange
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16945
 
-• **onvolumechange**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`WindowEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Inherited from
+
+`Window.onunload`
+
+***
+
+### onvolumechange()
+
+> **onvolumechange**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6076
 
 Occurs when the volume is changed, or playback is muted or unmuted.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onvolumechange
+`Window.onvolumechange`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6076
+### onwaiting()
 
-___
+> **onwaiting**: (`this`, `ev`) => `any`
 
-### onwaiting
-
-• **onwaiting**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6081
 
 Occurs when playback stops because the next frame of a video resource is not available.
 
-##### Parameters
+#### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `this` | `GlobalEventHandlers` | - |
-| `ev` | `Event` | The event. |
+##### this
 
-##### Returns
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+The event.
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onwaiting
+`Window.onwaiting`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:6081
+### ~~onwebkitanimationend()~~
 
-___
+> **onwebkitanimationend**: (`this`, `ev`) => `any`
 
-### onwebkitanimationend
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6083
 
-• **onwebkitanimationend**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
+#### Parameters
 
-#### Type declaration
+##### this
 
-▸ (`this`, `ev`): `any`
+`GlobalEventHandlers`
 
-**`Deprecated`**
+##### ev
+
+`Event`
+
+#### Returns
+
+`any`
+
+#### Deprecated
 
 This is a legacy alias of `onanimationend`.
 
-##### Parameters
+#### Inherited from
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Window.onwebkitanimationend`
 
-##### Returns
+***
+
+### ~~onwebkitanimationiteration()~~
+
+> **onwebkitanimationiteration**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6085
+
+#### Parameters
+
+##### this
+
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
 
 `any`
 
-#### Inherited from
-
-Window.onwebkitanimationend
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6083
-
-___
-
-### onwebkitanimationiteration
-
-• **onwebkitanimationiteration**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-**`Deprecated`**
+#### Deprecated
 
 This is a legacy alias of `onanimationiteration`.
 
-##### Parameters
+#### Inherited from
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Window.onwebkitanimationiteration`
 
-##### Returns
+***
+
+### ~~onwebkitanimationstart()~~
+
+> **onwebkitanimationstart**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6087
+
+#### Parameters
+
+##### this
+
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
 
 `any`
 
-#### Inherited from
-
-Window.onwebkitanimationiteration
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6085
-
-___
-
-### onwebkitanimationstart
-
-• **onwebkitanimationstart**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-**`Deprecated`**
+#### Deprecated
 
 This is a legacy alias of `onanimationstart`.
 
-##### Parameters
+#### Inherited from
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Window.onwebkitanimationstart`
 
-##### Returns
+***
+
+### ~~onwebkittransitionend()~~
+
+> **onwebkittransitionend**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6089
+
+#### Parameters
+
+##### this
+
+`GlobalEventHandlers`
+
+##### ev
+
+`Event`
+
+#### Returns
 
 `any`
 
-#### Inherited from
-
-Window.onwebkitanimationstart
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6087
-
-___
-
-### onwebkittransitionend
-
-• **onwebkittransitionend**: (`this`: `GlobalEventHandlers`, `ev`: `Event`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-**`Deprecated`**
+#### Deprecated
 
 This is a legacy alias of `ontransitionend`.
 
-##### Parameters
+#### Inherited from
 
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `Event` |
+`Window.onwebkittransitionend`
 
-##### Returns
+***
+
+### onwheel()
+
+> **onwheel**: (`this`, `ev`) => `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:6090
+
+#### Parameters
+
+##### this
+
+`GlobalEventHandlers`
+
+##### ev
+
+`WheelEvent`
+
+#### Returns
 
 `any`
 
 #### Inherited from
 
-Window.onwebkittransitionend
+`Window.onwheel`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6089
-
-___
-
-### onwheel
-
-• **onwheel**: (`this`: `GlobalEventHandlers`, `ev`: `WheelEvent`) => `any`
-
-#### Type declaration
-
-▸ (`this`, `ev`): `any`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `this` | `GlobalEventHandlers` |
-| `ev` | `WheelEvent` |
-
-##### Returns
-
-`any`
-
-#### Inherited from
-
-Window.onwheel
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:6090
-
-___
+***
 
 ### opener
 
-• **opener**: `any`
+> **opener**: `any`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16813
 
 #### Inherited from
 
-Window.opener
+`Window.opener`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16813
+### ~~orientation~~
 
-___
+> `readonly` **orientation**: `number`
 
-### orientation
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16815
 
-• `Readonly` **orientation**: `number`
-
-**`Deprecated`**
+#### Deprecated
 
 #### Inherited from
 
-Window.orientation
+`Window.orientation`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16815
-
-___
+***
 
 ### origin
 
-• `Readonly` **origin**: `string`
+> `readonly` **origin**: `string`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16963
 
 #### Inherited from
 
-Window.origin
+`Window.origin`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16963
-
-___
+***
 
 ### outerHeight
 
-• `Readonly` **outerHeight**: `number`
+> `readonly` **outerHeight**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16816
 
 #### Inherited from
 
-Window.outerHeight
+`Window.outerHeight`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16816
-
-___
+***
 
 ### outerWidth
 
-• `Readonly` **outerWidth**: `number`
+> `readonly` **outerWidth**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16817
 
 #### Inherited from
 
-Window.outerWidth
+`Window.outerWidth`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16817
+### ~~pageXOffset~~
 
-___
+> `readonly` **pageXOffset**: `number`
 
-### pageXOffset
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16819
 
-• `Readonly` **pageXOffset**: `number`
-
-**`Deprecated`**
+#### Deprecated
 
 This is a legacy alias of `scrollX`.
 
 #### Inherited from
 
-Window.pageXOffset
+`Window.pageXOffset`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16819
+### ~~pageYOffset~~
 
-___
+> `readonly` **pageYOffset**: `number`
 
-### pageYOffset
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16821
 
-• `Readonly` **pageYOffset**: `number`
-
-**`Deprecated`**
+#### Deprecated
 
 This is a legacy alias of `scrollY`.
 
 #### Inherited from
 
-Window.pageYOffset
+`Window.pageYOffset`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16821
-
-___
+***
 
 ### parent
 
-• `Readonly` **parent**: `Window`
+> `readonly` **parent**: `Window`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16827
 
 Refers to either the parent WindowProxy, or itself.
 
@@ -4055,345 +3538,387 @@ It can rarely be null e.g. for contentWindow of an iframe that is already remove
 
 #### Inherited from
 
-Window.parent
+`Window.parent`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16827
-
-___
+***
 
 ### performance
 
-• `Readonly` **performance**: `Performance`
+> `readonly` **performance**: `Performance`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16964
 
 #### Inherited from
 
-Window.performance
+`Window.performance`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16964
-
-___
+***
 
 ### personalbar
 
-• `Readonly` **personalbar**: `BarProp`
+> `readonly` **personalbar**: `BarProp`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16829
 
 Returns true if the personal bar is visible; otherwise, returns false.
 
 #### Inherited from
 
-Window.personalbar
+`Window.personalbar`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16829
-
-___
+***
 
 ### screen
 
-• `Readonly` **screen**: `Screen`
+> `readonly` **screen**: `Screen`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16830
 
 #### Inherited from
 
-Window.screen
+`Window.screen`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16830
-
-___
+***
 
 ### screenLeft
 
-• `Readonly` **screenLeft**: `number`
+> `readonly` **screenLeft**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16831
 
 #### Inherited from
 
-Window.screenLeft
+`Window.screenLeft`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16831
-
-___
+***
 
 ### screenTop
 
-• `Readonly` **screenTop**: `number`
+> `readonly` **screenTop**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16832
 
 #### Inherited from
 
-Window.screenTop
+`Window.screenTop`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16832
-
-___
+***
 
 ### screenX
 
-• `Readonly` **screenX**: `number`
+> `readonly` **screenX**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16833
 
 #### Inherited from
 
-Window.screenX
+`Window.screenX`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16833
-
-___
+***
 
 ### screenY
 
-• `Readonly` **screenY**: `number`
+> `readonly` **screenY**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16834
 
 #### Inherited from
 
-Window.screenY
+`Window.screenY`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16834
-
-___
-
-### scrollX
-
-• `Readonly` **scrollX**: `number`
-
-#### Inherited from
-
-Window.scrollX
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16835
-
-___
-
-### scrollY
-
-• `Readonly` **scrollY**: `number`
-
-#### Inherited from
-
-Window.scrollY
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16836
-
-___
+***
 
 ### scrollbars
 
-• `Readonly` **scrollbars**: `BarProp`
+> `readonly` **scrollbars**: `BarProp`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16838
 
 Returns true if the scrollbars are visible; otherwise, returns false.
 
 #### Inherited from
 
-Window.scrollbars
+`Window.scrollbars`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16838
+### scrollX
 
-___
+> `readonly` **scrollX**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16835
+
+#### Inherited from
+
+`Window.scrollX`
+
+***
+
+### scrollY
+
+> `readonly` **scrollY**: `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16836
+
+#### Inherited from
+
+`Window.scrollY`
+
+***
 
 ### self
 
-• `Readonly` **self**: `Window` & typeof `globalThis`
+> `readonly` **self**: `Window` & *typeof* `globalThis`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16839
 
 #### Inherited from
 
-Window.self
+`Window.self`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16839
-
-___
+***
 
 ### sessionStorage
 
-• `Readonly` **sessionStorage**: `Storage`
+> `readonly` **sessionStorage**: `Storage`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16980
 
 #### Inherited from
 
-Window.sessionStorage
+`Window.sessionStorage`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16980
-
-___
+***
 
 ### speechSynthesis
 
-• `Readonly` **speechSynthesis**: `SpeechSynthesis`
+> `readonly` **speechSynthesis**: `SpeechSynthesis`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16840
 
 #### Inherited from
 
-Window.speechSynthesis
+`Window.speechSynthesis`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16840
+### ~~status~~
 
-___
+> **status**: `string`
 
-### status
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16842
 
-• **status**: `string`
-
-**`Deprecated`**
+#### Deprecated
 
 #### Inherited from
 
-Window.status
+`Window.status`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16842
-
-___
+***
 
 ### statusbar
 
-• `Readonly` **statusbar**: `BarProp`
+> `readonly` **statusbar**: `BarProp`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16844
 
 Returns true if the status bar is visible; otherwise, returns false.
 
 #### Inherited from
 
-Window.statusbar
+`Window.statusbar`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16844
-
-___
+***
 
 ### toolbar
 
-• `Readonly` **toolbar**: `BarProp`
+> `readonly` **toolbar**: `BarProp`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16846
 
 Returns true if the toolbar is visible; otherwise, returns false.
 
 #### Inherited from
 
-Window.toolbar
+`Window.toolbar`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16846
-
-___
+***
 
 ### top
 
-• `Readonly` **top**: `Window`
+> `readonly` **top**: `Window`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16847
 
 #### Inherited from
 
-Window.top
+`Window.top`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16847
-
-___
+***
 
 ### visualViewport
 
-• `Readonly` **visualViewport**: `VisualViewport`
+> `readonly` **visualViewport**: `VisualViewport`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16848
 
 #### Inherited from
 
-Window.visualViewport
+`Window.visualViewport`
 
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16848
-
-___
+***
 
 ### window
 
-• `Readonly` **window**: `Window` & typeof `globalThis`
+> `readonly` **window**: `Window` & *typeof* `globalThis`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16849
 
 #### Inherited from
 
-Window.window
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16849
+`Window.window`
 
 ## Accessors
 
 ### location
 
-• `get` **location**(): `Location`
+#### Get Signature
 
-#### Returns
+> **get** **location**(): `Location`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16799
+
+##### Returns
 
 `Location`
 
-#### Inherited from
+#### Set Signature
 
-Window.location
+> **set** **location**(`href`): `void`
 
-#### Defined in
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16800
 
-node_modules/typescript/lib/lib.dom.d.ts:16799
+##### Parameters
 
-• `set` **location**(`href`): `void`
+###### href
 
-#### Parameters
+`string` | `Location`
 
-| Name | Type |
-| :------ | :------ |
-| `href` | `string` \| `Location` |
-
-#### Returns
+##### Returns
 
 `void`
 
 #### Inherited from
 
-Window.location
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16800
+`Window.location`
 
 ## Methods
 
-### addEventListener
+### addEventListener()
 
-▸ **addEventListener**<`K`\>(`type`, `listener`, `options?`): `void`
+#### Call Signature
 
-#### Type parameters
+> **addEventListener**\<`K`\>(`type`, `listener`, `options?`): `void`
 
-| Name | Type |
-| :------ | :------ |
-| `K` | extends keyof `WindowEventMap` |
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16894
+
+Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+
+The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+
+When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+
+When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+
+When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+
+If an AbortSignal is passed for options's signal, then the event listener will be removed when signal is aborted.
+
+The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+
+##### Type Parameters
+
+###### K
+
+`K` *extends* keyof `WindowEventMap`
+
+##### Parameters
+
+###### type
+
+`K`
+
+###### listener
+
+(`this`, `ev`) => `any`
+
+###### options?
+
+`boolean` | `AddEventListenerOptions`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.addEventListener`
+
+#### Call Signature
+
+> **addEventListener**(`type`, `listener`, `options?`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16895
+
+Appends an event listener for events whose type attribute value is type. The callback argument sets the callback that will be invoked when the event is dispatched.
+
+The options argument sets listener-specific options. For compatibility this can be a boolean, in which case the method behaves exactly as if the value was specified as options's capture.
+
+When set to true, options's capture prevents callback from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE. When false (or not present), callback will not be invoked when event's eventPhase attribute value is CAPTURING_PHASE. Either way, callback will be invoked if event's eventPhase attribute value is AT_TARGET.
+
+When set to true, options's passive indicates that the callback will not cancel the event by invoking preventDefault(). This is used to enable performance optimizations described in § 2.8 Observing event listeners.
+
+When set to true, options's once indicates that the callback will only be invoked once after which the event listener will be removed.
+
+If an AbortSignal is passed for options's signal, then the event listener will be removed when signal is aborted.
+
+The event listener is appended to target's event listener list and is not appended if it has the same type, callback, and capture.
+
+##### Parameters
+
+###### type
+
+`string`
+
+###### listener
+
+`EventListenerOrEventListenerObject`
+
+###### options?
+
+`boolean` | `AddEventListenerOptions`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.addEventListener`
+
+***
+
+### alert()
+
+> **alert**(`message?`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16850
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `K` |
-| `listener` | (`this`: `Window`, `ev`: `WindowEventMap`[`K`]) => `any` |
-| `options?` | `boolean` \| `AddEventListenerOptions` |
+##### message?
+
+`any`
 
 #### Returns
 
@@ -4401,69 +3926,21 @@ node_modules/typescript/lib/lib.dom.d.ts:16800
 
 #### Inherited from
 
-Window.addEventListener
+`Window.alert`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16894
+### atob()
 
-▸ **addEventListener**(`type`, `listener`, `options?`): `void`
+> **atob**(`data`): `string`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` |
-| `listener` | `EventListenerOrEventListenerObject` |
-| `options?` | `boolean` \| `AddEventListenerOptions` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.addEventListener
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16895
-
-___
-
-### alert
-
-▸ **alert**(`message?`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16965
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `any` |
+##### data
 
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.alert
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16850
-
-___
-
-### atob
-
-▸ **atob**(`data`): `string`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `data` | `string` |
+`string`
 
 #### Returns
 
@@ -4471,17 +3948,15 @@ ___
 
 #### Inherited from
 
-Window.atob
+`Window.atob`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16965
+### blur()
 
-___
+> **blur**(): `void`
 
-### blur
-
-▸ **blur**(): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16851
 
 #### Returns
 
@@ -4489,23 +3964,21 @@ ___
 
 #### Inherited from
 
-Window.blur
+`Window.blur`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16851
+### btoa()
 
-___
+> **btoa**(`data`): `string`
 
-### btoa
-
-▸ **btoa**(`data`): `string`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16966
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `data` | `string` |
+##### data
+
+`string`
 
 #### Returns
 
@@ -4513,23 +3986,21 @@ ___
 
 #### Inherited from
 
-Window.btoa
+`Window.btoa`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16966
+### cancelAnimationFrame()
 
-___
+> **cancelAnimationFrame**(`handle`): `void`
 
-### cancelAnimationFrame
-
-▸ **cancelAnimationFrame**(`handle`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:2195
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handle` | `number` |
+##### handle
+
+`number`
 
 #### Returns
 
@@ -4537,23 +4008,21 @@ ___
 
 #### Inherited from
 
-Window.cancelAnimationFrame
+`Window.cancelAnimationFrame`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:2195
+### cancelIdleCallback()
 
-___
+> **cancelIdleCallback**(`handle`): `void`
 
-### cancelIdleCallback
-
-▸ **cancelIdleCallback**(`handle`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16852
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handle` | `number` |
+##### handle
+
+`number`
 
 #### Returns
 
@@ -4561,43 +4030,39 @@ ___
 
 #### Inherited from
 
-Window.cancelIdleCallback
+`Window.cancelIdleCallback`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16852
+### ~~captureEvents()~~
 
-___
+> **captureEvents**(): `void`
 
-### captureEvents
-
-▸ **captureEvents**(): `void`
-
-**`Deprecated`**
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16854
 
 #### Returns
 
 `void`
 
+#### Deprecated
+
 #### Inherited from
 
-Window.captureEvents
+`Window.captureEvents`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16854
+### clearInterval()
 
-___
+> **clearInterval**(`id`): `void`
 
-### clearInterval
-
-▸ **clearInterval**(`id`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16967
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `number` |
+##### id
+
+`number`
 
 #### Returns
 
@@ -4605,23 +4070,21 @@ ___
 
 #### Inherited from
 
-Window.clearInterval
+`Window.clearInterval`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16967
+### clearTimeout()
 
-___
+> **clearTimeout**(`id`): `void`
 
-### clearTimeout
-
-▸ **clearTimeout**(`id`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16968
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `id` | `number` |
+##### id
+
+`number`
 
 #### Returns
 
@@ -4629,17 +4092,15 @@ ___
 
 #### Inherited from
 
-Window.clearTimeout
+`Window.clearTimeout`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16968
+### close()
 
-___
+> **close**(): `void`
 
-### close
-
-▸ **close**(): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16856
 
 Closes the window.
 
@@ -4649,23 +4110,21 @@ Closes the window.
 
 #### Inherited from
 
-Window.close
+`Window.close`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16856
+### confirm()
 
-___
+> **confirm**(`message?`): `boolean`
 
-### confirm
-
-▸ **confirm**(`message?`): `boolean`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16857
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
+##### message?
+
+`string`
 
 #### Returns
 
@@ -4673,75 +4132,91 @@ ___
 
 #### Inherited from
 
-Window.confirm
+`Window.confirm`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16857
+### createImageBitmap()
 
-___
+#### Call Signature
 
-### createImageBitmap
+> **createImageBitmap**(`image`, `options?`): `Promise`\<`ImageBitmap`\>
 
-▸ **createImageBitmap**(`image`, `options?`): `Promise`<`ImageBitmap`\>
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16969
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `image` | `ImageBitmapSource` |
-| `options?` | `ImageBitmapOptions` |
+###### image
 
-#### Returns
+`ImageBitmapSource`
 
-`Promise`<`ImageBitmap`\>
+###### options?
 
-#### Inherited from
+`ImageBitmapOptions`
 
-Window.createImageBitmap
+##### Returns
 
-#### Defined in
+`Promise`\<`ImageBitmap`\>
 
-node_modules/typescript/lib/lib.dom.d.ts:16969
+##### Inherited from
 
-▸ **createImageBitmap**(`image`, `sx`, `sy`, `sw`, `sh`, `options?`): `Promise`<`ImageBitmap`\>
+`Window.createImageBitmap`
 
-#### Parameters
+#### Call Signature
 
-| Name | Type |
-| :------ | :------ |
-| `image` | `ImageBitmapSource` |
-| `sx` | `number` |
-| `sy` | `number` |
-| `sw` | `number` |
-| `sh` | `number` |
-| `options?` | `ImageBitmapOptions` |
+> **createImageBitmap**(`image`, `sx`, `sy`, `sw`, `sh`, `options?`): `Promise`\<`ImageBitmap`\>
 
-#### Returns
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16970
 
-`Promise`<`ImageBitmap`\>
+##### Parameters
 
-#### Inherited from
+###### image
 
-Window.createImageBitmap
+`ImageBitmapSource`
 
-#### Defined in
+###### sx
 
-node_modules/typescript/lib/lib.dom.d.ts:16970
+`number`
 
-___
+###### sy
 
-### dispatchEvent
+`number`
 
-▸ **dispatchEvent**(`event`): `boolean`
+###### sw
+
+`number`
+
+###### sh
+
+`number`
+
+###### options?
+
+`ImageBitmapOptions`
+
+##### Returns
+
+`Promise`\<`ImageBitmap`\>
+
+##### Inherited from
+
+`Window.createImageBitmap`
+
+***
+
+### dispatchEvent()
+
+> **dispatchEvent**(`event`): `boolean`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:5309
 
 Dispatches a synthetic event event to target and returns true if either event's cancelable attribute value is false or its preventDefault() method was not invoked, and false otherwise.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `Event` |
+##### event
+
+`Event`
 
 #### Returns
 
@@ -4749,42 +4224,41 @@ Dispatches a synthetic event event to target and returns true if either event's 
 
 #### Inherited from
 
-Window.dispatchEvent
+`Window.dispatchEvent`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:5309
+### fetch()
 
-___
+> **fetch**(`input`, `init?`): `Promise`\<`Response`\>
 
-### fetch
-
-▸ **fetch**(`input`, `init?`): `Promise`<`Response`\>
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16971
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `input` | `RequestInfo` \| `URL` |
-| `init?` | `RequestInit` |
+##### input
+
+`RequestInfo` | `URL`
+
+##### init?
+
+`RequestInit`
 
 #### Returns
 
-`Promise`<`Response`\>
+`Promise`\<`Response`\>
 
 #### Inherited from
 
-Window.fetch
+`Window.fetch`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16971
+### focus()
 
-___
+> **focus**(): `void`
 
-### focus
-
-▸ **focus**(): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16859
 
 Moves the focus to the window's browsing context, if any.
 
@@ -4794,24 +4268,25 @@ Moves the focus to the window's browsing context, if any.
 
 #### Inherited from
 
-Window.focus
+`Window.focus`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16859
+### getComputedStyle()
 
-___
+> **getComputedStyle**(`elt`, `pseudoElt?`): `CSSStyleDeclaration`
 
-### getComputedStyle
-
-▸ **getComputedStyle**(`elt`, `pseudoElt?`): `CSSStyleDeclaration`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16860
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `elt` | `Element` |
-| `pseudoElt?` | `string` |
+##### elt
+
+`Element`
+
+##### pseudoElt?
+
+`string`
 
 #### Returns
 
@@ -4819,17 +4294,15 @@ ___
 
 #### Inherited from
 
-Window.getComputedStyle
+`Window.getComputedStyle`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16860
+### getSelection()
 
-___
+> **getSelection**(): `Selection`
 
-### getSelection
-
-▸ **getSelection**(): `Selection`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16861
 
 #### Returns
 
@@ -4837,23 +4310,21 @@ ___
 
 #### Inherited from
 
-Window.getSelection
+`Window.getSelection`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16861
+### matchMedia()
 
-___
+> **matchMedia**(`query`): `MediaQueryList`
 
-### matchMedia
-
-▸ **matchMedia**(`query`): `MediaQueryList`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16862
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `query` | `string` |
+##### query
+
+`string`
 
 #### Returns
 
@@ -4861,24 +4332,25 @@ ___
 
 #### Inherited from
 
-Window.matchMedia
+`Window.matchMedia`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16862
+### moveBy()
 
-___
+> **moveBy**(`x`, `y`): `void`
 
-### moveBy
-
-▸ **moveBy**(`x`, `y`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16863
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
+##### x
+
+`number`
+
+##### y
+
+`number`
 
 #### Returns
 
@@ -4886,24 +4358,25 @@ ___
 
 #### Inherited from
 
-Window.moveBy
+`Window.moveBy`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16863
+### moveTo()
 
-___
+> **moveTo**(`x`, `y`): `void`
 
-### moveTo
-
-▸ **moveTo**(`x`, `y`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16864
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
+##### x
+
+`number`
+
+##### y
+
+`number`
 
 #### Returns
 
@@ -4911,25 +4384,29 @@ ___
 
 #### Inherited from
 
-Window.moveTo
+`Window.moveTo`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16864
+### open()
 
-___
+> **open**(`url?`, `target?`, `features?`): `Window`
 
-### open
-
-▸ **open**(`url?`, `target?`, `features?`): `Window`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16865
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `url?` | `string` \| `URL` |
-| `target?` | `string` |
-| `features?` | `string` |
+##### url?
+
+`string` | `URL`
+
+##### target?
+
+`string`
+
+##### features?
+
+`string`
 
 #### Returns
 
@@ -4937,17 +4414,17 @@ ___
 
 #### Inherited from
 
-Window.open
+`Window.open`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16865
+### postMessage()
 
-___
+#### Call Signature
 
-### postMessage
+> **postMessage**(`message`, `targetOrigin`, `transfer?`): `void`
 
-▸ **postMessage**(`message`, `targetOrigin`, `transfer?`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16877
 
 Posts a message to the given window. Messages can be structured objects, e.g. nested objects and arrays, can contain JavaScript values (strings, numbers, Date objects, etc), and can contain certain data objects such as File Blob, FileList, and ArrayBuffer objects.
 
@@ -4959,13 +4436,59 @@ If the origin of the target window doesn't match the given target origin, the me
 
 Throws a "DataCloneError" DOMException if transfer array contains duplicate objects or if message could not be cloned.
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `any` |
-| `targetOrigin` | `string` |
-| `transfer?` | `Transferable`[] |
+###### message
+
+`any`
+
+###### targetOrigin
+
+`string`
+
+###### transfer?
+
+`Transferable`[]
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.postMessage`
+
+#### Call Signature
+
+> **postMessage**(`message`, `options?`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16878
+
+##### Parameters
+
+###### message
+
+`any`
+
+###### options?
+
+`WindowPostMessageOptions`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.postMessage`
+
+***
+
+### print()
+
+> **print**(): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16879
 
 #### Returns
 
@@ -4973,63 +4496,25 @@ Throws a "DataCloneError" DOMException if transfer array contains duplicate obje
 
 #### Inherited from
 
-Window.postMessage
+`Window.print`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16877
+### prompt()
 
-▸ **postMessage**(`message`, `options?`): `void`
+> **prompt**(`message?`, `_default?`): `string`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `message` | `any` |
-| `options?` | `WindowPostMessageOptions` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.postMessage
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16878
-
-___
-
-### print
-
-▸ **print**(): `void`
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.print
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16879
-
-___
-
-### prompt
-
-▸ **prompt**(`message?`, `_default?`): `string`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16880
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
-| `_default?` | `string` |
+##### message?
+
+`string`
+
+##### \_default?
+
+`string`
 
 #### Returns
 
@@ -5037,23 +4522,21 @@ ___
 
 #### Inherited from
 
-Window.prompt
+`Window.prompt`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16880
+### queueMicrotask()
 
-___
+> **queueMicrotask**(`callback`): `void`
 
-### queueMicrotask
-
-▸ **queueMicrotask**(`callback`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16972
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | `VoidFunction` |
+##### callback
+
+`VoidFunction`
 
 #### Returns
 
@@ -5061,19 +4544,109 @@ ___
 
 #### Inherited from
 
-Window.queueMicrotask
+`Window.queueMicrotask`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16972
+### ~~releaseEvents()~~
 
-___
+> **releaseEvents**(): `void`
 
-### releaseEvents
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16882
 
-▸ **releaseEvents**(): `void`
+#### Returns
 
-**`Deprecated`**
+`void`
+
+#### Deprecated
+
+#### Inherited from
+
+`Window.releaseEvents`
+
+***
+
+### removeEventListener()
+
+#### Call Signature
+
+> **removeEventListener**\<`K`\>(`type`, `listener`, `options?`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16896
+
+Removes the event listener in target's event listener list with the same type, callback, and options.
+
+##### Type Parameters
+
+###### K
+
+`K` *extends* keyof `WindowEventMap`
+
+##### Parameters
+
+###### type
+
+`K`
+
+###### listener
+
+(`this`, `ev`) => `any`
+
+###### options?
+
+`boolean` | `EventListenerOptions`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.removeEventListener`
+
+#### Call Signature
+
+> **removeEventListener**(`type`, `listener`, `options?`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16897
+
+Removes the event listener in target's event listener list with the same type, callback, and options.
+
+##### Parameters
+
+###### type
+
+`string`
+
+###### listener
+
+`EventListenerOrEventListenerObject`
+
+###### options?
+
+`boolean` | `EventListenerOptions`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.removeEventListener`
+
+***
+
+### reportError()
+
+> **reportError**(`e`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16973
+
+#### Parameters
+
+##### e
+
+`any`
 
 #### Returns
 
@@ -5081,101 +4654,21 @@ ___
 
 #### Inherited from
 
-Window.releaseEvents
+`Window.reportError`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16882
+### requestAnimationFrame()
 
-___
+> **requestAnimationFrame**(`callback`): `number`
 
-### removeEventListener
-
-▸ **removeEventListener**<`K`\>(`type`, `listener`, `options?`): `void`
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `K` | extends keyof `WindowEventMap` |
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:2196
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `type` | `K` |
-| `listener` | (`this`: `Window`, `ev`: `WindowEventMap`[`K`]) => `any` |
-| `options?` | `boolean` \| `EventListenerOptions` |
+##### callback
 
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.removeEventListener
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16896
-
-▸ **removeEventListener**(`type`, `listener`, `options?`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `type` | `string` |
-| `listener` | `EventListenerOrEventListenerObject` |
-| `options?` | `boolean` \| `EventListenerOptions` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.removeEventListener
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16897
-
-___
-
-### reportError
-
-▸ **reportError**(`e`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `e` | `any` |
-
-#### Returns
-
-`void`
-
-#### Inherited from
-
-Window.reportError
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16973
-
-___
-
-### requestAnimationFrame
-
-▸ **requestAnimationFrame**(`callback`): `number`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `callback` | `FrameRequestCallback` |
+`FrameRequestCallback`
 
 #### Returns
 
@@ -5183,24 +4676,25 @@ ___
 
 #### Inherited from
 
-Window.requestAnimationFrame
+`Window.requestAnimationFrame`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:2196
+### requestIdleCallback()
 
-___
+> **requestIdleCallback**(`callback`, `options?`): `number`
 
-### requestIdleCallback
-
-▸ **requestIdleCallback**(`callback`, `options?`): `number`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16883
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `callback` | `IdleRequestCallback` |
-| `options?` | `IdleRequestOptions` |
+##### callback
+
+`IdleRequestCallback`
+
+##### options?
+
+`IdleRequestOptions`
 
 #### Returns
 
@@ -5208,24 +4702,25 @@ ___
 
 #### Inherited from
 
-Window.requestIdleCallback
+`Window.requestIdleCallback`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16883
+### resizeBy()
 
-___
+> **resizeBy**(`x`, `y`): `void`
 
-### resizeBy
-
-▸ **resizeBy**(`x`, `y`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16884
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
+##### x
+
+`number`
+
+##### y
+
+`number`
 
 #### Returns
 
@@ -5233,24 +4728,25 @@ ___
 
 #### Inherited from
 
-Window.resizeBy
+`Window.resizeBy`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16884
+### resizeTo()
 
-___
+> **resizeTo**(`width`, `height`): `void`
 
-### resizeTo
-
-▸ **resizeTo**(`width`, `height`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16885
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `width` | `number` |
-| `height` | `number` |
+##### width
+
+`number`
+
+##### height
+
+`number`
 
 #### Returns
 
@@ -5258,160 +4754,173 @@ ___
 
 #### Inherited from
 
-Window.resizeTo
+`Window.resizeTo`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16885
+### scroll()
 
-___
+#### Call Signature
 
-### scroll
+> **scroll**(`options?`): `void`
 
-▸ **scroll**(`options?`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16886
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `ScrollToOptions` |
+###### options?
 
-#### Returns
+`ScrollToOptions`
 
-`void`
-
-#### Inherited from
-
-Window.scroll
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16886
-
-▸ **scroll**(`x`, `y`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
-
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
-Window.scroll
+`Window.scroll`
 
-#### Defined in
+#### Call Signature
 
-node_modules/typescript/lib/lib.dom.d.ts:16887
+> **scroll**(`x`, `y`): `void`
 
-___
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16887
 
-### scrollBy
+##### Parameters
 
-▸ **scrollBy**(`options?`): `void`
+###### x
 
-#### Parameters
+`number`
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `ScrollToOptions` |
+###### y
 
-#### Returns
+`number`
 
-`void`
-
-#### Inherited from
-
-Window.scrollBy
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16888
-
-▸ **scrollBy**(`x`, `y`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
-
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
-Window.scrollBy
+`Window.scroll`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16889
+### scrollBy()
 
-___
+#### Call Signature
 
-### scrollTo
+> **scrollBy**(`options?`): `void`
 
-▸ **scrollTo**(`options?`): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16888
 
-#### Parameters
+##### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `options?` | `ScrollToOptions` |
+###### options?
 
-#### Returns
+`ScrollToOptions`
 
-`void`
-
-#### Inherited from
-
-Window.scrollTo
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16890
-
-▸ **scrollTo**(`x`, `y`): `void`
-
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `x` | `number` |
-| `y` | `number` |
-
-#### Returns
+##### Returns
 
 `void`
 
-#### Inherited from
+##### Inherited from
 
-Window.scrollTo
+`Window.scrollBy`
 
-#### Defined in
+#### Call Signature
 
-node_modules/typescript/lib/lib.dom.d.ts:16891
+> **scrollBy**(`x`, `y`): `void`
 
-___
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16889
 
-### setInterval
+##### Parameters
 
-▸ **setInterval**(`handler`, `timeout?`, ...`arguments`): `number`
+###### x
+
+`number`
+
+###### y
+
+`number`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.scrollBy`
+
+***
+
+### scrollTo()
+
+#### Call Signature
+
+> **scrollTo**(`options?`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16890
+
+##### Parameters
+
+###### options?
+
+`ScrollToOptions`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.scrollTo`
+
+#### Call Signature
+
+> **scrollTo**(`x`, `y`): `void`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16891
+
+##### Parameters
+
+###### x
+
+`number`
+
+###### y
+
+`number`
+
+##### Returns
+
+`void`
+
+##### Inherited from
+
+`Window.scrollTo`
+
+***
+
+### setInterval()
+
+> **setInterval**(`handler`, `timeout?`, ...`arguments?`): `number`
+
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16974
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handler` | `TimerHandler` |
-| `timeout?` | `number` |
-| `...arguments` | `any`[] |
+##### handler
+
+`TimerHandler`
+
+##### timeout?
+
+`number`
+
+##### arguments?
+
+...`any`[]
 
 #### Returns
 
@@ -5419,25 +4928,29 @@ ___
 
 #### Inherited from
 
-Window.setInterval
+`Window.setInterval`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16974
+### setTimeout()
 
-___
+> **setTimeout**(`handler`, `timeout?`, ...`arguments?`): `number`
 
-### setTimeout
-
-▸ **setTimeout**(`handler`, `timeout?`, ...`arguments`): `number`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16975
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `handler` | `TimerHandler` |
-| `timeout?` | `number` |
-| `...arguments` | `any`[] |
+##### handler
+
+`TimerHandler`
+
+##### timeout?
+
+`number`
+
+##### arguments?
+
+...`any`[]
 
 #### Returns
 
@@ -5445,17 +4958,15 @@ ___
 
 #### Inherited from
 
-Window.setTimeout
+`Window.setTimeout`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16975
+### stop()
 
-___
+> **stop**(): `void`
 
-### stop
-
-▸ **stop**(): `void`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16893
 
 Cancels the document load.
 
@@ -5465,24 +4976,25 @@ Cancels the document load.
 
 #### Inherited from
 
-Window.stop
+`Window.stop`
 
-#### Defined in
+***
 
-node_modules/typescript/lib/lib.dom.d.ts:16893
+### structuredClone()
 
-___
+> **structuredClone**(`value`, `options?`): `any`
 
-### structuredClone
-
-▸ **structuredClone**(`value`, `options?`): `any`
+Defined in: node\_modules/typescript/lib/lib.dom.d.ts:16976
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `value` | `any` |
-| `options?` | `StructuredSerializeOptions` |
+##### value
+
+`any`
+
+##### options?
+
+`StructuredSerializeOptions`
 
 #### Returns
 
@@ -5490,8 +5002,4 @@ ___
 
 #### Inherited from
 
-Window.structuredClone
-
-#### Defined in
-
-node_modules/typescript/lib/lib.dom.d.ts:16976
+`Window.structuredClone`

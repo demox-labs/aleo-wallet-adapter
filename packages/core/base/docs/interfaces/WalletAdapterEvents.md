@@ -1,87 +1,79 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / WalletAdapterEvents
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / WalletAdapterEvents
 
 # Interface: WalletAdapterEvents
 
-## Table of contents
-
-### Methods
-
-- [connect](WalletAdapterEvents.md#connect)
-- [disconnect](WalletAdapterEvents.md#disconnect)
-- [error](WalletAdapterEvents.md#error)
-- [readyStateChange](WalletAdapterEvents.md#readystatechange)
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:7](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L7)
 
 ## Methods
 
-### connect
+### connect()
 
-▸ **connect**(`publicKey`, `programs?`): `void`
+> **connect**(`publicKey`, `programs?`): `void`
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `publicKey` | `string` |
-| `programs?` | `string`[] |
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:8](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L8)
-
-___
-
-### disconnect
-
-▸ **disconnect**(): `void`
-
-#### Returns
-
-`void`
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:9](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L9)
-
-___
-
-### error
-
-▸ **error**(`error`): `void`
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:8](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L8)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `error` | [`WalletError`](../classes/WalletError.md) |
+##### publicKey
+
+`string`
+
+##### programs?
+
+`string`[]
 
 #### Returns
 
 `void`
 
-#### Defined in
+***
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:10](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L10)
+### disconnect()
 
-___
+> **disconnect**(): `void`
 
-### readyStateChange
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:9](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L9)
 
-▸ **readyStateChange**(`readyState`): `void`
+#### Returns
+
+`void`
+
+***
+
+### error()
+
+> **error**(`error`): `void`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:10](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L10)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `readyState` | [`WalletReadyState`](../enums/WalletReadyState.md) |
+##### error
+
+[`WalletError`](../classes/WalletError.md)
 
 #### Returns
 
 `void`
 
-#### Defined in
+***
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:11](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L11)
+### readyStateChange()
+
+> **readyStateChange**(`readyState`): `void`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:11](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L11)
+
+#### Parameters
+
+##### readyState
+
+[`WalletReadyState`](../enumerations/WalletReadyState.md)
+
+#### Returns
+
+`void`

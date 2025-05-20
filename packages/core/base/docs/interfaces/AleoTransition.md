@@ -1,45 +1,33 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / AleoTransition
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / AleoTransition
 
 # Interface: AleoTransition
 
-## Implemented by
-
-- [`Transition`](../classes/Transition.md)
-
-## Table of contents
-
-### Properties
-
-- [functionName](AleoTransition.md#functionname)
-- [inputs](AleoTransition.md#inputs)
-- [program](AleoTransition.md#program)
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L2)
 
 ## Properties
 
 ### functionName
 
-• **functionName**: `string`
+> **functionName**: `string`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L4)
 
-[aleo-wallet-adapter/packages/core/base/transaction.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L4)
-
-___
+***
 
 ### inputs
 
-• **inputs**: `any`[]
+> **inputs**: `any`[]
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L5)
 
-[aleo-wallet-adapter/packages/core/base/transaction.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L5)
-
-___
+***
 
 ### program
 
-• **program**: `string`
+> **program**: `string`
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L3)
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L3)

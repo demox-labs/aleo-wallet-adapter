@@ -1,44 +1,35 @@
-[@demox-labs/aleo-wallet-adapter-reactui](../README.md) / [Exports](../modules.md) / WalletModalContextState
+[**@demox-labs/aleo-wallet-adapter-reactui**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-reactui](../README.md) / WalletModalContextState
 
 # Interface: WalletModalContextState
 
-## Table of contents
-
-### Properties
-
-- [setVisible](WalletModalContextState.md#setvisible)
-- [visible](WalletModalContextState.md#visible)
+Defined in: [useWalletModal.tsx:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/ui/src/useWalletModal.tsx#L3)
 
 ## Properties
 
-### setVisible
+### setVisible()
 
-• **setVisible**: (`open`: `boolean`) => `void`
+> **setVisible**: (`open`) => `void`
 
-#### Type declaration
+Defined in: [useWalletModal.tsx:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/ui/src/useWalletModal.tsx#L5)
 
-▸ (`open`): `void`
+#### Parameters
 
-##### Parameters
+##### open
 
-| Name | Type |
-| :------ | :------ |
-| `open` | `boolean` |
+`boolean`
 
-##### Returns
+#### Returns
 
 `void`
 
-#### Defined in
-
-[useWalletModal.tsx:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/ui/src/useWalletModal.tsx#L5)
-
-___
+***
 
 ### visible
 
-• **visible**: `boolean`
+> **visible**: `boolean`
 
-#### Defined in
-
-[useWalletModal.tsx:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/ui/src/useWalletModal.tsx#L4)
+Defined in: [useWalletModal.tsx:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/ui/src/useWalletModal.tsx#L4)

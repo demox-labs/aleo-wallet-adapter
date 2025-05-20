@@ -1,30 +1,25 @@
-[@demox-labs/aleo-wallet-adapter-react](../README.md) / [Exports](../modules.md) / Wallet
+[**@demox-labs/aleo-wallet-adapter-react**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-react](../README.md) / Wallet
 
 # Interface: Wallet
 
-## Table of contents
-
-### Properties
-
-- [adapter](Wallet.md#adapter)
-- [readyState](Wallet.md#readystate)
+Defined in: [useWallet.ts:13](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L13)
 
 ## Properties
 
 ### adapter
 
-• **adapter**: `Adapter`
+> **adapter**: `Adapter`
 
-#### Defined in
+Defined in: [useWallet.ts:14](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L14)
 
-[useWallet.ts:14](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L14)
-
-___
+***
 
 ### readyState
 
-• **readyState**: `WalletReadyState`
+> **readyState**: `WalletReadyState`
 
-#### Defined in
-
-[useWallet.ts:15](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L15)
+Defined in: [useWallet.ts:15](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L15)

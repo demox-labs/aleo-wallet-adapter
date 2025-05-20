@@ -1,110 +1,83 @@
-[@demox-labs/aleo-wallet-adapter-react](../README.md) / [Exports](../modules.md) / WalletProviderProps
+[**@demox-labs/aleo-wallet-adapter-react**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-react](../README.md) / WalletProviderProps
 
 # Interface: WalletProviderProps
 
-## Table of contents
-
-### Properties
-
-- [autoConnect](WalletProviderProps.md#autoconnect)
-- [children](WalletProviderProps.md#children)
-- [decryptPermission](WalletProviderProps.md#decryptpermission)
-- [localStorageKey](WalletProviderProps.md#localstoragekey)
-- [network](WalletProviderProps.md#network)
-- [onError](WalletProviderProps.md#onerror)
-- [programs](WalletProviderProps.md#programs)
-- [wallets](WalletProviderProps.md#wallets)
+Defined in: [WalletProvider.tsx:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L21)
 
 ## Properties
 
-### autoConnect
+### autoConnect?
 
-• `Optional` **autoConnect**: `boolean`
+> `optional` **autoConnect**: `boolean`
 
-#### Defined in
+Defined in: [WalletProvider.tsx:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L27)
 
-[WalletProvider.tsx:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L27)
-
-___
+***
 
 ### children
 
-• **children**: `ReactNode`
+> **children**: `ReactNode`
 
-#### Defined in
+Defined in: [WalletProvider.tsx:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L22)
 
-[WalletProvider.tsx:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L22)
+***
 
-___
+### decryptPermission?
 
-### decryptPermission
+> `optional` **decryptPermission**: `DecryptPermission`
 
-• `Optional` **decryptPermission**: `DecryptPermission`
+Defined in: [WalletProvider.tsx:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L24)
 
-#### Defined in
+***
 
-[WalletProvider.tsx:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L24)
+### localStorageKey?
 
-___
+> `optional` **localStorageKey**: `string`
 
-### localStorageKey
+Defined in: [WalletProvider.tsx:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L29)
 
-• `Optional` **localStorageKey**: `string`
+***
 
-#### Defined in
+### network?
 
-[WalletProvider.tsx:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L29)
+> `optional` **network**: `WalletAdapterNetwork`
 
-___
+Defined in: [WalletProvider.tsx:26](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L26)
 
-### network
+***
 
-• `Optional` **network**: `WalletAdapterNetwork`
+### onError()?
 
-#### Defined in
+> `optional` **onError**: (`error`) => `void`
 
-[WalletProvider.tsx:26](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L26)
+Defined in: [WalletProvider.tsx:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L28)
 
-___
+#### Parameters
 
-### onError
+##### error
 
-• `Optional` **onError**: (`error`: `WalletError`) => `void`
+`WalletError`
 
-#### Type declaration
-
-▸ (`error`): `void`
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `error` | `WalletError` |
-
-##### Returns
+#### Returns
 
 `void`
 
-#### Defined in
+***
 
-[WalletProvider.tsx:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L28)
+### programs?
 
-___
+> `optional` **programs**: `string`[]
 
-### programs
+Defined in: [WalletProvider.tsx:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L25)
 
-• `Optional` **programs**: `string`[]
-
-#### Defined in
-
-[WalletProvider.tsx:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L25)
-
-___
+***
 
 ### wallets
 
-• **wallets**: `Adapter`[]
+> **wallets**: `Adapter`[]
 
-#### Defined in
-
-[WalletProvider.tsx:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/WalletProvider.tsx#L23)
+Defined in: [WalletProvider.tsx:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/WalletProvider.tsx#L23)

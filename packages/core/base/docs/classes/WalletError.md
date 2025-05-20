@@ -1,225 +1,186 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / WalletError
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / WalletError
 
 # Class: WalletError
 
-## Hierarchy
+Defined in: [aleo-wallet-adapter/packages/core/base/errors.ts:1](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/errors.ts#L1)
+
+## Extends
 
 - `Error`
 
-  ↳ **`WalletError`**
+## Extended by
 
-  ↳↳ [`WalletNotReadyError`](WalletNotReadyError.md)
-
-  ↳↳ [`WalletLoadError`](WalletLoadError.md)
-
-  ↳↳ [`WalletConfigError`](WalletConfigError.md)
-
-  ↳↳ [`WalletConnectionError`](WalletConnectionError.md)
-
-  ↳↳ [`WalletNotSelectedError`](WalletNotSelectedError.md)
-
-  ↳↳ [`WalletDisconnectedError`](WalletDisconnectedError.md)
-
-  ↳↳ [`WalletDisconnectionError`](WalletDisconnectionError.md)
-
-  ↳↳ [`WalletAccountError`](WalletAccountError.md)
-
-  ↳↳ [`WalletPublicKeyError`](WalletPublicKeyError.md)
-
-  ↳↳ [`WalletKeypairError`](WalletKeypairError.md)
-
-  ↳↳ [`WalletNotConnectedError`](WalletNotConnectedError.md)
-
-  ↳↳ [`WalletSendTransactionError`](WalletSendTransactionError.md)
-
-  ↳↳ [`WalletSignMessageError`](WalletSignMessageError.md)
-
-  ↳↳ [`WalletSignTransactionError`](WalletSignTransactionError.md)
-
-  ↳↳ [`WalletTimeoutError`](WalletTimeoutError.md)
-
-  ↳↳ [`WalletWindowBlockedError`](WalletWindowBlockedError.md)
-
-  ↳↳ [`WalletWindowClosedError`](WalletWindowClosedError.md)
-
-  ↳↳ [`WalletDecryptionNotAllowedError`](WalletDecryptionNotAllowedError.md)
-
-  ↳↳ [`WalletDecryptionError`](WalletDecryptionError.md)
-
-  ↳↳ [`WalletRecordsError`](WalletRecordsError.md)
-
-  ↳↳ [`WalletTransactionError`](WalletTransactionError.md)
-
-## Table of contents
-
-### Constructors
-
-- [constructor](WalletError.md#constructor)
-
-### Properties
-
-- [cause](WalletError.md#cause)
-- [error](WalletError.md#error)
-- [message](WalletError.md#message)
-- [name](WalletError.md#name)
-- [stack](WalletError.md#stack)
-- [prepareStackTrace](WalletError.md#preparestacktrace)
-- [stackTraceLimit](WalletError.md#stacktracelimit)
-
-### Methods
-
-- [captureStackTrace](WalletError.md#capturestacktrace)
+- [`WalletNotReadyError`](WalletNotReadyError.md)
+- [`WalletLoadError`](WalletLoadError.md)
+- [`WalletConfigError`](WalletConfigError.md)
+- [`WalletConnectionError`](WalletConnectionError.md)
+- [`WalletNotSelectedError`](WalletNotSelectedError.md)
+- [`WalletDisconnectedError`](WalletDisconnectedError.md)
+- [`WalletDisconnectionError`](WalletDisconnectionError.md)
+- [`WalletAccountError`](WalletAccountError.md)
+- [`WalletPublicKeyError`](WalletPublicKeyError.md)
+- [`WalletKeypairError`](WalletKeypairError.md)
+- [`WalletNotConnectedError`](WalletNotConnectedError.md)
+- [`WalletSendTransactionError`](WalletSendTransactionError.md)
+- [`WalletSignMessageError`](WalletSignMessageError.md)
+- [`WalletSignTransactionError`](WalletSignTransactionError.md)
+- [`WalletTimeoutError`](WalletTimeoutError.md)
+- [`WalletWindowBlockedError`](WalletWindowBlockedError.md)
+- [`WalletWindowClosedError`](WalletWindowClosedError.md)
+- [`WalletDecryptionNotAllowedError`](WalletDecryptionNotAllowedError.md)
+- [`WalletDecryptionError`](WalletDecryptionError.md)
+- [`WalletRecordsError`](WalletRecordsError.md)
+- [`WalletTransactionError`](WalletTransactionError.md)
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new WalletError**(`message?`, `error?`)
+> **new WalletError**(`message?`, `error?`): `WalletError`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/errors.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/errors.ts#L5)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message?` | `string` |
-| `error?` | `any` |
+##### message?
 
-#### Overrides
+`string`
 
-Error.constructor
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/errors.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/errors.ts#L5)
-
-## Properties
-
-### cause
-
-• `Optional` **cause**: `unknown`
-
-#### Inherited from
-
-Error.cause
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es2022.error.d.ts:26
-
-___
-
-### error
-
-• **error**: `any`
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/errors.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/errors.ts#L2)
-
-___
-
-### message
-
-• **message**: `string`
-
-#### Inherited from
-
-Error.message
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es5.d.ts:1041
-
-___
-
-### name
-
-• **name**: `string`
-
-#### Inherited from
-
-Error.name
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es5.d.ts:1040
-
-___
-
-### stack
-
-• `Optional` **stack**: `string`
-
-#### Inherited from
-
-Error.stack
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es5.d.ts:1042
-
-___
-
-### prepareStackTrace
-
-▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
-
-#### Type declaration
-
-▸ (`err`, `stackTraces`): `any`
-
-Optional override for formatting stack traces
-
-**`See`**
-
-https://v8.dev/docs/stack-trace-api#customizing-stack-traces
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `err` | `Error` |
-| `stackTraces` | `CallSite`[] |
-
-##### Returns
+##### error?
 
 `any`
 
+#### Returns
+
+`WalletError`
+
+#### Overrides
+
+`Error.constructor`
+
+## Properties
+
+### cause?
+
+> `optional` **cause**: `unknown`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/typescript/lib/lib.es2022.error.d.ts:26
+
 #### Inherited from
 
-Error.prepareStackTrace
+`Error.cause`
 
-#### Defined in
+***
 
-node_modules/@types/node/globals.d.ts:98
+### error
 
-___
+> **error**: `any`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/errors.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/errors.ts#L2)
+
+***
+
+### message
+
+> **message**: `string`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/typescript/lib/lib.es5.d.ts:1054
+
+#### Inherited from
+
+`Error.message`
+
+***
+
+### name
+
+> **name**: `string`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/typescript/lib/lib.es5.d.ts:1053
+
+#### Inherited from
+
+`Error.name`
+
+***
+
+### stack?
+
+> `optional` **stack**: `string`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/typescript/lib/lib.es5.d.ts:1055
+
+#### Inherited from
+
+`Error.stack`
+
+***
+
+### prepareStackTrace()?
+
+> `static` `optional` **prepareStackTrace**: (`err`, `stackTraces`) => `any`
+
+Defined in: node\_modules/@types/node/globals.d.ts:98
+
+Optional override for formatting stack traces
+
+#### Parameters
+
+##### err
+
+`Error`
+
+##### stackTraces
+
+`CallSite`[]
+
+#### Returns
+
+`any`
+
+#### See
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
+#### Inherited from
+
+`Error.prepareStackTrace`
+
+***
 
 ### stackTraceLimit
 
-▪ `Static` **stackTraceLimit**: `number`
+> `static` **stackTraceLimit**: `number`
+
+Defined in: node\_modules/@types/node/globals.d.ts:100
 
 #### Inherited from
 
-Error.stackTraceLimit
-
-#### Defined in
-
-node_modules/@types/node/globals.d.ts:100
+`Error.stackTraceLimit`
 
 ## Methods
 
-### captureStackTrace
+### captureStackTrace()
 
-▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+> `static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Defined in: node\_modules/@types/node/globals.d.ts:91
 
 Create .stack property on a target object
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `targetObject` | `object` |
-| `constructorOpt?` | `Function` |
+##### targetObject
+
+`object`
+
+##### constructorOpt?
+
+`Function`
 
 #### Returns
 
@@ -227,8 +188,4 @@ Create .stack property on a target object
 
 #### Inherited from
 
-Error.captureStackTrace
-
-#### Defined in
-
-node_modules/@types/node/globals.d.ts:91
+`Error.captureStackTrace`

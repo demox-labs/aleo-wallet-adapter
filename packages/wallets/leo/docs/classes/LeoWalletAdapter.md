@@ -1,436 +1,346 @@
-[@demox-labs/aleo-wallet-adapter-leo](../README.md) / [Exports](../modules.md) / LeoWalletAdapter
+[**@demox-labs/aleo-wallet-adapter-leo**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-leo](../README.md) / LeoWalletAdapter
 
 # Class: LeoWalletAdapter
 
-## Hierarchy
+Defined in: [adapter.ts:62](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L62)
+
+## Extends
 
 - `BaseMessageSignerWalletAdapter`
 
-  ↳ **`LeoWalletAdapter`**
-
-## Table of contents
-
-### Constructors
-
-- [constructor](LeoWalletAdapter.md#constructor)
-
-### Properties
-
-- [\_connecting](LeoWalletAdapter.md#_connecting)
-- [\_decryptPermission](LeoWalletAdapter.md#_decryptpermission)
-- [\_publicKey](LeoWalletAdapter.md#_publickey)
-- [\_readyState](LeoWalletAdapter.md#_readystate)
-- [\_wallet](LeoWalletAdapter.md#_wallet)
-- [icon](LeoWalletAdapter.md#icon)
-- [name](LeoWalletAdapter.md#name)
-- [supportedTransactionVersions](LeoWalletAdapter.md#supportedtransactionversions)
-- [url](LeoWalletAdapter.md#url)
-- [prefixed](LeoWalletAdapter.md#prefixed)
-
-### Accessors
-
-- [connected](LeoWalletAdapter.md#connected)
-- [connecting](LeoWalletAdapter.md#connecting)
-- [decryptPermission](LeoWalletAdapter.md#decryptpermission)
-- [publicKey](LeoWalletAdapter.md#publickey)
-- [readyState](LeoWalletAdapter.md#readystate)
-
-### Methods
-
-- [addListener](LeoWalletAdapter.md#addlistener)
-- [connect](LeoWalletAdapter.md#connect)
-- [decrypt](LeoWalletAdapter.md#decrypt)
-- [disconnect](LeoWalletAdapter.md#disconnect)
-- [emit](LeoWalletAdapter.md#emit)
-- [eventNames](LeoWalletAdapter.md#eventnames)
-- [getExecution](LeoWalletAdapter.md#getexecution)
-- [listenerCount](LeoWalletAdapter.md#listenercount)
-- [listeners](LeoWalletAdapter.md#listeners)
-- [off](LeoWalletAdapter.md#off)
-- [on](LeoWalletAdapter.md#on)
-- [once](LeoWalletAdapter.md#once)
-- [removeAllListeners](LeoWalletAdapter.md#removealllisteners)
-- [removeListener](LeoWalletAdapter.md#removelistener)
-- [requestBulkTransactions](LeoWalletAdapter.md#requestbulktransactions)
-- [requestDeploy](LeoWalletAdapter.md#requestdeploy)
-- [requestExecution](LeoWalletAdapter.md#requestexecution)
-- [requestRecordPlaintexts](LeoWalletAdapter.md#requestrecordplaintexts)
-- [requestRecords](LeoWalletAdapter.md#requestrecords)
-- [requestTransaction](LeoWalletAdapter.md#requesttransaction)
-- [requestTransactionHistory](LeoWalletAdapter.md#requesttransactionhistory)
-- [signMessage](LeoWalletAdapter.md#signmessage)
-- [transactionStatus](LeoWalletAdapter.md#transactionstatus)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new LeoWalletAdapter**(`__namedParameters?`)
+> **new LeoWalletAdapter**(`__namedParameters`): `LeoWalletAdapter`
+
+Defined in: [adapter.ts:78](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L78)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `__namedParameters` | [`LeoWalletAdapterConfig`](../interfaces/LeoWalletAdapterConfig.md) |
+##### \_\_namedParameters
+
+[`LeoWalletAdapterConfig`](../interfaces/LeoWalletAdapterConfig.md) = `{}`
+
+#### Returns
+
+`LeoWalletAdapter`
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.constructor
-
-#### Defined in
-
-[adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L75)
+`BaseMessageSignerWalletAdapter.constructor`
 
 ## Properties
 
-### \_connecting
-
-• `Private` **\_connecting**: `boolean`
-
-#### Defined in
-
-[adapter.ts:66](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L66)
-
-___
-
-### \_decryptPermission
-
-• `Private` **\_decryptPermission**: `string`
-
-#### Defined in
-
-[adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L69)
-
-___
-
-### \_publicKey
-
-• `Private` **\_publicKey**: `string`
-
-#### Defined in
-
-[adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L68)
-
-___
-
-### \_readyState
-
-• `Private` **\_readyState**: `WalletReadyState`
-
-#### Defined in
-
-[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L70)
-
-___
-
-### \_wallet
-
-• `Private` **\_wallet**: [`LeoWallet`](../interfaces/LeoWallet.md)
-
-#### Defined in
-
-[adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L67)
-
-___
-
 ### icon
 
-• **icon**: `string` = `'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJERjI1N0M3NUFERjExRUQ4OTkyRDkwNjQwODFGMjUwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJERjI1N0M4NUFERjExRUQ4OTkyRDkwNjQwODFGMjUwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkRGMjU3QzU1QURGMTFFRDg5OTJEOTA2NDA4MUYyNTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MkRGMjU3QzY1QURGMTFFRDg5OTJEOTA2NDA4MUYyNTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7ZyM59AAACz0lEQVR42uzdT2vTYADH8d+Tpo3oYeph4g4iE6boZV68idKDiHj1spt7BYL4DgTfgKDgTdxZr4JXD4LCRMGLghtUGPgHpbWmaRuTsWOTOpfkyZ5+v+xWlrT5dE+ewJPFrLRjkb08DgEAABAAABAAAFD1+TmvxbFGQ5VxmdBoyMumT3Y6dujixPdlzO4BkqPvNzV/PO+X/7vuL/W6k7ec7PfovILAHYAf3zQIMw9jJsBwqGMLuvcoBSy8tYd6tqaDhya8FA20ekvLF9wBuHtb798oOLD7IShBawV5Y8VehqCcms30j8+d06y3h5PweFzKe4pjCzu1Vf6HZRbENBQAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAmgGArGWUTubX7Q01fD1/qvVXU1b0FVs00KkzungFgO11uy9faDSqdKf9ntrXAbA3BBljbdzjJMxJGAACAAACYDar4zQ0uSwq4zYx46nVAmBaw0g3VrV4uvgtb3X05MHOrB+AzJLv/tllnTtf/Ja/bO4AcA6Y0iAsZbPhH07CBAAABAAABAAABAAABAAAABAAABAAABAAABAAABAAABAAABAAAFippMdnNFt1BKjd2lBj0kWcc4cLfnqTkTobAPzb9/Tx/RJ1AZheebdoA7BfDxOzIAAIAAAIAOeyMwuKIvV/y6t2tmO8Ov4rKDsAi0u6dLXSw5FY97r68BaA7S5fS38qrrOhOzdrd50xQ+eAku5+BYBZEAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAGwrwBculuonp/Fy3/HjYZD37Xcz2I8O/BmpT35nsQ4VhDo5JI7fwRhX58/Tn5pPNbcES2cKGW/m5/ShdleBrCf4xaGevfaoSEo+zFWydH5+V1ft0rZb7OVefSVvzzd4kNerQxQgY3xllkQ01AACAAACAAAyEJ/BRgAJph5IP1XFpwAAAAASUVORK5CYII='`
+> **icon**: `string` = `'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAIAAABMXPacAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDkuMC1jMDAwIDc5LjE3MWMyN2ZhYiwgMjAyMi8wOC8xNi0yMjozNTo0MSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIDI0LjAgKFdpbmRvd3MpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjJERjI1N0M3NUFERjExRUQ4OTkyRDkwNjQwODFGMjUwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjJERjI1N0M4NUFERjExRUQ4OTkyRDkwNjQwODFGMjUwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6MkRGMjU3QzU1QURGMTFFRDg5OTJEOTA2NDA4MUYyNTAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6MkRGMjU3QzY1QURGMTFFRDg5OTJEOTA2NDA4MUYyNTAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7ZyM59AAACz0lEQVR42uzdT2vTYADH8d+Tpo3oYeph4g4iE6boZV68idKDiHj1spt7BYL4DgTfgKDgTdxZr4JXD4LCRMGLghtUGPgHpbWmaRuTsWOTOpfkyZ5+v+xWlrT5dE+ewJPFrLRjkb08DgEAABAAABAAAFD1+TmvxbFGQ5VxmdBoyMumT3Y6dujixPdlzO4BkqPvNzV/PO+X/7vuL/W6k7ec7PfovILAHYAf3zQIMw9jJsBwqGMLuvcoBSy8tYd6tqaDhya8FA20ekvLF9wBuHtb798oOLD7IShBawV5Y8VehqCcms30j8+d06y3h5PweFzKe4pjCzu1Vf6HZRbENBQAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAAgAAmgGArGWUTubX7Q01fD1/qvVXU1b0FVs00KkzungFgO11uy9faDSqdKf9ntrXAbA3BBljbdzjJMxJGAACAAACYDar4zQ0uSwq4zYx46nVAmBaw0g3VrV4uvgtb3X05MHOrB+AzJLv/tllnTtf/Ja/bO4AcA6Y0iAsZbPhH07CBAAABAAABAAABAAABAAAABAAABAAABAAABAAABAAABAAABAAAFippMdnNFt1BKjd2lBj0kWcc4cLfnqTkTobAPzb9/Tx/RJ1AZheebdoA7BfDxOzIAAIAAAIAOeyMwuKIvV/y6t2tmO8Ov4rKDsAi0u6dLXSw5FY97r68BaA7S5fS38qrrOhOzdrd50xQ+eAku5+BYBZEAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAEAAAGwrwBculuonp/Fy3/HjYZD37Xcz2I8O/BmpT35nsQ4VhDo5JI7fwRhX58/Tn5pPNbcES2cKGW/m5/ShdleBrCf4xaGevfaoSEo+zFWydH5+V1ft0rZb7OVefSVvzzd4kNerQxQgY3xllkQ01AACAAACAAAyEJ/BRgAJph5IP1XFpwAAAAASUVORK5CYII='`
+
+Defined in: [adapter.ts:64](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L64)
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.icon
+`BaseMessageSignerWalletAdapter.icon`
 
-#### Defined in
-
-[adapter.ts:62](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L62)
-
-___
+***
 
 ### name
 
-• **name**: `WalletName`<``"Leo Wallet"``\> = `LeoWalletName`
+> **name**: `WalletName`\<`"Leo Wallet"`\> = `LeoWalletName`
+
+Defined in: [adapter.ts:63](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L63)
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.name
+`BaseMessageSignerWalletAdapter.name`
 
-#### Defined in
-
-[adapter.ts:60](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L60)
-
-___
+***
 
 ### supportedTransactionVersions
 
-• `Readonly` **supportedTransactionVersions**: `any` = `null`
+> `readonly` **supportedTransactionVersions**: `any` = `null`
+
+Defined in: [adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L67)
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.supportedTransactionVersions
+`BaseMessageSignerWalletAdapter.supportedTransactionVersions`
 
-#### Defined in
-
-[adapter.ts:64](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L64)
-
-___
+***
 
 ### url
 
-• **url**: `string` = `'https://leo.app/download'`
+> **url**: `string`
+
+Defined in: [adapter.ts:66](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L66)
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.url
+`BaseMessageSignerWalletAdapter.url`
 
-#### Defined in
-
-[adapter.ts:61](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L61)
-
-___
+***
 
 ### prefixed
 
-▪ `Static` **prefixed**: `string` \| `boolean`
+> `static` **prefixed**: `string` \| `boolean`
+
+Defined in: node\_modules/eventemitter3/index.d.ts:9
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.prefixed
-
-#### Defined in
-
-node_modules/eventemitter3/index.d.ts:9
+`BaseMessageSignerWalletAdapter.prefixed`
 
 ## Accessors
 
 ### connected
 
-• `get` **connected**(): `boolean`
+#### Get Signature
 
-#### Returns
+> **get** **connected**(): `boolean`
+
+Defined in: node\_modules/@demox-labs/aleo-wallet-adapter-base/dist/adapter.d.ts:63
+
+##### Returns
 
 `boolean`
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.connected
+`BaseMessageSignerWalletAdapter.connected`
 
-#### Defined in
-
-node_modules/@demox-labs/aleo-wallet-adapter-base/dist/adapter.d.ts:63
-
-___
+***
 
 ### connecting
 
-• `get` **connecting**(): `boolean`
+#### Get Signature
 
-#### Returns
+> **get** **connecting**(): `boolean`
+
+Defined in: [adapter.ts:111](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L111)
+
+##### Returns
 
 `boolean`
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.connecting
+`BaseMessageSignerWalletAdapter.connecting`
 
-#### Defined in
-
-[adapter.ts:107](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L107)
-
-___
+***
 
 ### decryptPermission
 
-• `get` **decryptPermission**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **decryptPermission**(): `string`
+
+Defined in: [adapter.ts:107](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L107)
+
+##### Returns
 
 `string`
 
-#### Defined in
-
-[adapter.ts:103](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L103)
-
-___
+***
 
 ### publicKey
 
-• `get` **publicKey**(): `string`
+#### Get Signature
 
-#### Returns
+> **get** **publicKey**(): `string`
+
+Defined in: [adapter.ts:103](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L103)
+
+##### Returns
 
 `string`
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.publicKey
+`BaseMessageSignerWalletAdapter.publicKey`
 
-#### Defined in
-
-[adapter.ts:99](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L99)
-
-___
+***
 
 ### readyState
 
-• `get` **readyState**(): `WalletReadyState`
+#### Get Signature
 
-#### Returns
+> **get** **readyState**(): `WalletReadyState`
+
+Defined in: [adapter.ts:115](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L115)
+
+##### Returns
 
 `WalletReadyState`
 
-#### Overrides
+#### Set Signature
 
-BaseMessageSignerWalletAdapter.readyState
+> **set** **readyState**(`readyState`): `void`
 
-#### Defined in
+Defined in: [adapter.ts:119](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L119)
 
-[adapter.ts:111](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L111)
+##### Parameters
 
-• `set` **readyState**(`readyState`): `void`
+###### readyState
 
-#### Parameters
+`WalletReadyState`
 
-| Name | Type |
-| :------ | :------ |
-| `readyState` | `WalletReadyState` |
-
-#### Returns
+##### Returns
 
 `void`
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.readyState
-
-#### Defined in
-
-[adapter.ts:115](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L115)
+`BaseMessageSignerWalletAdapter.readyState`
 
 ## Methods
 
-### addListener
+### addListener()
 
-▸ **addListener**<`T`\>(`event`, `fn`, `context?`): [`LeoWalletAdapter`](LeoWalletAdapter.md)
+> **addListener**\<`T`\>(`event`, `fn`, `context?`): `this`
 
-#### Type parameters
+Defined in: node\_modules/eventemitter3/index.d.ts:45
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+#### Type Parameters
+
+##### T
+
+`T` *extends* keyof `WalletAdapterEvents`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn` | (...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void` |
-| `context?` | `any` |
+##### event
+
+`T`
+
+##### fn
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
 
 #### Returns
 
-[`LeoWalletAdapter`](LeoWalletAdapter.md)
+`this`
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.addListener
+`BaseMessageSignerWalletAdapter.addListener`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:45
+### connect()
 
-___
+> **connect**(`decryptPermission`, `network`, `programs?`): `Promise`\<`void`\>
 
-### connect
-
-▸ **connect**(`decryptPermission`, `network`, `programs?`): `Promise`<`void`\>
+Defined in: [adapter.ts:314](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L314)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `decryptPermission` | `DecryptPermission` |
-| `network` | `WalletAdapterNetwork` |
-| `programs?` | `string`[] |
+##### decryptPermission
+
+`DecryptPermission`
+
+##### network
+
+`WalletAdapterNetwork`
+
+##### programs?
+
+`string`[]
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.connect
+`BaseMessageSignerWalletAdapter.connect`
 
-#### Defined in
+***
 
-[adapter.ts:294](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L294)
+### decrypt()
 
-___
+> **decrypt**(`cipherText`, `tpk?`, `programId?`, `functionName?`, `index?`): `Promise`\<`string`\>
 
-### decrypt
-
-▸ **decrypt**(`cipherText`, `tpk?`, `programId?`, `functionName?`, `index?`): `Promise`<`string`\>
+Defined in: [adapter.ts:123](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L123)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `cipherText` | `string` |
-| `tpk?` | `string` |
-| `programId?` | `string` |
-| `functionName?` | `string` |
-| `index?` | `number` |
+##### cipherText
+
+`string`
+
+##### tpk?
+
+`string`
+
+##### programId?
+
+`string`
+
+##### functionName?
+
+`string`
+
+##### index?
+
+`number`
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.decrypt
+`BaseMessageSignerWalletAdapter.decrypt`
 
-#### Defined in
+***
 
-[adapter.ts:119](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L119)
+### disconnect()
 
-___
+> **disconnect**(): `Promise`\<`void`\>
 
-### disconnect
-
-▸ **disconnect**(): `Promise`<`void`\>
+Defined in: [adapter.ts:347](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L347)
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.disconnect
+`BaseMessageSignerWalletAdapter.disconnect`
 
-#### Defined in
+***
 
-[adapter.ts:327](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L327)
+### emit()
 
-___
+> **emit**\<`T`\>(`event`, ...`args`): `boolean`
 
-### emit
-
-▸ **emit**<`T`\>(`event`, ...`args`): `boolean`
+Defined in: node\_modules/eventemitter3/index.d.ts:32
 
 Calls each of the listeners registered for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+##### T
+
+`T` *extends* keyof `WalletAdapterEvents`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `...args` | `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>] |
+##### event
+
+`T`
+
+##### args
+
+...`ArgumentMap`\<`WalletAdapterEvents`\>\[`Extract`\<`T`, keyof `WalletAdapterEvents`\>\]
 
 #### Returns
 
@@ -438,17 +348,15 @@ Calls each of the listeners registered for a given event.
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.emit
+`BaseMessageSignerWalletAdapter.emit`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:32
+### eventNames()
 
-___
+> **eventNames**(): keyof `WalletAdapterEvents`[]
 
-### eventNames
-
-▸ **eventNames**(): keyof `WalletAdapterEvents`[]
+Defined in: node\_modules/eventemitter3/index.d.ts:15
 
 Return an array listing the events for which the emitter has registered
 listeners.
@@ -459,49 +367,45 @@ keyof `WalletAdapterEvents`[]
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.eventNames
+`BaseMessageSignerWalletAdapter.eventNames`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:15
+### getExecution()
 
-___
+> **getExecution**(`transactionId`): `Promise`\<`string`\>
 
-### getExecution
-
-▸ **getExecution**(`transactionId`): `Promise`<`string`\>
+Defined in: [adapter.ts:264](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L264)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `transactionId` | `string` |
+##### transactionId
+
+`string`
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.getExecution
+`BaseMessageSignerWalletAdapter.getExecution`
 
-#### Defined in
+***
 
-[adapter.ts:244](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L244)
+### listenerCount()
 
-___
+> **listenerCount**(`event`): `number`
 
-### listenerCount
-
-▸ **listenerCount**(`event`): `number`
+Defined in: node\_modules/eventemitter3/index.d.ts:27
 
 Return the number of listeners listening to a given event.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | keyof `WalletAdapterEvents` |
+##### event
+
+keyof `WalletAdapterEvents`
 
 #### Returns
 
@@ -509,418 +413,436 @@ Return the number of listeners listening to a given event.
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.listenerCount
+`BaseMessageSignerWalletAdapter.listenerCount`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:27
+### listeners()
 
-___
+> **listeners**\<`T`\>(`event`): (...`args`) => `void`[]
 
-### listeners
-
-▸ **listeners**<`T`\>(`event`): (...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void`[]
+Defined in: node\_modules/eventemitter3/index.d.ts:20
 
 Return the listeners registered for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+##### T
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-
-#### Returns
-
-(...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void`[]
-
-#### Inherited from
-
-BaseMessageSignerWalletAdapter.listeners
-
-#### Defined in
-
-node_modules/eventemitter3/index.d.ts:20
-
-___
-
-### off
-
-▸ **off**<`T`\>(`event`, `fn?`, `context?`, `once?`): [`LeoWalletAdapter`](LeoWalletAdapter.md)
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+`T` *extends* keyof `WalletAdapterEvents`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn?` | (...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void` |
-| `context?` | `any` |
-| `once?` | `boolean` |
+##### event
+
+`T`
 
 #### Returns
 
-[`LeoWalletAdapter`](LeoWalletAdapter.md)
+(...`args`) => `void`[]
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.off
+`BaseMessageSignerWalletAdapter.listeners`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:69
+### off()
 
-___
+> **off**\<`T`\>(`event`, `fn?`, `context?`, `once?`): `this`
 
-### on
+Defined in: node\_modules/eventemitter3/index.d.ts:69
 
-▸ **on**<`T`\>(`event`, `fn`, `context?`): [`LeoWalletAdapter`](LeoWalletAdapter.md)
+#### Type Parameters
+
+##### T
+
+`T` *extends* keyof `WalletAdapterEvents`
+
+#### Parameters
+
+##### event
+
+`T`
+
+##### fn?
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
+
+##### once?
+
+`boolean`
+
+#### Returns
+
+`this`
+
+#### Inherited from
+
+`BaseMessageSignerWalletAdapter.off`
+
+***
+
+### on()
+
+> **on**\<`T`\>(`event`, `fn`, `context?`): `this`
+
+Defined in: node\_modules/eventemitter3/index.d.ts:40
 
 Add a listener for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+##### T
+
+`T` *extends* keyof `WalletAdapterEvents`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn` | (...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void` |
-| `context?` | `any` |
+##### event
+
+`T`
+
+##### fn
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
 
 #### Returns
 
-[`LeoWalletAdapter`](LeoWalletAdapter.md)
+`this`
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.on
+`BaseMessageSignerWalletAdapter.on`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:40
+### once()
 
-___
+> **once**\<`T`\>(`event`, `fn`, `context?`): `this`
 
-### once
-
-▸ **once**<`T`\>(`event`, `fn`, `context?`): [`LeoWalletAdapter`](LeoWalletAdapter.md)
+Defined in: node\_modules/eventemitter3/index.d.ts:54
 
 Add a one-time listener for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+##### T
+
+`T` *extends* keyof `WalletAdapterEvents`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn` | (...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void` |
-| `context?` | `any` |
+##### event
+
+`T`
+
+##### fn
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
 
 #### Returns
 
-[`LeoWalletAdapter`](LeoWalletAdapter.md)
+`this`
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.once
+`BaseMessageSignerWalletAdapter.once`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:54
+### removeAllListeners()
 
-___
+> **removeAllListeners**(`event?`): `this`
 
-### removeAllListeners
-
-▸ **removeAllListeners**(`event?`): [`LeoWalletAdapter`](LeoWalletAdapter.md)
+Defined in: node\_modules/eventemitter3/index.d.ts:79
 
 Remove all listeners, or those of the specified event.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event?` | keyof `WalletAdapterEvents` |
+##### event?
+
+keyof `WalletAdapterEvents`
 
 #### Returns
 
-[`LeoWalletAdapter`](LeoWalletAdapter.md)
+`this`
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.removeAllListeners
+`BaseMessageSignerWalletAdapter.removeAllListeners`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:79
+### removeListener()
 
-___
+> **removeListener**\<`T`\>(`event`, `fn?`, `context?`, `once?`): `this`
 
-### removeListener
-
-▸ **removeListener**<`T`\>(`event`, `fn?`, `context?`, `once?`): [`LeoWalletAdapter`](LeoWalletAdapter.md)
+Defined in: node\_modules/eventemitter3/index.d.ts:63
 
 Remove the listeners of a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof `WalletAdapterEvents` |
+##### T
+
+`T` *extends* keyof `WalletAdapterEvents`
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn?` | (...`args`: `ArgumentMap`<`WalletAdapterEvents`\>[`Extract`<`T`, keyof `WalletAdapterEvents`\>]) => `void` |
-| `context?` | `any` |
-| `once?` | `boolean` |
+##### event
+
+`T`
+
+##### fn?
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
+
+##### once?
+
+`boolean`
 
 #### Returns
 
-[`LeoWalletAdapter`](LeoWalletAdapter.md)
+`this`
 
 #### Inherited from
 
-BaseMessageSignerWalletAdapter.removeListener
+`BaseMessageSignerWalletAdapter.removeListener`
 
-#### Defined in
+***
 
-node_modules/eventemitter3/index.d.ts:63
+### requestBulkTransactions()
 
-___
+> **requestBulkTransactions**(`transactions`): `Promise`\<`string`[]\>
 
-### requestBulkTransactions
-
-▸ **requestBulkTransactions**(`transactions`): `Promise`<`string`[]\>
+Defined in: [adapter.ts:200](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L200)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `transactions` | `AleoTransaction`[] |
+##### transactions
+
+`AleoTransaction`[]
 
 #### Returns
 
-`Promise`<`string`[]\>
+`Promise`\<`string`[]\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestBulkTransactions
+`BaseMessageSignerWalletAdapter.requestBulkTransactions`
 
-#### Defined in
+***
 
-[adapter.ts:196](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L196)
+### requestDeploy()
 
-___
+> **requestDeploy**(`deployment`): `Promise`\<`string`\>
 
-### requestDeploy
-
-▸ **requestDeploy**(`deployment`): `Promise`<`string`\>
+Defined in: [adapter.ts:216](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L216)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `deployment` | `AleoDeployment` |
+##### deployment
+
+`AleoDeployment`
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestDeploy
+`BaseMessageSignerWalletAdapter.requestDeploy`
 
-#### Defined in
+***
 
-[adapter.ts:212](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L212)
+### requestExecution()
 
-___
+> **requestExecution**(`transaction`): `Promise`\<`string`\>
 
-### requestExecution
-
-▸ **requestExecution**(`transaction`): `Promise`<`string`\>
+Defined in: [adapter.ts:184](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L184)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `AleoTransaction` |
+##### transaction
+
+`AleoTransaction`
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestExecution
+`BaseMessageSignerWalletAdapter.requestExecution`
 
-#### Defined in
+***
 
-[adapter.ts:180](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L180)
+### requestRecordPlaintexts()
 
-___
+> **requestRecordPlaintexts**(`program`): `Promise`\<`any`[]\>
 
-### requestRecordPlaintexts
-
-▸ **requestRecordPlaintexts**(`program`): `Promise`<`any`[]\>
+Defined in: [adapter.ts:280](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L280)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `program` | `string` |
+##### program
+
+`string`
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestRecordPlaintexts
+`BaseMessageSignerWalletAdapter.requestRecordPlaintexts`
 
-#### Defined in
+***
 
-[adapter.ts:260](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L260)
+### requestRecords()
 
-___
+> **requestRecords**(`program`): `Promise`\<`any`[]\>
 
-### requestRecords
-
-▸ **requestRecords**(`program`): `Promise`<`any`[]\>
+Defined in: [adapter.ts:151](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L151)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `program` | `string` |
+##### program
+
+`string`
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestRecords
+`BaseMessageSignerWalletAdapter.requestRecords`
 
-#### Defined in
+***
 
-[adapter.ts:147](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L147)
+### requestTransaction()
 
-___
+> **requestTransaction**(`transaction`): `Promise`\<`string`\>
 
-### requestTransaction
-
-▸ **requestTransaction**(`transaction`): `Promise`<`string`\>
+Defined in: [adapter.ts:168](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L168)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `AleoTransaction` |
+##### transaction
+
+`AleoTransaction`
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestTransaction
+`BaseMessageSignerWalletAdapter.requestTransaction`
 
-#### Defined in
+***
 
-[adapter.ts:164](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L164)
+### requestTransactionHistory()
 
-___
+> **requestTransactionHistory**(`program`): `Promise`\<`any`[]\>
 
-### requestTransactionHistory
-
-▸ **requestTransactionHistory**(`program`): `Promise`<`any`[]\>
+Defined in: [adapter.ts:297](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L297)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `program` | `string` |
+##### program
+
+`string`
 
 #### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`any`[]\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.requestTransactionHistory
+`BaseMessageSignerWalletAdapter.requestTransactionHistory`
 
-#### Defined in
+***
 
-[adapter.ts:277](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L277)
+### signMessage()
 
-___
+> **signMessage**(`message`): `Promise`\<`Uint8Array`\>
 
-### signMessage
-
-▸ **signMessage**(`message`): `Promise`<`Uint8Array`\>
+Defined in: [adapter.ts:365](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L365)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `Uint8Array` |
+##### message
+
+`Uint8Array`
 
 #### Returns
 
-`Promise`<`Uint8Array`\>
+`Promise`\<`Uint8Array`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.signMessage
+`BaseMessageSignerWalletAdapter.signMessage`
 
-#### Defined in
+***
 
-[adapter.ts:345](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L345)
+### transactionStatus()
 
-___
+> **transactionStatus**(`transactionId`): `Promise`\<`string`\>
 
-### transactionStatus
-
-▸ **transactionStatus**(`transactionId`): `Promise`<`string`\>
+Defined in: [adapter.ts:232](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L232)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `transactionId` | `string` |
+##### transactionId
+
+`string`
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`\<`string`\>
 
 #### Overrides
 
-BaseMessageSignerWalletAdapter.transactionStatus
+`BaseMessageSignerWalletAdapter.transactionStatus`
 
-#### Defined in
+***
 
-[adapter.ts:228](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L228)
+### transitionViewKeys()
+
+> **transitionViewKeys**(`transactionId`): `Promise`\<`string`[]\>
+
+Defined in: [adapter.ts:248](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L248)
+
+#### Parameters
+
+##### transactionId
+
+`string`
+
+#### Returns
+
+`Promise`\<`string`[]\>
+
+#### Overrides
+
+`BaseMessageSignerWalletAdapter.transitionViewKeys`

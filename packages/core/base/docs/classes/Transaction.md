@@ -1,141 +1,149 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / Transaction
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / Transaction
 
 # Class: Transaction
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L28)
 
 ## Implements
 
 - [`AleoTransaction`](../interfaces/AleoTransaction.md)
 
-## Table of contents
-
-### Constructors
-
-- [constructor](Transaction.md#constructor)
-
-### Properties
-
-- [address](Transaction.md#address)
-- [chainId](Transaction.md#chainid)
-- [fee](Transaction.md#fee)
-- [feePrivate](Transaction.md#feeprivate)
-- [transitions](Transaction.md#transitions)
-
-### Methods
-
-- [createTransaction](Transaction.md#createtransaction)
-
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new Transaction**(`address`, `chainId`, `transitions`, `fee`, `feePrivate?`)
+> **new Transaction**(`address`, `chainId`, `transitions`, `fee`, `feePrivate`): `Transaction`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L35)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `address` | `string` | `undefined` |
-| `chainId` | `string` | `undefined` |
-| `transitions` | [`AleoTransition`](../interfaces/AleoTransition.md)[] | `undefined` |
-| `fee` | `number` | `undefined` |
-| `feePrivate` | `boolean` | `true` |
+##### address
 
-#### Defined in
+`string`
 
-[aleo-wallet-adapter/packages/core/base/transaction.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L35)
+##### chainId
+
+`string`
+
+##### transitions
+
+[`AleoTransition`](../interfaces/AleoTransition.md)[]
+
+##### fee
+
+`number`
+
+##### feePrivate
+
+`boolean` = `true`
+
+#### Returns
+
+`Transaction`
 
 ## Properties
 
 ### address
 
-• **address**: `string`
+> **address**: `string`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L29)
 
 #### Implementation of
 
-[AleoTransaction](../interfaces/AleoTransaction.md).[address](../interfaces/AleoTransaction.md#address)
+[`AleoTransaction`](../interfaces/AleoTransaction.md).[`address`](../interfaces/AleoTransaction.md#address)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L29)
-
-___
+***
 
 ### chainId
 
-• **chainId**: `string`
+> **chainId**: `string`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:30](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L30)
 
 #### Implementation of
 
-[AleoTransaction](../interfaces/AleoTransaction.md).[chainId](../interfaces/AleoTransaction.md#chainid)
+[`AleoTransaction`](../interfaces/AleoTransaction.md).[`chainId`](../interfaces/AleoTransaction.md#chainid)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:30](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L30)
-
-___
+***
 
 ### fee
 
-• **fee**: `number`
+> **fee**: `number`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L32)
 
 #### Implementation of
 
-[AleoTransaction](../interfaces/AleoTransaction.md).[fee](../interfaces/AleoTransaction.md#fee)
+[`AleoTransaction`](../interfaces/AleoTransaction.md).[`fee`](../interfaces/AleoTransaction.md#fee)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L32)
-
-___
+***
 
 ### feePrivate
 
-• **feePrivate**: `boolean`
+> **feePrivate**: `boolean`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L33)
 
 #### Implementation of
 
-[AleoTransaction](../interfaces/AleoTransaction.md).[feePrivate](../interfaces/AleoTransaction.md#feeprivate)
+[`AleoTransaction`](../interfaces/AleoTransaction.md).[`feePrivate`](../interfaces/AleoTransaction.md#feeprivate)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L33)
-
-___
+***
 
 ### transitions
 
-• **transitions**: [`AleoTransition`](../interfaces/AleoTransition.md)[]
+> **transitions**: [`AleoTransition`](../interfaces/AleoTransition.md)[]
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L31)
 
 #### Implementation of
 
-[AleoTransaction](../interfaces/AleoTransaction.md).[transitions](../interfaces/AleoTransaction.md#transitions)
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L31)
+[`AleoTransaction`](../interfaces/AleoTransaction.md).[`transitions`](../interfaces/AleoTransaction.md#transitions)
 
 ## Methods
 
-### createTransaction
+### createTransaction()
 
-▸ `Static` **createTransaction**(`address`, `chainId`, `program`, `functionName`, `inputs`, `fee`, `feePrivate?`): [`Transaction`](Transaction.md)
+> `static` **createTransaction**(`address`, `chainId`, `program`, `functionName`, `inputs`, `fee`, `feePrivate`): `Transaction`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/transaction.ts:43](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/transaction.ts#L43)
 
 #### Parameters
 
-| Name | Type | Default value |
-| :------ | :------ | :------ |
-| `address` | `string` | `undefined` |
-| `chainId` | `string` | `undefined` |
-| `program` | `string` | `undefined` |
-| `functionName` | `string` | `undefined` |
-| `inputs` | `any`[] | `undefined` |
-| `fee` | `number` | `undefined` |
-| `feePrivate` | `boolean` | `true` |
+##### address
+
+`string`
+
+##### chainId
+
+`string`
+
+##### program
+
+`string`
+
+##### functionName
+
+`string`
+
+##### inputs
+
+`any`[]
+
+##### fee
+
+`number`
+
+##### feePrivate
+
+`boolean` = `true`
 
 #### Returns
 
-[`Transaction`](Transaction.md)
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/transaction.ts:43](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L43)
+`Transaction`

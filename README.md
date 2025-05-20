@@ -10,6 +10,8 @@ Modular TypeScript wallet adapters and components for Aleo applications.
 
 This is a quick setup guide with examples of how to add Wallet Adapter to a React-based Aleo app.
 
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ## Quick Setup (using React UI)
 
 ### 📲Install
@@ -163,7 +165,7 @@ import { useWallet } from "@demox-labs/aleo-wallet-adapter-react";
 import React, { FC, useCallback } from "react";
 
 export const RequestTransaction: FC = () => {
-  const { publicKey, requestTransaction } = useWallet();
+  const { publicKey, requestTransaction, transactionStatus, transitionViewKeys } = useWallet();
 
   const onClick = async () => {
     if (!publicKey) throw new WalletNotConnectedError();
@@ -185,7 +187,15 @@ export const RequestTransaction: FC = () => {
 
     if (requestTransaction) {
       // Returns a transaction Id, that can be used to check the status. Note this is not the on-chain transaction id
-      await requestTransaction(aleoTransaction);
+      const transactionId = await requestTransaction(aleoTransaction);
+
+      // Optional: Request the transaction status to check if the transaction has succeeded or failed
+      // This can take some time to update and finalize on-chain so it's recommended to be polled in a loop
+      const transactionStatus = await transactionStatus(transactionId);
+
+      // Optional: Request the transition view keys for a specific transaction
+      // This requires the on-chain history permission
+      cosnt transitionViewKeys = await transitionViewKeys(transactionId);
     }
   };
 

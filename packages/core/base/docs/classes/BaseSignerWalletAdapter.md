@@ -1,350 +1,313 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / BaseSignerWalletAdapter
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
 
-# Class: BaseSignerWalletAdapter<Name\>
+***
+
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / BaseSignerWalletAdapter
+
+# Class: `abstract` BaseSignerWalletAdapter\<Name\>
+
+Defined in: [aleo-wallet-adapter/packages/core/base/signer.ts:12](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/signer.ts#L12)
 
 Minimal `EventEmitter` interface that is molded against the Node.js
 `EventEmitter` interface.
 
-## Type parameters
+## Extends
 
-| Name | Type |
-| :------ | :------ |
-| `Name` | extends `string` = `string` |
+- [`BaseWalletAdapter`](BaseWalletAdapter.md)\<`Name`\>
 
-## Hierarchy
+## Extended by
 
-- [`BaseWalletAdapter`](BaseWalletAdapter.md)<`Name`\>
+- [`BaseMessageSignerWalletAdapter`](BaseMessageSignerWalletAdapter.md)
 
-  ↳ **`BaseSignerWalletAdapter`**
+## Type Parameters
 
-  ↳↳ [`BaseMessageSignerWalletAdapter`](BaseMessageSignerWalletAdapter.md)
+### Name
+
+`Name` *extends* `string` = `string`
 
 ## Implements
 
-- [`SignerWalletAdapter`](../modules.md#signerwalletadapter)<`Name`\>
-
-## Table of contents
-
-### Constructors
-
-- [constructor](BaseSignerWalletAdapter.md#constructor)
-
-### Properties
-
-- [connecting](BaseSignerWalletAdapter.md#connecting)
-- [icon](BaseSignerWalletAdapter.md#icon)
-- [name](BaseSignerWalletAdapter.md#name)
-- [publicKey](BaseSignerWalletAdapter.md#publickey)
-- [readyState](BaseSignerWalletAdapter.md#readystate)
-- [supportedTransactionVersions](BaseSignerWalletAdapter.md#supportedtransactionversions)
-- [url](BaseSignerWalletAdapter.md#url)
-- [prefixed](BaseSignerWalletAdapter.md#prefixed)
-
-### Accessors
-
-- [connected](BaseSignerWalletAdapter.md#connected)
-
-### Methods
-
-- [addListener](BaseSignerWalletAdapter.md#addlistener)
-- [connect](BaseSignerWalletAdapter.md#connect)
-- [disconnect](BaseSignerWalletAdapter.md#disconnect)
-- [emit](BaseSignerWalletAdapter.md#emit)
-- [eventNames](BaseSignerWalletAdapter.md#eventnames)
-- [listenerCount](BaseSignerWalletAdapter.md#listenercount)
-- [listeners](BaseSignerWalletAdapter.md#listeners)
-- [off](BaseSignerWalletAdapter.md#off)
-- [on](BaseSignerWalletAdapter.md#on)
-- [once](BaseSignerWalletAdapter.md#once)
-- [removeAllListeners](BaseSignerWalletAdapter.md#removealllisteners)
-- [removeListener](BaseSignerWalletAdapter.md#removelistener)
+- [`SignerWalletAdapter`](../type-aliases/SignerWalletAdapter.md)\<`Name`\>
 
 ## Constructors
 
-### constructor
+### Constructor
 
-• **new BaseSignerWalletAdapter**<`Name`\>()
+> **new BaseSignerWalletAdapter**\<`Name`\>(): `BaseSignerWalletAdapter`\<`Name`\>
 
-#### Type parameters
+#### Returns
 
-| Name | Type |
-| :------ | :------ |
-| `Name` | extends `string` = `string` |
+`BaseSignerWalletAdapter`\<`Name`\>
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[constructor](BaseWalletAdapter.md#constructor)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`constructor`](BaseWalletAdapter.md#constructor)
 
 ## Properties
 
 ### connecting
 
-• `Abstract` **connecting**: `boolean`
+> `abstract` **connecting**: `boolean`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L72)
 
 #### Implementation of
 
-SignerWalletAdapter.connecting
+`SignerWalletAdapter.connecting`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[connecting](BaseWalletAdapter.md#connecting)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`connecting`](BaseWalletAdapter.md#connecting)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L72)
-
-___
+***
 
 ### icon
 
-• `Abstract` **icon**: `string`
+> `abstract` **icon**: `string`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L69)
 
 #### Implementation of
 
-SignerWalletAdapter.icon
+`SignerWalletAdapter.icon`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[icon](BaseWalletAdapter.md#icon)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`icon`](BaseWalletAdapter.md#icon)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L69)
-
-___
+***
 
 ### name
 
-• `Abstract` **name**: [`WalletName`](../modules.md#walletname)<`Name`\>
+> `abstract` **name**: [`WalletName`](../type-aliases/WalletName.md)\<`Name`\>
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L67)
 
 #### Implementation of
 
-SignerWalletAdapter.name
+`SignerWalletAdapter.name`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[name](BaseWalletAdapter.md#name)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`name`](BaseWalletAdapter.md#name-1)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L67)
-
-___
+***
 
 ### publicKey
 
-• `Abstract` **publicKey**: `string`
+> `abstract` **publicKey**: `string`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L71)
 
 #### Implementation of
 
-SignerWalletAdapter.publicKey
+`SignerWalletAdapter.publicKey`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[publicKey](BaseWalletAdapter.md#publickey)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`publicKey`](BaseWalletAdapter.md#publickey)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L71)
-
-___
+***
 
 ### readyState
 
-• `Abstract` **readyState**: [`WalletReadyState`](../enums/WalletReadyState.md)
+> `abstract` **readyState**: [`WalletReadyState`](../enumerations/WalletReadyState.md)
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L70)
 
 #### Implementation of
 
-SignerWalletAdapter.readyState
+`SignerWalletAdapter.readyState`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[readyState](BaseWalletAdapter.md#readystate)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`readyState`](BaseWalletAdapter.md#readystate)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L70)
-
-___
+***
 
 ### supportedTransactionVersions
 
-• `Abstract` **supportedTransactionVersions**: `ReadonlySet`<`any`\>
+> `abstract` **supportedTransactionVersions**: `ReadonlySet`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L73)
 
 #### Implementation of
 
-SignerWalletAdapter.supportedTransactionVersions
+`SignerWalletAdapter.supportedTransactionVersions`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[supportedTransactionVersions](BaseWalletAdapter.md#supportedtransactionversions)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`supportedTransactionVersions`](BaseWalletAdapter.md#supportedtransactionversions)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L73)
-
-___
+***
 
 ### url
 
-• `Abstract` **url**: `string`
+> `abstract` **url**: `string`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L68)
 
 #### Implementation of
 
-SignerWalletAdapter.url
+`SignerWalletAdapter.url`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[url](BaseWalletAdapter.md#url)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`url`](BaseWalletAdapter.md#url)
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L68)
-
-___
+***
 
 ### prefixed
 
-▪ `Static` **prefixed**: `string` \| `boolean`
+> `static` **prefixed**: `string` \| `boolean`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:9
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[prefixed](BaseWalletAdapter.md#prefixed)
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:9
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`prefixed`](BaseWalletAdapter.md#prefixed)
 
 ## Accessors
 
 ### connected
 
-• `get` **connected**(): `boolean`
+#### Get Signature
 
-#### Returns
+> **get** **connected**(): `boolean`
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L75)
+
+##### Returns
 
 `boolean`
 
 #### Implementation of
 
-SignerWalletAdapter.connected
+`SignerWalletAdapter.connected`
 
 #### Inherited from
 
-BaseWalletAdapter.connected
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L75)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`connected`](BaseWalletAdapter.md#connected)
 
 ## Methods
 
-### addListener
+### addListener()
 
-▸ **addListener**<`T`\>(`event`, `fn`, `context?`): [`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+> **addListener**\<`T`\>(`event`, `fn`, `context?`): `this`
 
-#### Type parameters
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:45
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+#### Type Parameters
 
-#### Parameters
+##### T
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn` | (...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void` |
-| `context?` | `any` |
-
-#### Returns
-
-[`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
-
-#### Implementation of
-
-SignerWalletAdapter.addListener
-
-#### Inherited from
-
-[BaseWalletAdapter](BaseWalletAdapter.md).[addListener](BaseWalletAdapter.md#addlistener)
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:45
-
-___
-
-### connect
-
-▸ `Abstract` **connect**(`decryptPermission`, `network`, `programs?`): `Promise`<`void`\>
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
-| `network` | [`Testnet`](../enums/WalletAdapterNetwork.md#testnet) |
-| `programs?` | `string`[] |
+##### event
+
+`T`
+
+##### fn
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
 
 #### Returns
 
-`Promise`<`void`\>
+`this`
 
 #### Implementation of
 
-SignerWalletAdapter.connect
+`SignerWalletAdapter.addListener`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[connect](BaseWalletAdapter.md#connect)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`addListener`](BaseWalletAdapter.md#addlistener)
 
-#### Defined in
+***
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:79](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L79)
+### connect()
 
-___
+> `abstract` **connect**(`decryptPermission`, `network`, `programs?`): `Promise`\<`void`\>
 
-### disconnect
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:79](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L79)
 
-▸ `Abstract` **disconnect**(): `Promise`<`void`\>
+#### Parameters
+
+##### decryptPermission
+
+[`DecryptPermission`](../enumerations/DecryptPermission.md)
+
+##### network
+
+[`WalletAdapterNetwork`](../enumerations/WalletAdapterNetwork.md)
+
+##### programs?
+
+`string`[]
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
 #### Implementation of
 
-SignerWalletAdapter.disconnect
+`SignerWalletAdapter.connect`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[disconnect](BaseWalletAdapter.md#disconnect)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`connect`](BaseWalletAdapter.md#connect)
 
-#### Defined in
+***
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:80](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L80)
+### disconnect()
 
-___
+> `abstract` **disconnect**(): `Promise`\<`void`\>
 
-### emit
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:80](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L80)
 
-▸ **emit**<`T`\>(`event`, ...`args`): `boolean`
+#### Returns
+
+`Promise`\<`void`\>
+
+#### Implementation of
+
+`SignerWalletAdapter.disconnect`
+
+#### Inherited from
+
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`disconnect`](BaseWalletAdapter.md#disconnect)
+
+***
+
+### emit()
+
+> **emit**\<`T`\>(`event`, ...`args`): `boolean`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:32
 
 Calls each of the listeners registered for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### T
+
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `...args` | [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>] |
+##### event
+
+`T`
+
+##### args
+
+...[`ArgumentMap`](../@demox-labs/namespaces/EventEmitter/type-aliases/ArgumentMap.md)\<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>\[`Extract`\<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>\]
 
 #### Returns
 
@@ -352,21 +315,19 @@ Calls each of the listeners registered for a given event.
 
 #### Implementation of
 
-SignerWalletAdapter.emit
+`SignerWalletAdapter.emit`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[emit](BaseWalletAdapter.md#emit)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`emit`](BaseWalletAdapter.md#emit)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:32
+### eventNames()
 
-___
+> **eventNames**(): keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)[]
 
-### eventNames
-
-▸ **eventNames**(): keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)[]
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:15
 
 Return an array listing the events for which the emitter has registered
 listeners.
@@ -377,29 +338,27 @@ keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)[]
 
 #### Implementation of
 
-SignerWalletAdapter.eventNames
+`SignerWalletAdapter.eventNames`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[eventNames](BaseWalletAdapter.md#eventnames)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`eventNames`](BaseWalletAdapter.md#eventnames)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:15
+### listenerCount()
 
-___
+> **listenerCount**(`event`): `number`
 
-### listenerCount
-
-▸ **listenerCount**(`event`): `number`
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:27
 
 Return the number of listeners listening to a given event.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### event
+
+keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Returns
 
@@ -407,230 +366,244 @@ Return the number of listeners listening to a given event.
 
 #### Implementation of
 
-SignerWalletAdapter.listenerCount
+`SignerWalletAdapter.listenerCount`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[listenerCount](BaseWalletAdapter.md#listenercount)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`listenerCount`](BaseWalletAdapter.md#listenercount)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:27
+### listeners()
 
-___
+> **listeners**\<`T`\>(`event`): (...`args`) => `void`[]
 
-### listeners
-
-▸ **listeners**<`T`\>(`event`): (...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void`[]
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:20
 
 Return the listeners registered for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### T
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-
-#### Returns
-
-(...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void`[]
-
-#### Implementation of
-
-SignerWalletAdapter.listeners
-
-#### Inherited from
-
-[BaseWalletAdapter](BaseWalletAdapter.md).[listeners](BaseWalletAdapter.md#listeners)
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:20
-
-___
-
-### off
-
-▸ **off**<`T`\>(`event`, `fn?`, `context?`, `once?`): [`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
-
-#### Type parameters
-
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn?` | (...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void` |
-| `context?` | `any` |
-| `once?` | `boolean` |
+##### event
+
+`T`
 
 #### Returns
 
-[`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+(...`args`) => `void`[]
 
 #### Implementation of
 
-SignerWalletAdapter.off
+`SignerWalletAdapter.listeners`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[off](BaseWalletAdapter.md#off)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`listeners`](BaseWalletAdapter.md#listeners)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:69
+### off()
 
-___
+> **off**\<`T`\>(`event`, `fn?`, `context?`, `once?`): `this`
 
-### on
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:69
 
-▸ **on**<`T`\>(`event`, `fn`, `context?`): [`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+#### Type Parameters
+
+##### T
+
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
+
+#### Parameters
+
+##### event
+
+`T`
+
+##### fn?
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
+
+##### once?
+
+`boolean`
+
+#### Returns
+
+`this`
+
+#### Implementation of
+
+`SignerWalletAdapter.off`
+
+#### Inherited from
+
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`off`](BaseWalletAdapter.md#off)
+
+***
+
+### on()
+
+> **on**\<`T`\>(`event`, `fn`, `context?`): `this`
+
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:40
 
 Add a listener for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### T
+
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn` | (...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void` |
-| `context?` | `any` |
+##### event
+
+`T`
+
+##### fn
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
 
 #### Returns
 
-[`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+`this`
 
 #### Implementation of
 
-SignerWalletAdapter.on
+`SignerWalletAdapter.on`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[on](BaseWalletAdapter.md#on)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`on`](BaseWalletAdapter.md#on)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:40
+### once()
 
-___
+> **once**\<`T`\>(`event`, `fn`, `context?`): `this`
 
-### once
-
-▸ **once**<`T`\>(`event`, `fn`, `context?`): [`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:54
 
 Add a one-time listener for a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### T
+
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn` | (...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void` |
-| `context?` | `any` |
+##### event
+
+`T`
+
+##### fn
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
 
 #### Returns
 
-[`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+`this`
 
 #### Implementation of
 
-SignerWalletAdapter.once
+`SignerWalletAdapter.once`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[once](BaseWalletAdapter.md#once)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`once`](BaseWalletAdapter.md#once)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:54
+### removeAllListeners()
 
-___
+> **removeAllListeners**(`event?`): `this`
 
-### removeAllListeners
-
-▸ **removeAllListeners**(`event?`): [`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:79
 
 Remove all listeners, or those of the specified event.
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event?` | keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### event?
+
+keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Returns
 
-[`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+`this`
 
 #### Implementation of
 
-SignerWalletAdapter.removeAllListeners
+`SignerWalletAdapter.removeAllListeners`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[removeAllListeners](BaseWalletAdapter.md#removealllisteners)
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`removeAllListeners`](BaseWalletAdapter.md#removealllisteners)
 
-#### Defined in
+***
 
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:79
+### removeListener()
 
-___
+> **removeListener**\<`T`\>(`event`, `fn?`, `context?`, `once?`): `this`
 
-### removeListener
-
-▸ **removeListener**<`T`\>(`event`, `fn?`, `context?`, `once?`): [`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+Defined in: aleo-wallet-adapter/packages/core/base/node\_modules/eventemitter3/index.d.ts:63
 
 Remove the listeners of a given event.
 
-#### Type parameters
+#### Type Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `T` | extends keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md) |
+##### T
+
+`T` *extends* keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `event` | `T` |
-| `fn?` | (...`args`: [`ArgumentMap`](../modules/EventEmitter.md#argumentmap)<[`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>[`Extract`<`T`, keyof [`WalletAdapterEvents`](../interfaces/WalletAdapterEvents.md)\>]) => `void` |
-| `context?` | `any` |
-| `once?` | `boolean` |
+##### event
+
+`T`
+
+##### fn?
+
+(...`args`) => `void`
+
+##### context?
+
+`any`
+
+##### once?
+
+`boolean`
 
 #### Returns
 
-[`BaseSignerWalletAdapter`](BaseSignerWalletAdapter.md)<`Name`\>
+`this`
 
 #### Implementation of
 
-SignerWalletAdapter.removeListener
+`SignerWalletAdapter.removeListener`
 
 #### Inherited from
 
-[BaseWalletAdapter](BaseWalletAdapter.md).[removeListener](BaseWalletAdapter.md#removelistener)
-
-#### Defined in
-
-aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:63
+[`BaseWalletAdapter`](BaseWalletAdapter.md).[`removeListener`](BaseWalletAdapter.md#removelistener)

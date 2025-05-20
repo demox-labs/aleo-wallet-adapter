@@ -1,67 +1,49 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / AleoDeployment
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / AleoDeployment
 
 # Interface: AleoDeployment
 
-## Implemented by
-
-- [`Deployment`](../classes/Deployment.md)
-
-## Table of contents
-
-### Properties
-
-- [address](AleoDeployment.md#address)
-- [chainId](AleoDeployment.md#chainid)
-- [fee](AleoDeployment.md#fee)
-- [feePrivate](AleoDeployment.md#feeprivate)
-- [program](AleoDeployment.md#program)
+Defined in: [aleo-wallet-adapter/packages/core/base/deployment.ts:1](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/deployment.ts#L1)
 
 ## Properties
 
 ### address
 
-• **address**: `string`
+> **address**: `string`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/deployment.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/deployment.ts#L2)
 
-[aleo-wallet-adapter/packages/core/base/deployment.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L2)
-
-___
+***
 
 ### chainId
 
-• **chainId**: `string`
+> **chainId**: `string`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/deployment.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/deployment.ts#L3)
 
-[aleo-wallet-adapter/packages/core/base/deployment.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L3)
-
-___
+***
 
 ### fee
 
-• **fee**: `number`
+> **fee**: `number`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/deployment.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/deployment.ts#L5)
 
-[aleo-wallet-adapter/packages/core/base/deployment.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L5)
-
-___
+***
 
 ### feePrivate
 
-• **feePrivate**: `boolean`
+> **feePrivate**: `boolean`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/deployment.ts:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/deployment.ts#L6)
 
-[aleo-wallet-adapter/packages/core/base/deployment.ts:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L6)
-
-___
+***
 
 ### program
 
-• **program**: `string`
+> **program**: `string`
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/deployment.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L4)
+Defined in: [aleo-wallet-adapter/packages/core/base/deployment.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/deployment.ts#L4)

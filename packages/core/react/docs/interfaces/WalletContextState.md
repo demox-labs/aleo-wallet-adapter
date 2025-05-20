@@ -1,426 +1,353 @@
-[@demox-labs/aleo-wallet-adapter-react](../README.md) / [Exports](../modules.md) / WalletContextState
+[**@demox-labs/aleo-wallet-adapter-react**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-react](../README.md) / WalletContextState
 
 # Interface: WalletContextState
 
-## Table of contents
-
-### Properties
-
-- [autoConnect](WalletContextState.md#autoconnect)
-- [connected](WalletContextState.md#connected)
-- [connecting](WalletContextState.md#connecting)
-- [decrypt](WalletContextState.md#decrypt)
-- [disconnecting](WalletContextState.md#disconnecting)
-- [getExecution](WalletContextState.md#getexecution)
-- [publicKey](WalletContextState.md#publickey)
-- [requestBulkTransactions](WalletContextState.md#requestbulktransactions)
-- [requestDeploy](WalletContextState.md#requestdeploy)
-- [requestExecution](WalletContextState.md#requestexecution)
-- [requestRecordPlaintexts](WalletContextState.md#requestrecordplaintexts)
-- [requestRecords](WalletContextState.md#requestrecords)
-- [requestTransaction](WalletContextState.md#requesttransaction)
-- [requestTransactionHistory](WalletContextState.md#requesttransactionhistory)
-- [signMessage](WalletContextState.md#signmessage)
-- [transactionStatus](WalletContextState.md#transactionstatus)
-- [wallet](WalletContextState.md#wallet)
-- [wallets](WalletContextState.md#wallets)
-
-### Methods
-
-- [connect](WalletContextState.md#connect)
-- [disconnect](WalletContextState.md#disconnect)
-- [select](WalletContextState.md#select)
+Defined in: [useWallet.ts:18](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L18)
 
 ## Properties
 
 ### autoConnect
 
-• **autoConnect**: `boolean`
+> **autoConnect**: `boolean`
 
-#### Defined in
+Defined in: [useWallet.ts:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L19)
 
-[useWallet.ts:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L19)
-
-___
+***
 
 ### connected
 
-• **connected**: `boolean`
+> **connected**: `boolean`
 
-#### Defined in
+Defined in: [useWallet.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L24)
 
-[useWallet.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L24)
-
-___
+***
 
 ### connecting
 
-• **connecting**: `boolean`
+> **connecting**: `boolean`
 
-#### Defined in
+Defined in: [useWallet.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L23)
 
-[useWallet.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L23)
+***
 
-___
+### decrypt()
 
-### decrypt
+> **decrypt**: (`cipherText`, `tpk?`, `programId?`, `functionName?`, `index?`) => `Promise`\<`string`\>
 
-• **decrypt**: (`cipherText`: `string`, `tpk?`: `string`, `programId?`: `string`, `functionName?`: `string`, `index?`: `number`) => `Promise`<`string`\>
+Defined in: [useWallet.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L32)
 
-#### Type declaration
+#### Parameters
 
-▸ (`cipherText`, `tpk?`, `programId?`, `functionName?`, `index?`): `Promise`<`string`\>
+##### cipherText
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `cipherText` | `string` |
-| `tpk?` | `string` |
-| `programId?` | `string` |
-| `functionName?` | `string` |
-| `index?` | `number` |
+##### tpk?
 
-##### Returns
+`string`
 
-`Promise`<`string`\>
+##### programId?
 
-#### Defined in
+`string`
 
-[useWallet.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L32)
+##### functionName?
 
-___
+`string`
+
+##### index?
+
+`number`
+
+#### Returns
+
+`Promise`\<`string`\>
+
+***
 
 ### disconnecting
 
-• **disconnecting**: `boolean`
+> **disconnecting**: `boolean`
 
-#### Defined in
+Defined in: [useWallet.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L25)
 
-[useWallet.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L25)
+***
 
-___
+### getExecution()
 
-### getExecution
+> **getExecution**: (`transactionId`) => `Promise`\<`string`\>
 
-• **getExecution**: (`transactionId`: `string`) => `Promise`<`string`\>
+Defined in: [useWallet.ts:40](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L40)
 
-#### Type declaration
+#### Parameters
 
-▸ (`transactionId`): `Promise`<`string`\>
+##### transactionId
 
-##### Parameters
+`string`
 
-| Name | Type |
-| :------ | :------ |
-| `transactionId` | `string` |
+#### Returns
 
-##### Returns
+`Promise`\<`string`\>
 
-`Promise`<`string`\>
-
-#### Defined in
-
-[useWallet.ts:39](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L39)
-
-___
+***
 
 ### publicKey
 
-• **publicKey**: `string`
+> **publicKey**: `string`
 
-#### Defined in
+Defined in: [useWallet.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L22)
 
-[useWallet.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L22)
+***
 
-___
+### requestBulkTransactions()
 
-### requestBulkTransactions
+> **requestBulkTransactions**: (`transactions`) => `Promise`\<`string`[]\>
 
-• **requestBulkTransactions**: (`transactions`: `AleoTransaction`[]) => `Promise`<`string`[]\>
+Defined in: [useWallet.ts:36](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L36)
 
-#### Type declaration
+#### Parameters
 
-▸ (`transactions`): `Promise`<`string`[]\>
+##### transactions
 
-##### Parameters
+`AleoTransaction`[]
 
-| Name | Type |
-| :------ | :------ |
-| `transactions` | `AleoTransaction`[] |
+#### Returns
 
-##### Returns
+`Promise`\<`string`[]\>
 
-`Promise`<`string`[]\>
+***
 
-#### Defined in
+### requestDeploy()
 
-[useWallet.ts:36](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L36)
+> **requestDeploy**: (`deployment`) => `Promise`\<`string`\>
 
-___
+Defined in: [useWallet.ts:37](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L37)
 
-### requestDeploy
+#### Parameters
 
-• **requestDeploy**: (`deployment`: `AleoDeployment`) => `Promise`<`string`\>
+##### deployment
 
-#### Type declaration
+`AleoDeployment`
 
-▸ (`deployment`): `Promise`<`string`\>
+#### Returns
 
-##### Parameters
+`Promise`\<`string`\>
 
-| Name | Type |
-| :------ | :------ |
-| `deployment` | `AleoDeployment` |
+***
 
-##### Returns
+### requestExecution()
 
-`Promise`<`string`\>
+> **requestExecution**: (`transaction`) => `Promise`\<`string`\>
 
-#### Defined in
+Defined in: [useWallet.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L35)
 
-[useWallet.ts:37](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L37)
+#### Parameters
 
-___
+##### transaction
 
-### requestExecution
+`AleoTransaction`
 
-• **requestExecution**: (`transaction`: `AleoTransaction`) => `Promise`<`string`\>
+#### Returns
 
-#### Type declaration
+`Promise`\<`string`\>
 
-▸ (`transaction`): `Promise`<`string`\>
+***
 
-##### Parameters
+### requestRecordPlaintexts()
 
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `AleoTransaction` |
+> **requestRecordPlaintexts**: (`program`) => `Promise`\<`any`[]\>
 
-##### Returns
+Defined in: [useWallet.ts:41](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L41)
 
-`Promise`<`string`\>
+#### Parameters
 
-#### Defined in
+##### program
 
-[useWallet.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L35)
+`string`
 
-___
+#### Returns
 
-### requestRecordPlaintexts
+`Promise`\<`any`[]\>
 
-• **requestRecordPlaintexts**: (`program`: `string`) => `Promise`<`any`[]\>
+***
 
-#### Type declaration
+### requestRecords()
 
-▸ (`program`): `Promise`<`any`[]\>
+> **requestRecords**: (`program`) => `Promise`\<`any`[]\>
 
-##### Parameters
+Defined in: [useWallet.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L33)
 
-| Name | Type |
-| :------ | :------ |
-| `program` | `string` |
+#### Parameters
 
-##### Returns
+##### program
 
-`Promise`<`any`[]\>
+`string`
 
-#### Defined in
+#### Returns
 
-[useWallet.ts:40](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L40)
+`Promise`\<`any`[]\>
 
-___
+***
 
-### requestRecords
+### requestTransaction()
 
-• **requestRecords**: (`program`: `string`) => `Promise`<`any`[]\>
+> **requestTransaction**: (`transaction`) => `Promise`\<`string`\>
 
-#### Type declaration
+Defined in: [useWallet.ts:34](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L34)
 
-▸ (`program`): `Promise`<`any`[]\>
+#### Parameters
 
-##### Parameters
+##### transaction
 
-| Name | Type |
-| :------ | :------ |
-| `program` | `string` |
+`AleoTransaction`
 
-##### Returns
+#### Returns
 
-`Promise`<`any`[]\>
+`Promise`\<`string`\>
 
-#### Defined in
+***
 
-[useWallet.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L33)
+### requestTransactionHistory()
 
-___
+> **requestTransactionHistory**: (`program`) => `Promise`\<`any`[]\>
 
-### requestTransaction
+Defined in: [useWallet.ts:42](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L42)
 
-• **requestTransaction**: (`transaction`: `AleoTransaction`) => `Promise`<`string`\>
+#### Parameters
 
-#### Type declaration
+##### program
 
-▸ (`transaction`): `Promise`<`string`\>
+`string`
 
-##### Parameters
+#### Returns
 
-| Name | Type |
-| :------ | :------ |
-| `transaction` | `AleoTransaction` |
+`Promise`\<`any`[]\>
 
-##### Returns
+***
 
-`Promise`<`string`\>
+### signMessage()
 
-#### Defined in
+> **signMessage**: (`message`) => `Promise`\<`Uint8Array`\>
 
-[useWallet.ts:34](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L34)
+Defined in: [useWallet.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L31)
 
-___
+#### Parameters
 
-### requestTransactionHistory
+##### message
 
-• **requestTransactionHistory**: (`program`: `string`) => `Promise`<`any`[]\>
+`Uint8Array`
 
-#### Type declaration
+#### Returns
 
-▸ (`program`): `Promise`<`any`[]\>
+`Promise`\<`Uint8Array`\>
 
-##### Parameters
+***
 
-| Name | Type |
-| :------ | :------ |
-| `program` | `string` |
+### transactionStatus()
 
-##### Returns
+> **transactionStatus**: (`transactionId`) => `Promise`\<`string`\>
 
-`Promise`<`any`[]\>
+Defined in: [useWallet.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L38)
 
-#### Defined in
+#### Parameters
 
-[useWallet.ts:41](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L41)
+##### transactionId
 
-___
+`string`
 
-### signMessage
+#### Returns
 
-• **signMessage**: (`message`: `Uint8Array`) => `Promise`<`Uint8Array`\>
+`Promise`\<`string`\>
 
-#### Type declaration
+***
 
-▸ (`message`): `Promise`<`Uint8Array`\>
+### transitionViewKeys()
 
-##### Parameters
+> **transitionViewKeys**: (`transactionId`) => `Promise`\<`string`[]\>
 
-| Name | Type |
-| :------ | :------ |
-| `message` | `Uint8Array` |
+Defined in: [useWallet.ts:39](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L39)
 
-##### Returns
+#### Parameters
 
-`Promise`<`Uint8Array`\>
+##### transactionId
 
-#### Defined in
+`string`
 
-[useWallet.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L31)
+#### Returns
 
-___
+`Promise`\<`string`[]\>
 
-### transactionStatus
-
-• **transactionStatus**: (`transactionId`: `string`) => `Promise`<`string`\>
-
-#### Type declaration
-
-▸ (`transactionId`): `Promise`<`string`\>
-
-##### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `transactionId` | `string` |
-
-##### Returns
-
-`Promise`<`string`\>
-
-#### Defined in
-
-[useWallet.ts:38](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L38)
-
-___
+***
 
 ### wallet
 
-• **wallet**: [`Wallet`](Wallet.md)
+> **wallet**: [`Wallet`](Wallet.md)
 
-#### Defined in
+Defined in: [useWallet.ts:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L21)
 
-[useWallet.ts:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L21)
-
-___
+***
 
 ### wallets
 
-• **wallets**: [`Wallet`](Wallet.md)[]
+> **wallets**: [`Wallet`](Wallet.md)[]
 
-#### Defined in
-
-[useWallet.ts:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L20)
+Defined in: [useWallet.ts:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L20)
 
 ## Methods
 
-### connect
+### connect()
 
-▸ **connect**(`decryptPermission`, `network`, `programs?`): `Promise`<`void`\>
+> **connect**(`decryptPermission`, `network`, `programs?`): `Promise`\<`void`\>
 
-#### Parameters
-
-| Name | Type |
-| :------ | :------ |
-| `decryptPermission` | `DecryptPermission` |
-| `network` | `WalletAdapterNetwork` |
-| `programs?` | `string`[] |
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Defined in
-
-[useWallet.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L28)
-
-___
-
-### disconnect
-
-▸ **disconnect**(): `Promise`<`void`\>
-
-#### Returns
-
-`Promise`<`void`\>
-
-#### Defined in
-
-[useWallet.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L29)
-
-___
-
-### select
-
-▸ **select**(`walletName`): `void`
+Defined in: [useWallet.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L28)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `walletName` | `WalletName`<`string`\> |
+##### decryptPermission
+
+`DecryptPermission`
+
+##### network
+
+`WalletAdapterNetwork`
+
+##### programs?
+
+`string`[]
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### disconnect()
+
+> **disconnect**(): `Promise`\<`void`\>
+
+Defined in: [useWallet.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L29)
+
+#### Returns
+
+`Promise`\<`void`\>
+
+***
+
+### select()
+
+> **select**(`walletName`): `void`
+
+Defined in: [useWallet.ts:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/react/useWallet.ts#L27)
+
+#### Parameters
+
+##### walletName
+
+`WalletName`
 
 #### Returns
 
 `void`
-
-#### Defined in
-
-[useWallet.ts:27](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/react/useWallet.ts#L27)

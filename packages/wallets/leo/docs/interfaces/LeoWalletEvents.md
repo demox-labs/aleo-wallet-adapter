@@ -1,71 +1,63 @@
-[@demox-labs/aleo-wallet-adapter-leo](../README.md) / [Exports](../modules.md) / LeoWalletEvents
+[**@demox-labs/aleo-wallet-adapter-leo**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-leo](../README.md) / LeoWalletEvents
 
 # Interface: LeoWalletEvents
 
-## Table of contents
-
-### Methods
-
-- [accountChange](LeoWalletEvents.md#accountchange)
-- [connect](LeoWalletEvents.md#connect)
-- [disconnect](LeoWalletEvents.md#disconnect)
+Defined in: [adapter.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L22)
 
 ## Methods
 
-### accountChange
+### accountChange()
 
-▸ **accountChange**(...`args`): `unknown`
+> **accountChange**(...`args`): `unknown`
+
+Defined in: [adapter.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L25)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...args` | `unknown`[] |
+##### args
+
+...`unknown`[]
 
 #### Returns
 
 `unknown`
 
-#### Defined in
+***
 
-[adapter.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L25)
+### connect()
 
-___
+> **connect**(...`args`): `unknown`
 
-### connect
-
-▸ **connect**(...`args`): `unknown`
+Defined in: [adapter.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L23)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...args` | `unknown`[] |
+##### args
+
+...`unknown`[]
 
 #### Returns
 
 `unknown`
 
-#### Defined in
+***
 
-[adapter.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L23)
+### disconnect()
 
-___
+> **disconnect**(...`args`): `unknown`
 
-### disconnect
-
-▸ **disconnect**(...`args`): `unknown`
+Defined in: [adapter.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/wallets/leo/adapter.ts#L24)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `...args` | `unknown`[] |
+##### args
+
+...`unknown`[]
 
 #### Returns
 
 `unknown`
-
-#### Defined in
-
-[adapter.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/wallets/leo/adapter.ts#L24)

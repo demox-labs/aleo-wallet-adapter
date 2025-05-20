@@ -1,36 +1,29 @@
-[@demox-labs/aleo-wallet-adapter-reactui](../README.md) / [Exports](../modules.md) / WalletModalProps
+[**@demox-labs/aleo-wallet-adapter-reactui**](../README.md)
+
+***
+
+[@demox-labs/aleo-wallet-adapter-reactui](../README.md) / WalletModalProps
 
 # Interface: WalletModalProps
 
-## Hierarchy
+Defined in: [WalletModal.tsx:11](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/ui/src/WalletModal.tsx#L11)
 
-- **`WalletModalProps`**
+## Extended by
 
-  ↳ [`WalletModalProviderProps`](WalletModalProviderProps.md)
-
-## Table of contents
-
-### Properties
-
-- [className](WalletModalProps.md#classname)
-- [container](WalletModalProps.md#container)
+- [`WalletModalProviderProps`](WalletModalProviderProps.md)
 
 ## Properties
 
-### className
+### className?
 
-• `Optional` **className**: `string`
+> `optional` **className**: `string`
 
-#### Defined in
+Defined in: [WalletModal.tsx:12](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/ui/src/WalletModal.tsx#L12)
 
-[WalletModal.tsx:12](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/ui/src/WalletModal.tsx#L12)
+***
 
-___
+### container?
 
-### container
+> `optional` **container**: `string`
 
-• `Optional` **container**: `string`
-
-#### Defined in
-
-[WalletModal.tsx:13](https://github.com/demox-labs/aleo-wallet-adapter/blob/6db9271/packages/ui/src/WalletModal.tsx#L13)
+Defined in: [WalletModal.tsx:13](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/ui/src/WalletModal.tsx#L13)

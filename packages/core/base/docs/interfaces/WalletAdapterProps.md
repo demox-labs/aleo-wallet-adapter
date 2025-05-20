@@ -1,151 +1,122 @@
-[@demox-labs/aleo-wallet-adapter-base](../README.md) / [Exports](../modules.md) / WalletAdapterProps
+[**@demox-labs/aleo-wallet-adapter-base**](../README.md)
 
-# Interface: WalletAdapterProps<Name\>
+***
 
-## Type parameters
+[@demox-labs/aleo-wallet-adapter-base](../README.md) / WalletAdapterProps
 
-| Name | Type |
-| :------ | :------ |
-| `Name` | extends `string` = `string` |
+# Interface: WalletAdapterProps\<Name\>
 
-## Hierarchy
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:18](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L18)
 
-- **`WalletAdapterProps`**
+## Extended by
 
-  ↳ [`SignerWalletAdapterProps`](SignerWalletAdapterProps.md)
+- [`SignerWalletAdapterProps`](SignerWalletAdapterProps.md)
+- [`MessageSignerWalletAdapterProps`](MessageSignerWalletAdapterProps.md)
 
-  ↳ [`MessageSignerWalletAdapterProps`](MessageSignerWalletAdapterProps.md)
+## Type Parameters
 
-## Table of contents
+### Name
 
-### Properties
-
-- [connected](WalletAdapterProps.md#connected)
-- [connecting](WalletAdapterProps.md#connecting)
-- [icon](WalletAdapterProps.md#icon)
-- [name](WalletAdapterProps.md#name)
-- [publicKey](WalletAdapterProps.md#publickey)
-- [readyState](WalletAdapterProps.md#readystate)
-- [supportedTransactionVersions](WalletAdapterProps.md#supportedtransactionversions)
-- [url](WalletAdapterProps.md#url)
-
-### Methods
-
-- [connect](WalletAdapterProps.md#connect)
-- [disconnect](WalletAdapterProps.md#disconnect)
+`Name` *extends* `string` = `string`
 
 ## Properties
 
 ### connected
 
-• **connected**: `boolean`
+> **connected**: `boolean`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L25)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:25](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L25)
-
-___
+***
 
 ### connecting
 
-• **connecting**: `boolean`
+> **connecting**: `boolean`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L24)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:24](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L24)
-
-___
+***
 
 ### icon
 
-• **icon**: `string`
+> **icon**: `string`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L21)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:21](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L21)
-
-___
+***
 
 ### name
 
-• **name**: [`WalletName`](../modules.md#walletname)<`Name`\>
+> **name**: [`WalletName`](../type-aliases/WalletName.md)\<`Name`\>
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L19)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:19](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L19)
-
-___
+***
 
 ### publicKey
 
-• **publicKey**: `string`
+> **publicKey**: `string`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L23)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:23](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L23)
-
-___
+***
 
 ### readyState
 
-• **readyState**: [`WalletReadyState`](../enums/WalletReadyState.md)
+> **readyState**: [`WalletReadyState`](../enumerations/WalletReadyState.md)
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L22)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:22](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L22)
-
-___
+***
 
 ### supportedTransactionVersions
 
-• **supportedTransactionVersions**: `ReadonlySet`<`any`\>
+> **supportedTransactionVersions**: `ReadonlySet`
 
-#### Defined in
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:26](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L26)
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:26](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L26)
-
-___
+***
 
 ### url
 
-• **url**: `string`
+> **url**: `string`
 
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L20)
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:20](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L20)
 
 ## Methods
 
-### connect
+### connect()
 
-▸ **connect**(`decryptPermission`, `network`, `programs?`): `Promise`<`void`\>
+> **connect**(`decryptPermission`, `network`, `programs?`): `Promise`\<`void`\>
+
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L28)
 
 #### Parameters
 
-| Name | Type |
-| :------ | :------ |
-| `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
-| `network` | [`Testnet`](../enums/WalletAdapterNetwork.md#testnet) |
-| `programs?` | `string`[] |
+##### decryptPermission
+
+[`DecryptPermission`](../enumerations/DecryptPermission.md)
+
+##### network
+
+[`WalletAdapterNetwork`](../enumerations/WalletAdapterNetwork.md)
+
+##### programs?
+
+`string`[]
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`\<`void`\>
 
-#### Defined in
+***
 
-[aleo-wallet-adapter/packages/core/base/adapter.ts:28](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L28)
+### disconnect()
 
-___
+> **disconnect**(): `Promise`\<`void`\>
 
-### disconnect
-
-▸ **disconnect**(): `Promise`<`void`\>
+Defined in: [aleo-wallet-adapter/packages/core/base/adapter.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/818636b4a87a5b81f15303d0099057a3563c844a/packages/core/base/adapter.ts#L29)
 
 #### Returns
 
-`Promise`<`void`\>
-
-#### Defined in
-
-[aleo-wallet-adapter/packages/core/base/adapter.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L29)
+`Promise`\<`void`\>

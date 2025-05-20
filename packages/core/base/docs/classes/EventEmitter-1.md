@@ -62,7 +62,7 @@ Minimal `EventEmitter` interface that is molded against the Node.js
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:9
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:9
 
 ## Methods
 
@@ -90,7 +90,7 @@ node_modules/eventemitter3/index.d.ts:9
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:45
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:45
 
 ___
 
@@ -119,7 +119,7 @@ Calls each of the listeners registered for a given event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:32
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:32
 
 ___
 
@@ -136,7 +136,7 @@ listeners.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:15
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:15
 
 ___
 
@@ -158,7 +158,7 @@ Return the number of listeners listening to a given event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:27
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:27
 
 ___
 
@@ -186,7 +186,7 @@ Return the listeners registered for a given event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:20
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:20
 
 ___
 
@@ -215,7 +215,7 @@ ___
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:69
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:69
 
 ___
 
@@ -245,7 +245,7 @@ Add a listener for a given event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:40
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:40
 
 ___
 
@@ -275,7 +275,7 @@ Add a one-time listener for a given event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:54
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:54
 
 ___
 
@@ -297,7 +297,7 @@ Remove all listeners, or those of the specified event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:79
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:79
 
 ___
 
@@ -328,4 +328,4 @@ Remove the listeners of a given event.
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:63
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:63

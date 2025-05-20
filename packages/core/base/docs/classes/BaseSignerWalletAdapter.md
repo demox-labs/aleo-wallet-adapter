@@ -91,7 +91,7 @@ SignerWalletAdapter.connecting
 
 #### Defined in
 
-[adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L72)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:72](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L72)
 
 ___
 
@@ -109,7 +109,7 @@ SignerWalletAdapter.icon
 
 #### Defined in
 
-[adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L69)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:69](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L69)
 
 ___
 
@@ -127,7 +127,7 @@ SignerWalletAdapter.name
 
 #### Defined in
 
-[adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L67)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:67](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L67)
 
 ___
 
@@ -145,7 +145,7 @@ SignerWalletAdapter.publicKey
 
 #### Defined in
 
-[adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L71)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:71](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L71)
 
 ___
 
@@ -163,7 +163,7 @@ SignerWalletAdapter.readyState
 
 #### Defined in
 
-[adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L70)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:70](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L70)
 
 ___
 
@@ -181,7 +181,7 @@ SignerWalletAdapter.supportedTransactionVersions
 
 #### Defined in
 
-[adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L73)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:73](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L73)
 
 ___
 
@@ -199,7 +199,7 @@ SignerWalletAdapter.url
 
 #### Defined in
 
-[adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L68)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:68](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L68)
 
 ___
 
@@ -213,7 +213,7 @@ ___
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:9
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:9
 
 ## Accessors
 
@@ -235,7 +235,7 @@ BaseWalletAdapter.connected
 
 #### Defined in
 
-[adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L75)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:75](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L75)
 
 ## Methods
 
@@ -271,7 +271,7 @@ SignerWalletAdapter.addListener
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:45
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:45
 
 ___
 
@@ -284,7 +284,7 @@ ___
 | Name | Type |
 | :------ | :------ |
 | `decryptPermission` | [`DecryptPermission`](../enums/DecryptPermission.md) |
-| `network` | [`WalletAdapterNetwork`](../enums/WalletAdapterNetwork.md) |
+| `network` | [`Testnet`](../enums/WalletAdapterNetwork.md#testnet) |
 | `programs?` | `string`[] |
 
 #### Returns
@@ -301,7 +301,7 @@ SignerWalletAdapter.connect
 
 #### Defined in
 
-[adapter.ts:79](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L79)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:79](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L79)
 
 ___
 
@@ -323,7 +323,7 @@ SignerWalletAdapter.disconnect
 
 #### Defined in
 
-[adapter.ts:80](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/adapter.ts#L80)
+[aleo-wallet-adapter/packages/core/base/adapter.ts:80](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/adapter.ts#L80)
 
 ___
 
@@ -360,7 +360,7 @@ SignerWalletAdapter.emit
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:32
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:32
 
 ___
 
@@ -385,7 +385,7 @@ SignerWalletAdapter.eventNames
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:15
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:15
 
 ___
 
@@ -415,7 +415,7 @@ SignerWalletAdapter.listenerCount
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:27
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:27
 
 ___
 
@@ -451,7 +451,7 @@ SignerWalletAdapter.listeners
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:20
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:20
 
 ___
 
@@ -488,7 +488,7 @@ SignerWalletAdapter.off
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:69
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:69
 
 ___
 
@@ -526,7 +526,7 @@ SignerWalletAdapter.on
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:40
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:40
 
 ___
 
@@ -564,7 +564,7 @@ SignerWalletAdapter.once
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:54
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:54
 
 ___
 
@@ -594,7 +594,7 @@ SignerWalletAdapter.removeAllListeners
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:79
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:79
 
 ___
 
@@ -633,4 +633,4 @@ SignerWalletAdapter.removeListener
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:63
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:63

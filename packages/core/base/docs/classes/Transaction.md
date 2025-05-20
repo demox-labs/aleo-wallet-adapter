@@ -42,7 +42,7 @@
 
 #### Defined in
 
-[transaction.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L35)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:35](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L35)
 
 ## Properties
 
@@ -56,7 +56,7 @@
 
 #### Defined in
 
-[transaction.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L29)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:29](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L29)
 
 ___
 
@@ -70,7 +70,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:30](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L30)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:30](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L30)
 
 ___
 
@@ -84,7 +84,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L32)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:32](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L32)
 
 ___
 
@@ -98,7 +98,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L33)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:33](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L33)
 
 ___
 
@@ -112,7 +112,7 @@ ___
 
 #### Defined in
 
-[transaction.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L31)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:31](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L31)
 
 ## Methods
 
@@ -138,4 +138,4 @@ ___
 
 #### Defined in
 
-[transaction.ts:43](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/transaction.ts#L43)
+[aleo-wallet-adapter/packages/core/base/transaction.ts:43](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/transaction.ts#L43)

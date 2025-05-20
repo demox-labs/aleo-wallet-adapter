@@ -35,7 +35,7 @@
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:109
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:109
 
 ___
 
@@ -52,7 +52,7 @@ ___
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:126
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:126
 
 ___
 
@@ -69,7 +69,7 @@ ___
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:117
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:117
 
 ___
 
@@ -85,7 +85,7 @@ ___
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:105
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:105
 
 ___
 
@@ -103,7 +103,7 @@ interface EventTypes {
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:103
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:103
 
 ## Variables
 
@@ -113,4 +113,4 @@ node_modules/eventemitter3/index.d.ts:103
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:131
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:131

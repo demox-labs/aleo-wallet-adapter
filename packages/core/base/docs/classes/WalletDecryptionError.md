@@ -21,6 +21,12 @@
 - [message](WalletDecryptionError.md#message)
 - [name](WalletDecryptionError.md#name)
 - [stack](WalletDecryptionError.md#stack)
+- [prepareStackTrace](WalletDecryptionError.md#preparestacktrace)
+- [stackTraceLimit](WalletDecryptionError.md#stacktracelimit)
+
+### Methods
+
+- [captureStackTrace](WalletDecryptionError.md#capturestacktrace)
 
 ## Constructors
 
@@ -41,7 +47,7 @@
 
 #### Defined in
 
-[errors.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/errors.ts#L5)
+[aleo-wallet-adapter/packages/core/base/errors.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/errors.ts#L5)
 
 ## Properties
 
@@ -55,7 +61,7 @@
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es2022.error.d.ts:26
+aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es2022.error.d.ts:26
 
 ___
 
@@ -69,7 +75,7 @@ ___
 
 #### Defined in
 
-[errors.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/errors.ts#L2)
+[aleo-wallet-adapter/packages/core/base/errors.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/errors.ts#L2)
 
 ___
 
@@ -83,7 +89,7 @@ ___
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1041
+aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es5.d.ts:1041
 
 ___
 
@@ -97,7 +103,7 @@ ___
 
 #### Defined in
 
-[errors.ts:84](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/errors.ts#L84)
+[aleo-wallet-adapter/packages/core/base/errors.ts:84](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/errors.ts#L84)
 
 ___
 
@@ -111,4 +117,80 @@ ___
 
 #### Defined in
 
-node_modules/typescript/lib/lib.es5.d.ts:1042
+aleo-wallet-adapter/packages/core/base/node_modules/typescript/lib/lib.es5.d.ts:1042
+
+___
+
+### prepareStackTrace
+
+▪ `Static` `Optional` **prepareStackTrace**: (`err`: `Error`, `stackTraces`: `CallSite`[]) => `any`
+
+#### Type declaration
+
+▸ (`err`, `stackTraces`): `any`
+
+Optional override for formatting stack traces
+
+**`See`**
+
+https://v8.dev/docs/stack-trace-api#customizing-stack-traces
+
+##### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `err` | `Error` |
+| `stackTraces` | `CallSite`[] |
+
+##### Returns
+
+`any`
+
+#### Inherited from
+
+[WalletError](WalletError.md).[prepareStackTrace](WalletError.md#preparestacktrace)
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:98
+
+___
+
+### stackTraceLimit
+
+▪ `Static` **stackTraceLimit**: `number`
+
+#### Inherited from
+
+[WalletError](WalletError.md).[stackTraceLimit](WalletError.md#stacktracelimit)
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:100
+
+## Methods
+
+### captureStackTrace
+
+▸ `Static` **captureStackTrace**(`targetObject`, `constructorOpt?`): `void`
+
+Create .stack property on a target object
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `targetObject` | `object` |
+| `constructorOpt?` | `Function` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[WalletError](WalletError.md).[captureStackTrace](WalletError.md#capturestacktrace)
+
+#### Defined in
+
+node_modules/@types/node/globals.d.ts:91

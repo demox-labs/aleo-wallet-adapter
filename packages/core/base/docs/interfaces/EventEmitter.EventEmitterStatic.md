@@ -25,4 +25,4 @@
 
 #### Defined in
 
-node_modules/eventemitter3/index.d.ts:88
+aleo-wallet-adapter/packages/core/base/node_modules/eventemitter3/index.d.ts:88

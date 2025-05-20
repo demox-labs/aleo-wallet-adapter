@@ -24,7 +24,7 @@
 
 #### Defined in
 
-[deployment.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/deployment.ts#L2)
+[aleo-wallet-adapter/packages/core/base/deployment.ts:2](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L2)
 
 ___
 
@@ -34,7 +34,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/deployment.ts#L3)
+[aleo-wallet-adapter/packages/core/base/deployment.ts:3](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L3)
 
 ___
 
@@ -44,7 +44,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/deployment.ts#L5)
+[aleo-wallet-adapter/packages/core/base/deployment.ts:5](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L5)
 
 ___
 
@@ -54,7 +54,7 @@ ___
 
 #### Defined in
 
-[deployment.ts:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/deployment.ts#L6)
+[aleo-wallet-adapter/packages/core/base/deployment.ts:6](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L6)
 
 ___
 
@@ -64,4 +64,4 @@ ___
 
 #### Defined in
 
-[deployment.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/c12f88c/packages/core/base/deployment.ts#L4)
+[aleo-wallet-adapter/packages/core/base/deployment.ts:4](https://github.com/demox-labs/aleo-wallet-adapter/blob/fc6b47e/packages/core/base/deployment.ts#L4)
